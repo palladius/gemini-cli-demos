@@ -22,18 +22,33 @@ Ensure:
 
 Every demo subfolder, create/keep a `STATUS.md`, with this format:
 
-```markdown
-## Project name
+== BEGIN STATUS.md ==
 
+HASH HASH Project name (H2)
+
+* Created: YYYY-MM-DD
 * Creator: Name Surname
-* description:
+* Creator fav ice-cream: ..
 * status: WorkInPogress | Complete | Draft | UnderReview
 * Checkbox:
-    * [ ] code present
-    * [ ] code working
+    * [ ] code_present
+    * [ ] code_working
     * [X] documentation
     * [ ] video
-* Demo purpose: [try to infer it if you have anough info, or leave a '-' if not enough info.. info will come!]
-```
+* Demo purpose: ...
+* Time to execute: **XX** minutes
 
-so anyone can check the status. Check with user for missing information and fill in the blanks.
+== END STATUS.md ==
+
+So anyone can check the status. Check with user for missing information and fill in the blanks.
+
+You should be able to fill in the blanks yourself:
+- check Name surname from git
+- code present (BOOL): see if there's a DEMO_SCRIPT.md and if it feels right
+- code_working (BOOL): does it feel complete?
+- documentation (BOOL): is `README.md` thoroughly documented? If not, maybe help making a better documentaiton.
+- video (BOOL): is there a video somewhere linked in the `README.md`?
+- Demo purpose: summarize what you understand from README.md
+- Time to execute: check from script. Calculate ~30 seconds per LLM invocation and round up.
+- Created: if its new, its today :) if not, check from git the first commit of this folder.
+- Creator fav ice-cream (STRING): ask the user whats their fav ice cream.

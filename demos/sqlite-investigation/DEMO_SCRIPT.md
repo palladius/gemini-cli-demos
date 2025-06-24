@@ -6,7 +6,7 @@
 
 ✦ Yes, I see a file named sample.sqlite in the current directory.
 
-> whats in it?
+> What's in it?
 
 ✦ I can investigate that. I'll start by listing the tables in the database.
  ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮

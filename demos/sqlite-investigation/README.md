@@ -7,3 +7,11 @@ This demo showcases how `gemini-cli` is able to:
 1. See some sample invocations in `DEMO_SCRIPT.md`
 2. See a potential output in `OUTPUT.md`.
 
+
+First invocation:
+
+![alt text](image.png)
+
+Wow moment:
+
+![alt text](image-1.png)
