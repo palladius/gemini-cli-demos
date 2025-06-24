@@ -18,6 +18,13 @@ Ensure:
 * all markdown has no typos or obvious mistakes.
 * all linked URLs in markdown are publicly available (ensure a curl returns 200).
 
+## IMPORTANT
+
+Before committing/pushing, ensure that:
+
+* no Keys or private info is shared in some Markdown.
+* no files above 50MB are committed (eg big videos).
+
 ## STATUS.md
 
 Every demo subfolder, create/keep a `STATUS.md`, with this format:
@@ -52,3 +59,11 @@ You should be able to fill in the blanks yourself:
 - Time to execute: check from script. Calculate ~30 seconds per LLM invocation and round up.
 - Created: if its new, its today :) if not, check from git the first commit of this folder.
 - Creator fav ice-cream (STRING): ask the user whats their fav ice cream.
+
+
+Finally ensure All demos are captured in the MAIN `README.md` (under git root), in table form.
+Each line shall have this format:
+1. "demo" demo folder name (link)
+2. "category" - 1-2 workds on the topic (git, Database, ..)
+3. "description" a short description of what the demo is about, what it demonstrates, .. should be <200 chars.
+
