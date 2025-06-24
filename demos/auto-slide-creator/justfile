@@ -15,3 +15,7 @@ run:
 # Clean up the virtual environment
 clean:
     rm -rf .venv
+
+# Helps gemini escape the cage and see the ../../ folder.
+escape-the-cage:
+    ln -s ../../ gemini-cli-demos-symlink

@@ -1,24 +1,29 @@
 
-
 import os
 import re
-import base64
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload
 
 # Define the scopes
-SCOPES = ['https://www.googleapis.com/auth/presentations']
+SCOPES = ['https://www.googleapis.com/auth/presentations', 'https://www.googleapis.com/auth/drive.file']
 
 def find_image_for_demo(demo_name):
     """Finds an image for a given demo."""
     demo_path = os.path.join('..', demo_name)
-    if not os.path.isdir(demo_path):
-        return None
-    for root, _, files in os.walk(demo_path):
-        for file in files:
-            if file.endswith(".png"):
-                return os.path.join(root, file)
+    if os.path.isdir(demo_path):
+        # Prioritize 'image.png'
+        specific_image_path = os.path.join(demo_path, 'image.png')
+        if os.path.exists(specific_image_path):
+            return specific_image_path
+        
+        # Look for any other png that is not a logo
+        for root, _, files in os.walk(demo_path):
+            for file in files:
+                if file.endswith(".png") and "logo" not in file:
+                    return os.path.join(root, file)
+
     # Fallback to a logo in the assets directory if it exists
     assets_logo = os.path.join('..', '..', 'assets', 'logo.png')
     if os.path.exists(assets_logo):
@@ -81,26 +86,21 @@ def create_formatted_text_requests(object_id, text):
 
 def main():
     """Creates a Google Slides presentation."""
-    creds = None
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-    if not creds or not creds.valid:
-        flow = InstalledAppFlow.from_client_secrets_file(
-            'credentials.json', SCOPES)
-        creds = flow.run_local_server(port=0)
-        with open('token.json', 'w') as token:
-            token.write(creds.to_json())
+    flow = InstalledAppFlow.from_client_secrets_file(
+        'credentials.json', SCOPES)
+    creds = flow.run_local_server(port=0)
 
-    service = build('slides', 'v1', credentials=creds)
+    slides_service = build('slides', 'v1', credentials=creds)
+    drive_service = build('drive', 'v3', credentials=creds)
 
-    presentation = service.presentations().create(body={
+    presentation = slides_service.presentations().create(body={
         'title': 'Gemini CLI Demos'
     }).execute()
     presentation_id = presentation.get('presentationId')
     
     # Delete the initial empty slide
     first_slide_id = presentation.get('slides')[0].get('objectId')
-    service.presentations().batchUpdate(presentationId=presentation_id, body={
+    slides_service.presentations().batchUpdate(presentationId=presentation_id, body={
         'requests': [{'deleteObject': {'objectId': first_slide_id}}]
     }).execute()
 
@@ -166,9 +166,13 @@ def main():
         image_path = find_image_for_demo(demo_name)
 
         if image_path and os.path.exists(image_path):
-            with open(image_path, "rb") as image_file:
-                encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
-            image_url = f"data:image/png;base64,{encoded_string}"
+            file_metadata = {'name': os.path.basename(image_path)}
+            media = MediaFileUpload(image_path, mimetype='image/png')
+            image = drive_service.files().create(body=file_metadata, media_body=media, fields='id, webContentLink').execute()
+            image_url = image.get('webContentLink')
+
+            # Make the image publicly readable
+            drive_service.permissions().create(fileId=image.get('id'), body={'type': 'anyone', 'role': 'reader'}).execute()
             
             slide_requests.append({
                 'createImage': {
@@ -189,7 +193,7 @@ def main():
             })
 
     if slide_requests:
-        service.presentations().batchUpdate(presentationId=presentation_id, body={'requests': slide_requests}).execute()
+        slides_service.presentations().batchUpdate(presentationId=presentation_id, body={'requests': slide_requests}).execute()
 
     print(f"Presentation created: https://docs.google.com/presentation/d/{presentation_id}")
 
