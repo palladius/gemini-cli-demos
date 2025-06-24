@@ -5,6 +5,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
+
 # Define the scopes
 SCOPES = ['https://www.googleapis.com/auth/presentations']
 
@@ -33,119 +34,150 @@ def main():
     }).execute()
 
     presentation_id = presentation.get('presentationId')
+    first_slide = presentation.get('slides')[0]
+    first_slide_id = first_slide.get('objectId')
+    title_placeholder_id = None
+    for element in first_slide.get('pageElements'):
+        if element.get('shape', {}).get('placeholder', {}).get('type') == 'CENTERED_TITLE':
+            title_placeholder_id = element.get('objectId')
+            break
 
     # Add slides
-    requests = [
+    slides_data = [
         {
-            'createSlide': {
-                'objectId': 'title_slide',
-                'slideLayoutReference': {
-                    'predefinedLayout': 'TITLE'
-                }
-            }
+            'objectId': 'intent_slide',
+            'layout': 'TITLE_AND_BODY',
+            'title': 'Repository Intent',
+            'body': 'This repository contains Demos-in-a-box for Gemini CLI.'
         },
         {
-            'insertText': {
-                'objectId': 'title_slide',
-                'text': 'Gemini CLI Demos',
-                'insertionIndex': 0
-            }
+            'objectId': 'auto_slide_creator_slide',
+            'layout': 'TITLE_AND_BODY',
+            'title': 'Auto Slide Creator',
+            'body': 'This demo showcases how `gemini-cli` is able to:\n\n* Create Google Slides\n* Generate E/R schema based on it.'
         },
         {
-            'createSlide': {
-                'objectId': 'intent_slide',
-                'slideLayoutReference': {
-                    'predefinedLayout': 'TITLE_AND_BODY'
-                }
-            }
+            'objectId': 'git_investigation_slide',
+            'layout': 'TITLE_AND_BODY',
+            'title': 'Git Investigation',
+            'body': 'This demo will showcase git investigation capabilities.'
         },
         {
-            'insertText': {
-                'objectId': 'intent_slide',
-                'text': 'Repository Intent',
-                'insertionIndex': 0
-            }
+            'objectId': 'sqlite_investigation_slide',
+            'layout': 'TITLE_AND_BODY',
+            'title': 'SQLite Investigation',
+            'body': 'This demo showcases how `gemini-cli` is able to:\n* read/write/understand a sqlite3.\n* Generate E/R schema based on it.'
         },
         {
-            'insertText': {
-                'objectId': 'intent_slide',
-                'text': 'This repository contains Demos-in-a-box for Gemini CLI.',
-                'insertionIndex': 1
-            }
-        },
-        {
-            'createSlide': {
-                'objectId': 'auto_slide_creator_slide',
-                'slideLayoutReference': {
-                    'predefinedLayout': 'TITLE_AND_BODY'
-                }
-            }
-        },
-        {
-            'insertText': {
-                'objectId': 'auto_slide_creator_slide',
-                'text': 'Auto Slide Creator',
-                'insertionIndex': 0
-            }
-        },
-        {
-            'insertText': {
-                'objectId': 'auto_slide_creator_slide',
-                'text': 'This demo showcases how `gemini-cli` is able to:\n\n* Create Google Slides\n* Generate E/R schema based on it.',
-                'insertionIndex': 1
-            }
-        },
-        {
-            'createSlide': {
-                'objectId': 'git_investigation_slide',
-                'slideLayoutReference': {
-                    'predefinedLayout': 'TITLE_AND_BODY'
-                }
-            }
-        },
-        {
-            'insertText': {
-                'objectId': 'git_investigation_slide',
-                'text': 'Git Investigation',
-                'insertionIndex': 0
-            }
-        },
-        {
-            'insertText': {
-                'objectId': 'git_investigation_slide',
-                'text': 'This demo will showcase git investigation capabilities.',
-                'insertionIndex': 1
-            }
-        },
-        {
-            'createSlide': {
-                'objectId': 'sqlite_investigation_slide',
-                'slideLayoutReference': {
-                    'predefinedLayout': 'TITLE_AND_BODY'
-                }
-            }
-        },
-        {
-            'insertText': {
-                'objectId': 'sqlite_investigation_slide',
-                'text': 'SQLite Investigation',
-                'insertionIndex': 0
-            }
-        },
-        {
-            'insertText': {
-                'objectId': 'sqlite_investigation_slide',
-                'text': 'This demo showcases how `gemini-cli` is able to:\n* read/write/understand a sqlite3.\n* Generate E/R schema based on it.',
-                'insertionIndex': 1
-            }
+            'objectId': 'thank_you_slide',
+            'layout': 'TITLE_AND_BODY',
+            'title': 'Thank you!',
+            'body': 'Generated by gemini-cli + auto-slide-creator'
         }
     ]
 
-    body = {
-        'requests': requests
-    }
-    response = service.presentations().batchUpdate(
-        presentationId=presentation_id, body=body).execute()
+    if title_placeholder_id:
+        title_requests = [
+            {
+                'insertText': {
+                    'objectId': title_placeholder_id,
+                    'text': 'Gemini CLI Demos'
+                }
+            }
+        ]
+        body = {
+            'requests': title_requests
+        }
+        service.presentations().batchUpdate(
+            presentationId=presentation_id, body=body).execute()
+    else:
+        print("Could not find title placeholder on the first slide.")
+
+    slide_requests = []
+    for i, slide in enumerate(slides_data):
+        slide_id = f"slide_{i}"
+        title_id = f"title_{i}"
+        body_id = f"body_{i}"
+
+        placeholder_id_mappings = []
+        if slide['layout'] == 'TITLE':
+            placeholder_id_mappings.append({
+                'layoutPlaceholder': {
+                    'type': 'CENTERED_TITLE'
+                },
+                'objectId': title_id
+            })
+        elif slide['layout'] == 'TITLE_AND_BODY':
+            placeholder_id_mappings.extend([
+                {
+                    'layoutPlaceholder': {
+                        'type': 'TITLE'
+                    },
+                    'objectId': title_id
+                },
+                {
+                    'layoutPlaceholder': {
+                        'type': 'BODY'
+                    },
+                    'objectId': body_id
+                }
+            ])
+
+        slide_requests.append({
+            'createSlide': {
+                'objectId': slide_id,
+                'slideLayoutReference': {
+                    'predefinedLayout': slide['layout']
+                },
+                'placeholderIdMappings': placeholder_id_mappings
+            }
+        })
+
+        if slide['title']:
+            slide_requests.append({
+                'insertText': {
+                    'objectId': title_id,
+                    'text': slide['title']
+                }
+            })
+        if slide['body']:
+            slide_requests.append({
+                'insertText': {
+                    'objectId': body_id,
+                    'text': slide['body']
+                }
+            })
+        if slide['objectId'] == 'sqlite_investigation_slide':
+            slide_requests.append({
+                'createImage': {
+                    'url': 'https://i.imgur.com/4YjD2jO.png',
+                    'elementProperties': {
+                        'pageObjectId': slide_id,
+                        'size': {
+                            'height': {
+                                'magnitude': 3000000,
+                                'unit': 'EMU'
+                            },
+                            'width': {
+                                'magnitude': 3000000,
+                                'unit': 'EMU'
+                            }
+                        },
+                        'transform': {
+                            'scaleX': 1,
+                            'scaleY': 1,
+                            'translateX': 4000000,
+                            'translateY': 2000000,
+                            'unit': 'EMU'
+                        }
+                    }
+                }
+            })
+
+    if slide_requests:
+        body = {'requests': slide_requests}
+        service.presentations().batchUpdate(presentationId=presentation_id, body=body).execute()
+
     print(f"Created presentation with ID: {presentation_id}")
 
 if __name__ == '__main__':
