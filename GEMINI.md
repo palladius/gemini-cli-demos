@@ -36,7 +36,7 @@ HASH HASH Project name (H2)
 * Created: YYYY-MM-DD
 * Creator: Name Surname
 * Creator fav ice-cream: ..
-* status: WorkInPogress | Complete | Draft | UnderReview
+* status: WorkInPogress | Complete | Draft  | SignedOff
 * Checkbox:
     * [ ] code_present
     * [ ] code_working
@@ -59,7 +59,7 @@ You should be able to fill in the blanks yourself:
 - Time to execute: check from script. Calculate ~30 seconds per LLM invocation and round up.
 - Created: if its new, its today :) if not, check from git the first commit of this folder.
 - Creator fav ice-cream (STRING): ask the user whats their fav ice cream.
-
+- status: note if you see code it might NOT be complete. For `SignedOff`, status when everything checks correctly, ask explicitly to user if that project should be signed off. Until then, it cant exceed WIP.
 
 Finally ensure All demos are captured in the MAIN `README.md` (under git root), in table form.
 Each line shall have this format:
