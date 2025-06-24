@@ -6,7 +6,7 @@ Available demos:
 
 | Status | Demo | Category | Description |
 |---|---|---|---|
-| 🚧 | [auto-slide-creator](./demos/auto-slide-creator) | Google Workspace | This demo showcases how `gemini-cli` is able to create Google Slides. |
+| 🚧 | [auto-slide-creator](./demos/auto-slide-creator) | Google Workspace | This demo showcases how `gemini-cli` is able to create Google Slides. Missing features: image generation, proper formatting for backticks and bullet points. |
 | 🚧 | [git-investigation](./demos/git-investigation) | Git | This demo will showcase git investigation capabilities. |
 | ✅ | [sqlite-investigation](./demos/sqlite-investigation) | Database | This demo showcases how `gemini-cli` is able to read/write/understand a sqlite3 database and generate an E/R schema from it. |
 

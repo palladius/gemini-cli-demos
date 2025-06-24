@@ -1,54 +1,115 @@
 
 
 import os
+import re
+import base64
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-
 # Define the scopes
 SCOPES = ['https://www.googleapis.com/auth/presentations']
+
+def find_image_for_demo(demo_name):
+    """Finds an image for a given demo."""
+    demo_path = os.path.join('..', demo_name)
+    if not os.path.isdir(demo_path):
+        return None
+    for root, _, files in os.walk(demo_path):
+        for file in files:
+            if file.endswith(".png"):
+                return os.path.join(root, file)
+    # Fallback to a logo in the assets directory if it exists
+    assets_logo = os.path.join('..', '..', 'assets', 'logo.png')
+    if os.path.exists(assets_logo):
+        return assets_logo
+    return None
+
+def create_formatted_text_requests(object_id, text):
+    """
+    Creates a list of requests to insert text and apply formatting for
+    bullet points and backticks.
+    """
+    requests = [{'insertText': {'objectId': object_id, 'text': text}}]
+    
+    formatting_requests = []
+    
+    # Find all matches for backticks and bullets
+    backtick_matches = list(re.finditer(r'`([^`]+)`', text))
+    bullet_matches = list(re.finditer(r'^\* (.*)', text, re.MULTILINE))
+    
+    all_matches = []
+    for m in backtick_matches:
+        all_matches.append({'type': 'backtick', 'match': m})
+    for m in bullet_matches:
+        all_matches.append({'type': 'bullet', 'match': m})
+        
+    all_matches.sort(key=lambda x: x['match'].start(), reverse=True)
+    
+    for item in all_matches:
+        match = item['match']
+        start, end = match.span()
+        
+        if item['type'] == 'backtick':
+            # Apply style to the text inside backticks
+            formatting_requests.append({
+                'updateTextStyle': {
+                    'objectId': object_id,
+                    'textRange': {'type': 'FIXED_RANGE', 'startIndex': start + 1, 'endIndex': end - 1},
+                    'style': {'fontFamily': 'Courier New'},
+                    'fields': 'fontFamily'
+                }
+            })
+            # Delete the backticks
+            formatting_requests.append({'deleteText': {'objectId': object_id, 'textRange': {'type': 'FIXED_RANGE', 'startIndex': end - 1, 'endIndex': end}}})
+            formatting_requests.append({'deleteText': {'objectId': object_id, 'textRange': {'type': 'FIXED_RANGE', 'startIndex': start, 'endIndex': start + 1}}})
+        
+        elif item['type'] == 'bullet':
+            # Create bullets for the paragraph
+            formatting_requests.append({
+                'createParagraphBullets': {
+                    'objectId': object_id,
+                    'textRange': {'type': 'FIXED_RANGE', 'startIndex': start, 'endIndex': end},
+                    'bulletPreset': 'BULLET_DISC_CIRCLE_SQUARE'
+                }
+            })
+            # Delete the '* ' marker
+            formatting_requests.append({'deleteText': {'objectId': object_id, 'textRange': {'type': 'FIXED_RANGE', 'startIndex': start, 'endIndex': start + 2}}})
+            
+    requests.extend(formatting_requests)
+    return requests
 
 def main():
     """Creates a Google Slides presentation."""
     creds = None
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-    # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         flow = InstalledAppFlow.from_client_secrets_file(
             'credentials.json', SCOPES)
         creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
 
     service = build('slides', 'v1', credentials=creds)
 
-    # Create the presentation
     presentation = service.presentations().create(body={
         'title': 'Gemini CLI Demos'
     }).execute()
-
     presentation_id = presentation.get('presentationId')
-    first_slide = presentation.get('slides')[0]
-    first_slide_id = first_slide.get('objectId')
-    title_placeholder_id = None
-    for element in first_slide.get('pageElements'):
-        if element.get('shape', {}).get('placeholder', {}).get('type') == 'CENTERED_TITLE':
-            title_placeholder_id = element.get('objectId')
-            break
+    
+    # Delete the initial empty slide
+    first_slide_id = presentation.get('slides')[0].get('objectId')
+    service.presentations().batchUpdate(presentationId=presentation_id, body={
+        'requests': [{'deleteObject': {'objectId': first_slide_id}}]
+    }).execute()
 
-    # Add slides
     slides_data = [
         {
             'objectId': 'intent_slide',
             'layout': 'TITLE_AND_BODY',
             'title': 'Repository Intent',
-            'body': 'This repository contains Demos-in-a-box for Gemini CLI.'
+            'body': 'This repository contains Demos-in-a-box for `gemini-cli`.'
         },
         {
             'objectId': 'auto_slide_creator_slide',
@@ -60,38 +121,21 @@ def main():
             'objectId': 'git_investigation_slide',
             'layout': 'TITLE_AND_BODY',
             'title': 'Git Investigation',
-            'body': 'This demo will showcase git investigation capabilities.'
+            'body': 'This demo will showcase `git` investigation capabilities.'
         },
         {
             'objectId': 'sqlite_investigation_slide',
             'layout': 'TITLE_AND_BODY',
             'title': 'SQLite Investigation',
-            'body': 'This demo showcases how `gemini-cli` is able to:\n* read/write/understand a sqlite3.\n* Generate E/R schema based on it.'
+            'body': 'This demo showcases how `gemini-cli` is able to:\n* read/write/understand a `sqlite3` database.\n* Generate E/R schema based on it.'
         },
         {
             'objectId': 'thank_you_slide',
             'layout': 'TITLE_AND_BODY',
             'title': 'Thank you!',
-            'body': 'Generated by gemini-cli + auto-slide-creator'
+            'body': 'Generated by `gemini-cli` + `auto-slide-creator`'
         }
     ]
-
-    if title_placeholder_id:
-        title_requests = [
-            {
-                'insertText': {
-                    'objectId': title_placeholder_id,
-                    'text': 'Gemini CLI Demos'
-                }
-            }
-        ]
-        body = {
-            'requests': title_requests
-        }
-        service.presentations().batchUpdate(
-            presentationId=presentation_id, body=body).execute()
-    else:
-        print("Could not find title placeholder on the first slide.")
 
     slide_requests = []
     for i, slide in enumerate(slides_data):
@@ -99,75 +143,45 @@ def main():
         title_id = f"title_{i}"
         body_id = f"body_{i}"
 
-        placeholder_id_mappings = []
-        if slide['layout'] == 'TITLE':
-            placeholder_id_mappings.append({
-                'layoutPlaceholder': {
-                    'type': 'CENTERED_TITLE'
-                },
-                'objectId': title_id
-            })
-        elif slide['layout'] == 'TITLE_AND_BODY':
-            placeholder_id_mappings.extend([
-                {
-                    'layoutPlaceholder': {
-                        'type': 'TITLE'
-                    },
-                    'objectId': title_id
-                },
-                {
-                    'layoutPlaceholder': {
-                        'type': 'BODY'
-                    },
-                    'objectId': body_id
-                }
-            ])
+        placeholder_id_mappings = [
+            {'layoutPlaceholder': {'type': 'TITLE'}, 'objectId': title_id},
+            {'layoutPlaceholder': {'type': 'BODY'}, 'objectId': body_id}
+        ]
 
         slide_requests.append({
             'createSlide': {
                 'objectId': slide_id,
-                'slideLayoutReference': {
-                    'predefinedLayout': slide['layout']
-                },
+                'slideLayoutReference': {'predefinedLayout': slide['layout']},
                 'placeholderIdMappings': placeholder_id_mappings
             }
         })
 
         if slide['title']:
-            slide_requests.append({
-                'insertText': {
-                    'objectId': title_id,
-                    'text': slide['title']
-                }
-            })
+            slide_requests.append({'insertText': {'objectId': title_id, 'text': slide['title']}})
+        
         if slide['body']:
-            slide_requests.append({
-                'insertText': {
-                    'objectId': body_id,
-                    'text': slide['body']
-                }
-            })
-        if slide['objectId'] == 'sqlite_investigation_slide':
+            slide_requests.extend(create_formatted_text_requests(body_id, slide['body']))
+
+        demo_name = slide['objectId'].replace('_slide', '')
+        image_path = find_image_for_demo(demo_name)
+
+        if image_path and os.path.exists(image_path):
+            with open(image_path, "rb") as image_file:
+                encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+            image_url = f"data:image/png;base64,{encoded_string}"
+            
             slide_requests.append({
                 'createImage': {
-                    'url': 'https://i.imgur.com/4YjD2jO.png',
+                    'url': image_url,
                     'elementProperties': {
                         'pageObjectId': slide_id,
                         'size': {
-                            'height': {
-                                'magnitude': 3000000,
-                                'unit': 'EMU'
-                            },
-                            'width': {
-                                'magnitude': 3000000,
-                                'unit': 'EMU'
-                            }
+                            'height': {'magnitude': 2000000, 'unit': 'EMU'},
+                            'width': {'magnitude': 2000000, 'unit': 'EMU'}
                         },
                         'transform': {
-                            'scaleX': 1,
-                            'scaleY': 1,
-                            'translateX': 4000000,
-                            'translateY': 2000000,
+                            'scaleX': 1, 'scaleY': 1,
+                            'translateX': 3500000, 'translateY': 1500000,
                             'unit': 'EMU'
                         }
                     }
@@ -175,11 +189,9 @@ def main():
             })
 
     if slide_requests:
-        body = {'requests': slide_requests}
-        service.presentations().batchUpdate(presentationId=presentation_id, body=body).execute()
+        service.presentations().batchUpdate(presentationId=presentation_id, body={'requests': slide_requests}).execute()
 
-    print(f"Created presentation with ID: {presentation_id}")
+    print(f"Presentation created: https://docs.google.com/presentation/d/{presentation_id}")
 
 if __name__ == '__main__':
     main()
-

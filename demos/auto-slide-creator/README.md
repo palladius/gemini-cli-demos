@@ -1,21 +1,12 @@
 This demo showcases how `gemini-cli` is able to:
 
 * Create code to generate Google Slides
-* Create code
+* Help on JSON key setup.
 
 ## How to use this demo
 
 1. See some sample invocations in `DEMO_SCRIPT.md`
 2. See a potential output in `OUTPUT.md`.
-
-
-First invocation:
-
-![alt text](image.png)
-
-Wow moment:
-
-![alt text](image-1.png)
 
 ## REQUIREMENTS
 
