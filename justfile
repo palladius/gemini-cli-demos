@@ -14,3 +14,7 @@ test my_demo:
 
 commit-and-push:
     echo 'commit and push after checking quality gates' | gemini --yolo
+
+# run gemini CLI - todo use n pm after launch
+run:
+    npx https://github.com/google-gemini/gemini-cli
