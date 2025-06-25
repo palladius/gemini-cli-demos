@@ -1,0 +1,5 @@
+create_db:
+    ./generate_database.sh
+
+upload_sheets:
+    ./.venv/bin/python3 upload_to_sheets.py
