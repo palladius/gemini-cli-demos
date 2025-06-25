@@ -15,3 +15,6 @@ This demo showcases how `gemini-cli` is able to:
   * downlload JSON
   * copy here and rename to 'credentials.json'
 
+## Results
+
+![alt text](image.png)
