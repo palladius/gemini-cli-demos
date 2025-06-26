@@ -5,3 +5,4 @@ credentials.json.*
 .*.md
 .ondir.was.here.touch
 .git-privatize
+.env

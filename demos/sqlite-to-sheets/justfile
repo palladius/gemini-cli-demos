@@ -3,3 +3,6 @@ create_db:
 
 upload_sheets:
     ./.venv/bin/python3 upload_to_sheets.py
+
+update-csvs:
+    ./export_csvs.sh

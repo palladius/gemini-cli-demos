@@ -1,4 +1,3 @@
-
 import gspread
 import pandas as pd
 import os
@@ -20,11 +19,12 @@ EMAIL = "riccardo.carlesso@gmail.com"
 
 def get_credentials():
     """Get credentials using gcloud's user authentication."""
-    creds, _ = default()
+    creds, _ = default(scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"])
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
     return creds
+
 
 def parse_sql_schema(sql_file):
     """Parses the SQL file to extract table schemas."""
@@ -57,6 +57,8 @@ def main():
         print(f"Spreadsheet '{SPREADSHEET_NAME}' created.")
         spreadsheet.share(EMAIL, perm_type='user', role='writer')
         print(f"Spreadsheet shared with {EMAIL}")
+
+    print(f"Spreadsheet URL: {spreadsheet.url}")
 
     # --- Add Synopsis sheet ---
     try:
