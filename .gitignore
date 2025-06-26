@@ -4,3 +4,4 @@ credentials.json
 credentials.json.*
 .*.md
 .ondir.was.here.touch
+.git-privatize
