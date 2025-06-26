@@ -6,3 +6,6 @@ upload_sheets:
 
 update-csvs:
     ./export_csvs.sh
+
+init:
+    pip install -r requirements.txt

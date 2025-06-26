@@ -12,9 +12,11 @@ from google.oauth2.credentials import Credentials
 SPREADSHEET_NAME = "people_and_orders"
 CSV_DIR = "output"
 SQL_FILE = "create_database.sql"
-# --- Your email address ---
-# --- IMPORTANT: Please replace with your email address ---
-EMAIL = "riccardo.carlesso@gmail.com"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+EMAIL = os.getenv("EMAIL")
 
 
 def get_credentials():
@@ -49,14 +51,26 @@ def main():
     schema = parse_sql_schema(SQL_FILE)
 
     # --- Get or create the spreadsheet ---
-    try:
-        spreadsheet = gc.open(SPREADSHEET_NAME)
-        print(f"Spreadsheet '{SPREADSHEET_NAME}' found.")
-    except gspread.exceptions.SpreadsheetNotFound:
+    spreadsheet_id = os.getenv("SPREADSHEET_ID")
+    if spreadsheet_id:
+        try:
+            spreadsheet = gc.open_by_key(spreadsheet_id)
+            print(f"Spreadsheet with ID '{spreadsheet_id}' found.")
+        except gspread.exceptions.SpreadsheetNotFound:
+            print(f"Spreadsheet with ID '{spreadsheet_id}' not found. Creating a new one.")
+            spreadsheet = gc.create(SPREADSHEET_NAME)
+            print(f"Spreadsheet '{SPREADSHEET_NAME}' created.")
+            spreadsheet.share(EMAIL, perm_type='user', role='writer')
+            print(f"Spreadsheet shared with {EMAIL}")
+            with open(".env", "a") as f:
+                f.write(f"\nSPREADSHEET_ID={spreadsheet.id}\n")
+    else:
         spreadsheet = gc.create(SPREADSHEET_NAME)
         print(f"Spreadsheet '{SPREADSHEET_NAME}' created.")
         spreadsheet.share(EMAIL, perm_type='user', role='writer')
         print(f"Spreadsheet shared with {EMAIL}")
+        with open(".env", "a") as f:
+            f.write(f"\nSPREADSHEET_ID={spreadsheet.id}\n")
 
     print(f"Spreadsheet URL: {spreadsheet.url}")
 

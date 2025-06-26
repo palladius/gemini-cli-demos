@@ -7,6 +7,7 @@ INSERT INTO users VALUES(3,'Susan','sue@example.com');
 INSERT INTO users VALUES(4,'Richard','rich@example.com');
 INSERT INTO users VALUES(5,'Esther','esther@example.com');
 INSERT INTO users VALUES(6,'Francesco','checco@example.com');
+INSERT INTO users VALUES(7,'Riccardo','ricc@example.com');
 CREATE TABLE products (sku TEXT PRIMARY KEY, description TEXT, price REAL);
 INSERT INTO products VALUES('WDG001','Magic Widget',19.98999999999999843);
 INSERT INTO products VALUES('RIC042','HHTTG Book',41.99000000000000198);
