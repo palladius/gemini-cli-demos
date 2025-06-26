@@ -14,6 +14,7 @@ CREATE TABLE events (
 CREATE TABLE people (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
+  surname TEXT,
   email TEXT UNIQUE
 );
 
@@ -31,9 +32,9 @@ INSERT INTO events (id, name, location, date) VALUES
 (1, 'Tech Conference 2025', 'Virtual', '2025-10-15'),
 (2, 'Local Hackathon', 'City Library', '2025-11-01');
 
-INSERT INTO people (id, name, email) VALUES
-(1, 'Alice', 'alice@example.com'),
-(2, 'Bob', 'bob@example.com');
+INSERT INTO people (id, name, surname, email) VALUES
+(1, 'Alice', 'Smith', 'alice@example.com'),
+(2, 'Bob', 'Jones', 'bob@example.com');
 
 INSERT INTO subscriptions (person_id, event_id) VALUES
 (1, 1),
