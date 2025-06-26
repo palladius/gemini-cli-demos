@@ -2,7 +2,7 @@
 ## Sample conversation w/ Gemini CLI
 
 ```
-> hi can u see a sqlite file here?
+**> hi can u see a sqlite file here?**
 
 ✦ Yes, I see a file named sample.sqlite in the current directory.
 
