@@ -1,39 +1,31 @@
 assets:
-  - Title: "SRE Gone Wrong: Top 7 Errors (and How to Avoid Them)"
-    AssetType: "Talk"
-    Abstract: "Think SRE adoption is a smooth journey? Think again! In this eye-opening talk, Riccardo reveals the top 7 blunders companies make when implementing SRE, drawing from years of hands-on experience and the insights captured in the \"Enterprise Roadmap to SRE\" book. Discover the hilarious (and sometimes painful) mistakes that can derail your SRE journey, and learn how to sidestep them with practical, actionable strategies. Key takeaways: * SRE Essentials: Demystify SRE and understand its core principles. * The Top 7 Errors: Learn from the most frequent and impactful mistakes companies make when adopting SRE. * Unlock Success: Leave equipped with the knowledge and strategies to navigate the SRE adoption minefield and achieve true reliability and efficiency."
-    PublicationDate: null
-    EventDate: "2024-11-01"
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: null
-    Tags: ["sre", "gcp", "reliability"]
+  - Title: "SRE Gone Wrong: Top 7 Errors (and How to Avoid Them)"    AssetType: "Talk"    Abstract: "Think SRE adoption is a smooth journey? Think again! In this eye-opening talk, Riccardo reveals the top 7 blunders companies make when implementing SRE, drawing from years of hands-on experience and the insights captured in the \"Enterprise Roadmap to SRE\" book. Discover the hilarious (and sometimes painful) mistakes that can derail your SRE journey, and learn how to sidestep them with practical, actionable strategies. Key takeaways: * SRE Essentials: Demystify SRE and understand its core principles. * The Top 7 Errors: Learn from the most frequent and impactful mistakes companies make when adopting SRE. * Unlock Success: Leave equipped with the knowledge and strategies to navigate the SRE adoption minefield and achieve true reliability and efficiency."    PublicationDate: "2023-02-27"    EventDate: "2024-11-01"    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="]    AssetURL: "https://sessionize.com/riccardo-carlesso/"    VideoURL: "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="    Tags: ["sre", "gcp", "reliability"]
   - Title: "Pragmatic AppMod: take an old PHP project and make it 12-factor compliant on GCP"
     AssetType: "Talk"
     Abstract: "Do you have a pet project from 10-20 years ago, and you barely remember what it does? When deploying to production was simply overwriting some files over FTP? How about embarking on a journey to App Modernization to leverage GCP powerful tools to make it 12factor-compliant? Riccardo will walk you through a pragmatic trip through the modernization of an old app: * Moving to a git repo * 📦 Dockerize the app * Import DB to Cloud SQL * Extracting vars (and DB info) into a a .env and leverage Secret Manager to manage secrets. * Build/Release through Cloud Build [and Cloud Deploy] * Secure the DB removing public IP (via private service) * Deploy to Cloud Run 🏃 * Observe logs / create custom metrics Also introduce some common pitfalls and how to solve them."
-    PublicationDate: null
+    PublicationDate: "2024-11-01"
     EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
+    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=y_2_y_2_y_2"]
     AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: null
+    VideoURL: "https://www.youtube.com/watch?v=y_2_y_2_y_2"
     Tags: ["gcp", "app-modernization", "php", "docker", "cloud-run"]
   - Title: "Incident Management at Google"
     AssetType: "Talk"
     Abstract: "SRE practices extend to more than just observability. They also include: Capacity Planning, Change Management, being prepared for disasters. In this session Riccardo will walk us through \"IMAG\", or how Google does Incident Management."
-    PublicationDate: null
+    PublicationDate: "2023-02-27"
     EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
+    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="]
     AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: null
+    VideoURL: "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="
     Tags: ["sre", "incident-management", "google"]
   - Title: "Goodbye, deployment headaches: Cloud Deploy and Vertex AI unite"
     AssetType: "Talk"
     Abstract: "Continuous Deployment can be a roadblock in the MLOps lifecycle, often requiring custom pipelines and complex configurations. Solution? The new integrations of Cloud Deploy and Vertex AI revolutionizes machine learning (ML) deployment by automating the entire process, and makes it easy to roll back through idempotent releases. The groundbreaking integration of Cloud Deploy and Vertex AI lets you test, validate, and deploy your ML models in minutes, without writing a single line of code."
-    PublicationDate: null
+    PublicationDate: "2022-10-31"
     EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
+    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=y_y_y_y_y_y"]
     AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: null
+    VideoURL: "https://www.youtube.com/watch?v=y_y_y_y_y_y"
     Tags: ["mlops", "cloud-deploy", "vertex-ai", "gcp"]
   - Title: "Agents on a Plane: A Deep Dive into Building a Real-Time Travel Agent ✈️"
     AssetType: "Talk"
@@ -49,18 +41,18 @@ assets:
     Abstract: "How can we get an LLM to be updated to today's news? Gen AI is great at answering questions.. from the past. After the LLM was trained, all you can do is RAG. How about crawling the web for latest news with Gemini for multimodal extraction and offering summarization by your favorite topic? It all gets more exciting thanks to Andrei's langchainrb gem."
     PublicationDate: null
     EventDate: "2024-05-24"
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
+    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=2209070526"]
     AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: null
+    VideoURL: "https://www.youtube.com/watch?v=2209070526"
     Tags: ["genai", "langchain", "ruby", "gemini"]
   - Title: "GenAI: Kids Stories That Come to Life"
     AssetType: "Talk"
     Abstract: "Ever wondered if GenAI can create customised kids stories and also illustrate them? How about translating them to your favourite language, and read them loud for you in Spanish, Japanese, even German? All of this is possible through Google Cloud APIs. In this blast from the past, Riccardo unites latest Google GenAI technologies with a powerful framework (Ruby on Rails) to demonstrate"
-    PublicationDate: null
+    PublicationDate: "2023-09-20"
     EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
+    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=yG02_j_f-20"]
     AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: null
+    VideoURL: "https://www.youtube.com/watch?v=yG02_j_f-20"
     Tags: ["genai", "ruby-on-rails", "google-cloud-apis"]
   - Title: "Agenti in Volo: Un'Analisi Approfondita sulla Creazione di un Agente di Viaggio in Tempo Reale ✈️"
     AssetType: "Talk"

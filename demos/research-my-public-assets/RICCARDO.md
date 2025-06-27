@@ -1,9 +1,9 @@
 
-Riccardo Online presence:
+Riccardo Online presence (in this order):
 
-* https://sessionize.com/riccardo-carlesso/
-* https://www.rubyevents.org/speakers/riccardo-carlesso
 * https://github.com/palladius/my-sessions-and-bio
+* https://www.rubyevents.org/speakers/riccardo-carlesso
+* https://sessionize.com/riccardo-carlesso/
 * https://g.dev/ricc
 
 More links might be available at the beginning of https://github.com/palladius/my-sessions-and-bio (first few lines before Bio)

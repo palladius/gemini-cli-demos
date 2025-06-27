@@ -50,12 +50,39 @@ Events stanza: ("events: ..." followed by an array):
 
 While the YAML is going to be consumed by a program, this is for essential reading.
 
+**Events**
+
 1. Put a list of events/travels associated to the assets you've found. Take inspiration by https://github.com/palladius/my-sessions-and-bio . These should have an emoji witht he flag of the event country.
+2. they should all be linked to the best URL that signify that event in that day. Bonus points if it lists also the speakers for the day.
+
+**Talks**
 
 2. Put also a list of assets (talks, videos, demos..) in bullet points, this should be concise, title only and link to the URLS. Use emoji/emojis for the country/countries where I presented this. These assets should contain: event name and date where they were presented, and the TYPE (demo, talk, CfP ..). Some talks might just be CFPs and so not materialized yet.
 
 
+## output/assets/images/
+
+If you find a link to a resourcem like the image of a presentation that has been done, this is cheap and precious, so: DOWNLOAD IT! Let's download images rationally, this way:
+
+1. Path should be something like `output/assets/images/[events|talks|workshops|..]/image-name.{png,jpg,..}
+2. This path should also be used in the "image: " stanza under both the YAML and the `index.md`. This should allow us to call that image directly from the `index.md` and load that directly (by just removing the initial `output/`).
 
 ## Future
 
-Propose a PR to https://github.com/palladius/my-sessions-and-bio , or a change in local FS `~/git/my-sessions-and-bio/`.
+<IGNORE>
+== IGNORE THIS PART - its for future versions ==
+
+* Propose a PR to https://github.com/palladius/my-sessions-and-bio , or a change in local FS `~/git/my-sessions-and-bio/`.
+* make this properly multitennant, allowing multiple people RICCARDO.md, GUILLAUME.md, ... this requires that `output/` becomes `output/NAME_SURNAME/`.
+
+== STOP IGNORING HERE ==
+</IGNORE>
+
+## Bugs
+
+* If the WebFetch times out, consider using something as simple as a `curl URL`. Even better,
+  consider curling websites under `.cache` with a smart naming which starts with the timestamp of the curl so we can clean or refresh old data. Maybe by creating a `.cache/YYYYMMDD/` :)
+
+## Feedback Loop
+
+* If a date or a location are unknown, please make an effort to fetch the right URL and find that! this is your PRIMARY job, you have time to go around the internet and find stuff. So please find. If AFTER looking well you still can't find a date, and only AFTER searching in the proper event/talk websites, then you can ask user to tip you date or location.
