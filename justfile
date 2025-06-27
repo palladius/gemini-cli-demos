@@ -22,3 +22,7 @@ run:
 # CICD example
 update-readme:
     gemini -a -p "Update README with [possibly new] articles under demos/"
+
+# checks that yaml works.
+test-yaml-ok:
+     cat output/data.yaml  | yq

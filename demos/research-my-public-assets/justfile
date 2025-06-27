@@ -1,6 +1,10 @@
 
 
 
+# this list.
+list:
+    just -l
+
 # TODO try in headless mode.
 async-research:
     gemini -p 'Search for new assets from Riccardo Carlesso'
