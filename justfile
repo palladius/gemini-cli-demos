@@ -18,3 +18,7 @@ commit-and-push:
 # run gemini CLI - todo use n pm after launch
 run:
     npx https://github.com/google-gemini/gemini-cli
+
+# CICD example
+update-readme:
+    gemini -a -p "Update README with [possibly new] articles under demos/"

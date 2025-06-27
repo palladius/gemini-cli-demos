@@ -15,9 +15,25 @@ Available demos:
 To install: `npx @gemini/gemini-cli`.
 More info: https://github.com/google-gemini/gemini-cli
 
+## CI/CD
+
+We moved to LLM-Ops Gemini-based ci/cd, see for instance: `just update-readme`
+
+```bash
+$ gemini -a -p "Update README with [possibly new] articles under demos/"
+I will update the main `README.md` to include the demos I found in the `demos/` directory. First, I'll list the contents of the `demos/` directory to identify all the demos. Then, for each demo, I will read its `STATUS.md` file to gather the necessary information to update the main `README.md`.
+```
+
 ## CONTRIBUTING
 
 Please do contribute to this repo. Add a new folder and make sure it's complete with:
 - purpose
 - repeatable code
 - tests.
+
+Every folder should have:
+
+1. A `GEMINI.md` which shows users (and Gemini!) the purpose of what you're trying to build.
+2. A `SCRIPT.md` , this is a README you're going to read if recording a video, basically.
+3. A `README.md` which teases users on what this is about. This is linked from main README, so make it nice, engaging,
+   short and full of images/screenshots which show the art of possible.
