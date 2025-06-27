@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.7
+
+- Marked `sqlite-investigation` and `auto-slide-creator` demos as complete in their `STATUS.md` files and updated `README.md` accordingly.
+
+## 0.0.6
+
+- Removed monospace formatting from lines 9, 10, and 11 in `README.md`.
+
 ## 0.0.5
 
 - Removed monospace formatting from all "Demo Folder" entries in `README.md`.

@@ -69,6 +69,6 @@ Finally ensure All demos are captured in the MAIN `README.md` (under git root), 
 Each line shall have this format:
 1. "Status" (emoji representing: done, WIP, not started yet)
 1. "Author" (first name is enough, lets keep it short)
-1. "Demo Folder" demo folder name (link). Add a trailing slash to the demo name so people understand its a folder.
+1. "Demo Folder" demo folder name (link). Add a trailing slash to the demo name so people understand its a folder. Add a folder emoji before the folder in each line ;)
 1. "category" - 1-2 workds on the topic (git, Database, ..)
 1. "description" a short description of what the demo is about, what it demonstrates, .. should be <200 chars.
