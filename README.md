@@ -8,7 +8,11 @@ Available demos:
 |---|---|---|---|
 | 🚧 | [auto-slide-creator](./demos/auto-slide-creator) | Google Workspace | This demo showcases how `gemini-cli` is able to create Google Slides. Missing features: image generation, proper formatting for backticks and bullet points. |
 | 🚧 | [git-investigation](./demos/git-investigation) | Git | This demo will showcase git investigation capabilities. |
+| 🚧 | [auto-slide-creator](./demos/auto-slide-creator) | Google Workspace | This demo showcases how `gemini-cli` is able to create Google Slides. Missing features: image generation, proper formatting for backticks and bullet points. |
+| 🚧 | [git-investigation](./demos/git-investigation) | Git | This demo will showcase git investigation capabilities. |
+| 🚧 | [research-my-public-assets](./demos/research-my-public-assets) | Research | This demo collects all assets created by Riccardo Carlesso, focusing on Google Cloud or Google topics. |
 | ✅ | [sqlite-investigation](./demos/sqlite-investigation) | Database | This demo showcases how `gemini-cli` is able to read/write/understand a sqlite3 database and generate an E/R schema from it. |
+| 🚧 | [sqlite-to-sheets](./demos/sqlite-to-sheets) | Google Sheets | This demo shows how to extract data from a SQLite database, convert it to CSV files, and then upload these CSVs to Google Sheets. |
 
 ## INSTALL
 
