@@ -1,138 +1,224 @@
 assets:
-  - Title: "SRE Gone Wrong: Top 7 Errors (and How to Avoid Them)"    AssetType: "Talk"    Abstract: "Think SRE adoption is a smooth journey? Think again! In this eye-opening talk, Riccardo reveals the top 7 blunders companies make when implementing SRE, drawing from years of hands-on experience and the insights captured in the \"Enterprise Roadmap to SRE\" book. Discover the hilarious (and sometimes painful) mistakes that can derail your SRE journey, and learn how to sidestep them with practical, actionable strategies. Key takeaways: * SRE Essentials: Demystify SRE and understand its core principles. * The Top 7 Errors: Learn from the most frequent and impactful mistakes companies make when adopting SRE. * Unlock Success: Leave equipped with the knowledge and strategies to navigate the SRE adoption minefield and achieve true reliability and efficiency."    PublicationDate: "2023-02-27"    EventDate: "2024-11-01"    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="]    AssetURL: "https://sessionize.com/riccardo-carlesso/"    VideoURL: "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="    Tags: ["sre", "gcp", "reliability"]
+  - Title: "News Crawler via Langchain.rb and Gemini APIs"
+    AssetType: "Talk"
+    Abstract: "Riccardo Carlesso, Developer Advocate at Google Cloud, discusses a project involving a news crawler built with Langchain.rb and Gemini APIs."
+    Publication Date: "2024-08-01"
+    Event Date: "2024-08-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG46yXYMPD8xXXn_n704fLrsaaPzQWHjMYbXb60-43iMEMuJg5BNXUsQpu93GZfbkJx269fTvozElpZc0iAuGw1UOlLEcd1JCgycChXDwL58OIXZ_BrBv7KkXIdIxABP-dANeBYsYfzaxs16Kfu33JHEfN3yj7n2yjZDeg6cXFKo61xw40o9w9hdBFGit5gxpHbrh0EKMc="
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG46yXYMPD8xXXn_n704fLrsaaPzQWHjMYbXb60-43iMEMuJg5BNXUsQpu93GZfbkJx269fTvozElpZc0iAuGw1UOlLEcd1JCgycChXDwL58OIXZ_BrBv7KkXIdIxABP-dANeBYsYfzaxs16Kfu33JHEfN3yj7n2yjZDeg6cXFKo61xw40o9w9hdBFGit5gxpHbrh0EKMc="
+    VideoURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK"
+    Tags: ["gcp", "genai", "langchain", "ruby", "gemini_api"]
+  - Title: "How Google Uses its Conversational Interfaces: Call Companion UI Demo"
+    AssetType: "Talk"
+    Abstract: "This talk focuses on reimagining customer service through multi-modal interaction and Generative AI, showcasing Google's Call Companion UI."
+    Publication Date: "2023-12-04"
+    Event Date: "2023-12-04"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuCuwxF_8leHtZalu_Z2vbHgB0uxz3tlwKLcpD95xUaQ-q7rfQ5ahDkGq1M1uUWLLzgY6YOv9BZdMRpDmc5Oy_rT-kiSR2ukA_eZ_KtDnhpXjRtEXrlu34hDHdLAwgzUthaJRjojA="
+    AssetURL: null
+    VideoURL: "https://vertexaisearch.cloud.google.google.com/grounding-api-redirect/AUZIYQEuCuwxF_8leHtZalu_Z2vbHgB0uxz3tlwKLcpD95xUaQ-q7rfQ5ahDkGq1M1uUWLLzgY6YOv9BZdMRpDmc5Oy_rT-kiSR2ukA_eZ_KtDnhpXjRtEXrlu34hDHdLAwgzUthaJRjojA="
+    Tags: ["gcp", "genai", "customer_service", "multimodal_ai"]
+  - Title: "SRE Gone Wrong: Top 7 Errors (and How to Avoid Them)"
+    AssetType: "Talk"
+    Abstract: "An eye-opening talk revealing the top 7 blunders companies make when implementing Site Reliability Engineering (SRE), drawing from the 'Enterprise Roadmap to SRE' book."
+    Publication Date: "2023-02-27"
+    Event Date: "2023-11-07"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGkw0l8TObkxA6IOnWenzC08DAweBwbuwyDw0EdxXUyc96ITuAXnJHAECZLo-YknBAkaDPa_6_Et6gxnNDDD2YFUF2DCthmkvmdzQmZGgrGwEMZ6TxdWqnoPWA8PrlJYRXn1GzOik="
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
+    VideoURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGkw0l8TObkxA6IOnWenzC08DAweBwbuwyDw0EdxXUyc96ITuAXnJHAECZLo-YknBAkaDPa_6_Et6gxnNDDD2YFUF2DCthmkvmdzQmZGgrGwEMZ6TxdWqnoPWA8PrlJYRXn1GzOik="
+    Tags: ["sre", "devops", "gcp", "reliability"]
   - Title: "Pragmatic AppMod: take an old PHP project and make it 12-factor compliant on GCP"
     AssetType: "Talk"
-    Abstract: "Do you have a pet project from 10-20 years ago, and you barely remember what it does? When deploying to production was simply overwriting some files over FTP? How about embarking on a journey to App Modernization to leverage GCP powerful tools to make it 12factor-compliant? Riccardo will walk you through a pragmatic trip through the modernization of an old app: * Moving to a git repo * 📦 Dockerize the app * Import DB to Cloud SQL * Extracting vars (and DB info) into a a .env and leverage Secret Manager to manage secrets. * Build/Release through Cloud Build [and Cloud Deploy] * Secure the DB removing public IP (via private service) * Deploy to Cloud Run 🏃 * Observe logs / create custom metrics Also introduce some common pitfalls and how to solve them."
-    PublicationDate: "2024-11-01"
-    EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=y_2_y_2_y_2"]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: "https://www.youtube.com/watch?v=y_2_y_2_y_2"
-    Tags: ["gcp", "app-modernization", "php", "docker", "cloud-run"]
-  - Title: "Incident Management at Google"
-    AssetType: "Talk"
-    Abstract: "SRE practices extend to more than just observability. They also include: Capacity Planning, Change Management, being prepared for disasters. In this session Riccardo will walk us through \"IMAG\", or how Google does Incident Management."
-    PublicationDate: "2023-02-27"
-    EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: "https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ=="
-    Tags: ["sre", "incident-management", "google"]
-  - Title: "Goodbye, deployment headaches: Cloud Deploy and Vertex AI unite"
-    AssetType: "Talk"
-    Abstract: "Continuous Deployment can be a roadblock in the MLOps lifecycle, often requiring custom pipelines and complex configurations. Solution? The new integrations of Cloud Deploy and Vertex AI revolutionizes machine learning (ML) deployment by automating the entire process, and makes it easy to roll back through idempotent releases. The groundbreaking integration of Cloud Deploy and Vertex AI lets you test, validate, and deploy your ML models in minutes, without writing a single line of code."
-    PublicationDate: "2022-10-31"
-    EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=y_y_y_y_y_y"]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: "https://www.youtube.com/watch?v=y_y_y_y_y_y"
-    Tags: ["mlops", "cloud-deploy", "vertex-ai", "gcp"]
-  - Title: "Agents on a Plane: A Deep Dive into Building a Real-Time Travel Agent ✈️"
-    AssetType: "Talk"
-    Abstract: "In 2025, an LLM agent needs to do more than just talk. It needs to do. This presentation is a hands-on look at building a truly useful AI travel agent with a multi-agent framework. Forget abstract concepts; we're diving straight into the code of a live demo that queries real APIs for flights, hotels 🏨, and AirB&Bs. We will cover how to structure a multi-agent system to handle complex, real-world tasks: validating budgets, managing user preferences, and visualizing results. You will learn how to implement an advanced, modular system that can be deployed on any cloud with any LLM. This is a technical L200-L300 session designed for developers who want to see how to coordinate agents and tools to create a seamless, end-to-end user experience. [Talk+Demo]"
-    PublicationDate: null
-    EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
+    Abstract: "A pragmatic journey through the modernization of an old application to leverage Google Cloud Platform's powerful tools and make it 12-factor compliant."
+    Publication Date: "2023-01-01"
+    Event Date: "2023-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
     VideoURL: null
-    Tags: ["genai", "llm", "agents", "travel"]
-  - Title: "News Crawler via Langchain.RB and Gemini APIs"
+    Tags: ["gcp", "app_modernization", "php", "12_factor_app"]
+  - Title: "Incident Management at Google (IMAG)"
     AssetType: "Talk"
-    Abstract: "How can we get an LLM to be updated to today's news? Gen AI is great at answering questions.. from the past. After the LLM was trained, all you can do is RAG. How about crawling the web for latest news with Gemini for multimodal extraction and offering summarization by your favorite topic? It all gets more exciting thanks to Andrei's langchainrb gem."
-    PublicationDate: null
-    EventDate: "2024-05-24"
-    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=2209070526"]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: "https://www.youtube.com/watch?v=2209070526"
-    Tags: ["genai", "langchain", "ruby", "gemini"]
-  - Title: "GenAI: Kids Stories That Come to Life"
-    AssetType: "Talk"
-    Abstract: "Ever wondered if GenAI can create customised kids stories and also illustrate them? How about translating them to your favourite language, and read them loud for you in Spanish, Japanese, even German? All of this is possible through Google Cloud APIs. In this blast from the past, Riccardo unites latest Google GenAI technologies with a powerful framework (Ruby on Rails) to demonstrate"
-    PublicationDate: "2023-09-20"
-    EventDate: null
-    URLs: ["https://sessionize.com/riccardo-carlesso/", "https://www.youtube.com/watch?v=yG02_j_f-20"]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
-    VideoURL: "https://www.youtube.com/watch?v=yG02_j_f-20"
-    Tags: ["genai", "ruby-on-rails", "google-cloud-apis"]
-  - Title: "Agenti in Volo: Un'Analisi Approfondita sulla Creazione di un Agente di Viaggio in Tempo Reale ✈️"
-    AssetType: "Talk"
-    Abstract: "Nel 2025, un agente basato su LLM deve fare più che parlare. Deve agire. Questa presentazione è uno sguardo pratico alla costruzione di un agente di viaggio IA realmente utile, utilizzando un framework multi-agente. Dimentica i concetti astratti: ci tufferemo direttamente nel codice di una demo live che interroga API reali per voli, hotel 🏨 e AirB&B. Vedremo come strutturare un sistema multi-agente per gestire compiti complessi e reali: validare budget, gestire le preferenze dell'utente e visualizzare i risultati. Imparerai come implementare un sistema avanzato e modulare che può essere distribuito su qualsiasi cloud e con qualsiasi LLM. Questa è una sessione tecnica di livello L200-L300, pensata per sviluppatori che vogliono scoprire come coordinare agenti e strumenti per creare un'esperienza utente fluida e completa."
-    PublicationDate: null
-    EventDate: "2024-10-01"
-    URLs: ["https://sessionize.com/riccardo-carlesso/"]
-    AssetURL: "https://sessionize.com/riccardo-carlesso/"
+    Abstract: "This session walks through 'IMAG', explaining how Google handles Incident Management and extends SRE practices beyond observability."
+    Publication Date: "2023-01-01"
+    Event Date: "2023-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
     VideoURL: null
-    Tags: ["genai", "llm", "agents", "travel", "italian"]
-  - Title: "RAILS8 RESPONSIVE CHAT DONE WITH RUBYLLM"
-    AssetType: "Talk"
-    Abstract: "A talk about creating a responsive chat application using Rails 8 and RubyLLM."
-    PublicationDate: null
-    EventDate: "2025-06-01"
-    URLs: ["https://www.rubyevents.org/speakers/riccardo-carlesso"]
-    AssetURL: "https://www.rubyevents.org/speakers/riccardo-carlesso"
+    Tags: ["sre", "incident_management", "google"]
+  - Title: "Agents on a Plane: A Deep Dive into Building a Real-Time Travel Agent"
+    AssetType: "Presentation"
+    Abstract: "A hands-on look at building a truly useful AI travel agent with a multi-agent framework, demonstrating how to query real APIs for flights, hotels, and AirBnBs."
+    Publication Date: "2025-01-01"
+    Event Date: "2025-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b"
     VideoURL: null
-    Tags: ["ruby-on-rails", "rubyllm", "chat", "ai"]
-  - Title: "WORKSHOP: BRING YOUR RUBY APP IN THE CLOUD"
+    Tags: ["ai", "llm", "multi_agent_systems", "travel"]
+  - Title: "Introduction to SRE & Deploying Landing Zone via Fabric FAST"
+    AssetType: "Talk"
+    Abstract: "This session delves into the fundamentals of Site Reliability Engineering (SRE), comparing it to DevOps, and explores the practical implementation of Fabric FAST for deploying a Landing Zone on GCP."
+    Publication Date: "2024-09-25"
+    Event Date: "2024-09-17"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHC_JZQYMtc0FH2zghePNpUNvN_gZ7lsCA4cHj334HT4dOb9_eEoJUIQDSvQaJFlqERY620AMGCFg_9zfDGI3zXF2K7ijNlZWp-DipjEu2IDyVgnf0QMw_zr3cS7Ce-OWtDxjuwuG0="
+    AssetURL: null
+    VideoURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHC_JZQYMtc0FH2zghePNpUNvN_gZ7lsCA4cHj334HT4dOb9_eEoJUIQDSvQaJFlqERY620AMGCFg_9zfDGI3zXF2K7ijNlZWp-DipjEu2IDyVgnf0QMw_zr3cS7Ce-OWtDxjuwuG0="
+    Tags: ["sre", "devops", "gcp", "landing_zone", "fabric_fast"]
+  - Title: "Level Up Your Rails Game with Cloud Run: A Qwiklabs Deep Dive"
+    AssetType: "Article"
+    Abstract: "A video walkthrough and article demonstrating how to execute Ruby on Rails with PostgreSQL on Cloud Run using Cloud Skills Boost (formerly Qwiklabs), including personal toolchain insights."
+    Publication Date: "2024-08-15"
+    Event Date: "2024-08-15"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwRLrMp67AxLgkxgJblqCC2nBtHwN4sCNpt0V8w3zryYBlyFydvw90vv_YPg6VIcXiIprK4iekIerU14IXeSOCmrcYtxhqF5G3O_kPcVNAuI2KOzXMIQYw2tB2uFxyhf-ta_76Mlyuh-dxB8P0lA1LtM3ZtImM3tPqS4SqqxZTYdhpfyXCFWRUz_yE4ko5x2wtifBqMh0="
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwRLrMp67AxLgkxgJblqCC2nBtHwN4sCNpt0V8w3zryYBlyFydvw90vv_YPg6VIcXiIprK4iekIerU14IXC_SOCmrcYtxhqF5G3O_kPcVNAuI2KOzXMIQYw2tB2uFxyhf-ta_76Mlyuh-dxB8P0lA1LtM3ZtImM3tPqS4SqqxZTYdhpfyXCFWRUz_yE4ko5x2wtifBqMh0="
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwRLrMp67AxLgkxgJblqCC2nBtHwN4sCNpt0V8w3zryYBlyFydvw90vv_YPg6VIcXiIprK4iekIerU14IXeSOCmrcYtxhqF5G3O_kPcVNAuI2KOzXMIQYw2tB2uFxyhf-ta_76Mlyuh-dxB8P0lA1LtM3ZtImM3tPqS4SqqxZTYdhpfyXCFWRUz_yE4ko5x2wtifBqMh0="
+    VideoURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwRLrMp67AxLgkxgJblqCC2nBtHwN4sCNpt0V8w3zryYBlyFydvw90vv_YPg6VIcXiIprK4iekIerU14IXC_SOCmrcYtxhqF5G3O_kPcVNAuI2KOzXMIQYw2tB2uFxyhf-ta_76Mlyuh-dxB8P0lA1LtM3ZtImM3tPqS4SqqxZTYdhpfyXCFWRUz_yE4ko5x2wtifBqMh0="
+    Tags: ["gcp", "cloud_run", "ruby_on_rails", "qwiklabs", "cloud_skills_boost"]
+  - Title: "Canary Deployment on GCP using Cloud Build, Cloud Deploy and Skaffold"
+    AssetType: "Video"
+    Abstract: "A demonstration of implementing canary deployments on Google Cloud Platform using Cloud Build, Cloud Deploy, and Skaffold, including code examples and architecture."
+    Publication Date: "2022-10-31"
+    Event Date: "2022-10-31"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXNtBrqRmfq4dlglxnUyeFe20JwG_fTXjLzj_shNiyg0jDQY7JD5ffAVb-FcfJzOMEU5zVJrOgGHz498JyVm4oGerWyQti_cX6k0FFYw3T1Ec3XXr67ohd8OVnTdbyhb5mRpH344c="
+      - "https://github.com/pal..."
+    AssetURL: "https://github.com/pal..."
+    VideoURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXNtBrqRmfq4dlglxnUyeFe20JwG_fTXjLzj_shNiyg0jDQY7JD5ffAVb-FcfJzOMEU5zVJrOgGHz498JyVm4oGerWyQti_cX6k0FFYw3T1Ec3XXr67ohd8OVnTdbyhb5mRpH344c="
+    Tags: ["gcp", "canary_deployment", "cloud_build", "cloud_deploy", "skaffold", "devops"]
+  - Title: "Breathing new life into a legacy application"
     AssetType: "Workshop"
-    Abstract: "A workshop on deploying Ruby applications to the cloud."
-    PublicationDate: null
-    EventDate: "2024-01-01"
-    URLs: ["https://www.rubyevents.org/speakers/riccardo-carlesso"]
-    AssetURL: "https://www.rubyevents.org/speakers/riccardo-carlesso"
+    Abstract: "This workshop focuses on reviving old applications, exploring security and networking features of Google Kubernetes Engine to transform vulnerable landscapes into robust systems."
+    Publication Date: "2024-01-01"
+    Event Date: "2024-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUN0JhtRJx5ztprtn-kKVsp7hWe5y6OGG5EfPsvuRtengff59izxVoCym5uTYHSkh9vMSYAjczRKCVyXMD6IreUpsR9bhVQf0pXoTJOIGv2MOxdNhq5OKHtYLbFPhsl0gqXmdDowJVb4LtlqTFHpuiREoCW-x12BF9p1RBn1zRYHw="
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUN0JhtRJx5ztprtn-kKVsp7hWe5y6OGG5EfPsvuRtengff59izxVoCym5uTYHSkh9vMSYAjczRKCVyXMD6IreUpsR9bhVQf0pXoTJOIGv2MOxdNhq5OKHtYLbFPhsl0gqXmdDowJVb4LtlqTFHpuiREoCW-x12BF9p1RBn1zRYHw="
     VideoURL: null
-    Tags: ["ruby", "cloud", "deployment"]
-  - Title: "NEWS CRAWLER VIA LANGCHAIN.RB AND GEMINI APIS"
-    AssetType: "Talk"
-    Abstract: "A talk on building a news crawler using LangChain.rb and Gemini APIs."
-    PublicationDate: null
-    EventDate: "2024-08-01"
-    URLs: ["https://www.rubyevents.org/speakers/riccardo-carlesso"]
-    AssetURL: "https://www.rubyevents.org/speakers/riccardo-carlesso"
+    Tags: ["gcp", "kubernetes", "legacy_modernization", "security"]
+  - Title: "Gemini 2.0's spatial understanding capabilities within Google Cloud's Vertex AI platform"
+    AssetType: "Presentation"
+    Abstract: "This presentation dives into how developers can leverage Gemini 2.0's spatial understanding capabilities within Google Cloud's Vertex AI platform, with practical applications and integration examples."
+    Publication Date: "2024-01-01"
+    Event Date: "2024-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUN0JhtRJx5ztprtn-kKVsp7hWe5y6OGG5EfPsvuRtengff59izxVoCym5uTYHSkh9vMSYAjczRKCVyXMD6IreUpsR9bhVQf0pXoTJOIGv2MOxdNhq5OKHtYLbFPhsl0gqXmdDowJVb4LtlqTFHpuiREoCW-x12BF9p1RBn1zRYHw="
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUN0JhtRJx5ztprtn-kKVsp7hWe5y6OGG5EfPsvuRtengff59izxVoCym5uTYHSkh9vMSYAjczRKCVyXMD6IreUpsR9bhVQf0pXoTJOIGv2MOxdNhq5OKHtYLbFPhsl0gqXmdDowJVb4LtlqTFHpuiREoCW-x12BF9p1RBn1zRYHw="
     VideoURL: null
-    Tags: ["langchain", "gemini-api", "ruby", "ai"]
-  - Title: "NEWS CRAWLER VIA LANGCHAIN.RB AND GEMINI APIS"
+    Tags: ["gcp", "gemini", "vertex_ai", "spatial_ai", "ai"]
+  - Title: "Vibe coding my first Chrome Extension with gemini-cli!"
+    AssetType: "Article"
+    Abstract: "An article detailing the experience of coding a Chrome Extension using the `gemini-cli` tool."
+    Publication Date: "2025-06-25"
+    Event Date: "2025-06-25"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    VideoURL: null
+    Tags: ["gemini", "chrome_extension", "coding", "cli"]
+  - Title: "How I coded 5 kid games with Gemini on a Saturday afternoon."
+    AssetType: "Article"
+    Abstract: "An article describing the process and experience of coding five children's games using the Gemini AI model in a single afternoon."
+    Publication Date: "2025-03-25"
+    Event Date: "2025-03-25"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    VideoURL: null
+    Tags: ["gemini", "ai", "game_development", "personal_project"]
+  - Title: "Migrate GCP projects across organizations, with gcloud."
+    AssetType: "Article"
+    Abstract: "A guide on how to migrate Google Cloud Platform projects between different organizations using the `gcloud` command-line tool."
+    Publication Date: "2024-01-01"
+    Event Date: "2024-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    VideoURL: null
+    Tags: ["gcp", "gcloud", "project_migration", "cloud_management"]
+  - Title: "Ruby on Rails-like ORM and scaffolding in Golang anyone?"
+    AssetType: "Article"
+    Abstract: "An article discussing the possibility and concepts of implementing Ruby on Rails-like ORM and scaffolding patterns within the Go programming language."
+    Publication Date: "2024-01-01"
+    Event Date: "2024-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh"
+    VideoURL: null
+    Tags: ["golang", "ruby_on_rails", "orm", "scaffolding", "programming"]
+  - Title: "Workshop: Bring your Ruby app in the Cloud."
+    AssetType: "Workshop"
+    Abstract: "A workshop focused on migrating and deploying Ruby applications to the cloud."
+    Publication Date: "2024-01-01"
+    Event Date: "2024-01-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK"
+    VideoURL: null
+    Tags: ["ruby", "cloud_migration", "gcp"]
+  - Title: "Rails8 responsive chat done with RubyLLM."
     AssetType: "Talk"
-    Abstract: "A talk on building a news crawler using LangChain.rb and Gemini APIs. Video available."
-    PublicationDate: null
-    EventDate: "2024-05-24"
-    URLs: ["https://www.rubyevents.org/speakers/riccardo-carlesso"]
-    AssetURL: "https://www.rubyevents.org/speakers/riccardo-carlesso"
-    VideoURL: "https://www.rubyevents.org/videos/news-crawler-via-langchain-rb-and-gemini-apis-riccardo-carlesso-rubyday-2024"
-    Tags: ["langchain", "gemini-api", "ruby", "ai"]
+    Abstract: "A talk demonstrating a Rails 8 responsive chat application built using RubyLLM."
+    Publication Date: "2025-06-01"
+    Event Date: "2025-06-01"
+    URLs:
+      - "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK"
+    AssetURL: "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK"
+    VideoURL: null
+    Tags: ["ruby_on_rails", "llm", "chat_application"]
 events:
-  - event_title: "Devfest Pescara 2024"
-    event_series: "Devfest"
-    event_counter: "2024"
-    event_date: "2024-11-01"
-    event_place: "Pescara, Italy"
-    event_description: null
-  - event_title: "DevFest Modena 2024"
-    event_series: "DevFest"
-    event_counter: "2024"
-    event_date: "2024-10-01"
-    event_place: "Modena, Italy"
-    event_description: null
-  - event_title: "rubyday 2024"
-    event_series: "rubyday"
-    event_counter: "2024"
-    event_date: "2024-05-24"
-    event_place: "Verona, Italy"
-    event_description: null
-  - event_title: "Railshöck June 2025"
-    event_series: "Railshöck"
-    event_counter: "June 2025"
-    event_date: "2025-06-01"
-    event_place: "Unknown"
-    event_description: "A conference or meetup for Ruby on Rails enthusiasts."
-  - event_title: "EuRuKo 2024"
-    event_series: "EuRuKo"
-    event_counter: "2024"
-    event_date: "2024-01-01"
-    event_place: "Unknown"
-    event_description: "European Ruby Conference."
   - event_title: "Railshöck August 2024"
     event_series: "Railshöck"
     event_counter: "August 2024"
     event_date: "2024-08-01"
-    event_place: "Unknown"
-    event_description: "A conference or meetup for Ruby on Rails enthusiasts."
+    event_place: "Zurich, Switzerland"
+    event_description: "A Railshöck meetup in August 2024 featuring a talk on News Crawler via Langchain.rb and Gemini APIs."
+  - event_title: "Ruby Day 2024"
+    event_series: "Ruby Day"
+    event_counter: "2024"
+    event_date: "2024-10-01"
+    event_place: "Verona, Italy"
+    event_description: "Annual Ruby conference featuring a talk on News Crawler via Langchain.rb and Gemini APIs."
+  - event_title: "DEVOPSDAYS WARSAW 2023"
+    event_series: "DevOpsDays"
+    event_counter: "Warsaw 2023"
+    event_date: "2023-11-07"
+    event_place: "EXPO XXI, Warszawa, Poland"
+    event_description: "A DevOpsDays conference in Warsaw, Poland, where Riccardo Carlesso presented 'How to fail your SRE adoption (for Enterprises)'."
+  - event_title: "GDG Cloud Budapest Meetup"
+    event_series: "GDG Cloud Budapest"
+    event_counter: "2023-01-26"
+    event_date: "2023-01-26"
+    event_place: "Budapest, Hungary"
+    event_description: "A Google Developer Group Cloud meetup in Budapest, featuring Riccardo Carlesso's talk on SRE adoption."
+  - event_title: "GDG Cloud Budapest Meetup"
+    event_series: "GDG Cloud Budapest"
+    event_counter: "2024-09-17"
+    event_date: "2024-09-17"
+    event_place: "Budapest, Hungary"
+    event_description: "A Google Developer Group Cloud meetup in Budapest, featuring Riccardo Carlesso's talk on Introduction to SRE & Deploying Landing Zone via Fabric FAST."
+  - event_title: "Google /dev/cloud day Istanbul"
+    event_series: "Google /dev/cloud day"
+    event_counter: "Istanbul"
+    event_date: "2024-01-01"
+    event_place: "Istanbul, Turkey"
+    event_description: "A Google Cloud developer event in Istanbul, featuring workshops and presentations by Riccardo Carlesso on legacy application modernization and Gemini 2.0 spatial understanding."
+  - event_title: "GDG Cloud Zürich Meetup #1 (November)"
+    event_series: "GDG Cloud Zürich"
+    event_counter: "November"
+    event_date: "2022-11-01"
+    event_place: "Zurich, Switzerland"
+    event_description: "A Google Developer Group Cloud meetup in Zurich, where Riccardo Carlesso presented on Canary deployment."
+  - event_title: "Railshöck June 2025"
+    event_series: "Railshöck"
+    event_counter: "June 2025"
+    event_date: "2025-06-01"
+    event_place: "Zurich, Switzerland"
+    event_description: "A Railshöck meetup in June 2025 featuring a talk on Rails8 responsive chat done with RubyLLM."

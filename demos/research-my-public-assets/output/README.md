@@ -1,25 +1,32 @@
-# Events
+# Riccardo Carlesso - Public Assets
 
-Here is a list of events where Riccardo Carlesso has presented:
+## Events
 
-*   🇮🇹 **Devfest Pescara 2024** (November 2024, Pescara, Italy)
-*   🇮🇹 **DevFest Modena 2024** (October 2024, Modena, Italy)
-*   🇮🇹 **rubyday 2024** (May 2024, Verona, Italy)
-*   **Railshöck June 2025** (June 2025, Unknown)
-*   **EuRuKo 2024** (January 2024, Unknown)
-*   **Railshöck August 2024** (August 2024, Unknown)
+* 🇵🇱 2023-11-07 - [DEVOPSDAYS WARSAW 2023](https://devopsdays.pl/bio/#kontakt) (EXPO XXI, Warszawa, Poland)
+* 🇭🇺 2024-09-17 - [GDG Cloud Budapest Meetup](https://gdg.community.dev/events/details/google-gdg-budapest-presents-how-to-fail-your-sre-adoption/) (Budapest, Hungary)
+* 🇭🇺 2023-01-26 - [GDG Cloud Budapest Meetup](https://gdg.community.dev/events/details/google-gdg-budapest-presents-how-to-fail-your-sre-adoption/) (Budapest, Hungary)
+* 🇹🇷 2024-01-01 - [Google /dev/cloud day Istanbul](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUN0JhtRJx5ztprtn-kKVsp7hWe5y6OGG5EfPsvuRtengff59izxVoCym5uTYHSkh9vMSYAjczRKCVyXMD6IreUpsR9bhVQf0pXoTJOIGv2MOxdNhq5OKHtYLbFPhsl0gqXmdDowJVb4LtlqTFHpuiREoCW-x12BF9p1RBn1zRYHw=) (Istanbul, Turkey)
+* 🇨🇭 2022-11-01 - [GDG Cloud Zürich Meetup #1 (November)](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXNtBrqRmfq4dlglxnUyeFe20JwG_fTXjLzj_shNiyg0jDQY7JD5ffAVb-FcfJzOMEU5zVJrOgGHz498JyVm4oGerWyQti_cX6k0FFYw3T1Ec3XXr67ohd8OVnTdbyhb5mRpH344c=) (Zurich, Switzerland)
+* 🇨🇭 2025-06-01 - [Railshöck June 2025](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK) (Zurich, Switzerland)
+* 🇨🇭 2024-08-01 - [Railshöck August 2024](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG46yXYMPD8xXXn_n704fLrsaaPzQWHjMYbXb60-43iMEMuJg5BNXUsQpu93GZfbkJx269fTvozElpZc0iAuGw1UOlLEcd1JCgycChXDwL58OIXZ_BrBv7KkXIdIxABP-dANeBYsYfzaxs16Kfu33JHEfN3yj7n2yjZDeg6cXFKo61xw40o9w9hdBFGit5gxpHbrh0EKMc=) (Zurich, Switzerland)
+* 🇮🇹 2024-10-01 - [Ruby Day 2024](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK) (Verona, Italy)
 
-# Assets
+## Talks & Articles
 
-*   🇮🇹 [SRE Gone Wrong: Top 7 Errors (and How to Avoid Them)](https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ==) - Talk at Devfest Pescara 2024 (2024-11-01)
-*   [Pragmatic AppMod: take an old PHP project and make it 12-factor compliant on GCP](https://www.youtube.com/watch?v=y_2_y_2_y_2) - Talk
-*   [Incident Management at Google](https://www.youtube.com/watch?v=AUZIYQFwCfNB_uNAPqp6n3XEQButDv-j_mrGV6tIZY3gEBZHecKWYmRrrG-drsuN_qjj-u4VnhyhPjb742UOOO0ojNHqMQ8DT1LEWv0DBh19p6fr5RE71saOkl36q8Qahj9vkcaCm82uxQ0ssKs2HmFkZMTAQ==) - Talk
-*   [Goodbye, deployment headaches: Cloud Deploy and Vertex AI unite](https://www.youtube.com/watch?v=y_y_y_y_y_y) - Talk
-*   [Agents on a Plane: A Deep Dive into Building a Real-Time Travel Agent ✈️](https://sessionize.com/riccardo-carlesso/) - Talk
-*   [News Crawler via Langchain.RB and Gemini APIs](https://www.youtube.com/watch?v=2209070526) - Talk at rubyday 2024 (2024-05-24)
-*   [GenAI: Kids Stories That Come to Life](https://www.youtube.com/watch?v=yG02_j_f-20) - Talk
-*   🇮🇹 [Agenti in Volo: Un'Analisi Approfondita sulla Creazione di un Agente di Viaggio in Tempo Reale ✈️](https://sessionize.com/riccardo-carlesso/) - Talk at DevFest Modena 2024 (2024-10-01)
-*   [RAILS8 RESPONSIVE CHAT DONE WITH RUBYLLM](https://www.rubyevents.org/speakers/riccardo-carlesso) - Talk at Railshöck June 2025 (2025-06-01)
-*   [WORKSHOP: BRING YOUR RUBY APP IN THE CLOUD](https://www.rubyevents.org/speakers/riccardo-carlesso) - Workshop at EuRuKo 2024 (2024-01-01)
-*   [NEWS CRAWLER VIA LANGCHAIN.RB AND GEMINI APIS](https://www.rubyevents.org/speakers/riccardo-carlesso) - Talk at Railshöck August 2024 (2024-08-01)
-*   [NEWS CRAWLER VIA LANGCHAIN.RB AND GEMINI APIS](https://www.rubyevents.org/speakers/riccardo-carlesso) - Talk at rubyday 2024 (2024-05-24)
+* 🌍 [News Crawler via Langchain.rb and Gemini APIs](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG46yXYMPD8xXXn_n704fLrsaaPzQWHjMYbXb60-43iMEMuJg5BNXUsQpu93GZfbkJx269fTvozElpZc0iAuGw1UOlLEcd1JCgycChXDwL58OIXZ_BrBv7KkXIdIxABP-dANeBYsYfzaxs16Kfu33JHEfN3yj7n2yjZDeg6cXFKo61xw40o9w9hdBFGit5gxpHbrh0EKMc=) - Talk (2024-08-01, Railshöck August 2024)
+* 🌍 [How Google Uses its Conversational Interfaces: Call Companion UI Demo](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuCuwxF_8leHtZalu_Z2vbHgB0uxz3tlwKLcpD95xUaQ-q7rfQ5ahDkGq1M1uUWLLzgY6YOv9BZdMRpDmc5Oy_rT-kiSR2ukA_eZ_KtDnhpXjRtEXrlu34hDHdLAwgzUthaJRjojA=) - Talk (2023-12-04, Online Publication)
+* 🌍 [SRE Gone Wrong: Top 7 Errors (and How to Avoid Them)](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b) - Talk (2023-11-07, DEVOPSDAYS WARSAW 2023)
+* 🌍 [Pragmatic AppMod: take an old PHP project and make it 12-factor compliant on GCP](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b) - Talk (2023-01-01, Online Publication)
+* 🌍 [Incident Management at Google (IMAG)](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b) - Talk (2023-01-01, Online Publication)
+* 🌍 [Agents on a Plane: A Deep Dive into Building a Real-Time Travel Agent](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxKitpbLLggWvMlTm-U-27OR22x3xcJ8ZgiVlQtV9flgZtRwf9ewlyUe47IO1KhKfNgG51dPDBeUAKxDwj5Zxum-_6M_OtZTcYog22rPphEUQvykNcGGNZkR_RenQlYwtGX9b) - Presentation (2025-01-01, Online Publication)
+* 🌍 [Introduction to SRE & Deploying Landing Zone via Fabric FAST](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHC_JZQYMtc0FH2zghePNpUNvN_gZ7lsCA4cHj334HT4dOb9_eEoJUIQDSvQaJFlqERY620AMGCFg_9zfDGI3zXF2K7ijNlZWp-DipjEu2IDyVgnf0QMw_zr3cS7Ce-OWtDxjuwuG0=) - Talk (2024-09-17, GDG Cloud Budapest Meetup)
+* 🌍 [Level Up Your Rails Game with Cloud Run: A Qwiklabs Deep Dive](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwRLrMp67AxLgkxgJblqCC2nBtHwN4sCNpt0V8w3zryYBlyFydvw90vv_YPg6VIcXiIprK4iekIerU14IXeSOCmrcYtxhqF5G3O_kPcVNAuI2KOzXMIQYw2tB2uFxyhf-ta_76Mlyuh-dxB8P0lA1LtM3ZtImM3tPqS4SqqxZTYdhpfyXCFWRUz_yE4ko5x2wtifBqMh0=) - Article (2024-08-15, Online Publication)
+* 🌍 [Canary Deployment on GCP using Cloud Build, Cloud Deploy and Skaffold](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXNtBrqRmfq4dlglxnUyeFe20JwG_fTXjLzj_shNiyg0jDQY7JD5ffAVb-FcfJzOMEU5zVJrOgGHz498JyVm4oGerWyQti_cX6k0FFYw3T1Ec3XXr67ohd8OVnTdbyhb5mRpH344c=) - Video (2022-10-31, Online Publication)
+* 🌍 [Breathing new life into a legacy application](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUN0JhtRJx5ztprtn-kKVsp7hWe5y6OGG5EfPsvuRtengff59izxVoCym5uTYHSkh9vMSYAjczRKCVyXMD6IreUpsR9bhVQf0pXoTJOIGv2MOxdNhq5OKHtYLbFPhsl0gqXmdDowJVb4LtlqTFHpuiREoCW-x12BF9p1RBn1zRYHw=) - Workshop (2024-01-01, Google /dev/cloud day Istanbul)
+* 🌍 [Gemini 2.0's spatial understanding capabilities within Google Cloud's Vertex AI platform](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUN0JhtRJx5ztprtn-kKVsp7hWe5y6OGG5EfPsvuRtengff59izxVoCym5uTYHSkh9vMSYAjczRKCVyXMD6IreUpsR9bhVQf0pXoTJOIGv2MOxdNhq5OKHtYLbFPhsl0gqXmdDowJVb4LtlqTFHpuiREoCW-x12BF9p1RBn1zRYHw=) - Presentation (2024-01-01, Google /dev/cloud day Istanbul)
+* 🌍 [Vibe coding my first Chrome Extension with gemini-cli!](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh=) - Article (2025-06-25, Online Publication)
+* 🌍 [How I coded 5 kid games with Gemini on a Saturday afternoon.](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh=) - Article (2025-03-25, Online Publication)
+* 🌍 [Migrate GCP projects across organizations, with gcloud.](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh=) - Article (2024-01-01, Online Publication)
+* 🌍 [Ruby on Rails-like ORM and scaffolding in Golang anyone?](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM_1MXiHlP6ePV3UD3RY1rDZUjMVa9bL4lFfq3FOocKZq4pOZeqUd9myp2bdGpvEZW9xFSbuFN6QxTe5e0CuPWnuVgUSAGefBQvTpybDAQYuhRpdT_EI_nV3PtSoNY6jw11AOTuTBG6J4qnaKI2xgOkuTfs0mEGoiN-CUHAQQnFWbvEkfcfZM4E_RtIQOH-JvEkSTbJ6GU7Tv6NIQh=) - Article (2024-01-01, Online Publication)
+* 🌍 [Workshop: Bring your Ruby app in the Cloud.](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK) - Workshop (2024-01-01, Online Publication)
+* 🌍 [Rails8 responsive chat done with RubyLLM.](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr0obQPV9UTO7wtaiKpbqwSG7A75EXrqMd9n6DzdDINJADgZ-6pAqp0PT7m-kkV_KmEpD4Ww5SFb7TvWt2UoyyZrd9taoOkO-P9mce4q7N7N4CYMy51HEX-VzQDtxaBW1yb1YQz9S9O4jl6HFM2aFK) - Talk (2025-06-01, Railshöck June 2025)
