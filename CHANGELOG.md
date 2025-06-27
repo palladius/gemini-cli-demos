@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.0.5
+
+- Removed monospace formatting from all "Demo Folder" entries in `README.md`.
+
+## 0.0.4
+
+- Removed monospace formatting from "Demo Folder" column in `README.md`.
+- Updated `GEMINI.md` instruction for "Demo Folder" column.
+
+## 0.0.3
+
+- Updated `README.md` to include "Demo Folder" column with trailing slashes and monospace formatting.
+- Updated `GEMINI.md` with new instruction for "Demo Folder" column.
+
+## 0.0.2
+
+- Updated `README.md` to include "Status" and "Author" columns as per `GEMINI.md` instructions.
+
 ## 0.0.1
 
 - Added `research-my-public-assets` and `sqlite-to-sheets` demos to `README.md`.
