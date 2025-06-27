@@ -31,7 +31,7 @@ Every demo subfolder, create/keep a `STATUS.md`, with this format:
 
 == BEGIN STATUS.md ==
 
-HASH HASH Project name (H2)
+<HASH><HASH> Project name (*make it a H2*)
 
 * Created: YYYY-MM-DD
 * Creator: Name Surname
@@ -61,9 +61,14 @@ You should be able to fill in the blanks yourself:
 - Creator fav ice-cream (STRING): ask the user whats their fav ice cream.
 - status: note if you see code it might NOT be complete. For `SignedOff`, status when everything checks correctly, ask explicitly to user if that project should be signed off. Until then, it cant exceed WIP.
 
-Finally ensure All demos are captured in the MAIN `README.md` (under git root), in table form.
-Each line shall have this format:
-1. "demo" demo folder name (link)
-2. "category" - 1-2 workds on the topic (git, Database, ..)
-3. "description" a short description of what the demo is about, what it demonstrates, .. should be <200 chars.
 
+## MAIN `README.md`
+
+Finally ensure All demos are captured in the MAIN `README.md` (under git root), in table form.
+
+Each line shall have this format:
+1. "Status" (emoji representing: done, WIP, not started yet)
+1. "Author" (first name is enough, lets keep it short)
+1. "demo" demo folder name (link)
+1. "category" - 1-2 workds on the topic (git, Database, ..)
+1. "description" a short description of what the demo is about, what it demonstrates, .. should be <200 chars.
