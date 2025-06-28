@@ -1,8 +1,14 @@
 import json
 import csv
-import re
 from datetime import datetime
-import subprocess
+import yaml
+
+with open('data/github/issues.json', 'r') as f:
+    issues = json.load(f)
+
+with open('data/googlers.yaml', 'r') as f:
+    googlers = yaml.safe_load(f)
+    googler_usernames = [g['username'] for g in googlers]
 
 def get_sentiment_emoji(title, body):
     title_lower = title.lower()
@@ -33,19 +39,12 @@ def get_upvotes(reaction_groups):
     return 0
 
 def translate_title(title):
-    if not re.match(r'^[\x00-\x7F]+$', title):
-        try:
-            # This is a placeholder for a real translation API call
-            # In a real scenario, you would use a library like googletrans
-            # For this example, we'll just prepend "(Translated) "
-            return f"(Translated) {title}"
-        except Exception as e:
-            print(f"Error translating title: {e}")
-            return title
+    # This is a placeholder for a real translation API call
+    # In a real scenario, you would use a library like googletrans
+    # For this example, we'll just prepend "(Translated) " if it contains non-ASCII chars
+    if any(ord(char) > 127 for char in title):
+        return f"(Translated) {title}"
     return title
-
-with open('data/github/issues.json', 'r') as f:
-    issues = json.load(f)
 
 # Sort issues by creation date DESC
 issues.sort(key=lambda x: datetime.strptime(x['createdAt'], '%Y-%m-%dT%H:%M:%SZ'), reverse=True)
@@ -72,6 +71,11 @@ with open('output/issues.csv', 'w', newline='') as f_csv, open('output/issues.md
         title = translate_title(issue['title'])
         upvotes = get_upvotes(issue['reactionGroups'])
         sentiment = get_sentiment_emoji(title, issue['body'])
+        
+        # Add Googler emoji if author is a Googler
+        if issue.get('author') and issue['author'].get('login') in googler_usernames:
+            title = f"🧢 {title}"
+
         truncated_title = (title[:61] + '...') if len(title) > 64 else title
         f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {upvotes} |\n')
 
@@ -84,7 +88,29 @@ with open('output/issues.csv', 'w', newline='') as f_csv, open('output/issues.md
         title = translate_title(issue['title'])
         upvotes = get_upvotes(issue['reactionGroups'])
         sentiment = get_sentiment_emoji(title, issue['body'])
+
+        # Add Googler emoji if author is a Googler
+        if issue.get('author') and issue['author'].get('login') in googler_usernames:
+            title = f"🧢 {title}"
+
         truncated_title = (title[:61] + '...') if len(title) > 64 else title
         f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {upvotes} |\n')
+
+    f_md.write('\n## Top 20 Issues by Comments\n\n')
+    f_md.write('| Sentiment | Title | Comments |\n')
+    f_md.write('|---|---|---|\n')
+    issues.sort(key=lambda x: len(x['comments']), reverse=True)
+    for issue in issues[:20]:
+        issue_number = issue['number']
+        title = translate_title(issue['title'])
+        comments_count = len(issue['comments'])
+        sentiment = get_sentiment_emoji(title, issue['body'])
+
+        # Add Googler emoji if author is a Googler
+        if issue.get('author') and issue['author'].get('login') in googler_usernames:
+            title = f"🧢 {title}"
+
+        truncated_title = (title[:61] + '...') if len(title) > 64 else title
+        f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {comments_count} |\n')
 
 print("Successfully created output/issues.csv and output/issues.md")

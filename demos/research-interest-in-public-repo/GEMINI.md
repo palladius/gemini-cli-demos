@@ -50,6 +50,7 @@ which allows for stateful and consequential updates.
 The final output I want is all under `output/` and in the following files:
 
 * `output/issues.csv`: a list of issues with: Id of the issue, title, number of upvotes, and an emoji with a generic sentiment analysis of it (Feature Request, Bug report, Suggestion, ..). Use thumbs up/down for positive/negative sentiment, and a computer emoji if its simply pure code. Sorted by ID DESC. Also add a small (160char max) synopsis of what the bug is about.
+  * I also want a boolean if the bug needs triage:  "status/need-triage" tag: (https://github.com/google-gemini/gemini-cli/issues?q=is%3Aissue%20state%3Aopen%20label%3Astatus%2Fneed-triage). If so add a 🚧 emoji.
 * `output/issues.md`: This would be a human-readable version of the above, maybe only with the last 50 issues (500 are too many) in DATE DESC. The issues should have the title with a permalink to github issue, eg https://github.com/google-gemini/gemini-cli/issues/XXXX. Crop the title to 64B. The Last 50 issues should form a table where the emoji should be first, linked title second, and whatever you want afterwards. This should have BOTH
   * a list of the LATEST 50 in time DESC order.
   * And a list with the 20 with the most upvotes, in upvotes desc order.

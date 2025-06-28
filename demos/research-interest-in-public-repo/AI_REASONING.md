@@ -7,8 +7,12 @@ This document outlines the decisions made by the AI agent while processing the d
 - I used the `gh` CLI to fetch the issues from the `google-gemini/gemini-cli` repository.
 - I created a Python script (`bin/process_issues.py`) to process the downloaded JSON data and create the `issues.csv` and `issues.md` files.
 - The script performs a simple sentiment analysis based on keywords in the issue title and body.
-- `output/issues.md` now includes two tables: the latest 50 issues by creation date and the top 20 issues by upvotes.
+- `output/issues.md` now includes three tables:
+    - The latest 50 issues by creation date.
+    - The top 20 issues by upvotes.
+    - The top 20 issues by comment count.
 - A placeholder for title translation was added to `process_issues.py`.
+- The script now reads `data/googlers.yaml` and adds a 🧢 emoji to the issue title if the author is a Googler.
 
 ## Stack Overflow Questions
 

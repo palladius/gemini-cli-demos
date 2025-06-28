@@ -79,3 +79,28 @@
 | 📝 | [Rate limiting detected loop](https://github.com/google-gemini/gemini-cli/issues/1671) | 11 |
 | 👍 | [Unclear relations to privacy policy and terms](https://github.com/google-gemini/gemini-cli/issues/1454) | 11 |
 | 👍 | [Force to use Pro Model](https://github.com/google-gemini/gemini-cli/issues/2247) | 10 |
+
+## Top 20 Issues by Comments
+
+| Sentiment | Title | Comments |
+|---|---|---|
+| 🐛 | [gemini-2.5-pro is [API Error: got status: 429 Too Many Requests.](https://github.com/google-gemini/gemini-cli/issues/1502) | 88 |
+| 🐛 | [API Error: exception TypeError: fetch failed sending request](https://github.com/google-gemini/gemini-cli/issues/1549) | 28 |
+| 👍 | [Login with Google - Doesn't support (SSH Issue?) for headless...](https://github.com/google-gemini/gemini-cli/issues/1437) | 23 |
+| 💻 | [Gemini CLI crashes when play.googleapis.com is not reachable](https://github.com/google-gemini/gemini-cli/issues/1733) | 18 |
+| 💻 | [Rate limiting detected with just one message](https://github.com/google-gemini/gemini-cli/issues/1925) | 16 |
+| 👍 | [Rate Limit Exceeded](https://github.com/google-gemini/gemini-cli/issues/1881) | 14 |
+| 📝 | [gemini exits during Web auth (firewall)](https://github.com/google-gemini/gemini-cli/issues/1491) | 14 |
+| 💻 | [Always automatically quit](https://github.com/google-gemini/gemini-cli/issues/1700) | 13 |
+| 📝 | [Gemini will keep tinking indefinitely](https://github.com/google-gemini/gemini-cli/issues/2025) | 13 |
+| 👍 | [(Translated) 🐛 Model Switch Madness: Gemini Pro Auto-Downgrad...](https://github.com/google-gemini/gemini-cli/issues/1852) | 11 |
+| 📝 | [Input token count is cooked](https://github.com/google-gemini/gemini-cli/issues/2191) | 10 |
+| 🐛 | [ERROR: missing macos seatbelt profile file when run via npx](https://github.com/google-gemini/gemini-cli/issues/850) | 10 |
+| 👍 | [(Translated) gemini-cli不能使用gemini-2.5-pro，启动后自动被切换到gemini-2.5...](https://github.com/google-gemini/gemini-cli/issues/2333) | 9 |
+| 👍 | [Subscription model](https://github.com/google-gemini/gemini-cli/issues/1924) | 9 |
+| 📝 | [Add OpenRouter support](https://github.com/google-gemini/gemini-cli/issues/1515) | 8 |
+| 👍 | [(Translated) Repeated “Rate Limiting Detected” Message and CL...](https://github.com/google-gemini/gemini-cli/issues/1798) | 8 |
+| ❓ | [How to point gemini-cli to a proxy ?](https://github.com/google-gemini/gemini-cli/issues/1457) | 7 |
+| 💻 | [always keep me on the login process](https://github.com/google-gemini/gemini-cli/issues/1901) | 7 |
+| 🐛 | [Always failing: 400 - Please ensure that the number of functi...](https://github.com/google-gemini/gemini-cli/issues/1535) | 7 |
+| 👍 | [(Translated) ⚡ Rate limiting detected. Automatically switchin...](https://github.com/google-gemini/gemini-cli/issues/2056) | 7 |
