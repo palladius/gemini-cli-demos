@@ -107,3 +107,7 @@ In Markdown, make them human friendly. For instance, translate to English from o
 ## Justfile
 
 Keep a terse `justfile` set of instructions for the commands you run the most. This both self-evident, and you can leverate them in the future. Plus its good for initialization, python/uv setup, and so on.
+
+## Code
+
+* we're using git: no `mv` -> `git mv`, and so on.

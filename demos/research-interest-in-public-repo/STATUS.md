@@ -10,5 +10,5 @@
     * [X] code_working
     * [X] documentation
     * [ ] video
-* Demo purpose: To monitor public interest in the Gemini CLI across GitHub, Stack Overflow, and Reddit, performing sentiment analysis and generating summary reports.
+* Demo purpose: To monitor public interest in the Gemini CLI across GitHub, Stack Overflow, and Reddit, performing sentiment analysis, generating summary reports, and providing LLM-driven insights for bug summaries and duplicates.
 * Time to execute: **15** minutes

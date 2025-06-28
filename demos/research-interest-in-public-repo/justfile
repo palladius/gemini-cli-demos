@@ -7,47 +7,52 @@
 
 
 # Define a variable for the Python interpreter
-PYTHON := python3
+PYTHON := "python3"
 # Define a variable for the uv command
-UV := uv
+UV := "uv"
 
 list:
 	just -l
 
-# Rule to install Python dependencies
+# install Python dependencies
 install:
 	@echo "Installing Python dependencies..."
-	$(UV) pip install -r bin/requirements.txt
+	{{UV}} pip install -r requirements.txt
 
-# Rule to process GitHub issues (generates issues.csv and issues.md)
+# process GitHub issues (generates issues.csv and issues.md)
 process-issues:
 	@echo "Processing GitHub issues..."
-	$(PYTHON) bin/process_issues.py
+	{{PYTHON}} bin/process_issues.py
 
-# Rule to process Stack Overflow questions (generates stackoverflow.csv)
+# process Stack Overflow questions (generates stackoverflow.csv)
 process-stackoverflow:
 	@echo "Processing Stack Overflow questions..."
-	$(PYTHON) bin/process_stackoverflow.py
+	{{PYTHON}} bin/process_stackoverflow.py
 
-# Rule to process Reddit posts (generates reddit.md)
+# process Reddit posts (generates reddit.md)
 process-reddit:
 	@echo "Processing Reddit posts..."
-	$(PYTHON) bin/process_reddit.py
+	{{PYTHON}} bin/process_reddit.py
 
-# Rule to generate insights (generates INSIGHTS.md)
+# generate insights (generates INSIGHTS.md)
 generate-insights:
 	@echo "Generating insights..."
-	$(PYTHON) bin/generate_insights.py
+	{{PYTHON}} bin/generate_insights.py
 
-# Rule to generate the pie chart (generates sentiment_pie_chart.png)
+# [LLM] generate LLM-powered insights (generates INSIGHTS.md with LLM content)
+generate-llm-insights:
+	@echo "Generating LLM-powered insights..."
+	{{PYTHON}} bin/llm_insights.py
+
+# generate the pie chart (generates sentiment_pie_chart.png)
 generate-pie-chart:
 	@echo "Generating pie chart..."
-	$(PYTHON) bin/generate_pie_chart.py
+	{{PYTHON}} bin/generate_pie_chart.py
 
-# Rule to update the summary README (updates output/README.md)
+# update the summary README (updates output/README.md)
 update-summary:
 	@echo "Updating summary README..."
-	$(PYTHON) bin/update_summary.py
+	{{PYTHON}} bin/update_summary.py
 
 # Main rule to run all processing steps in order
 all:
@@ -57,6 +62,7 @@ all:
 	@just process-stackoverflow
 	@just process-reddit
 	@just generate-insights
+	@just generate-llm-insights
 	@just generate-pie-chart
 	@just update-summary
 	@echo "All processing steps completed."
