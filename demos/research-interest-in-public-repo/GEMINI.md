@@ -56,6 +56,10 @@ The final output I want is all under `output/` and in the following files:
   * If you find other relevant metrics, I'm all ears in AI_RESONING for more tables :)
 * `output/reddit.csv`: You decide. Needs to contain a permalink to it, so I can click on it. At least: some popularity metric (upvotes), title, and <160B synopsis.
 * `output/reddit.md`: Again, a top 50 list of titles, linked to conversation permalink. They should also contain some sort of sentiment analysis provided by LLM.
+* `output/README.md`: Something shows a synopsis of ALL the above MD documents.
+  * A link to them
+  * Number with statistics of them (N issues, M positive/O negative), ...
+  * It would make me VERY happy if there was some sort of pie chart of the issues: red negative, green positive and blue everything else. Feel free to decide how to create it.
 
 ## AI vs determinism
 
