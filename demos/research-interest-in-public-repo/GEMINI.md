@@ -111,3 +111,4 @@ Keep a terse `justfile` set of instructions for the commands you run the most. T
 ## Code
 
 * we're using git: no `mv` -> `git mv`, and so on.
+* For GH issues, always use numeric Id whenever interactive with people (even in program printfs): `1234` is better than `I_kwDOObWEYM69sXck`.
