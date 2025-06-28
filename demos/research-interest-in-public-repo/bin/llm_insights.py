@@ -11,6 +11,8 @@ load_dotenv()
 
 # Configure the Gemini API key
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+
 if GEMINI_API_KEY:
     print("Gemini API key found.")
     genai.configure(api_key=GEMINI_API_KEY)
@@ -18,7 +20,6 @@ else:
     print("Gemini API key not found. Please set the GEMINI_API_KEY environment variable and try again.")
     exit(1) # Exit if API key is not found
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
 print(f"Using Gemini model: {GEMINI_MODEL}")
 
 def get_gemini_response(prompt):
@@ -39,11 +40,12 @@ def generate_llm_insights():
     # Load issues data from JSON
     issues_data = []
     try:
-        with open('/Users/ricc/git/gemini-cli-demos/demos/research-interest-in-public-repo/data/github/issues.json', 'r') as f:
+        # Horrible hardcoded path
+        with open('./data/github/issues.json', 'r') as f:
             issues_data = json.load(f)
     except FileNotFoundError:
         insights_content += "Error: data/github/issues.json not found. Please run process_issues.py first to fetch GitHub issues.\n"
-        with open('/Users/ricc/git/gemini-cli-demos/demos/research-interest-in-public-repo/output/LLM_INSIGHTS.md', 'w') as f:
+        with open('./output/LLM_INSIGHTS.md', 'w') as f:
             f.write(insights_content)
         return
 
@@ -71,6 +73,14 @@ def generate_llm_insights():
     prompt_parts.append("Provide any other general insights or recurring themes you notice, and suggest overall courses of action.")
 
     full_prompt = "\n".join(prompt_parts)
+
+    # Save the full prompt to .cache/
+    cache_dir = './.cache'
+    os.makedirs(cache_dir, exist_ok=True)
+    prompt_cache_file = os.path.join(cache_dir, 'llm_prompt_for_insights.md')
+    with open(prompt_cache_file, 'w') as f:
+        f.write(full_prompt)
+    print(f"Full prompt saved to {prompt_cache_file}")
 
     print("Sending prompt to LLM...")
     llm_response = get_gemini_response(full_prompt)

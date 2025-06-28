@@ -41,8 +41,10 @@ generate-insights:
 
 # [LLM] generate LLM-powered insights (generates INSIGHTS.md with LLM content)
 generate-llm-insights:
-	@echo "Generating LLM-powered insights..."
-	{{PYTHON}} bin/llm_insights.py
+	@echo "Generating LLM-powered insights... and see how long it takes.."
+	time {{PYTHON}} bin/llm_insights.py
+	@echo "Showing LLM-powered insights to help GeminiCLI Feedback Loop..."
+	cat output/LLM_INSIGHTS.md
 
 # generate the pie chart (generates sentiment_pie_chart.png)
 generate-pie-chart:
@@ -66,3 +68,9 @@ all:
 	@just generate-pie-chart
 	@just update-summary
 	@echo "All processing steps completed."
+
+
+job-update-reddit:
+	@echo "Updating Reddit posts by invoking Gemini CLI in headless mode."
+	#gemini -y -c -d -p 'Update the reddit threads now'
+	gemini -y -c  -p 'Update the reddit threads now'
