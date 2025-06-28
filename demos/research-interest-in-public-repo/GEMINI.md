@@ -38,7 +38,7 @@ You need to find a way (and document it in `AI_REASONING.md`) to download files 
 
 For instance, I want you to:
 
-* dump GitHUb issues (use `gh` if available, or fetch if not).
+* dump GitHUb issues (use `gh` if available, or fetch if not). every issue should have some sort of metrics (upvotes, comments, popularity). dig as much as you can since we have 500+ bugs and no human can see them all.
 * Dump Gemini CLI questions on Stackoverflow
 * Dump questions on Reddit, record discussions title, subreddit, and so on.
 
@@ -50,7 +50,10 @@ which allows for stateful and consequential updates.
 The final output I want is all under `output/` and in the following files:
 
 * `output/issues.csv`: a list of issues with: Id of the issue, title, number of upvotes, and an emoji with a generic sentiment analysis of it (Feature Request, Bug report, Suggestion, ..). Use thumbs up/down for positive/negative sentiment, and a computer emoji if its simply pure code. Sorted by ID DESC. Also add a small (160char max) synopsis of what the bug is about.
-* `output/issues.md`: This would be a human-readable version of the above, maybe only with the last 50 issues (500 are too many) in DATE DESC. The issues should have the title with a permalink to github issue, eg https://github.com/google-gemini/gemini-cli/issues/XXXX. Crop the title to 64B. The Last 50 issues should form a table where the emoji should be first, linked title second, and whatever you want afterwards.
+* `output/issues.md`: This would be a human-readable version of the above, maybe only with the last 50 issues (500 are too many) in DATE DESC. The issues should have the title with a permalink to github issue, eg https://github.com/google-gemini/gemini-cli/issues/XXXX. Crop the title to 64B. The Last 50 issues should form a table where the emoji should be first, linked title second, and whatever you want afterwards. This should have BOTH
+  * a list of the LATEST 50 in time DESC order.
+  * And a list with the 20 with the most upvotes, in upvotes desc order.
+  * If you find other relevant metrics, I'm all ears in AI_RESONING for more tables :)
 * `output/reddit.csv`: You decide. Needs to contain a permalink to it, so I can click on it. At least: some popularity metric (upvotes), title, and <160B synopsis.
 * `output/reddit.md`: Again, a top 50 list of titles, linked to conversation permalink. They should also contain some sort of sentiment analysis provided by LLM.
 
@@ -62,3 +65,6 @@ free to dump bash (or small python) scripts under `bin/`. Do this only if you fe
 Somethings require an LLM (your) reasoning. There are two approaches to it.
 1. The easiest is that you use the deterministic approach for the first part (eg, download issues into a CSV) an call it eg "blahblah_deterministic.ext" and then you take this input and do the LLM work (summarization, sentiment analysis yourself)
 2. If you see value in repeatedly doing this, feel free instead to CODE something accessing gemini. In this case, put the file in `bin/` and have 'llm' somewhere in the script name.
+
+In CSVs, keep data raw.
+In Markdown, make them human friendly. For instance, translate to English from other languages (eg there's a title in chinese ATM).
