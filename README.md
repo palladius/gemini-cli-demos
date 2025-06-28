@@ -11,6 +11,7 @@ Available demos:
 | 🚧 | Riccardo | [research-my-public-assets/](./demos/research-my-public-assets/) | Research | This demo collects all assets created by Riccardo Carlesso, focusing on Google Cloud topics (easy to adapt to your use case). |
 | ✅ | Riccardo | [sqlite-investigation/](./demos/sqlite-investigation/) | Database | This demo showcases how `gemini-cli` is able to read/write/understand a sqlite3 database and generate an E/R schema from it. |
 | ✅ | Riccardo | [sqlite-to-sheets/](./demos/sqlite-to-sheets/) | Google Sheets | This demo shows how to extract data from a SQLite database, convert it to CSV files, and then upload these CSVs to Google Sheets. |
+|  WIP | Riccardo | research-interest-in-public-repo/ (demos/research-interest-in-public-repo/) | CLI | A demo that monitors public interest in a GitHub repository. |
 
 ## INSTALL
 

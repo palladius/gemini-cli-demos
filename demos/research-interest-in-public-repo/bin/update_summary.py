@@ -1,7 +1,7 @@
 
 import csv
 import yaml
-import re
+import json
 
 def get_sentiment_emoji(title, body):
     title_lower = title.lower()
@@ -111,11 +111,7 @@ This document provides a summary of the public interest in the Gemini CLI, gathe
 
 ## Sentiment Analysis Pie Chart
 
-(Placeholder for a pie chart showing the distribution of sentiment across issues, e.g., Red for Negative, Green for Positive, Blue for Neutral/Code-related)
-
-```
-[Pie Chart Image Here]
-```
+![GitHub Issue Sentiment Analysis Pie Chart](./sentiment_pie_chart.png)
 """
 
 # Format the README content with the collected statistics

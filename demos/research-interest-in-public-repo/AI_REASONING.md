@@ -35,4 +35,5 @@ This document outlines the decisions made by the AI agent while processing the d
 - I created `output/README.md` to provide a summary of all the generated reports.
 - I created a Python script (`bin/update_summary.py`) to populate `output/README.md` with statistics from `issues.csv`, `stackoverflow.csv`, and `data/reddit/posts.yaml`.
 - The script calculates total counts and sentiment breakdowns for each category.
-- A placeholder for a sentiment analysis pie chart is included.
+- I created a Python script (`bin/generate_pie_chart.py`) to generate a pie chart of GitHub issue sentiment analysis using `matplotlib`.
+- The `output/README.md` now includes a link to the generated pie chart image.

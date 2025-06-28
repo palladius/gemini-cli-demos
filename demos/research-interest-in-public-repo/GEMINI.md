@@ -78,4 +78,4 @@ Somethings require an LLM (your) reasoning. There are two approaches to it.
 2. If you see value in repeatedly doing this, feel free instead to CODE something accessing gemini. In this case, put the file in `bin/` and have 'llm' somewhere in the script name.
 
 In CSVs, keep data raw.
-In Markdown, make them human friendly. For instance, translate to English from other languages (eg there's a title in chinese ATM).
+In Markdown, make them human friendly. For instance, translate to English from other languages (eg there's a title in chinese ATM). If you DO translate, please add the country flag emoji "closest" to the original language. You choose.
