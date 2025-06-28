@@ -62,6 +62,11 @@ The final output I want is all under `output/` and in the following files:
   * A link to them
   * Number with statistics of them (N issues, M positive/O negative), ...
   * It would make me VERY happy if there was some sort of pie chart of the issues: red negative, green positive and blue everything else. Feel free to decide how to create it.
+* `output/INSIGHTS.md`: Here I want an LLM to go through the data and spot patterns, duplicates, and so on.
+  * List all bugs which seem like duplicate or similar to each other.
+  * Same for conversations.
+  * All correlated info needs to have a permalink for human to easily review. Title is not enough (but its a good start).
+
 
 ## Googlers
 

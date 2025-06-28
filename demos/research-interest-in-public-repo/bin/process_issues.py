@@ -39,11 +39,8 @@ def get_upvotes(reaction_groups):
     return 0
 
 def translate_title(title):
-    # This is a placeholder for a real translation API call
-    # In a real scenario, you would use a library like googletrans
-    # For this example, we'll just prepend "(Translated) " if it contains non-ASCII chars
-    if any(ord(char) > 127 for char in title):
-        return f"(Translated) {title}"
+    # This function is a placeholder and does not perform actual translation.
+    # It simply returns the original title.
     return title
 
 # Sort issues by creation date DESC
@@ -77,7 +74,8 @@ with open('output/issues.csv', 'w', newline='') as f_csv, open('output/issues.md
             title = f"🧢 {title}"
 
         truncated_title = (title[:61] + '...') if len(title) > 64 else title
-        f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {upvotes} |\n')
+        display_upvotes = str(upvotes) if upvotes > 0 else ''
+        f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {display_upvotes} |\n')
 
     f_md.write('\n## Top 20 Issues by Upvotes\n\n')
     f_md.write('| Sentiment | Title | Upvotes |\n')
@@ -94,7 +92,8 @@ with open('output/issues.csv', 'w', newline='') as f_csv, open('output/issues.md
             title = f"🧢 {title}"
 
         truncated_title = (title[:61] + '...') if len(title) > 64 else title
-        f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {upvotes} |\n')
+        display_upvotes = str(upvotes) if upvotes > 0 else ''
+        f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {display_upvotes} |\n')
 
     f_md.write('\n## Top 20 Issues by Comments\n\n')
     f_md.write('| Sentiment | Title | Comments |\n')
@@ -111,6 +110,7 @@ with open('output/issues.csv', 'w', newline='') as f_csv, open('output/issues.md
             title = f"🧢 {title}"
 
         truncated_title = (title[:61] + '...') if len(title) > 64 else title
-        f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {comments_count} |\n')
+        display_comments_count = str(comments_count) if comments_count > 0 else ''
+        f_md.write(f'| {sentiment} | [{truncated_title}](https://github.com/google-gemini/gemini-cli/issues/{issue_number}) | {display_comments_count} |\n')
 
 print("Successfully created output/issues.csv and output/issues.md")

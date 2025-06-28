@@ -11,8 +11,9 @@ This document outlines the decisions made by the AI agent while processing the d
     - The latest 50 issues by creation date.
     - The top 20 issues by upvotes.
     - The top 20 issues by comment count.
-- A placeholder for title translation was added to `process_issues.py`.
+- The `translate_title` function in `process_issues.py` is a placeholder and does not perform actual translation. It simply returns the original title. The `(Translated)` prefix has been removed to avoid misrepresentation.
 - The script now reads `data/googlers.yaml` and adds a 🧢 emoji to the issue title if the author is a Googler.
+- Upvotes and comments in `output/issues.md` now display an empty string instead of '0' when the count is zero.
 
 ## Stack Overflow Questions
 
