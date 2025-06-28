@@ -22,7 +22,8 @@ This document outlines the decisions made by the AI agent while processing the d
 - I used a provided sample data in `data/reddit/posts.yaml`.
 - `data/reddit/posts.yaml` now includes a constructed permalink for the post "GEMINI CLI IS ACTUALLY GREAT" based on my knowledge of Reddit URL patterns. Other permalinks are only included if explicitly known.
 - I created a Python script (`bin/process_reddit.py`) to process the sample data and generate `output/reddit.md`.
-- `output/reddit.md` now includes a table with sentiment analysis. Permalinks are only included if they are present in `data/reddit/posts.yaml`.
+- `output/reddit.md` now includes a table with sentiment analysis. Only positive and negative sentiment posts are included, and only the emoji is displayed for sentiment.
+- The title is linked if a permalink is present, and the subreddit is always linked to its generic Reddit page.
 - I installed `pyyaml` using `uv` and created a `bin/requirements.txt` file to manage dependencies.
 
 ## Summary README (`output/README.md`)
