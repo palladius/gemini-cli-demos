@@ -65,9 +65,11 @@ The final output I want is all under `output/` and in the following files:
 * `output/INSIGHTS.md`: Here I want an LLM to go through the data and spot patterns, duplicates, and so on.
   * List all bugs which seem like duplicate or similar to each other.
   * Same for conversations.
+  * Put Bug id (eg 2210) in front, before tht title.
   * All correlated info needs to have a permalink for human to easily review. Title is not enough (but its a good start).
   * For this array of resources suggest a course of action, like "duplicate A against B since B has more context" or "comment on reddit A pointing to bug B" or "point reddit A to solution on Stackoverflow B".
   * If A and B are two GH issues, verify if they are already somewhat cross-referenced or marked as dupe!
+  * **NOTE**: EVERY array of 2+ potential duplicate SHOULD HAVE a "Course of action:" bullet point at the end, with text and maybe links.
 
 
 ## Googlers

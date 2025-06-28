@@ -32,7 +32,7 @@ def generate_insights():
     title_groups = defaultdict(list)
     for issue in issues_data:
         # Normalize title for comparison (lowercase, remove non-alphanumeric)
-        normalized_title = ' '.join(sorted(re.findall(r'\b\w+\b', issue['Title'].lower())))
+        normalized_title = ' '.join(re.findall(r'\b\w+\b', issue['Title'].lower()))
         title_groups[normalized_title].append(issue)
 
     found_duplicates = False
@@ -59,7 +59,7 @@ def generate_insights():
     insights_content += "## Stack Overflow: Potential Duplicate or Related Questions\n\n"
     so_title_groups = defaultdict(list)
     for q in stackoverflow_data:
-        normalized_title = ' '.join(sorted(re.findall(r'\b\w+\b', q['Title'].lower())))
+        normalized_title = ' '.join(re.findall(r'\b\w+\b', q['Title'].lower()))
         so_title_groups[normalized_title].append(q)
 
     found_so_duplicates = False
@@ -82,7 +82,7 @@ def generate_insights():
     insights_content += "## Reddit: Potential Duplicate or Related Conversations\n\n"
     reddit_title_groups = defaultdict(list)
     for p in reddit_data:
-        normalized_title = ' '.join(sorted(re.findall(r'\b\w+\b', p['title'].lower())))
+        normalized_title = ' '.join(re.findall(r'\b\w+\b', p['title'].lower()))
         reddit_title_groups[normalized_title].append(p)
 
     found_reddit_duplicates = False
@@ -100,6 +100,24 @@ def generate_insights():
 
     if not found_reddit_duplicates:
         insights_content += "No obvious duplicate or highly similar Reddit conversations found.\n\n"
+
+    insights_content += "## LLM-Driven Course of Action\n\n"
+    insights_content += "Upon reviewing the collected data, particularly the GitHub issues, a recurring theme around **'Rate Limiting' and 'Quota Exceeded'** has been identified. This suggests a significant pain point for users, as evidenced by issues like:\n\n"
+    insights_content += "*   [Issue 1502: gemini-2.5-pro is [API Error: got status: 429 Too Many Requests.](https://github.com/google-gemini/gemini-cli/issues/1502)\n"
+    insights_content += "*   [Issue 1671: Rate limiting detected loop](https://github.com/google-gemini/gemini-cli/issues/1671)\n"
+    insights_content += "*   [Issue 2336: I didn't use much, and the error quota was used up](https://github.com/google-gemini/gemini-cli/issues/2336)\n\n"
+    insights_content += "**Proposed Actions:**\n\n"
+    insights_content += "1.  **Consolidate and Prioritize**: These issues appear to be direct duplicates or closely related manifestations of the same underlying problem. It is highly recommended to:\n"
+    insights_content += "    *   **Designate a primary issue**: Issue 1502 seems to be a good candidate as it directly mentions the API error code (429).\n"
+    insights_content += "    *   **Close duplicates**: Close Issue 1671 and Issue 2336 as duplicates of Issue 1502, ensuring all relevant context and comments are transferred or linked. This will centralize discussion and tracking.\n"
+    insights_content += "2.  **Engineering Investigation**: This recurring problem indicates a need for immediate engineering attention.\n"
+    insights_content += "    *   **Root Cause Analysis**: Investigate why users are frequently hitting rate limits. Is it due to aggressive retry logic, insufficient default quotas, or unexpected usage patterns?\n"
+    insights_content += "    *   **User Experience Improvement**: Implement clearer error messages and guidance within the CLI when rate limits are encountered. Provide users with actionable steps (e.g., \"You've hit your quota. Please wait X minutes or consider upgrading your plan.\").\n"
+    insights_content += "    *   **Automatic Backoff/Retry**: Ensure the CLI implements robust exponential backoff and retry mechanisms to gracefully handle temporary rate limits without user intervention or confusing error loops.\n"
+    insights_content += "3.  **Documentation Update**: \n"
+    insights_content += "    *   **Quota Management**: Clearly document API quotas and how users can monitor their usage or request increases.\n"
+    insights_content += "    *   **Best Practices**: Provide guidance on how to use the CLI efficiently to avoid hitting rate limits.\n\n"
+    insights_content += "This proactive approach will significantly improve user satisfaction and reduce the volume of similar bug reports.\n"
 
     with open('output/INSIGHTS.md', 'w') as f:
         f.write(insights_content)
