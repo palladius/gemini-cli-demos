@@ -1,0 +1,63 @@
+We recently launched Gemini CLI and we want to monitor ALL the internet noise about it.
+We want to see good press, bad press, do some sentiment analysis.
+As Cloud Devrel, we also want to be able to respond quickly to questions on the internet.
+
+* github repo: https://github.com/google-gemini/gemini-cli
+* Stackoverflow tagged convos: https://stackoverflow.com/questions/tagged/gemini-cli
+* Reddit
+
+## Scope
+
+Ignore anything that does NOT relate to the Gemini CLI product!
+Do not download locally anything which is out of scope, or if you do feel free to remove that.
+
+## things to monitor
+
+* GH Issues (currently 551): https://github.com/google-gemini/gemini-cli/issues , particularly the ones that still need triage.
+* Stackoverflow tagged questions: https://stackoverflow.com/questions/tagged/gemini-cli
+* Reddit: https://www.reddit.com/
+
+## How to interact with File System
+
+Make sure all data that you download are under:
+
+* `.cache/`: if intrinsically volatile, and not checked in git
+* `output/`: if of interest to final user (me). This should contain a subset of the info and be
+* `data/`: for BIGGER things. Be structured, a nicely readable YAML format is preferred. You could have subfolders like
+  * `data/github/`
+    * `issues.yaml`
+    * `pull_requests.yaml`
+  * `data/reddit/`
+  * `data/{SOMETHING_ELSE}/`
+
+## What's required of you
+
+A gemini CLI script (you) will be invoked multiple times, so it's of paramount importance you're able to pick up from where you leave it. Which is why it's important to persist locally the findings.
+
+You need to find a way (and document it in `AI_REASONING.md`) to download files only once or at most once every X days. Feel free to use the filesystem to download/persist data and summarize them. Find a way to persist them in a way that we can do it again tomorrow.
+
+For instance, I want you to:
+
+* dump GitHUb issues (use `gh` if available, or fetch if not).
+* Dump Gemini CLI questions on Stackoverflow
+* Dump questions on Reddit, record discussions title, subreddit, and so on.
+
+Whenever you make a decision for something which hasn't been defined yet, make sure to add it to `AI_REASONING.md`,
+which allows for stateful and consequential updates.
+
+## Requested output
+
+The final output I want is all under `output/` and in the following files:
+
+* `output/issues.csv`: a list of issues with: Id of the issue, title, number of upvotes, and an emoji with a generic sentiment analysis of it (Feature Request, Bug report, Suggestion, ..). Use thumbs up/down for positive/negative sentiment, and a computer emoji if its simply pure code. Sorted by ID DESC. Also add a small (160char max) synopsis of what the bug is about
+* `output/issues.md`: This would be a human-readable version of the above, maybe only with the last 50 issues (500 are too many) in DATE DESC.
+* `output/reddit.csv`: You decide.
+
+## AI vs determinism
+
+Some things you're required to do can be done programmatically. In that case, if you need to do it multiple times, feel
+free to dump bash (or small python) scripts under `bin/`. Do this only if you feel you might benefit from it tomorrow.
+
+Somethings require an LLM (your) reasoning. There are two approaches to it.
+1. The easiest is that you use the deterministic approach for the first part (eg, download issues into a CSV) an call it eg "blahblah_deterministic.ext" and then you take this input and do the LLM work (summarization, sentiment analysis yourself)
+2. If you see value in repeatedly doing this, feel free instead to CODE something accessing gemini. In this case, put the file in `bin/` and have 'llm' somewhere in the script name.
