@@ -43,3 +43,10 @@ This document outlines the decisions made by the AI agent while processing the d
 ## STATUS.md
 
 - I created the `STATUS.md` file in the demo directory to provide metadata about the project, including creation date, creator, status, and purpose.
+
+## INSIGHTS.md
+
+- I created `output/INSIGHTS.md` to provide insights into potential duplicate or similar issues/conversations across GitHub, Stack Overflow, and Reddit.
+- The duplicate detection is deterministic, based on title keyword matching, as I do not have direct LLM access for semantic analysis within the scripts.
+- All correlated information includes permalinks for easy human review.
+- Corrected GitHub issue permalinks to use `issue_number` instead of `issue_id`.

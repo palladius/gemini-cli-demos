@@ -66,6 +66,8 @@ The final output I want is all under `output/` and in the following files:
   * List all bugs which seem like duplicate or similar to each other.
   * Same for conversations.
   * All correlated info needs to have a permalink for human to easily review. Title is not enough (but its a good start).
+  * For this array of resources suggest a course of action, like "duplicate A against B since B has more context" or "comment on reddit A pointing to bug B" or "point reddit A to solution on Stackoverflow B".
+  * If A and B are two GH issues, verify if they are already somewhat cross-referenced or marked as dupe!
 
 
 ## Googlers
