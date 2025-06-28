@@ -1,3 +1,4 @@
+
 import json
 import csv
 from datetime import datetime
@@ -7,8 +8,8 @@ with open('data/github/issues.json', 'r') as f:
     issues = json.load(f)
 
 with open('data/googlers.yaml', 'r') as f:
-    googlers = yaml.safe_load(f)
-    googler_usernames = [g['username'] for g in googlers]
+    googlers_data = yaml.safe_load(f)
+    googler_usernames = googlers_data.get('github', [])
 
 def get_sentiment_emoji(title, body):
     title_lower = title.lower()

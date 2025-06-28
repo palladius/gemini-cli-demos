@@ -1,5 +1,3 @@
-
-
 import yaml
 import csv
 
@@ -11,7 +9,7 @@ def get_sentiment(title):
     elif "bad" in title_lower or "mistake" in title_lower or "problem" in title_lower:
         return "👎"
     else:
-        return "Neutral 📝" # Keep this for internal logic, but filter out later
+        return "📝" # Neutral sentiment emoji
 
 with open('data/reddit/posts.yaml', 'r') as f:
     reddit_posts = yaml.safe_load(f)
@@ -27,13 +25,9 @@ with open('output/reddit.md', 'w') as f_md:
         sentiment = get_sentiment(title)
         permalink = post.get('permalink', '') # Get permalink, default to empty string
 
-        if sentiment == "Neutral 📝": # Filter out neutral entries
-            continue
-
         linked_title = f'[{title}]({permalink})' if permalink else title
         linked_subreddit = f'[{subreddit}](https://www.reddit.com/{subreddit}/)'
 
         f_md.write(f'| {sentiment} | {linked_title} | {linked_subreddit} |\n')
 
 print("Successfully created output/reddit.md")
-

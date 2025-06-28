@@ -75,6 +75,21 @@ The final output I want is all under `output/` and in the following files:
 You have a list of googlers in `data/googlers.yaml`.
 If the owner of a bug on github is a googler, add this emoji (🧢) to the title, if its in the comments, add it to the comments column.
 
+Structure of the file is:
+
+```yaml
+github:
+- github_username1
+- github_username2
+reddit:
+- reddit_user1
+- reddit_user2
+stackoverflow:
+- stackoverflow_user1
+- stackoverflow_user2
+```
+Please do NOT mutate its content and structure, UNLESS you learn the username of a googler while interacting with us :)
+
 ## AI vs determinism
 
 Some things you're required to do can be done programmatically. In that case, if you need to do it multiple times, feel
@@ -86,3 +101,7 @@ Somethings require an LLM (your) reasoning. There are two approaches to it.
 
 In CSVs, keep data raw.
 In Markdown, make them human friendly. For instance, translate to English from other languages (eg there's a title in chinese ATM). If you DO translate, please add the country flag emoji "closest" to the original language. You choose.
+
+## Justfile
+
+Keep a terse `justfile` set of instructions for the commands you run the most. This both self-evident, and you can leverate them in the future. Plus its good for initialization, python/uv setup, and so on.

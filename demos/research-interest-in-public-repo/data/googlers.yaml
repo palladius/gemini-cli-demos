@@ -3,6 +3,13 @@
 # until 25jun.
 github:
 - palladius
+- jerop
+- philschmid
+- scidomino
+- ptone
+- bdmorgan
+- KeijiBranshi
+- bbiggs
 
 # Reddit
 reddit:
@@ -12,3 +19,8 @@ reddit:
   - moficodes
   - TheRicc
 
+stackoverflow:
+  - 3644991 # /luke-schlangen'
+  - 835611 # /user835611'
+  - 8156810 # /jeff
+  - 362420 # /riccardo
