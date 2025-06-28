@@ -2,6 +2,7 @@ HASH HASH research-my-public-assets
 
 * Created: 2025-06-27
 * Creator: Riccardo Carlesso
+* GitHub username: palladius
 * Creator fav ice-cream: pistacchio
 * status: WorkInProgress
 * Checkbox:

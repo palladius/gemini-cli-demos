@@ -35,6 +35,7 @@ Every demo subfolder, create/keep a `STATUS.md`, with this format:
 
 * Created: YYYY-MM-DD
 * Creator: Name Surname
+* GitHub username: <GitHub username>
 * Creator fav ice-cream: ..
 * status: WorkInPogress | Complete | Draft  | SignedOff
 * Checkbox:

@@ -2,6 +2,7 @@ HASH HASH sqlite-to-sheets
 
 * Created: 2025-06-26
 * Creator: Riccardo Carlesso
+* GitHub username: palladius
 * Creator fav ice-cream: pistacchio
 * status: WorkInProgress
 * Checkbox:

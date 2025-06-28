@@ -2,6 +2,7 @@
 
 * Created: 2025-06-24
 * Creator: Riccardo Carlesso
+* GitHub username: palladius
 * Creator fav ice-cream: pistacchio 
 * status: Complete
 * Checkbox:
