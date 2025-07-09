@@ -26,3 +26,8 @@ update-readme:
 # checks that yaml works.
 test-yaml-ok:
      cat output/data.yaml  | yq
+
+
+gemini-consolidate-readme:
+    gemini -y -d -p etc/prompts/headless-consolidate-readme.md
+

@@ -41,6 +41,7 @@ Every demo subfolder, create/keep a `STATUS.md`, with this format:
 * Checkbox:
     * [ ] code_present
     * [ ] code_working
+    * [ ] code_test
     * [X] documentation
     * [ ] video
 * Demo purpose: ...
@@ -54,6 +55,7 @@ You should be able to fill in the blanks yourself:
 - check Name surname from git
 - code present (BOOL): see if there's a DEMO_SCRIPT.md and if it feels right
 - code_working (BOOL): does it feel complete?
+- code_test (BOOL): does `just test` return 0? TRUE if yes, FALSE in EVERY other case.
 - documentation (BOOL): is `README.md` thoroughly documented? If not, maybe help making a better documentaiton.
 - video (BOOL): is there a video somewhere linked in the `README.md`?
 - Demo purpose: summarize what you understand from README.md

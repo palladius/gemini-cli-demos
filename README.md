@@ -40,3 +40,8 @@ Every folder should have:
 2. A `SCRIPT.md` , this is a README you're going to read if recording a video, basically.
 3. A `README.md` which teases users on what this is about. This is linked from main README, so make it nice, engaging,
    short and full of images/screenshots which show the art of possible.
+
+## Logs
+
+These are magically produced by invoking this: `gemini -y -d -p etc/prompts/headless-consolidate-readme.md`
+
