@@ -12,3 +12,5 @@ This demo (not started yet) will showcase some potential use cases for git:
 ## Additional use cases
 
 1. [hard] I hit capacity on GitHub or BitBucket: solve it for me!
+
+![image.png](image.png)
