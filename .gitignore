@@ -7,3 +7,4 @@ credentials.json.*
 .git-privatize
 .env
 .gemini/logs.db
+demos/sqlite-investigation/output/DEMO2.md
