@@ -29,5 +29,5 @@ test-yaml-ok:
 
 
 gemini-consolidate-readme:
-    gemini -y -d -p etc/prompts/headless-consolidate-readme.md
-
+    # DOESNT WORK THIS ONE gemini -y -d -p etc/prompts/headless-consolidate-readme.md
+    gemini -y -d -p 'Execute commands in this prompt: etc/prompts/headless-consolidate-readme.md'

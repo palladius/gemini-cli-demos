@@ -1,4 +1,6 @@
-Consolidate README.md file according to GEMINI.md:
+Start by writing to stdout "Runnin Carlessian Cron Job..."
+
+Consolidate `README.md` file according to @GEMINI.md:
 
 1. Check for all demos under `demos/`. For each:
    1. check that `demos/<DIR>/STATUS.md` is current. If not update it based on the content of the folder.
