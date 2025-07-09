@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.8
+
+- Updated `demos/git-investigation/STATUS.md` and `README.md`.
+
 ## 0.0.7
 
 - Marked `sqlite-investigation` and `auto-slide-creator` demos as complete in their `STATUS.md` files and updated `README.md` accordingly.
