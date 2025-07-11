@@ -31,9 +31,11 @@ Now I want to extend the Database with a new concept. I want to add the fact tha
 
 ## Wow moment
 
-Now that we have more tables, help me create/update the “output/DEMO2.md” with the updated schema and the updated E/R diagram in mermaid, similarly to what you can see in output/OUTPUT.md
+Now that we have more tables, help me create/update the “output/DEMO2.md” with the updated schema and the updated E/R diagram in mermaid, similarly to what you can see in output/OUTPUT.md .
 
-## Wow momnet v2
+If possible, color the new table(s) differently, like in RED.
+
+## Wow moment v2
 
 OMG this is amazing! Can we maybe show the 2 tables you've just created ina  different colors, or under a RED rectangle saying "Added by Gemini"?
 
