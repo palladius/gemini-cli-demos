@@ -25,3 +25,9 @@ Now I want to extend the Database with a new concept. I want to add the fact tha
 ## Wow moment
 
 Now that we have more tables, help me create/update the “output/DEMO2.md” with the update schema and the updated E/R diagram in mermaid, similarly to what you can see in output/OUTPUT.md
+
+# Cleanup
+
+```bash
+rm output/DEMO2.md
+```
