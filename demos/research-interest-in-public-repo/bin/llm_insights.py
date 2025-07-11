@@ -12,6 +12,7 @@ load_dotenv()
 # Configure the Gemini API key
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+LLM_ISSUE_LIMIT = int(os.environ.get("LLM_ISSUE_LIMIT", 50))
 
 if GEMINI_API_KEY:
     print("Gemini API key found.")
@@ -49,7 +50,7 @@ def generate_llm_insights():
             f.write(insights_content)
         return
 
-    print(f"Loaded {len(issues_data)} issues. Preparing prompt for LLM...")
+    print(f"Loaded {len(issues_data)} issues. Limiting to {LLM_ISSUE_LIMIT} for LLM processing. Preparing prompt for LLM...")
 
     # Construct the comprehensive prompt
     prompt_parts = [
@@ -58,19 +59,24 @@ def generate_llm_insights():
         "\n\n---"
     ]
 
-    for issue in issues_data:
+    for issue in issues_data[:LLM_ISSUE_LIMIT]:
         prompt_parts.append(f"ID: {issue['number']}\nTitle: {issue['title']}\nBody: {issue['body']}\n---")
 
-    prompt_parts.append("\n\nYour output should be in Markdown format, structured as follows:")
-    prompt_parts.append("\n## Issue Summaries")
-    prompt_parts.append("For each issue, provide a concise summary (2-3 sentences).")
-    prompt_parts.append("\n## Potential Duplicate Issues")
-    prompt_parts.append("List groups of issues that are duplicates or highly similar. For each group, provide:")
-    prompt_parts.append("- The IDs and Titles of the issues in the group, with permalinks to their GitHub pages (e.g., [Title](https://github.com/google-gemini/gemini-cli/issues/ID)).")
-    prompt_parts.append("- A brief explanation of why they are duplicates/similar.")
-    prompt_parts.append("- A 'Course of Action:' bullet point suggesting how to handle them (e.g., 'Merge A into B', 'Close A as duplicate of B', 'Cross-reference A and B').")
-    prompt_parts.append("\n## General Insights and Course of Action")
-    prompt_parts.append("Provide any other general insights or recurring themes you notice, and suggest overall courses of action.")
+    prompt_parts.append("""Your output should be in Markdown format, structured as follows:
+
+## Issue Summaries
+For each issue, provide a concise summary (2-3 sentences). Prepend each summary with the issue's numeric ID hyperlinked to its GitHub page (e.g., [2244](https://github.com/google-gemini/gemini-cli/issues/2244)).
+If the issue appears to be a Feature Request, add a 💡 emoji before the ID. If it's a Bug, add a 🐛 emoji.
+If the issue is specific to an Operating System (Windows, Linux, or Apple/macOS), prepend the line with the corresponding emoji (🪟 for Windows, 🐧 for Linux, 🍎 for Apple).
+
+## Potential Duplicate Issues
+List groups of issues that are duplicates or highly similar. For each group, provide:
+- The numeric IDs and Titles of the issues in the group, with permalinks to their GitHub pages (e.g., [Title](https://github.com/google-gemini/gemini-cli/issues/ID)).
+- A brief explanation of why they are duplicates/similar.
+- A 'Course of Action:' bullet point suggesting how to handle them (e.g., 'Merge A into B', 'Close A as duplicate of B', 'Cross-reference A and B').
+
+## General Insights and Course of Action
+Provide any other general insights or recurring themes you notice, and suggest overall courses of action.""")
 
     full_prompt = "\n".join(prompt_parts)
 

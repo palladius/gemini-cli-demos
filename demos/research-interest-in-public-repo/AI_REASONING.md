@@ -49,6 +49,11 @@ This document outlines the decisions made by the AI agent while processing the d
 
 - I created `output/INSIGHTS.md` to provide insights into potential duplicate or similar issues/conversations across GitHub, Stack Overflow, and Reddit. This file is for deterministic insights.
 - LLM-generated insights are now written to `output/LLM_INSIGHTS.md` to distinguish them from deterministic outputs.
+- The LLM is now instructed to format the output in `LLM_INSIGHTS.md` with:
+    - Numeric issue IDs hyperlinked to their GitHub pages.
+    - Emojis (💡 for Feature Request, 🐛 for Bug) prepended to issue summaries based on the issue's nature.
+    - OS-specific emojis (🪟 for Windows, 🐧 for Linux, 🍎 for Apple) prepended if the issue is relevant to a particular operating system.
+- To prevent timeouts with large datasets, the `llm_insights.py` script now processes a limited number of issues per LLM call, controlled by the `LLM_ISSUE_LIMIT` environment variable (defaults to 50).
 - The duplicate detection is now performed by the LLM using the full issue body from `data/github/issues.json`, allowing for semantic analysis.
 - All correlated information includes permalinks for easy human review.
 - Corrected GitHub issue permalinks to use `issue_number` instead of `issue_id`.
