@@ -1,13 +1,15 @@
+# Script for WAD demo
+
 As per go/ricc-gemini-cli:
 
 ```bash
-# setup
+# 00 - setup
 ./generate_database.sh
 ```
 
 ## PROMPTS - 3-slash-Ns separated
 
-can u see a sqlite file here?
+Can u see a sqlite file here?
 
 ## double click on a specific DB (which we can easily recreate)
 
@@ -38,5 +40,6 @@ OMG this is amazing! Can we maybe show the 2 tables you've just created ina  dif
 # Cleanup
 
 ```bash
+# 99 - cleanup
 rm output/DEMO2.md
 ```
