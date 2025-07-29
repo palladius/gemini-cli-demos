@@ -8,5 +8,5 @@
     * [X] code present
     * [X] code working
     * [X] documentation
-    * [ ] video
+    * [X] video
 * Demo purpose: To demonstrate `gemini-cli`'s capabilities with sqlite3 databases.
