@@ -1,76 +1,47 @@
+# Script for WAD demo
 
-## Sample conversation w/ Gemini CLI
+As per go/ricc-gemini-cli:
 
+```bash
+# 00 - setup
+./generate_database.sh
 ```
-**> hi can u see a sqlite file here?**
 
-✦ Yes, I see a file named sample.sqlite in the current directory.
+## PROMPTS - 3-slash-Ns separated
 
-> What's in it?
+Can u see a sqlite file here?
 
-✦ I can investigate that. I'll start by listing the tables in the database.
- ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ ?  Shell sqlite3 sample.sqlite ".tables" (Listing the tables in the `sample.sqlite` database.) ←                              │
- │                                                                                                                               │
- │   sqlite3 sample.sqlite ".tables"                                                                                             │
- │                                                                                                                               │
- │ Allow execution?                                                                                                              │
- │                                                                                                                               │
- │ ○ Yes, allow once                                                                                                             │
- │ ● Yes, allow always "sqlite3 ..."                                                                                             │
- │ ○ No (esc)                                                                                                                    │
- │                                                                                                                               │
- ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+## double click on a specific DB (which we can easily recreate)
 
-✦ I see two tables: products and users. I'll start by examining the users table. I'll check its structure and then look at a few rows to see
-  what kind of data it contains.
- ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ ✔  Shell sqlite3 sample.sqlite ".schema users" (Getting the schema of the `users` table.)                                         │
- │                                                                                                                                   │
- │    CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, email TEXT);                                                            │
- │                                                                                                                                   │
- ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-✦ Okay, the users table has id, name, and email columns. Now, let's see some of the data in this table.
- ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ ✔  Shell sqlite3 sample.sqlite "SELECT * FROM users LIMIT 5" (Getting the first 5 rows from the `users` table.)                   │
- │                                                                                                                                   │
- │    1|Alice|alice@example.com                                                                                                      │
- │    2|Bob|bob@example.com                                                                                                          │
- │    3|Alice|alice@example.com                                                                                                      │
- │    4|Bob|bob@example.com                                                                                                          │
- │    5|Alice|alice@example.com                                                                                                      │
- │                                                                                                                                   │
- ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-✦ It looks like the users table contains user information, as expected. Now I'll do the same for the products table, starting with its
-  schema.
- ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ ✔  Shell sqlite3 sample.sqlite ".schema products" (Getting the schema of the `products` table.)                                   │
- │                                                                                                                                   │
- │    CREATE TABLE products (sku TEXT PRIMARY KEY, description TEXT, price REAL);                                                    │
- │                                                                                                                                   │
- ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-✦ The products table has sku, description, and price. Let's see some of the data.
- ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ ✔  Shell sqlite3 sample.sqlite "SELECT * FROM products LIMIT 5" (Getting the first 5 rows from the `products` table.)             │
- │                                                                                                                                   │
- │    WDG001|Magic Widget|19.99                                                                                                      │
- │    RIC042|HHTTG Book|41.99                                                                                                        │
- │                                                                                                                                   │
- ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-✦ The products table contains product information.
+Ok lets use events_and_people.sqlite which I’ve just generated with ./generate_database.sh . Can you look at this DB, show me the tables, their schemas, and if there are any events or people in it?
 
 
-  To summarize, the sample.sqlite database contains two tables:
-   - users: with columns id, name, and email.
-   - products: with columns sku, description, and price.
+## Add a user and an event
 
-   ✦ The products table contains product information.
+Ok, let’s now add a person (Riccardo Carlesso, make up a sample email for me) and I’m coming to this event (We are developers in Berlin, today). Also make sure I attend (subscribe) this event.
 
-  Is there anything specific you'd like to know about the data in these tables?
+## English -> SQL
 
-> ok, now generate OUTPUT.md with a description of the DB and a Mermaid graph of the E/R diagram of the DB
+Now execute a query to get the people attending the most events, with person and COUNT in the table sorted by count. Show me both the SQL query AND the result.
+
+## Extend the DB
+
+Now I want to extend the Database with a new concept. I want to add the fact that Riccardo is participating to “We are developers” event with a talk, called “Gemini CLI rocks”. A talk should have a title, an abstract, and a person id, and it can be linked in 1:many to an event, and I want you to both create the tables to make this happen and add this talk , and “attach” it to both We are developers and Tech Conference 2025 to demonstrate the 1:many relationship. In the end, show me some SQL to demonstrate it.
+
+
+## Wow moment
+
+Now that we have more tables, help me create/update the “output/DEMO2.md” with the updated schema and the updated E/R diagram in mermaid, similarly to what you can see in output/OUTPUT.md .
+
+If possible, color the new table(s) differently, like in RED.
+
+## Wow moment v2
+
+OMG this is amazing! Can we maybe show the 2 tables you've just created ina  different colors, or under a RED rectangle saying "Added by Gemini"?
+
+# Cleanup
+
+```bash
+# 99 - cleanup
+rm output/DEMO2.md
 ```
