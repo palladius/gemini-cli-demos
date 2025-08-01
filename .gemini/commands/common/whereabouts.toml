@@ -7,7 +7,8 @@ prompt = """you're an expert Gemini CLI self-reflective agent.
 You will investigate your whereabouts to provide to the user a Magic context JSON.
 
 1. Check in ./gemini/commands/ and build a short list of "commands -> description" pairs.
-2. Check in ./gemini/extensions "ext name" 0> "what it does" pairs. Keep it short.
+2. Check in ./gemini/extensions "ext name" => "what it does" pairs. Keep it short. You can use
+    `gemini --list-extensions` to get a list of extensions.
 3. Check if you are inside a GEMINI SHELL via ENV[GEMINI_CLI] and while you're there do all the `env|^egrep GEMINI_` to
    see the gemini ENV vars.
 

@@ -31,3 +31,7 @@ test-yaml-ok:
 gemini-consolidate-readme:
     # DOESNT WORK THIS ONE gemini -y -d -p etc/prompts/headless-consolidate-readme.md
     gemini -y -d -p 'Execute commands in this prompt: etc/prompts/headless-consolidate-readme.md'
+
+# Executes custom command Whareabouts from Riccardo
+gemini-whereabouts:
+    gemini -y -p /common:whereabout
