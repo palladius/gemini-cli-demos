@@ -1,0 +1,4 @@
+# TODO copy from ewherre it is
+# Note this is called maybe by find_todos.toml if it works
+# This proves ability of a custom command being able to call another!
+description = "Create GitHub issues from TODOs in the codebase"
