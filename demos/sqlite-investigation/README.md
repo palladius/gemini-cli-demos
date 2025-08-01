@@ -19,3 +19,9 @@ First invocation:
 Wow moment:
 
 ![alt text](image-1.png)
+
+## TODOs
+
+Maybe integrate with [Chinook](https://www.sqlitetutorial.net/sqlite-sample-database/) which seems like a GREAT starting repo.
+
+Maybe reverse engineer it into a `./create-db.sh` and add Riccardo Carlesso as a user who likes DreamTheater, and add a column `can_play_on_piano`.

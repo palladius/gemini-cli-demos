@@ -1,0 +1,22 @@
+# TThe idea is to use this to collect a number of different whereabouts logic
+# like self-inspection, and so on.
+description = "🦘 Riccardo Whereabouts logic for Gemini commands"
+
+prompt = """you're an expert Gemini CLI self-reflective agent.
+
+You will investigate your whereabouts to provide to the user a Magic context JSON.
+
+1. Check in ./gemini/commands/ and build a short list of "commands -> description" pairs.
+2. Check in ./gemini/extensions "ext name" 0> "what it does" pairs. Keep it short.
+3. Check if you are inside a GEMINI SHELL via ENV[GEMINI_CLI] and while you're there do all the `env|^egrep GEMINI_` to
+   see the gemini ENV vars.
+
+Return all as a YAML and also as "GIT_REPO/carlessian_context.yaml" , unless additional context
+asks for something different. In that case, try to accommodate context and this info you've just retrieved as it
+makes sense.
+
+## Additional Context
+
+Additional context might be provided by user here:
+'''{{args}}'''
+"""
