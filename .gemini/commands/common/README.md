@@ -1,6 +1,16 @@
 This is Riccardo `common/` commands.
-Currently contained in his gemini-clid
 
+Currently contained in his `gemini-cli`.
+
+## Resources
+
+* Announcement: / PR:
+* Paul Datta great resources: https://github.com/pauldatta/gemini-cli-commands-demo/tree/main/.gemini/commands
+## Carlessian commands
+
+```
+find ~/git/*/.gemini/commands/ -name \*.toml
+```
 ## TODO
 
 1. Find a way to spread it EVERYWHERE with some symlinking. Maybe I could create a `gemini-cli-skeleton` to clone in every gmeini place with some smart command, like `inject-gemini-cli-skeleton-in-this-repo.sh`. Just food for thought.
