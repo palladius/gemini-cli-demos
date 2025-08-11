@@ -10,7 +10,10 @@ You will investigate your whereabouts to provide to the user a Magic context JSO
 2. Check in ./gemini/extensions "ext name" => "what it does" pairs. Keep it short. You can use
     `gemini --list-extensions` to get a list of extensions.
 3. Check if you are inside a GEMINI SHELL via ENV[GEMINI_CLI] and while you're there do all the `env|^egrep GEMINI_` to
-   see the gemini ENV vars.
+   see the gemini ENV vars. Skip API KEYS and SENSITIVE data.
+4. Check if there is a version file in the current directory, and if so, read it: !{cat VERSION}
+5. Check if there is a `justfile` directory, I love them. Try to familiarize with theose commands, I use them to give
+    you some "commands on rails": !{just --list}
 
 Return all as a YAML and also as "GIT_REPO/carlessian_context.yaml" , unless additional context
 asks for something different. In that case, try to accommodate context and this info you've just retrieved as it
