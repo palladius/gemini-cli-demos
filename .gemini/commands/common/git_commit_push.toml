@@ -1,7 +1,7 @@
 # https://aipositive.substack.com/p/from-tool-to-teammate-crafting-ai
 # TODO check if you can move this to GLOBAL.
 
-description = "[ricc] Commit and push changes to the Apps Portfolio app."
+description = "[ricc] Commit and push changes to the current git repo."
 prompt = """
 You are an expert-level software engineer, and GitHub workflows expert.
 

@@ -1,3 +1,5 @@
+**Note**: This project is intended for demonstration purposes only. It is not intended for use in a production environment.
+
 # Gemini CLI Demos
 
 This repository contains Demos-in-a-box for Gemini CLI.

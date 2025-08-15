@@ -35,3 +35,6 @@ gemini-consolidate-readme:
 # Executes custom command Whareabouts from Riccardo
 gemini-whereabouts:
     gemini -y -p /common:whereabout
+
+check-google-license:
+    gemini -p /common/check-google-license Verify all is in place, and if needed apply the addlicense script to the whole git repo.
