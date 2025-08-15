@@ -21,6 +21,7 @@ Internal docs (at go/releasing) say this:
 6. **Add source code headers**. Every file containing source code must include copyright and license information. This includes:
    You can use the following command to add a license file:
    ```
+   Ensure `golang` is installed locally (use brew/apt-get)
    $ go get -u github.com/google/addlicense
    $ ~/go/bin/addlicense -c "Google LLC" -l apache .
    ```
@@ -106,7 +107,7 @@ information on using pull requests.
   Code should look like this:
 
 ```bash
-$ gemini -p /common/check-google-license Verify all is in place, and if needed apply the addlicense script to the whole git repo.`
+gemini -y -p '/commsl:check_google_license  Verify all is in place, and if needed apply the addlicense script to the whole git repo.'
 ```
 
 ## Additional context (optional)
