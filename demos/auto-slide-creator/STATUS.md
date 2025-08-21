@@ -1,14 +1,16 @@
-## Auto Slide Creator
+## auto-slide-creator
 
-* Created: 2025-06-24
+* Created: 2025-08-21
 * Creator: Riccardo Carlesso
 * GitHub username: palladius
-* Creator fav ice-cream: pistacchio 
-* status: Complete
+* Creator fav ice-cream: ...
+* status: WorkInProgress
 * Checkbox:
-    * [X] code_present
-    * [X] code_working
-    * [X] documentation
+    * [ ] code_present
+    * [ ] code_working
+    * [ ] code_test
+    * [ ] license_headers
+    * [ ] documentation
     * [ ] video
-* Demo purpose: This demo showcases how `gemini-cli` is able to create Google Slides and generate an E/R schema based on it.
-* Time to execute: **1** minutes
+* Demo purpose: How to use this demo
+* Time to execute: **XX** minutes

@@ -1,0 +1,7 @@
+name = "Update STATUS.md and README.md"
+prompt = "Update all STATUS.md files and the main README.md"
+
+[[tool]]
+tool_name = "run_shell_command"
+command = "./scripts/update_docs.sh"
+description = "Run the update_docs.sh script"

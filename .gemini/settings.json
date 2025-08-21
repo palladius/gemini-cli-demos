@@ -1,12 +1,8 @@
-{ "mcpServers": {
-
-
-    //GCP (list projects and speckle instances..): https://github.com/eniayomi/gcp-mcp
-    // requires:  gcloud auth application-default login?
-    "gcp": {
-      "command": "npx",
-      "args": [ "-y", "gcp-mcp" ]
-    }
-
-
-}}
+{
+  "debug": false,
+  "maxSessionTurns": 50,
+  "telemetry": {
+    "enabled": false,
+    "target": "gcp"
+  }
+}

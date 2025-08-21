@@ -1,14 +1,16 @@
-## Project name: Research Interest in Public Repo
+## research-interest-in-public-repo
 
-* Created: 2025-06-28
+* Created: 2025-08-21
 * Creator: Riccardo Carlesso
 * GitHub username: palladius
-* Creator fav ice-cream: Pistacchio
+* Creator fav ice-cream: ...
 * status: WorkInProgress
 * Checkbox:
-    * [X] code_present
-    * [X] code_working
-    * [X] documentation
+    * [ ] code_present
+    * [ ] code_working
+    * [ ] code_test
+    * [ ] license_headers
+    * [ ] documentation
     * [ ] video
-* Demo purpose: To monitor public interest in the Gemini CLI across GitHub, Stack Overflow, and Reddit, performing sentiment analysis, generating summary reports, and providing LLM-driven insights for bug summaries and duplicates.
-* Time to execute: **15** minutes
+* Demo purpose: 📊 Monitored Platforms
+* Time to execute: **XX** minutes

@@ -1,16 +1,16 @@
-## Project name: google-sheets-mcp
+## google-sheets-mcp
 
-* Created: 2025-08-01
+* Created: 2025-08-21
 * Creator: Riccardo Carlesso
 * GitHub username: palladius
-* Creator fav ice-cream: Pistacchio
-* status: Draft
+* Creator fav ice-cream: ...
+* status: WorkInProgress
 * Checkbox:
     * [ ] code_present
     * [ ] code_working
     * [ ] code_test
     * [ ] license_headers
-    * [x] documentation
+    * [ ] documentation
     * [ ] video
-* Demo purpose: This demo shows how to use mcp-google-sheets to interact with Google Sheets.
-* Time to execute: **1** minutes
+* Demo purpose: 
+* Time to execute: **XX** minutes

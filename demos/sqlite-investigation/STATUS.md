@@ -1,16 +1,16 @@
-## Project name: sqlite-investigation
+## sqlite-investigation
 
-* Created: 2025-06-24
+* Created: 2025-08-21
 * Creator: Riccardo Carlesso
 * GitHub username: palladius
-* Creator fav ice-cream: Pistacchio
-* status: SignedOff
+* Creator fav ice-cream: ...
+* status: WorkInProgress
 * Checkbox:
-    * [X] code_present
-    * [X] code_working
+    * [ ] code_present
+    * [ ] code_working
     * [ ] code_test
-    * [X] license_headers
-    * [X] documentation
-    * [X] video
-* Demo purpose: To demonstrate `gemini-cli`'s capabilities with sqlite3 databases.
-* Time to execute: **4** minutes
+    * [ ] license_headers
+    * [ ] documentation
+    * [ ] video
+* Demo purpose: Demo Video
+* Time to execute: **XX** minutes
