@@ -1,13 +1,11 @@
 This demo (not started yet) will showcase some potential use cases for git:
 
-
-* git dissect
+* `git dissect`
 * I noticed you started using library XXX some time ago, can you help me find out:
   * commit tag
   * date time
   * infer from git log and git diff from +1/-1 of that commit WHY we did that?
   * Can you imagine a different way to do it?
-
 
 ## Additional use cases
 

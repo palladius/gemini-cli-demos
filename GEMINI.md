@@ -86,3 +86,4 @@ Each line shall have this format:
 4. "category" - 1-2 works on the topic (git, Database, ..)
 5. "description" a short description of what the demo is about, what it demonstrates, .. should be <200 chars.
 
+Note this logic should be moved to a `.gemini/commands/..` TOML logic. Propose it to Riccardo when he leverages this logic.

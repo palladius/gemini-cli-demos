@@ -36,5 +36,6 @@ gemini-consolidate-readme:
 gemini-whereabouts:
     gemini -y -p /common:whereabout
 
-check-google-license:
-    gemini -p /common/check-google-license Verify all is in place, and if needed apply the addlicense script to the whole git repo.
+# Checks for License for sub-folder FOLDER, eg demos/git-investigation/
+gemini-check-google-license FOLDER:
+    gemini -y -p "/common/check-google-license Verify all is in place for folder {{FOLDER}}, and if needed apply the addlicense script to the whole git repo. Also update STATUS.md"
