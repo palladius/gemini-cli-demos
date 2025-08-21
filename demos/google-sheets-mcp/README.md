@@ -1,5 +1,7 @@
  # Idea
-use https://github.com/xing5/mcp-google-sheets to
+
+Use https://github.com/xing5/mcp-google-sheets to interact with Sheets.
+This demo should have a big wow factor. Maybe a multitabs DB?
 
 
 # Replace with YOUR actual path and folder ID from the Google Setup step
