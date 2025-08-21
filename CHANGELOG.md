@@ -1,5 +1,10 @@
 # Changelog
 
+## 20250821 - 0.0.9
+
+- Updated the `STATUS.md` logic in both `GEMINI.md` and commands.
+- Added github actions.
+
 ## 0.0.8
 
 - Updated `demos/git-investigation/STATUS.md` and `README.md`.
