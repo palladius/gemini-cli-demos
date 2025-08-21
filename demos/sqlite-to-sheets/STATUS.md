@@ -4,11 +4,13 @@ HASH HASH sqlite-to-sheets
 * Creator: Riccardo Carlesso
 * GitHub username: palladius
 * Creator fav ice-cream: pistacchio
-* status: WorkInProgress
+* status: Complete
 * Checkbox:
     * [X] code_present
-    * [ ] code_working
+    * [X] code_working
+    * [ ] code_test
+    * [X] license_headers
     * [ ] documentation
     * [ ] video
 * Demo purpose: This demo shows how to extract data from a SQLite database, convert it to CSV files, and then upload these CSVs to Google Sheets.
-* Time to execute: XX minutes
+* Time to execute: **2** minutes

@@ -74,9 +74,11 @@ Finally ensure All demos are captured in the MAIN `README.md` (under git root), 
 Each line shall have this format:
 1. "Status"
    1. First, the most important emoji, representing:
-      1. ✅ done,
-      2. 📝 WIP
-      3. 🚧 not started yet
+      1. 🔝 SignedOff
+      2. ✅ Complete
+      3. 📝 Draft
+      4. 🚧 WorkInPogress
+      5. 🫙 NotStarted
    2. Add a "©" Copyright emoji/character if and only if the Copyright/License boolean is ok for that repo
    3. Add a  📹 emoji if video is present.
 2. "Author" (first name is enough, lets keep it short)

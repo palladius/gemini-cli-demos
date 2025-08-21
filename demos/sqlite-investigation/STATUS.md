@@ -1,12 +1,16 @@
 ## Project name: sqlite-investigation
 
+* Created: 2025-06-24
 * Creator: Riccardo Carlesso
 * GitHub username: palladius
-* description: This demo showcases how `gemini-cli` is able to: read/write/understand a sqlite3 database and generate an E/R schema based on it.
+* Creator fav ice-cream: Pistacchio
 * status: Complete
 * Checkbox:
-    * [X] code present
-    * [X] code working
+    * [X] code_present
+    * [X] code_working
+    * [ ] code_test
+    * [X] license_headers
     * [X] documentation
     * [X] video
 * Demo purpose: To demonstrate `gemini-cli`'s capabilities with sqlite3 databases.
+* Time to execute: **4** minutes
