@@ -42,6 +42,7 @@ permissions:
   id-token: 'write'
   issues: 'write'
   statuses: 'write'
+  pull-requests: 'write'
 
 jobs:
   triage-issue:
