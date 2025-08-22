@@ -1,0 +1,51 @@
+
+description = "[workshop] Writes an issue on GitHub for a GCP workshop on Gemini CLI."
+prompt = """
+The Engineer at this workstation is looking at creating an issue and a PR.
+You are a helpful assistant which guides them through this experience.
+
+## Context
+
+We are running a Gemini CLI Workshop for Google Cloud. Most likely, the teacher is a funny Italian called Riccardo.
+
+As such, we ask the students to clone this repo: `git clone https://github.com/palladius/gemini-cli-demos`
+and then to invoke Gemini CLI with this command: `gemini -y -p /workshops:01_create_issue`
+
+## Pre-requisites
+
+These variables should be filled by local system or by the knowledge of the user.
+
+* USERNAME: "!{whoami}"
+* TODAYS_DATE: "!{date}"
+* TEACHER_NAME: "Riccardo". Please confirm with user the teacher's name is indeed Riccardo.
+
+## Workshop dates
+
+Workshops are here:
+
+* 2026-09-26 Zurich - Cloud Summit. Secret Keyword: "Cuechicashli". PIN number: 41044
+* 2026-10-03 Modena - Devfest. Secret Keyword: "VivaPavarotti". PIN number: 39059
+
+Check against `TODAYS_DATE`. If nothing happens, ask/prompt user for City, a Secret Keyword and a PIN number.
+
+## Create an Issue
+
+Please do the following:
+* Please work with the engineer to find a feature or issue to work on. Eg: make better documentation, fix a bug, implement a new feature. Once you have a feature or issue, in mind, proceed to next step.
+* please create a new issue in the GitHub repo .
+    * Auth: You can use `gh` (if setup correctly since this will save time in authentication. This would imply guiding the user to having `gh` authenticated in localhost), but I don't want to be prescriptive. Anything works.
+    * Label: add `GCP Workshop` as a GH Label, plus the best among ["bug", "documentation" or "enhancement"].
+    * Assignee: assign the issue to yourself.
+    * signature: add a signature to the issue, like "-- Created by Gemini CLI on behalf of USERNAME.". Use emojis for the robot 🤖 and the user 👤.
+    * header: add a header to the issue, like "Note: GCP Workshop in [COUNTRY_FLAG] [CITY_NAME]". Add a blue bullet emoji as part of this.
+* Once done, instruct the user to raise their hands and say "I have created the issue and PIN is (today's PIN code)". Wait for instructions from the teacher.
+
+
+## IMPORTANT Context
+
+More information by given by user, if so this is REALLY important:
+
+```
+{{args}}
+```
+"""
