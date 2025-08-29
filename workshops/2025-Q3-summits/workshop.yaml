@@ -1,0 +1,15 @@
+student:
+  workshop_command_version: "1.0.5_29aug25"
+  username: "ricc"
+  todays_date: "20250829-154340"
+  teacher_name: "Riccardo"
+  github_username: "palladius"
+  user_name_and_surname: "Riccardo Cocciante"
+  computer_type: "Linux"
+  random_pin: "96412"
+workshop:
+  date: "2025-08-29"
+  city: "Antarctica"
+  event: "AnyFest"
+  secret_keyword: "AnyDayIsG00d"
+  zip_code: "17017"
