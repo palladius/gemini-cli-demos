@@ -9,3 +9,4 @@ credentials.json.*
 .gemini/logs.db
 demos/sqlite-investigation/output/DEMO2.md
 tmp/
+.vecchiume
