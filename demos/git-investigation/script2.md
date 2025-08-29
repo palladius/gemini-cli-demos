@@ -38,3 +38,7 @@ Finally file a PR on github for this change to happen, and the code to be review
 
 now teach me to make this a Pull Request. Can you do it with gh?
 
+## Now a graph of commits
+
+great. Now finally build me a calendar with Every day since the inception of the project, and for every day I want to see the # commits and the main feature/bug implemented on that day. Show
+that graphically for me in output/calendar.md  . The commit shall be in backticks and possibly linked to the commit on github. The commit should be prepended by HH:MM of time of day of the commit, and every commit should be kept short (~1 line): abbreviate if longer than say 100char.

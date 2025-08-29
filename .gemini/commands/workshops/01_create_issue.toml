@@ -15,14 +15,15 @@ and then to invoke Gemini CLI with this command: `gemini -y -p /workshops:01_cre
 
 These variables should be filled by local system or by the knowledge of the user.
 
-* WORKSHOP_COMMAND_VERSION: "1.0.1_29aug25"
+* WORKSHOP_COMMAND_VERSION: "1.0.3_29aug25"
 * USERNAME: "!{whoami}"
-* TODAYS_DATE: "!{date}"
+* TODAYS_DATE: "!{date +%Y%m%d-%H%M%S}"
 * TEACHER_NAME: "Riccardo". Please confirm with user the teacher's name is indeed Riccardo.
 * GITHUB_USERNAME: "!{gh api user | jq -r .login}" (I used `gh`). If gh fails, use `cat .git/config` to get the repo user downloaded from.
   If we're lucky, it's a fork of https://github.com/palladius/gemini-cli-demos with a different user than palladius (the workshop creator).
 * USER NAME and SURNAME: "!{git config --get user.name}". Change the surname picking from a famous character. Eg "John Doe" -> "John Kennedy",
   and "Riccardo Carlesso" -> "Riccardo Cocciante", and so on. We're here to have fun, not to steal people info.
+* COMPUTER_TYPE: "!{uname}" (to understand if you have Linux, Mac, or Windows.
 
 ## Workshop dates
 
@@ -38,9 +39,9 @@ Check against `TODAYS_DATE`. If nothing happens, ask/prompt user for City, a Sec
 
 ## Create a local YAML
 
-Create a `workshop.yaml` containing two stanzas:
+Create a `workshops/2025-Q3-summits/workshop.yaml` containing two stanzas:
 
-1. A `prerequisites:` section listing all the prerequisites for the workshop collected from the `## Pre-requisites` paragraph.
+1. A `student:` section listing all the prerequisites for the workshop collected from the `## Pre-requisites` paragraph.
 2. A `workshop` section containing the workshop details.
 
 Then `git add` the file, git commit and git push.
@@ -58,7 +59,8 @@ Please do the following:
     * Assignee: assign the issue to yourself.
     * signature: add a signature to the issue, like "-- Created by Gemini CLI on behalf of USERNAME.". Use emojis for the robot 🤖 and the user 👤.
     * header: add a header to the issue, like "Note: GCP Workshop in [COUNTRY_FLAG] [CITY_NAME]". Add a blue bullet emoji as part of this.
-* Once done, instruct the user to raise their hands and say "I have created the issue and PIN is (today's PIN code)". Wait for instructions from the teacher.
+* Once done, add issue URL to the YAML under `student:`, eg `  issue: https://github.com/USER/gemini-cli-demos/issues/3`
+* Once done, instruct the user to raise their hands and say "I have created the issue ISSUE_ID for user $GITHUB_USERNAME and PIN is (today's PIN code)". Wait for instructions from the teacher. Also update the issue with this same sentence, but change the pin with 'XXXXX'.
 
 ## Feature issue ideas
 
@@ -73,6 +75,24 @@ If nothing works (but please insist a bit on the above, so every student will fi
 * find bugs in the code
 * review existing code
 * Improve the current "code works" part.
+
+## Pull Request to main repo
+
+Now the hard part!
+
+1. Find a file called "workshops/2025-Q3-summits/YYYYMMDD-UPPERCASE_CITY.md"; if it doesn't exist, copy it from  "workshops/2025-Q3-summits/template.md"
+2. Add a line to the table with your details:
+
+```
+* hour_and_minute: "YYYYMMDD HH:MM" (from `date +'%Y%m%d %H:%M'`)
+* github: github_username
+* computer: [Windows/Mac/Linux]
+* issue: https://github.com/USER/gemini-cli-demos/issues/NUMBER
+```
+
+Since everyone will have a different issue number and pin, make sure to update those fields accordingly.
+
+Note: it's important that YOUR issue is in YOUR forked repo. While the PR needs to be against the original (`palladius`) repo.
 
 ## IMPORTANT Context
 

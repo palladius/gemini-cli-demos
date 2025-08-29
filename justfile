@@ -43,3 +43,7 @@ gemini-check-google-license FOLDER:
 # New Gemini feature from 28aug25 - auto edit!
 gemini:
     gemini -c --approval-mode auto_edit
+
+# Tests the workshop in NON-interactive way.
+gemini-workshop:
+    gemini -c -y -p "/workshops:01_create_issue DO NOT ASK QUESTION - youve being running in non-interactive mode."
