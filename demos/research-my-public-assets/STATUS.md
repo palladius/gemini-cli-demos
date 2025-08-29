@@ -1,4 +1,4 @@
-HASH HASH research-my-public-assets
+## research-my-public-assets
 
 * Created: 2025-06-27
 * Creator: Riccardo Carlesso
@@ -8,7 +8,9 @@ HASH HASH research-my-public-assets
 * Checkbox:
     * [X] code_present
     * [ ] code_working
-    * [X] documentation
-    * [X] video
+    * [ ] code_test
+    * [ ] license_headers
+    * [ ] documentation
+    * [ ] video
 * Demo purpose: This demo collects all assets created by Riccardo Carlesso, focusing on Google Cloud or Google topics.
 * Time to execute: 5 minutes

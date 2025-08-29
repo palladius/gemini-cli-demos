@@ -45,6 +45,7 @@ Every demo subfolder, create/keep a `STATUS.md`, with this format:
     * [ ] license_headers
     * [X] documentation
     * [ ] video
+    * [ ] asciinema (optional)
 * Demo purpose: ...
 * Time to execute: **XX** minutes
 
@@ -65,7 +66,8 @@ You should be able to fill in the blanks yourself:
 - Created: if its new, its today :) if not, check from git the first commit of this folder.
 - Creator fav ice-cream (STRING): ask the user whats their fav ice cream.
 - status: note if you see code it might NOT be complete. For `SignedOff`, status when everything checks correctly, ask explicitly to user if that project should be signed off. Until then, it cant exceed WIP.
-
+- ascinema is optional. to search, check for a `.cast` file in the folder. as easy as that
+  - To create, suggest user to record it this way: `asciinema rec -i .75 --overwrite -t "Gemini CLI Demo" --cols 100 --rows 30 -c gemini demo-orig.cast`. More info here: https://github.com/ptone/cli-demo-cookbook/blob/main/CONTRIBUTING.md
 
 ## MAIN `README.md`
 

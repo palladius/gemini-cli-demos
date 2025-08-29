@@ -1,4 +1,4 @@
-HASH HASH sqlite-to-sheets
+## sqlite-to-sheets
 
 * Created: 2025-06-26
 * Creator: Riccardo Carlesso
