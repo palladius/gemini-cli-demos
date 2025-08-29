@@ -7,6 +7,7 @@ student:
   user_name_and_surname: "Riccardo Cocciante"
   computer_type: "Linux"
   random_pin: "96412"
+  issue: https://github.com/palladius/gemini-cli-demos/issues/4
 workshop:
   date: "2025-08-29"
   city: "Antarctica"
