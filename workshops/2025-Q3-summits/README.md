@@ -2,7 +2,7 @@
 
 To do this workshop, you need two things:
 
-1. A GH account (optional but recommended)
+1. A GitHub account (optional but recommended)
 2. `Gemini CLI` installed. Tranquillo, if you don't, we can work on that.
 
 And of course, a computer connected to the internet.

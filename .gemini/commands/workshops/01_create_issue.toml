@@ -1,4 +1,14 @@
 
+## CHANGELOG
+#
+#
+# 29aug25 1.0.5 PIN became ZIP code, and randomized PIN code via $RANDOM.
+#
+#
+# Notes or TODOS
+# Use `shuf -i 10000-99999 -n 1` instead of $RANDOM.
+# TODO -
+# Use a if ENV[DEMO_PREP] then do NOT commit the zurich.md and the YAML to git / if you do rename them to .sample.
 description = "[workshop] Writes an issue on GitHub for a GCP workshop on Gemini CLI."
 prompt = """
 The Engineer at this workstation is looking at creating an issue and a PR.
@@ -15,7 +25,7 @@ and then to invoke Gemini CLI with this command: `gemini -y -p /workshops:01_cre
 
 These variables should be filled by local system or by the knowledge of the user.
 
-* WORKSHOP_COMMAND_VERSION: "1.0.4_29aug25"
+* WORKSHOP_COMMAND_VERSION: "1.0.5_29aug25"
 * USERNAME: "!{whoami}"
 * TODAYS_DATE: "!{date +%Y%m%d-%H%M%S}"
 * TEACHER_NAME: "Riccardo". Please confirm with user the teacher's name is indeed Riccardo.
@@ -24,18 +34,19 @@ These variables should be filled by local system or by the knowledge of the user
 * USER NAME and SURNAME: "!{git config --get user.name}". Change the surname picking from a famous character. Eg "John Doe" -> "John Kennedy",
   and "Riccardo Carlesso" -> "Riccardo Cocciante", and so on. We're here to have fun, not to steal people info.
 * COMPUTER_TYPE: "!{uname}" (to understand if you have Linux, Mac, or Windows.
+* RANDOM_PIN: "!{echo $RANDOM}"
 
 ## Workshop dates
 
 Known workshops are here:
 
-* 2026-08-29..2026-08-31 Argenta (FE, Italy) - Googley Prep Event. Secret Keyword: "OnlyProsPrep". PIN number: 00042.
-* 2026-09-26 Zurich - Cloud Summit. Secret Keyword: "Cuechicashli". PIN number: 41044.
-* 2026-10-03 Modena - Devfest. Secret Keyword: "VivaPavarotti". PIN number: 39059.
+* 2026-08-29..2026-08-31 Argenta (FE, Italy) - Googley Prep Event. Secret Keyword: "OnlyProsPrep". ZIP Code: 00042.
+* 2026-09-26 Zurich - Cloud Summit. Secret Keyword: "Cuechicashli". ZIP Code: 41044.
+* 2026-10-03 Modena - Devfest. Secret Keyword: "VivaPavarotti". ZIP Code: 39059.
 
-Check against `TODAYS_DATE`. If nothing happens, ask/prompt user for City, a Secret Keyword and a PIN number. If nothing suits, use the default values:
+Check against `TODAYS_DATE`. If nothing happens, ask/prompt user for City, a Secret Keyword and a ZIP Code. If nothing suits, use the default values:
 
-* YYYY-MM-DD Antarctica - AnyFest. Secret Keyword: "AnyDayIsG00d". PIN number: 17017.
+* YYYY-MM-DD Antarctica - AnyFest. Secret Keyword: "AnyDayIsG00d". ZIP Code: 17017.
 
 ## Create a local YAML
 
