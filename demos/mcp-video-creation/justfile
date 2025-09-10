@@ -1,0 +1,19 @@
+
+import '~/git/gic/justfile.gemini_common'
+
+list:
+    just -l
+
+
+
+# https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md
+# Tests local installation of MCP Golang Imagen client
+test-mcp:
+    echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-image","arguments":{"prompt":"a futuristic cityscape at sunset"}}}' | mcp-imagen-go | jq .
+
+
+# Launch gemini with bucket baked in
+gemini123:
+        GENMEDIA_BUCKET="ricc-genai-mcp-genmedia/" gemini -c --allowed-tools WebFetchTool
+
+# enable `imagen_t2i` Tool
