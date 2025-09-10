@@ -15,6 +15,7 @@
       }
     },
     "imagen": {
+      "trust": true,
       "command": "mcp-imagen-go",
       "env": {
         "MCP_SERVER_REQUEST_TIMEOUT": "55000",
@@ -23,6 +24,7 @@
       }
     },
     "chirp3-hd": {
+      "trust": true,
       "command": "mcp-chirp3-go",
       "env": {
         "MCP_SERVER_REQUEST_TIMEOUT": "55000",

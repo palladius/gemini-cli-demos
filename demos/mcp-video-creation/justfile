@@ -17,3 +17,7 @@ gemini123:
         GENMEDIA_BUCKET="ricc-genai-mcp-genmedia/" gemini -c --allowed-tools WebFetchTool
 
 # enable `imagen_t2i` Tool
+
+auth2:
+    echo gcloud auth application-default login
+    gcloud auth application-default set-quota-project "$(gcloud config get project)"
