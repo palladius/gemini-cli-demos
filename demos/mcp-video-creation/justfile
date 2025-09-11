@@ -67,3 +67,6 @@ install-extension:
     gemini extensions install https://github.com/google-gemini/gemini-cli-security
     gemini extensions list
     gemini extensions update --all
+
+assemble-sample-video:
+    bin/assemble_video.py stories/20250911-1230-CUJ03-rubycon-pitch/video_plan.yaml

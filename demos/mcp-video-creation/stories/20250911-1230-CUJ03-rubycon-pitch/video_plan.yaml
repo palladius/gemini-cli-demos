@@ -1,0 +1,38 @@
+# video_plan.yaml - The recipe for the Rubycon Pitch video.
+---
+title: "Rubycon Pitch Video"
+output_filename: "rubycon_pitch_from_plan.mp4"
+
+settings:
+  music_volume_db: -20 # Lower the music volume to not overpower narration/video audio
+
+scenes:
+  - scene: 1
+    description: "Opening scene with Rubycon logo and intro music."
+    video: "scene1_final.mp4"
+    music:
+      source: "scene1_music_choir_rock.wav"
+
+  - scene: 2
+    description: "The creator of Ruby, Matz, says 'Rubycon? Sugoi!'"
+    video: "scene2_final_with_speech.mp4"
+    music: null
+    narration: null
+
+  - scene: 3
+    description: "Developers, including a Japanese speaker with glasses, materialize into a completely full conference room."
+    video: "scene3_take7.mp4"
+    music: null
+    narration: null
+
+  - scene: 4
+    description: "Showcasing the solution."
+    video: "scene4_take2.mp4"
+    music:
+      source: "scene4_music.wav"
+
+  - scene: 5
+    description: "Call to action."
+    video: "scene5_final_simple_cta.mp4"
+    music:
+      source: "scene5_music.wav"

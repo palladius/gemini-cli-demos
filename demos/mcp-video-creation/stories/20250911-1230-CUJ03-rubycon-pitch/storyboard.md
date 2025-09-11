@@ -16,6 +16,18 @@
 *   **Prompt:** "A professional, corporate-style video of a conference room filled with a diverse audience of developers. The room is the 'sala quarzo' from the Rubycon website. A speaker is on stage, with a presentation slide showing the Ruby logo. The audience is engaged and taking notes."
 *   **Audio:** The sound of a speaker's voice (indistinct) and the gentle murmur of an engaged audience. Use Veo3.
 
+### Scene 3: Alternative 1 (Materializing Audience)
+
+*   **Context:** A more dynamic and magical version of the conference scene.
+*   **Prompt:** "A cinematic shot of the large, modern conference room, which is initially empty. The camera slowly pans across the empty seats for the first 2 seconds. Then, one by one, software developers magically materialize into the chairs with a subtle shimmering effect. By the end of the video, the entire room is filled with an attentive audience, all viewed from behind."
+*   **Takes:** `scene3_take5.mp4`, `scene3_take6.mp4`
+
+### Scene 3: Alternative 2 (Detailed Audience)
+
+*   **Context:** Adding specific character details to the materializing audience concept.
+*   **Prompt:** "A cinematic shot of a large, modern conference room, initially empty. The camera slowly pans across the seats. After 2 seconds, a diverse audience of software developers magically materializes into the chairs with a subtle shimmering effect. One of the prominent figures in the front rows is a Japanese speaker wearing glasses. By the end of the video, the entire room is completely full, with no empty seats, showing an attentive audience viewed from behind."
+*   **Takes:** `scene3_take7.mp4`, `scene3_take8.mp4`
+
 ## Scene 4: The Party
 
 *   **Context:** The fun part of the event.

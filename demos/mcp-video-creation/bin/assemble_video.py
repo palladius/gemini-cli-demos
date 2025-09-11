@@ -4,7 +4,7 @@
 Video Assembler Script
 
 This script reads a YAML file that defines a video structure (scenes, audio, etc.)
-and uses ffmpeg to assemble the final video.
+and uses ffmpeg to assemble the final video and a companion GIF.
 
 Usage:
     python3 bin/assemble_video.py /path/to/your/video_plan.yaml
@@ -12,6 +12,7 @@ Usage:
 
 import argparse
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -35,13 +36,39 @@ def run_ffmpeg_command(command):
     print("✅ Success")
     return stdout
 
+def create_gif_from_video(video_path, temp_dir):
+    """Creates a high-quality GIF from a video file."""
+    print(f"\n🖼️ Creating GIF for {video_path.name}...")
+    gif_path = video_path.with_suffix('.gif')
+    palette_path = Path(temp_dir) / "palette.png"
+
+    # GIF settings
+    fps = 15
+    scale_width = 540
+
+    # 1. Generate color palette for high-quality GIF
+    palette_cmd = [
+        'ffmpeg', '-i', str(video_path),
+        '-vf', f"fps={fps},scale={scale_width}:-1:flags=lanczos,palettegen",
+        '-y', str(palette_path)
+    ]
+    run_ffmpeg_command(palette_cmd)
+
+    # 2. Create GIF using the generated palette
+    gif_cmd = [
+        'ffmpeg', '-i', str(video_path),
+        '-i', str(palette_path),
+        '-filter_complex', f"fps={fps},scale={scale_width}:-1:flags=lanczos[x];[x][1:v]paletteuse",
+        '-y', str(gif_path)
+    ]
+    run_ffmpeg_command(gif_cmd)
+    print(f"🎉 GIF creation complete! Output file: {gif_path.resolve()}")
+
+
 def assemble_video(plan_path):
     """Main function to assemble the video based on the YAML plan."""
     
-    # Get absolute path of the plan file
     plan_path = Path(plan_path).resolve()
-    
-    # The working directory should be the directory containing the plan file
     work_dir = plan_path.parent
     os.chdir(work_dir)
     print(f"📂 Working directory set to: {work_dir}")
@@ -65,12 +92,10 @@ def assemble_video(plan_path):
                 print(f"🚨 Error: Video file not found: {scene_video}")
                 sys.exit(1)
 
-            # --- Audio Processing ---
             music_track = scene.get('music')
             narration_track = scene.get('narration')
             final_audio_for_scene = None
             
-            # 1. Prepare Narration
             processed_narration = None
             if narration_track:
                 narration_file = Path(narration_track['source'])
@@ -83,7 +108,6 @@ def assemble_video(plan_path):
                 ]
                 run_ffmpeg_command(cmd)
 
-            # 2. Prepare Music
             processed_music = None
             if music_track:
                 music_file = Path(music_track['source'])
@@ -96,7 +120,6 @@ def assemble_video(plan_path):
                 ]
                 run_ffmpeg_command(cmd)
 
-            # 3. Combine Audio
             if processed_narration and processed_music:
                 final_audio_for_scene = Path(temp_dir) / f"scene_{scene_num}_final_audio.wav"
                 cmd = [
@@ -112,62 +135,80 @@ def assemble_video(plan_path):
             elif processed_music:
                 final_audio_for_scene = processed_music
 
-            # --- Video and Audio Juxtaposition ---
             output_scene_video = Path(temp_dir) / f"scene_{scene_num}_processed.mp4"
             
             if final_audio_for_scene:
-                # If we have custom audio, replace the video's audio with it
                 cmd = [
                     'ffmpeg',
                     '-i', str(scene_video),
                     '-i', str(final_audio_for_scene),
-                    '-c:v', 'copy', # Copy video stream without re-encoding
-                    '-c:a', 'aac',   # Re-encode audio to aac
-                    '-map', '0:v:0', # Map video from first input
-                    '-map', '1:a:0', # Map audio from second input
-                    '-shortest',     # Finish encoding when the shortest input stream ends
+                    '-c:v', 'copy',
+                    '-c:a', 'aac',
+                    '-map', '0:v:0',
+                    '-map', '1:a:0',
+                    '-shortest',
                     '-y', str(output_scene_video)
                 ]
                 run_ffmpeg_command(cmd)
             else:
-                # If no custom audio, just copy the original video
-                print("ℹ️ No custom audio for this scene. Using original video.")
-                # We still copy it to the temp dir to have a consistent list
-                output_scene_video = scene_video.copy(output_scene_video)
+                # If no custom audio, we still process the video to standardize its streams
+                # for concatenation. This re-encodes existing audio to AAC or adds a
+                # silent AAC track if no audio is present.
+                print("ℹ️ No custom audio for this scene. Standardizing video for concatenation.")
+                cmd = [
+                    'ffmpeg',
+                    '-i', str(scene_video),
+                    '-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=48000',
+                    '-c:v', 'copy',
+                    '-c:a', 'aac',
+                    '-map', '0:v:0',
+                    '-map', '1:a:0',
+                    '-shortest',
+                    '-y', str(output_scene_video)
+                ]
+                run_ffmpeg_command(cmd)
 
 
             processed_scene_files.append(output_scene_video)
 
-        # --- Final Concatenation ---
+        # --- Final Concatenation (Robust Method) ---
         print("\n🎞️ Concatenating all processed scenes...")
-        concat_list_path = Path(temp_dir) / "concat_list.txt"
-        with open(concat_list_path, 'w') as f:
-            for video_file in processed_scene_files:
-                f.write(f"file '{video_file.resolve()}'\n")
         
+        # Prepare inputs for the filter_complex command
+        inputs = []
+        for video_file in processed_scene_files:
+            inputs.extend(['-i', str(video_file)])
+            
+        # Create the filter_complex string (e.g., "[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[v][a]")
+        filter_str = ""
+        for i in range(len(processed_scene_files)):
+            filter_str += f"[{i}:v][{i}:a]"
+        filter_str += f"concat=n={len(processed_scene_files)}:v=1:a=1[v][a]"
+
         output_filename = Path(plan['output_filename'])
         cmd = [
             'ffmpeg',
-            '-f', 'concat',
-            '-safe', '0',
-            '-i', str(concat_list_path),
-            '-c', 'copy', # Copy streams without re-encoding
+            *inputs,
+            '-filter_complex', filter_str,
+            '-map', '[v]',
+            '-map', '[a]',
             '-y', str(output_filename)
         ]
         run_ffmpeg_command(cmd)
         
         print(f"\n🎉 Video assembly complete! Output file: {output_filename.resolve()}")
 
+        # --- Automatic GIF Creation ---
+        create_gif_from_video(output_filename, temp_dir)
+
 
 if __name__ == "__main__":
-    # Check for ffmpeg installation
     try:
         subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True)
     except (subprocess.CalledProcessError, FileNotFoundError):
         print("🚨 FFMPEG is not installed or not in your PATH. Please install it to continue.")
         sys.exit(1)
         
-    # Check for PyYAML installation
     try:
         import yaml
     except ImportError:
