@@ -15,10 +15,8 @@ We want to pitch an event.
 
 ## Execution
 
-* Create a folder with name like `YYYYMMDD-HHMM-title-of-story/`.
-  * Copy the `etc/samples/veo.json` into the folder as `YYYYMMDD-HHMM-title-of-story/veo-storyboard.json`
-  * Note that this template gives you an animation for 8 seconds.
-* The final  last around 30-40 seconds at most.
+* Create a folder with name like `YYYYMMDD-HHMM-CUJ03-title-of-story/`.
+* The final video should be around 30-40 seconds at most.
 
 ## Storyboard
 
@@ -34,5 +32,16 @@ We want to pitch an event.
 For each scene, do this (eg for scene 1):
 
 1. Take scene 1 from Markdown
-2. Create a file `veo-scene1.json` by copying the `etc/samples/veo.json` and setting all the parameters as needed.
-3. Paste this JSON as payload into Veo API with the `veo_t2v` Tool.
+2. Create "2" videos for this scene and call it `scene1_takeX.mp4` for each take.
+   1. Use the Veo 3 fast model for both takes.
+3. Add info about this to the `README.md` in a table. the table should contain:
+   1. scene_time_start (seconds), eg 00:00
+   2. scene_time_end (seconds), eg 00:07
+   3. Short description (max 7 words)
+   4. Link to the file
+   5. Prompt used (in italic)
+
+Once done,
+
+1. Merge the video in a single video.
+2. Update the README with link to final video and summarize what it's about.

@@ -5,7 +5,7 @@ Use any Italian voice (a random voice from list_chirp_voices(it_IT), possibly fe
 In doubt, "it-IT-Chirp3-HD-Achernar" is awesome
 Save the audio file locally and name it appropriately.
 
-* Use a folder with name like `YYYYMMDD-HHMM-title-of-story/`.
+* Use a folder with name like `YYYYMMDD-HHMM-CUJ02-title-of-story/`.
 * It should last around 90-120 seconds at most.
 
 ## Storyboard
