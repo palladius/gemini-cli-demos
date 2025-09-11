@@ -55,3 +55,8 @@ test-mcp-end2end:
 # Generates the audio story for CUJ01 - Story+Audio+CoverImage
 test-cuj01:
     cat doc/CUJs/CUJ01-Seby-audio-story.md | PATH=~/go/bin/:$PATH gemini -y --allowed-tools ChirpTool,ImagenTool,LyriaTool,VeoTool,WebFetchTool -p
+
+
+# Showcasing the auto-extraction of frames from a video
+extract-frames-demo:
+    bin/extract_frames.py stories/20250911-1230-CUJ03-rubycon-pitch/scene4_final.mp4

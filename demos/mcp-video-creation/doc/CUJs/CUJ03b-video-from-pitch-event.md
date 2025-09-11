@@ -65,6 +65,7 @@ For each scene, do this (eg for scene 1):
    3. Short description (max 7 words)
    4. Link to the file (take1)
    5. Prompt used (in italic)
+   6. A screenshot of the video, using `ffmpeg` or better `bin/extract_frames.py`.
 
 ## Add the audio
 
