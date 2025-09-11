@@ -26,3 +26,9 @@ gcloud config set account ACCOUNT
 gcloud config set project PROJECT_ID
 just auth2
 ```
+
+### Thanks
+
+Thanks to Hussain Chinoy without whose work this wouldn't have been possible.
+
+**GenMedia** rocks!

@@ -12,7 +12,7 @@ If you're asked for storyboarding assistance or anything that would be a video l
 
 #### Style
 
-Identify a style of movie. Describe this in some detail. You'll retain this style in all subsequent decriptions to give style continuity.
+Identify a style of movie. Describe this in some detail. You'll retain this style in all subsequent descriptions to give style continuity.
 
 ### Characters
 
@@ -20,9 +20,10 @@ Identify and describe the main characters in the story. Give them good descripti
 
 ### Storyboard ideas - scene visuals
 
-Rememebering the Characters & Style, utilize the story to create 3-5 scenes with vivid descriptions that depict the milestones in the story arc. Use Imagen (Imagen 4 if available) to visualize these scenes. When you name the files, name them in order and descriptively.
+Remembering the Characters & Style, utilize the story to create 3-5 scenes with vivid descriptions that depict the milestones in the story arc.
+Use Imagen (Imagen 4 if available) to visualize these scenes. When you name the files, name them in order and descriptively.
 
-### Storboard music compliments
+### Storyboard music compliments
 
 For each of the storyboard scenes, construct a soundtrack description that fits the scene. Use Lyria to generate that audio soundtrack, saving the files in a rational relatable manner.
 
@@ -61,3 +62,7 @@ After the final movie is created, use Veo 3 to create an 8 second trailer for th
 ## Storage
 
 Veo files are named in this format `sample_0.mp4`, `sample_1.mp4` and so on. If you're directed to download them, also rename them something contextually related, so that you avoid overwriting videos with future generations.
+
+## Additional thoughts
+
+Please also read @GEMINI.riccardo.md for additional context.
