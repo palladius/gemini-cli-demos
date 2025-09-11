@@ -4,6 +4,9 @@
     // STDIO, installed before via https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia
    // "vertex-ai-creative-studio-imagen": { "command": "/usr/local/google/home/ricc/go/bin/mcp-imagen-go" }
 {
+  "general": {
+    "enablePromptCompletion": true
+  } ,
   "mcpServers": {
     "veo": {
       "command": "mcp-veo-go",

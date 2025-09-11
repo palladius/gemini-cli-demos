@@ -21,8 +21,15 @@ gemini-with-go:
     set -euo pipefail
     . .env
     export PATH=~/go/bin/:$PATH
-    #GENMEDIA_BUCKET="ricc-genai-mcp-genmedia/"
-    gemini -c --allowed-tools WebFetchTool
+    gemini -c -y --allowed-tools WebFetchTool,ChirpTool,ImagenTool,LyriaTool,VeoTool
+
+# Dangerous, but should be fine while generating audio video locally.
+gemini-with-go-yolo:
+    #!/bin/bash
+    set -euo pipefail
+    . .env
+    export PATH=~/go/bin/:$PATH
+    gemini -c -y
 
 # enable `imagen_t2i` Tool
 
