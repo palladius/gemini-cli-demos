@@ -16,8 +16,13 @@ test-mcp:
 
 
 # Launch gemini with bucket baked in
-gemini123:
-    PATH=~/go/bin/:$PATH GENMEDIA_BUCKET="ricc-genai-mcp-genmedia/" gemini -c --allowed-tools WebFetchTool
+gemini-with-go:
+    #!/bin/bash
+    set -euo pipefail
+    . .env
+    export PATH=~/go/bin/:$PATH
+    #GENMEDIA_BUCKET="ricc-genai-mcp-genmedia/"
+    gemini -c --allowed-tools WebFetchTool
 
 # enable `imagen_t2i` Tool
 
