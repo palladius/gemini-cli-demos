@@ -32,12 +32,18 @@ auth2:
 
 # Checks if go MCP scripts have been installed
 check-install:
+    echo '1. Checking MCP Go installations...'
     ls -al ~/go/bin/mcp-*-go
+    echo '1. Checking gcloud auth by issuing a simple list command..'
+    gcloud auth list
 
 # Runs Imagen MCP on net transport
 run-imagen-mcp-on-port-8080:
     PATH=~/go/bin/:$PATH PROJECT_ID=ricc-genai PORT=8080 mcp-imagen-go -transport http
 
 # Checks gemini-cli works with MCP
-test-mcp-works:
-    PATH=~/go/bin/:$PATH gemini -c --allowed-tools ChirpTool -p 'Show me Chirp voices through MCP tool.'
+test-mcp-end2end:
+    PATH=~/go/bin/:$PATH gemini -c --allowed-tools ChirpTool -p 'Show me Chirp voices through MCP tool, for instance the Italian female voices'
+
+test-cuj01:
+    cat doc/CUJs/CUJ01-Riccardo-son-audtio-story.md | PATH=~/go/bin/:$PATH gemini -y --allowed-tools ChirpTool,ImagenTool,LyriaTool,VeoTool,WebFetchTool -p
