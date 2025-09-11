@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -euo pipefail
+
+. .env && echo "Using project $PROJECT_ID and account $ACCOUNT"
+
+gcloud config set account $ACCOUNT
+gcloud config set project $PROJECT_ID
+gcloud auth application-default login
+gcloud auth application-default set-quota-project "$PROJECT_ID"

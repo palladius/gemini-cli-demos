@@ -10,3 +10,4 @@ credentials.json.*
 demos/sqlite-investigation/output/DEMO2.md
 tmp/
 .vecchiume
+.DS_Store
