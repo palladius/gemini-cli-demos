@@ -1,0 +1,29 @@
+## Scene 1: The Announcement
+
+*   **Context:** Opening scene, majestic and intriguing. We see a Roman legion crossing a river.
+*   **Prompt:** "A photorealistic video of Roman legionaries, led by Julius Caesar, crossing the Rubicon river. The legion's standards are adorned with large, sparkling red diamonds in a pentagonal shape. The sky is dramatic. Cinematic, 8k."
+*   **Audio:** Majestic, classical music. Use Lyria.
+
+## Scene 2: The Creator
+
+*   **Context:** A humorous twist. We see the creator of Ruby, Matz.
+*   **Prompt:** "A cartoon-style animation of a smiling, 60-year-old Japanese computer scientist with glasses, wearing a Roman toga. He is holding a large, glowing red diamond. The background is a serene Japanese garden."
+*   **Audio:** A subtle, humorous musical cue. Use Lyria.
+
+## Scene 3: The Conference
+
+*   **Context:** The "serious" part of the event.
+*   **Prompt:** "A professional, corporate-style video of a conference room filled with a diverse audience of developers. The room is the 'sala quarzo' from the Rubycon website. A speaker is on stage, with a presentation slide showing the Ruby logo. The audience is engaged and taking notes."
+*   **Audio:** The sound of a speaker's voice (indistinct) and the gentle murmur of an engaged audience. Use Veo3.
+
+## Scene 4: The Party
+
+*   **Context:** The fun part of the event.
+*   **Prompt:** "A vibrant, energetic video of a toga party at a discotheque by the sea in Rimini at night. A diverse crowd of people in togas are dancing and having fun. Everyone's toga is held together by a glowing red ruby brooch. The atmosphere is festive and exciting."
+*   **Audio:** Upbeat, electronic dance music. Use Lyria.
+
+## Scene 5: The Call to Action
+
+*   **Context:** The final scene with the event details.
+*   **Prompt:** "An animated graphic of the Rubycon logo, with the text 'Rubycon' and 'Rimini, 4-5 Ottobre 2025'. The text 'Join our newsletter: https://rubycon.it/' appears at the bottom of the screen. The background is a stylized map of Rimini."
+*   **Audio:** The majestic music from Scene 1 returns, swelling to a crescendo. Use Lyria.

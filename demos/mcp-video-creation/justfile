@@ -29,7 +29,7 @@ gemini-with-go-yolo:
     set -euo pipefail
     . .env
     export PATH=~/go/bin/:$PATH
-    gemini -c -y
+    gemini -c -y --session-summary .gemini/summaries/$(date +%Y%m%d-%H%M%S)-session-summary.txt
 
 # enable `imagen_t2i` Tool
 
