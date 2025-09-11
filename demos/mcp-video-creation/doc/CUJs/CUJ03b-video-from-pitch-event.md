@@ -4,16 +4,18 @@ We want to pitch an event.
 
 ## event details
 
-* Language: Italian
+* Language: English
 * Location: Rimini, Italy
-* Event Title: "Rubycon"
+* Event Title: "Rubycon 2026"
 * Date: Fri 8 May 2026
 * Details: a community-driven event for Ruby developers. Strong technical agenda and great party in the evening!
 * Pitch: Join us for an event
-* CTA: "Join our newsletter: https://rubycon.it/"
+* CTA: "Join our newsletter: https://rubycon.it/" (but make it short in video!)
 * Additional URLs for inspiration:
   * http://rubycon.it/
-
+* Imagery:
+  * Hotel room (Sala Quarzo, hotel Ambasciatory): https://rubycon.it/assets/images/sala-quarzo.jpg
+  * Rubycon logo: [rubycon-logo.png](https://rubycon.it/assets/images/logo.png)
 
 * Elements which should be present:
   * Ruby Logo.

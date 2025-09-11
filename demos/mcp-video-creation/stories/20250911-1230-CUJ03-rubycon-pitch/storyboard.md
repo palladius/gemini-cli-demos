@@ -25,5 +25,5 @@
 ## Scene 5: The Call to Action
 
 *   **Context:** The final scene with the event details.
-*   **Prompt:** "An animated graphic of the Rubycon logo, with the text 'Rubycon' and 'Rimini, 4-5 Ottobre 2025'. The text 'Join our newsletter: https://rubycon.it/' appears at the bottom of the screen. The background is a stylized map of Rimini."
+*   **Prompt:** "An animated graphic of the Rubycon logo (rubycon-logo.png), with the text 'Rubycon' and 'Rimini, 8 May 2025'. The text 'Join us  rubycon.it' appears at the bottom of the screen. The background is a stylized map of Rimini."
 *   **Audio:** The majestic music from Scene 1 returns, swelling to a crescendo. Use Lyria.

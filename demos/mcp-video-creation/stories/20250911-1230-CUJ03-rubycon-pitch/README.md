@@ -18,9 +18,21 @@ The storyboard for the video can be found in [storyboard.md](storyboard.md).
 | | | | [scene3_take2.mp4](scene3_take2.mp4) | |
 | 00:24 | 00:32 | Toga party by the sea | [scene4_take1.mp4](scene4_take1.mp4) | *A vibrant, energetic video of a toga party at a discotheque by the sea in Rimini at night. A diverse crowd of people in togas are dancing and having fun. Everyone's toga is held together by a glowing red ruby brooch. The atmosphere is festive and exciting.* |
 | | | | [scene4_take2.mp4](scene4_take2.mp4) | |
-| 00:32 | 00:40 | Rubycon logo and call to action | [scene5_take1_new_date.mp4](scene5_take1_new_date.mp4) | *An animated graphic of the Rubycon logo, with the text 'Rubycon' and 'Rimini, 8 Maggio 2026'. The text 'Join our newsletter: https://rubycon.it/' appears at the bottom of the screen. The background is a stylized map of Rimini.* |
-| | | | [scene5_take2_new_date.mp4](scene5_take2_new_date.mp4) | |
+| 00:32 | 00:40 | Rubycon logo and call to action | [scene5_take1_from_map.mp4](scene5_take1_from_map.mp4) | *An animated graphic of the Rubycon logo, with the text 'Rubycon' and 'Rimini, 8 Maggio 2026'. The text 'Join our newsletter: https://rubycon.it/' appears at the bottom of the screen. The video should evolve from the provided map image.* |
+| | | | [scene5_take2_from_map.mp4](scene5_take2_from_map.mp4) | |
 
 ## Final Video
 
-[Link to the final video]()
+The final video can be found here: [rubycon_pitch_final_no_scene3.mp4](rubycon_pitch_final_no_scene3.mp4)
+
+This video is a pitch for the Rubycon conference in Rimini, Italy. It features a mix of majestic and humorous scenes, including a Roman legion crossing the Rubicon, the creator of Ruby in a toga, a professional conference setting, and a vibrant toga party. The video concludes with a call to action to join the conference newsletter.
+
+**Note:** Scene 3 of the video is silent. You can use the provided `assemble_video.sh` script to add your own audio to this scene and regenerate the final video.
+
+## Production Notes
+
+### Why generate videos one-by-one?
+
+You asked why I called the video generation tool twice with `"num_videos": 1` instead of once with `"num_videos": 2`.
+
+Calling the tool for each take individually provides more granular control. It allows me to rename the output file immediately after it's created, which helps keep the project organized and makes it easier to track which video corresponds to which take. While calling it once with `num_videos: 2` is more efficient, the one-by-one approach is a safer workflow for managing multiple scenes and takes. However, per your request, I will use the more efficient method going forward.
