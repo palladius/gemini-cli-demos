@@ -60,3 +60,10 @@ test-cuj01:
 # Showcasing the auto-extraction of frames from a video
 extract-frames-demo:
     bin/extract_frames.py stories/20250911-1230-CUJ03-rubycon-pitch/scene4_final.mp4
+
+
+# TODO ricc move to SHARED one
+install-extension:
+    gemini extensions install https://github.com/google-gemini/gemini-cli-security
+    gemini extensions list
+    gemini extensions update --all
