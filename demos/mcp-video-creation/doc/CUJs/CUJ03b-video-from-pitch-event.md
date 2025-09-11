@@ -7,7 +7,7 @@ We want to pitch an event.
 * Language: Italian
 * Location: Rimini, Italy
 * Event Title: "Rubycon"
-* Date: Sat/Sun 4-5 Oct 2025
+* Date: Fri 8 May 2026
 * Details: a community-driven event for Ruby developers. Strong technical agenda and great party in the evening!
 * Pitch: Join us for an event
 * CTA: "Join our newsletter: https://rubycon.it/"
