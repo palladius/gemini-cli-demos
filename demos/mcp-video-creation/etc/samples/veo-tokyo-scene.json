@@ -1,0 +1,51 @@
+{
+"shot": {
+"composition": "Medium tracking shot, 50mm lens, shot on RED V-Raptor 8K with Netflix-approved HDR setup, shallow depth of field",
+"camera_motion": "smooth Steadicam walk-along, slight handheld bounce for naturalistic rhythm",
+"frame_rate": "24fps",
+"film_grain": "clean digital with film-emulated LUT for warmth and vibrancy"
+},
+"subject": {
+"description": "A young woman with a petite frame and soft porcelain complexion. She has oversized, almond-shaped eyes with long lashes, subtle pink-tinted cheeks, and a heart-shaped face. Her inky-black bob is slightly tousled and clipped to one side with a small red strawberry hairpin. Her style blends playful retro and modern Tokyo streetwear: she wears a crocheted ivory halter top with scalloped edges, high-waisted denim shorts with a wide brown belt and a red enamel star buckle, and a loose red gingham blouse draped off one shoulder. Her accessories include glossy cherry lip tint, a beaded bracelet stack, and soft shimmer eyeshadow.",
+"wardrobe": "Crocheted ivory halter with scalloped trim, fitted high-waisted denim shorts, wide tan belt with red enamel star buckle, oversized red gingham blouse slipped off one shoulder, strawberry hairpin in side-parted bob, and translucent plastic bead bracelets in pink and cream tones."
+},
+"scene": {
+"location": "a quiet urban street bathed in early morning sunlight",
+"time_of_day": "early morning",
+"environment": "empty sidewalks, golden sunlight reflecting off puddles and windows, occasional birds fluttering by, street slightly wet from overnight rain"
+},
+"visual_details": {
+"action": "she walks rhythmically down the sidewalk, swinging her hips slightly with the beat, one hand gesturing playfully, the other adjusting her shirt sleeve as she sings",
+"props": "morning mist, traffic light turning green in the distance, reflective puddles, subtle sun flare"
+},
+"cinematography": {
+"lighting": "natural golden-hour lighting with soft HDR bounce, gentle lens flare through morning haze",
+"tone": "playful, stylish, vibrant",
+"notes": "STRICTLY NO on-screen subtitles, lyrics, captions, or text overlays. Final render must be clean visual-only."
+},
+"audio": {
+"ambient": "city birds chirping, distant traffic hum, her boots tapping pavement",
+"voice": {
+"tone": "light, teasing, and melodic",
+"style": "pop-rap delivery in Japanese with flirtatious rhythm, confident breath control, playful pacing and bounce"
+},
+"lyrics": "ラーメンはもういらない、キャビアだけでいいの。 ファイナンスのおかげで、私、星みたいに輝いてる。"
+},
+"color_palette": "sun-warmed pastels with vibrant reds and denim blues, soft contrast with warm film LUT",
+"dialogue": {
+"character": "Woman (singing in Japanese)",
+"line": "ラーメンはもういらない、キャビアだけでいいの。 ファイナンスのおかげで、私、星みたいに輝いてる。",
+"subtitles": false
+},
+"visual_rules": {
+"prohibited_elements": [
+"subtitles",
+"captions",
+"karaoke-style lyrics",
+"text overlays",
+"lower thirds",
+"any written language appearing on screen"
+]
+}
+}
+// taken from https://dev.to/therealmrmumba/how-to-create-any-google-veo-3-video-styles-with-json-format-hack-1ond
