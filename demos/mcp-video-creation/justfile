@@ -45,5 +45,6 @@ run-imagen-mcp-on-port-8080:
 test-mcp-end2end:
     PATH=~/go/bin/:$PATH gemini -c --allowed-tools ChirpTool -p 'Show me Chirp voices through MCP tool, for instance the Italian female voices'
 
+# Generates the audio story for CUJ01 - Story+Audio+CoverImage
 test-cuj01:
-    cat doc/CUJs/CUJ01-Riccardo-son-audtio-story.md | PATH=~/go/bin/:$PATH gemini -y --allowed-tools ChirpTool,ImagenTool,LyriaTool,VeoTool,WebFetchTool -p
+    cat doc/CUJs/CUJ01-Seby-audio-story.md | PATH=~/go/bin/:$PATH gemini -y --allowed-tools ChirpTool,ImagenTool,LyriaTool,VeoTool,WebFetchTool -p
