@@ -4,13 +4,15 @@
 Video Assembler Script
 
 This script reads a YAML file that defines a video structure (scenes, audio, etc.)
-and uses ffmpeg to assemble the final video and a companion GIF.
+and uses ffmpeg to assemble the final video, a companion GIF, and a receipt file
+with deterministic data about the final video.
 
 Usage:
     python3 bin/assemble_video.py /path/to/your/video_plan.yaml
 """
 
 import argparse
+import json
 import os
 import shutil
 import subprocess
@@ -18,9 +20,10 @@ import sys
 import tempfile
 import yaml
 from pathlib import Path
+from copy import deepcopy
 
-def run_ffmpeg_command(command):
-    """Runs an ffmpeg command, checks for errors, and prints output."""
+def run_ffmpeg_command(command, is_json_output=False):
+    """Runs an ffmpeg/ffprobe command, checks for errors, and prints output."""
     print(f"🚀 Executing: {' '.join(command)}")
     process = subprocess.Popen(
         command,
@@ -30,11 +33,40 @@ def run_ffmpeg_command(command):
     )
     stdout, stderr = process.communicate()
     if process.returncode != 0:
-        print("❌ FFMPEG Error:")
+        print("❌ FFMPEG/FFPROBE Error:")
         print(stderr)
         sys.exit(1)
-    print("✅ Success")
+    
+    if not is_json_output:
+        print("✅ Success")
+    
     return stdout
+
+def get_video_duration(video_path):
+    """Gets the duration of a video file in seconds using ffprobe."""
+    cmd = [
+        'ffprobe',
+        '-v', 'error',
+        '-show_entries', 'format=duration',
+        '-of', 'default=noprint_wrappers=1:nokey=1',
+        str(video_path)
+    ]
+    duration_str = run_ffmpeg_command(cmd).strip()
+    return float(duration_str)
+
+def video_has_audio_stream(video_path):
+    """Checks if a video file has an audio stream using ffprobe."""
+    cmd = [
+        'ffprobe',
+        '-v', 'error',
+        '-select_streams', 'a',
+        '-show_entries', 'stream=codec_type',
+        '-of', 'json',
+        str(video_path)
+    ]
+    output = run_ffmpeg_command(cmd, is_json_output=True)
+    data = json.loads(output)
+    return 'streams' in data and len(data['streams']) > 0
 
 def create_gif_from_video(video_path, temp_dir):
     """Creates a high-quality GIF from a video file."""
@@ -42,11 +74,9 @@ def create_gif_from_video(video_path, temp_dir):
     gif_path = video_path.with_suffix('.gif')
     palette_path = Path(temp_dir) / "palette.png"
 
-    # GIF settings
     fps = 15
     scale_width = 540
 
-    # 1. Generate color palette for high-quality GIF
     palette_cmd = [
         'ffmpeg', '-i', str(video_path),
         '-vf', f"fps={fps},scale={scale_width}:-1:flags=lanczos,palettegen",
@@ -54,7 +84,6 @@ def create_gif_from_video(video_path, temp_dir):
     ]
     run_ffmpeg_command(palette_cmd)
 
-    # 2. Create GIF using the generated palette
     gif_cmd = [
         'ffmpeg', '-i', str(video_path),
         '-i', str(palette_path),
@@ -63,6 +92,36 @@ def create_gif_from_video(video_path, temp_dir):
     ]
     run_ffmpeg_command(gif_cmd)
     print(f"🎉 GIF creation complete! Output file: {gif_path.resolve()}")
+
+def remove_null_values(d):
+    """Recursively remove keys with None values from a dictionary."""
+    if not isinstance(d, dict):
+        return d
+    return {k: remove_null_values(v) for k, v in d.items() if v is not None}
+
+def write_receipt_file(plan_path, original_plan, scene_durations, total_duration):
+    """Writes a receipt file with deterministic data."""
+    print("\n🧾 Generating receipt file...")
+    receipt_path = plan_path.with_suffix('.receipt.yaml')
+    
+    receipt_plan = deepcopy(original_plan)
+    
+    current_time = 0.0
+    for i, scene in enumerate(receipt_plan['scenes']):
+        duration = scene_durations[i]
+        scene['start_time'] = round(current_time, 3)
+        scene['end_time'] = round(current_time + duration, 3)
+        scene['duration'] = round(duration, 3)
+        current_time += duration
+        
+    receipt_plan['total_duration'] = round(total_duration, 3)
+    
+    cleaned_receipt = remove_null_values(receipt_plan)
+
+    with open(receipt_path, 'w') as f:
+        yaml.dump(cleaned_receipt, f, sort_keys=False, default_flow_style=False)
+        
+    print(f"🎉 Receipt file generated: {receipt_path.resolve()}")
 
 
 def assemble_video(plan_path):
@@ -82,6 +141,7 @@ def assemble_video(plan_path):
         print(f"🛠️ Created temporary directory: {temp_dir}")
         
         processed_scene_files = []
+        scene_durations = []
         
         for i, scene in enumerate(plan['scenes']):
             scene_num = scene['scene']
@@ -151,35 +211,40 @@ def assemble_video(plan_path):
                 ]
                 run_ffmpeg_command(cmd)
             else:
-                # If no custom audio, we still process the video to standardize its streams
-                # for concatenation. This re-encodes existing audio to AAC or adds a
-                # silent AAC track if no audio is present.
                 print("ℹ️ No custom audio for this scene. Standardizing video for concatenation.")
-                cmd = [
-                    'ffmpeg',
-                    '-i', str(scene_video),
-                    '-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=48000',
-                    '-c:v', 'copy',
-                    '-c:a', 'aac',
-                    '-map', '0:v:0',
-                    '-map', '1:a:0',
-                    '-shortest',
-                    '-y', str(output_scene_video)
-                ]
+                if video_has_audio_stream(scene_video):
+                    cmd = [
+                        'ffmpeg',
+                        '-i', str(scene_video),
+                        '-c:v', 'copy',
+                        '-c:a', 'aac',
+                        '-ar', '48000',
+                        '-ac', '2',
+                        '-y', str(output_scene_video)
+                    ]
+                else:
+                    cmd = [
+                        'ffmpeg',
+                        '-i', str(scene_video),
+                        '-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=48000',
+                        '-c:v', 'copy',
+                        '-c:a', 'aac',
+                        '-map', '0:v:0',
+                        '-map', '1:a:0',
+                        '-shortest',
+                        '-y', str(output_scene_video)
+                    ]
                 run_ffmpeg_command(cmd)
 
-
             processed_scene_files.append(output_scene_video)
+            scene_durations.append(get_video_duration(output_scene_video))
 
-        # --- Final Concatenation (Robust Method) ---
         print("\n🎞️ Concatenating all processed scenes...")
         
-        # Prepare inputs for the filter_complex command
         inputs = []
         for video_file in processed_scene_files:
             inputs.extend(['-i', str(video_file)])
             
-        # Create the filter_complex string (e.g., "[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[v][a]")
         filter_str = ""
         for i in range(len(processed_scene_files)):
             filter_str += f"[{i}:v][{i}:a]"
@@ -198,15 +263,18 @@ def assemble_video(plan_path):
         
         print(f"\n🎉 Video assembly complete! Output file: {output_filename.resolve()}")
 
-        # --- Automatic GIF Creation ---
+        total_duration = get_video_duration(output_filename)
+        
+        write_receipt_file(plan_path, plan, scene_durations, total_duration)
         create_gif_from_video(output_filename, temp_dir)
 
 
 if __name__ == "__main__":
     try:
         subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True)
+        subprocess.run(['ffprobe', '-version'], capture_output=True, check=True)
     except (subprocess.CalledProcessError, FileNotFoundError):
-        print("🚨 FFMPEG is not installed or not in your PATH. Please install it to continue.")
+        print("🚨 FFMPEG/FFPROBE is not installed or not in your PATH. Please install it to continue.")
         sys.exit(1)
         
     try:
