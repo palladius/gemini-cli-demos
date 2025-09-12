@@ -85,3 +85,11 @@ install:
     sudo apt update
     sudo apt install ffmpeg
     ffmpeg -version
+
+
+gemini-check-install:
+    gemini -c -y -p '/aicinema:check_install'
+
+gemini-aicinema-generate-audio-story-for-ale:
+    gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for Alessandro'
+
