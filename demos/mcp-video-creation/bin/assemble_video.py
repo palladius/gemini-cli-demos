@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- 
 """
 Video Assembler Script
 
-This script reads a YAML file that defines a video structure (scenes, audio, etc.)
-and uses ffmpeg to assemble the final video, a companion GIF, and a receipt file
-with deterministic data about the final video.
+This script reads a YAML file to assemble a video.
+For detailed usage and instructions, please see the user guide:
+../doc/assemble_video/user_docs.md
 
 Usage:
     python3 bin/assemble_video.py /path/to/your/video_plan.yaml
@@ -154,6 +154,30 @@ def assemble_video(plan_path):
 
             music_track = scene.get('music')
             narration_track = scene.get('narration')
+            text_overlay = scene.get('text_overlay')
+            
+            # --- Video Pre-processing (Text Overlay) ---
+            video_to_process = scene_video
+            if text_overlay:
+                print("✏️ Adding text overlay...")
+                processed_video_with_text = Path(temp_dir) / f"scene_{scene_num}_text.mp4"
+                drawtext_filter = (
+                    f"drawtext=text='{text_overlay['text']}':"
+                    f"fontsize={text_overlay.get('font_size', 24)}:"
+                    f"fontcolor={text_overlay.get('font_color', 'white')}:"
+                    f"x={text_overlay.get('x', '(w-text_w)/2')}:"
+                    f"y={text_overlay.get('y', 'h-th-10')}"
+                )
+                cmd = [
+                    'ffmpeg', '-i', str(scene_video),
+                    '-vf', drawtext_filter,
+                    '-c:a', 'copy',
+                    '-y', str(processed_video_with_text)
+                ]
+                run_ffmpeg_command(cmd)
+                video_to_process = processed_video_with_text
+
+            # --- Audio Processing ---
             final_audio_for_scene = None
             
             processed_narration = None
@@ -195,12 +219,13 @@ def assemble_video(plan_path):
             elif processed_music:
                 final_audio_for_scene = processed_music
 
+            # --- Final Scene Assembly ---
             output_scene_video = Path(temp_dir) / f"scene_{scene_num}_processed.mp4"
             
             if final_audio_for_scene:
                 cmd = [
                     'ffmpeg',
-                    '-i', str(scene_video),
+                    '-i', str(video_to_process),
                     '-i', str(final_audio_for_scene),
                     '-c:v', 'copy',
                     '-c:a', 'aac',
@@ -212,10 +237,10 @@ def assemble_video(plan_path):
                 run_ffmpeg_command(cmd)
             else:
                 print("ℹ️ No custom audio for this scene. Standardizing video for concatenation.")
-                if video_has_audio_stream(scene_video):
+                if video_has_audio_stream(video_to_process):
                     cmd = [
                         'ffmpeg',
-                        '-i', str(scene_video),
+                        '-i', str(video_to_process),
                         '-c:v', 'copy',
                         '-c:a', 'aac',
                         '-ar', '48000',
@@ -225,7 +250,7 @@ def assemble_video(plan_path):
                 else:
                     cmd = [
                         'ffmpeg',
-                        '-i', str(scene_video),
+                        '-i', str(video_to_process),
                         '-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=48000',
                         '-c:v', 'copy',
                         '-c:a', 'aac',

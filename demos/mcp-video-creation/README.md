@@ -24,11 +24,15 @@ then login:
 ```bash
 gcloud config set account ACCOUNT
 gcloud config set project PROJECT_ID
+# or just...
 just auth2
 ```
 
 ### Thanks
 
-Thanks to Hussain Chinoy without whose work this wouldn't have been possible.
+Thanks to Hussain Chinoy without whose work this wouldn't have been possible. **GenMedia** rocks!
 
-**GenMedia** rocks!
+## Docs
+
+* [Text on video ffmpeg - SO](https://stackoverflow.com/questions/17623676/text-on-video-ffmpeg).
+*

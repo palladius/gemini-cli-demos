@@ -8,6 +8,12 @@ scenes:
   video: scene1_final.mp4
   music:
     source: scene1_music_choir_rock.wav
+  text_overlay:
+    text: In 49 B.C. Caesar came across the Rubicon river...
+    font_size: 36
+    font_color: white
+    x: (w-text_w)/2
+    y: h-th-20
   start_time: 0.0
   end_time: 7.875
   duration: 7.875
