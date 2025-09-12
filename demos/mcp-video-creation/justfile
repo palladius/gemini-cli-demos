@@ -87,9 +87,16 @@ install:
     ffmpeg -version
 
 
+[group: 'commands']
 gemini-check-install:
     gemini -c -y -p '/aicinema:check_install'
 
-gemini-aicinema-generate-audio-story-for-ale:
-    gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for Alessandro'
+# gemini-aicinema-generate-audio-story-for-ale:
+#     gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for Alessandro'
+
+# Generates a spooky bedtime story for NAME
+[group: 'aicinema']
+[group: 'commands']
+gemini-aicinema-generate-audio-story-for NAME:
+    gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for {{NAME}}'
 

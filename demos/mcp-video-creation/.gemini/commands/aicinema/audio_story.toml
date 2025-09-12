@@ -36,14 +36,20 @@ Remembering the Characters & Style, utilize the story to create 3-5 scenes with 
 
 For each of the storyboard scenes, construct a soundtrack description that fits the scene. Use Lyria to generate that audio soundtrack, saving the files in a rational relatable manner.
 
+# Setup
+
+* Create a properly named folder, like `stories/audio_stories/YYYYMMDD_HHMM_(short_title_of_the_story)/`.
+* Create a PLAN.md file in the folder, describing what you're going to do, the characters, the style, the scenes, the music.
+* The plan should contain checkboxes and you should be checking them out as soon as a task is done. Why? If you get interrupted, you can take it from where you left it.
 
 # Additional info
 
 * The story should last 3-4 minutes.
-* Save the story in a properly named folder, like `stories/audio_stories/YYYYMMDD_HHMM_(title_of_the_story)/`.
 * Save the story in the languages specified by the persona. If not given, use English and Italian. Save them in different `.txt` files, with 2 letter postfix, like  _it / _en / _de in naming resources.
   Note the FIRST file you save MUST be a .txt. This is the main story file with no paragraphs and markdown.
 * Then create an audio track for each of these, starting from the TEXT file. Use `Chirp` models.
+  Ensure the story doesn't have "#" and "*" as these might be interpreted as markdown, and
+  it sounds HORRIBLE as such, so sanitize it before as needed!
 * AFTER this, create a new markdown which contains the text above, a proper title in H1, and a link to audio (if feasible!)
 
 Example for ONE language (Italian):
@@ -66,7 +72,6 @@ Image style should be a cartoon in Pixar or Dreamworks style, fun, colorful.
 * Do NOT ask me questions, just go for as long as you can.
 * If you encounter any errors, put them in a `ERRORS.md` file (possibly in the target folder).
 * When done, please write down a `README.md` with everything you have done, things you generated, what went wrong, choices you made, prompts you used (in some tagging so I can see/reuse them in the future), and so on.
-
 
 # Additional context
 
