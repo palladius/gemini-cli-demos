@@ -59,3 +59,4 @@ Yes probably a `yaml` sounds best!
 ## Misc
 
 * Do not use `gsutil`, its broken for me. Use `gcloud storage ..` instead.
+* Use `"num_videos":2` to generate TWO videos with `veo_t2v`
