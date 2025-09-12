@@ -19,3 +19,6 @@ This project is licensed under the Apache 2.0 License.
 
 ## Video Prompt
 The current video for the wizard is not satisfactory as the wizard does not resemble Harry Potter. For future video generation, please use a prompt that specifically describes Harry Potter, and consider using Imagen 4 Ultra for generating the wizard image to ensure better likeness and quality.
+
+## Video Generation Prompt (Current)
+Harry the Wizard and a puffin flying together over the city of Rome, with iconic Roman landmarks in the background.

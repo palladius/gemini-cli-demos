@@ -70,3 +70,18 @@ install-extension:
 
 assemble-sample-video:
     bin/assemble_video.py stories/20250911-1230-CUJ03-rubycon-pitch/video_plan.yaml
+
+# Installs dependencies on MacOS
+[group: 'dependencies']
+[macos]
+install:
+    brew install ffmpeg
+    ffmpeg -version
+
+# Installs dependencies on Linux
+[group: 'dependencies']
+[linux]
+install:
+    sudo apt update
+    sudo apt install ffmpeg
+    ffmpeg -version
