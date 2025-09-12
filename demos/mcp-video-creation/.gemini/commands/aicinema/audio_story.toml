@@ -54,8 +54,10 @@ For each of the storyboard scenes, construct a soundtrack description that fits 
 
 Example for ONE language (Italian):
 1. `stories/audio_stories/20240911_1230_mystery_in_the_woods/mystery_in_the_woods_it.txt` - the main story text file in Italian
-2. `stories/audio_stories/20240911_1230_mystery_in_the_woods/mystery_in_the_woods_it.wav` - the audio file in Italian
+2. `stories/audio_stories/20240911_1230_mystery_in_the_woods/mystery_in_the_woods_it.wav` - the audio file in Italian.
 3. `stories/audio_stories/20240911_1230_mystery_in_the_woods/mystery_in_the_woods_it.md` - the markdown file with title, story and link
+
+Note: you need to rename CHIRP generated files to accommodate this naming scheme.
 
 ## Cover image
 

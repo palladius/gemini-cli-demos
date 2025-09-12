@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Adds a title to the bottom center of a video for a specified duration.
+# Usage: ./bin/add-title-small-bottom-center VIDEO_FILE "TITLE TEXT"
+#
+# Environment variables for customization:
+#   SECONDS_START: The time (in seconds) when the title should appear. Default: 0
+#   SECONDS_END:   The time (in seconds) when the title should disappear. Default: 2
+
+set -euo pipefail
+
+# Use environment variables if set, otherwise use defaults.
+SECONDS_START="${SECONDS_START:-0}"
+SECONDS_END="${SECONDS_END:-2}"
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 VIDEO_FILE 'TITLE TEXT'"
+    exit 1
+fi
+
+INPUT_FILE="$1"
+TITLE_TEXT="$2"
+EXTENSION="${INPUT_FILE##*.}"
+FILENAME_NO_EXT="${INPUT_FILE%.*}"
+OUTPUT_FILE="${FILENAME_NO_EXT}_with_title.${EXTENSION}"
+
+if [ ! -f "$INPUT_FILE" ]; then
+    echo "Error: Input file not found at '$INPUT_FILE'"
+    exit 1
+fi
+
+echo "Adding title to '$INPUT_FILE'..."
+echo "Text: '$TITLE_TEXT'"
+echo "Displaying from ${SECONDS_START}s to ${SECONDS_END}s."
+
+ffmpeg -i "$INPUT_FILE" \
+       -vf "drawtext=text='$TITLE_TEXT':fontcolor=white:fontsize=24:x=(w-text_w)/2:y=h-th-10:enable='between(t,${SECONDS_START},${SECONDS_END})'" \
+       -codec:a copy \
+       "$OUTPUT_FILE"
+
+echo "Successfully created titled video at '$OUTPUT_FILE'"

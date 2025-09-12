@@ -58,9 +58,14 @@ test-cuj01:
 
 
 # Showcasing the auto-extraction of frames from a video
+[group: 'demo']
 extract-frames-demo:
     bin/extract_frames.py stories/20250911-1230-CUJ03-rubycon-pitch/scene4_final.mp4
 
+
+[group: 'demo']
+add-random-title-to-video:
+    SECONDS_START=1 SECONDS_END=3 ./bin/add-title-small-bottom-center stories/audio_stories/20250912_1310_spooky_story_for_seby/veo-veo-3.0-generate-preview-20250912-131653-0.mp4 "My Justfile Title on $(date +%Y%m%d-%H%M%S)"
 
 # TODO ricc move to SHARED one
 install-extension:
@@ -99,4 +104,5 @@ gemini-check-install:
 [group: 'commands']
 gemini-aicinema-generate-audio-story-for NAME:
     gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for {{NAME}}'
+
 
