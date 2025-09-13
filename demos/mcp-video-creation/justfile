@@ -14,6 +14,17 @@ list:
 test-mcp:
     echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-image","arguments":{"prompt":"a futuristic cityscape at sunset"}}}' | mcp-imagen-go | jq .
 
+# Tests local installation of MCP Golang Chirp client
+test-chirp:
+    @if ! command -v mcp-chirp3-go &> /dev/null; then \
+        echo "mcp-chirp3-go not found in PATH."; \
+        echo "Please install it from https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md"; \
+        exit 1; \
+    fi
+    @echo "mcp-chirp3-go found, generating audio..."
+    @echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-speech","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
+
+
 
 # Launch gemini with bucket baked in
 gemini-with-go:
@@ -34,7 +45,7 @@ gemini-with-go-yolo:
 # enable `imagen_t2i` Tool
 
 # Authenticate properly
-auth2:
+auth:
     bin/gcloud-auth
 
 # Checks if go MCP scripts have been installed
@@ -106,3 +117,10 @@ gemini-aicinema-generate-audio-story-for NAME:
     gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for {{NAME}}'
 
 
+[group: 'commands']
+gemini-check-auth:
+    echo 1. Checking mcp-chirp3-go installation...
+    which mcp-chirp3-go || echo 'mcp-chirp3-go not found in PATH - this will FAIL!'
+    echo 2. checking its authenticated: his will fail with auth issues if it fails.
+    timeout 7 ~/go/bin/mcp-chirp3-go
+    gemini -c -y -p 'Ensure mcp-chirp3-go is installed and in PATH. Then use MCP Chirp model to generate an audio file which says "I love justfiles!" If fails, suggest next fixing steps.'
