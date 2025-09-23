@@ -5,7 +5,7 @@ student:
   teacher: "Riccardo"
   github_username: "palladius"
   name: "Rolando Furioso"
-  computer: "Darwin"
+  computer: "Mac"
   pin: "98765"
   issue: https://github.com/palladius/gemini-cli-demos/issues/13
 workshop:
