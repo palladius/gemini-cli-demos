@@ -7,6 +7,7 @@ student:
   name: "Rolando Furioso"
   computer: "Darwin"
   pin: "98765"
+  issue: https://github.com/palladius/gemini-cli-demos/issues/13
 workshop:
   name: "Zurich - Cloud Summit"
   secret_keyword: "Cuechicashli"
