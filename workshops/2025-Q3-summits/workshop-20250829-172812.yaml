@@ -1,0 +1,14 @@
+student:
+  workshop_command_version: "1.0.4_29aug25"
+  username: "user"
+  todays_date: "20250829-142632"
+  github_username: "danistrebel"
+  name_surname: "Daniel Day-Lewis"
+  computer_type: "Linux"
+  issue: https://github.com/palladius/gemini-cli-demos/issues/5
+workshop:
+  date: "2025-08-29"
+  city: "Antarctica"
+  event: "AnyFest"
+  secret_keyword: "AnyDayIsG00d"
+  pin_number: 17017

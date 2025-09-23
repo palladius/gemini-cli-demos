@@ -1,4 +1,4 @@
-# Workshop Submissions for 🇦🇶 Antarctica - 2025-08-29
+# Welcome to Antarctica 🇦🇶 2025-08-29
 
 | hour_and_minute | github | computer | issue |
 |---|---|---|---|
