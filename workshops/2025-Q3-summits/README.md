@@ -57,6 +57,28 @@ I hope your energy levels are good! We're getting started!
 1. Ensure you have your favorite IDE open (if you use one).
 2. ensure to `cd path/to/gemini-cli-demos` if you didnt follow the previous step. You should be in a folder with a `GEMINI.md`, a `README.md`, a `justfile` and other. It's important you call gemini from THIS folder, or scripts wont work!
 3. Let's now call `$ gemini` on your local shell.
+
+### 1. Our first interactions
+
+What's this code? I don't know! Let's ask Gemini!
+
+Copy and paste the following question (or something similar):
+
+```bash
+Explain the `workshops/2025-Q3-summits/ code base`.
+What does it do?
+```
+
+Now type this (dont forget the '@' symbol):
+
+```
+Read @workshops/2025-Q3-summits/GEMINI.md
+```
+
+This enforces the reading of a GEMINI.md prompt, which changes Gemini's behaviour. Now it should start using emojis and a few German words.
+
+### 2. Our first custom command
+
 4. To start the workshop, do something like this: `/workshops:01_create_issue What do you want to do`. Examples:
 
 ```bash
@@ -74,7 +96,7 @@ I hope your energy levels are good! We're getting started!
 Decide the authentication you want to have, the simplest is to use a gmail account login. You can swap auth via `/auth`.
 
 
-## [optional] Now your turn to create automation!
+## 3. [optional] Now your turn to create automation!
 
 Did you like what you see? Now you can try things yourself!
 
@@ -82,7 +104,8 @@ Did you like what you see? Now you can try things yourself!
 
 Did you notice some aspect where Gemini misbehaved? Or you want to extend/improve something? time to create your first GEMINI.md!
 
-1. Create a GEMINI.md in the root folder or your git repo.
+1. Create a GEMINI.md in the root folder or your git repo or edit the existing one.
+   1. Note that "workshops/2025-Q3-summits/GEMINI.md" contains mistakes on purpose. You might want to fix/remove them.
 2. Add some sentences. Something as simple as "Speak to me in Italian" or "add some emoji" or "call me Aladeen", or something more pertinent to your coding flow ("Ensure unit tests are there", "Before committing, always remember to run local tests", ..)
 3. Now reload `gemini` or run a `/memory refresh` or say "Please re-read @GEMINI.md". Don't forget the at ('@')!
 
@@ -98,6 +121,16 @@ Did you enjoy my Custom commands, like `/workshops:01_create_issue` ? Time to wr
 6. Enjoy Gemini following instructions in your TOML prompt, substituting "yellow is my favorite color" to the {{args}}.
 7. Test this also in headless mode! just run `gemini -p "/julia:my_first_cmd yellow is my favorite color"`. Note you might want to give your command some super powers. `--yolo` will let it do ANYTHING (dangerous). More docs [here](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/shell.md).
 
+### [optional] Add GitHub integration
+
+If you own your own repo, you can add custom GitHub Actions which allow you to interact with your GH repo!
+
+1. Type: `/setup-github`
+2. Follow instructions (install the gemini-cli bot, add GEMINI API KEY to your repo, ..)
+3. Test it by creating an issue and typing something like `@gemini-cli help me fix this issue`.
+4. Enjoy the experience:
+
+![testing gemini-cli GHA](images/gha.png)
 
 <!--
 Riccardo Only: ricc pvt doc: https://go/ricc-2025q3-cloud-summits
