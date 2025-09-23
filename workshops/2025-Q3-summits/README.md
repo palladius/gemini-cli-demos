@@ -2,14 +2,21 @@
 
 
 
-<img src="images/image-2.png" alt="A beautiful workshop" style="float: right; width: 50%; margin-left: 20px; margin-bottom: 10px;">
-
-To do this workshop, you need two things:
-
-1. A GitHub account (optional but recommended, for forks and PRs).
-2. `Gemini CLI` installed. Tranquillo, if you don't, we can work on that.
-
-And of course, a computer connected to the 🛜 internet.
+<table border="0">
+  <tr>
+    <td valign="top">
+      <p>To do this workshop, you need two things:</p>
+      <ol>
+        <li>A GitHub account (optional but recommended, for forks and PRs).</li>
+        <li><code>Gemini CLI</code> installed. Tranquillo, if you don't, we can work on that.</li>
+      </ol>
+      <p>And of course, a computer connected to the 🛜 internet.</p>
+    </td>
+    <td width="50%" align="center">
+      <img src="images/image-2.png" alt="A beautiful workshop">
+    </td>
+  </tr>
+</table>
 
 <!-- ![Beautiful Workshop](image.png) -->
 
