@@ -62,3 +62,4 @@ Yes probably a `yaml` sounds best!
 * Use `"num_videos":2` to generate TWO videos with `veo_t2v`
 * Do NOT use Chirp models with Markdown. Text needs to be without # and *.
 * MCP tools are usually installed in `~/go/bin`
+* Note: text comes out ugly in video, so maybe better: (1) call Veo without text on it, then (2) add it deterministically EX POST with `ffmpeg` / `avtool`.

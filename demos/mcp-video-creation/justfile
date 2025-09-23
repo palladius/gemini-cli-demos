@@ -1,5 +1,5 @@
 
-import '~/git/gic/justfile.gemini_common'
+#import '~/git/gic/justfile.gemini_common'
 
 
 # PATH := ~/go/bin:$(PATH)
@@ -133,3 +133,12 @@ test-transcription:
     bin/transcribe-video.sh stories/20250911-1230-CUJ03-rubycon-pitch/scene2_final.mp4
     echo 2. Testing output:
     cat stories/20250911-1230-CUJ03-rubycon-pitch/scene2_final_transcription.txt
+
+
+gemini-might-not-work:
+    echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
+    PATH=$PATH:~/go/bin gemini -c -y
+gemini-demo:
+    #echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
+    just auth
+    PATH=$PATH:~/go/bin gemini -c -y

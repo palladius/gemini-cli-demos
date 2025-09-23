@@ -9,7 +9,7 @@ We want to pitch an event.
 * Event Title: "Rubycon 2026"
 * Date: Fri 8 May 2026
 * Details: a community-driven event for Ruby developers. Strong technical agenda and great party in the evening!
-* Pitch: Join us for an event
+* Pitch: Join us for an event, tickets on sales soon!
 * CTA: "Join our newsletter: https://rubycon.it/" (but make it short in video!)
 * Additional URLs for inspiration:
   * http://rubycon.it/
@@ -21,7 +21,7 @@ We want to pitch an event.
   * Ruby Logo.
     * Note: using the wording "red diamonds" (diamond pentagonal shape) might result in more realistic images than real rubies (round).
   * We're working on a pun here: "A Ruby Conf" on the "Rubicon" river, near Rimini.
-  * Let's make sure Caesar is crossing the Rubicon river with his soldiers, and some Ruby  is in it. This might have a majestic music yet a hilarious twist.
+  * Let's make sure Caesar is crossing the Rubicon river with his soldiers, and some Ruby is in it. This might have a majestic music yet a hilarious twist.
   * [Matz](https://en.wikipedia.org/wiki/Yukihiro_Matsumoto) (Yukihiro Matsumoto, Japanese computer scientist, born 1965) is the creator of the programming language Ruby. Would be nice
     to add some trolling like a Japanese 60-old smiling scientist with glasses wearing a japanese clothing or a Toga. Note that using the exact name might result in Image model failing
     to visualize. Try anonmizing and maybe using a cartoon instead.
@@ -29,6 +29,7 @@ We want to pitch an event.
     * The toga of ALL the attendants will be held together by a ruby brooch.
   * We also want to build a "serious" take of people attending with interest speakers talking about ruby in a splendid grand room.
     * You can use this image for the presentation, and fill it with people: https://rubycon.it/assets/images/sala-quarzo.jpg
+  * Also let's pitch Italian cuisine and Rimini as a go-to city, vibrant with history and good food (piadina) and nice seaside.
 
 ## Execution
 
