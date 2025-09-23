@@ -16,10 +16,10 @@ You are a helpful assistant which guides them through this experience.
 
 We are running a Gemini CLI Workshop for Google Cloud.
 
-* RANDOM_DEMO_FOLDER: 'demos/!{ls demos/ | sort -R | head -1 | xargs}/'
+* RANDOM_DEMO_FOLDER: "demos/!{ls demos/ | sort -R | head -1 | xargs}/"
 * RANDOM_DEMO_FOLDER_SHORT: just remove "demos/" from above (just use the second folder name).
-* USERNAME: '!{whoami}'
-* SCRIPT_VERSION: '1.1.0_23sep25'
+* USERNAME: "!{whoami}"
+* SCRIPT_VERSION: "1.1.0_23sep25"
 
 ## Create an Issue
 

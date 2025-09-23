@@ -79,6 +79,12 @@ Read @workshops/2025-Q3-summits/GEMINI.md
 
 This enforces the reading of a GEMINI.md prompt, which changes Gemini's behaviour. Now it should start using emojis and a few German words.
 
+Finally, ask ANY question! Something like:
+
+```
+What is the workshop of today?
+What is Riccardo's favourite ice cream?
+```
 
 ### 2. Our first custom command
 
@@ -110,7 +116,7 @@ Do something like this: `/workshops:02_add_me_to_class in Cloud Summit Zurich`.
 ```
 -->
 
-
+![this is optional](image-2.png)
 
 ## 3. [optional] Now your turn to create automation!
 
