@@ -1,7 +1,11 @@
-
 # lists targets
 list:
     just -l
+
+clean:
+    @echo "Removing .venv folders..."
+    @find . -type d -name .venv -exec rm -rf {} +
+    @echo "Done."
 
 # install gemini CLI
 install:

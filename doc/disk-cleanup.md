@@ -17,3 +17,22 @@ find demos/mcp-video-creation/stories -name "*.mp4" -exec git rm --cached {} +
 
 **Explanation of `git rm --cached`:**
 The `git rm --cached <file>` command removes the specified file(s) from the Git index (staging area) and from the repository's history, but it leaves the actual file(s) in your working directory. This is useful when you want Git to stop tracking a file that was previously committed, without deleting your local copy of that file.
+
+## Calculating Repository Size
+
+**Date:** 2025-09-23
+
+**Reasoning:** To understand the impact of untracking large files and to monitor the overall repository size.
+
+**Action Taken:** Checked the size of the `.git` directory, which contains the entire history of the repository.
+
+**Command Used:**
+```bash
+du -sh .git
+```
+
+**Current `.git` directory size:** 776M
+
+**Explanation:**
+The `.git` directory stores all the history of your repository, including all versions of every file. Even after untracking files with `git rm --cached`, their history remains within the `.git` directory. To significantly reduce the size of the `.git` directory, especially after removing large files that were previously tracked, a `git gc` (garbage collection) command can be run. For more drastic size reductions involving rewriting history (e.g., removing large files from *all* history), tools like `git filter-repo` are used, but these are advanced operations that should be performed with extreme caution and a full understanding of their implications.
+

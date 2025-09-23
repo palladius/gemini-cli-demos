@@ -11,3 +11,5 @@ demos/sqlite-investigation/output/DEMO2.md
 tmp/
 .vecchiume
 .DS_Store
+# TODO remove me after workshop
+*.mp4

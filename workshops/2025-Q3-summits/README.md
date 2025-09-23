@@ -56,6 +56,32 @@ I hope your energy levels are good! We're getting started!
 ```
 Decide the authentication you want to have, the simplest is to use a gmail account login. You can swap auth via `/auth`.
 
-## REMOVEME
 
-ricc pvt doc: https://go/ricc-2025q3-cloud-summits
+## [optional] Now your turn to create automation!
+
+Did you like what you see? Now you can try things yourself!
+
+### [optional]  Write your own `GEMINI.md`
+
+Did you notice some aspect where Gemini misbehaved? Or you want to extend/improve something? time to create your first GEMINI.md!
+
+1. Create a GEMINI.md in the root folder or your git repo.
+2. Add some sentences. Something as simple as "Speak to me in Italian" or "add some emoji" or "call me Aladeen", or something more pertinent to your coding flow ("Ensure unit tests are there", "Before committing, always remember to run local tests", ..)
+3. Now reload `gemini` or run a `/memory refresh` or say "Please re-read @GEMINI.md". Don't forget the at ('@')!
+
+### [optional]  Write your own Custom command
+
+Did you enjoy my Custom commands, like `/workshops:01_create_issue` ? Time to write your own!
+
+1. Check `.commands/commands/`. Look around for files: `find .commands/commands/`.
+2. Create your own like `.commands/commands/YOURNAME/my_first_cmd.toml`. Say your name is "Julia", something like: `.commands/commands/julia/my_first_cmd.toml`.
+3. Check any other TOML in there, as you can see you need to have a `description` and a `prompt`. Add your business logic to the prompt. Also use `{{args}}` to paste what the user will give you when invoking the command.
+4. Once you're happy, restart `gemini`.
+5. Try writing `/julia:my_first_cmd yellow is my favorite color` (or any other comment).
+6. Enjoy Gemini following instructions in your TOML prompt, substituting "yellow is my favorite color" to the {{args}}.
+7. Test this also in headless mode! just run `gemini -p "/julia:my_first_cmd yellow is my favorite color"`. Note you might want to give your command some super powers. `--yolo` will let it do ANYTHING (dangerous). More docs [here](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/shell.md).
+
+
+<!--
+Riccardo Only: ricc pvt doc: https://go/ricc-2025q3-cloud-summits
+-->
