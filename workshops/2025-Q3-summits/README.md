@@ -1,6 +1,9 @@
 # Gemini CLI *beautiful* workshop
 
 
+
+<img src="images/image-2.png" alt="A beautiful workshop" style="float: right; width: 50%; margin-left: 20px; margin-bottom: 10px;">
+
 To do this workshop, you need two things:
 
 1. A GitHub account (optional but recommended, for forks and PRs).
@@ -10,7 +13,6 @@ And of course, a computer connected to the 🛜 internet.
 
 <!-- ![Beautiful Workshop](image.png) -->
 
-![A beautiful workshop](images/image-2.png)
 
 ## Prerequisites: Installing Gemini CLI
 
