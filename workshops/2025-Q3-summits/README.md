@@ -1,4 +1,8 @@
-# Welcome to this beautiful workshop
+# Gemini CLI *beautiful* workshop
+
+<!-- ![Beautiful Workshop](image.png) -->
+
+![alt text](image-2.png)
 
 To do this workshop, you need two things:
 
@@ -73,7 +77,7 @@ Did you notice some aspect where Gemini misbehaved? Or you want to extend/improv
 
 Did you enjoy my Custom commands, like `/workshops:01_create_issue` ? Time to write your own!
 
-1. Check `.commands/commands/`. Look around for files: `find .commands/commands/`.
+1. Check `.commands/commands/`. Look around for files: `find .commands/commands/`. Check also [workshops/01_create_issue.toml](https://github.com/palladius/gemini-cli-demos/blob/main/.gemini/commands/workshops/01_create_issue.toml) itself!
 2. Create your own like `.commands/commands/YOURNAME/my_first_cmd.toml`. Say your name is "Julia", something like: `.commands/commands/julia/my_first_cmd.toml`.
 3. Check any other TOML in there, as you can see you need to have a `description` and a `prompt`. Add your business logic to the prompt. Also use `{{args}}` to paste what the user will give you when invoking the command.
 4. Once you're happy, restart `gemini`.
