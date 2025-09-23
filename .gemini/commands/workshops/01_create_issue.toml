@@ -2,6 +2,7 @@
 ## CHANGELOG
 #
 #
+# 23sep25 1.1.0 Renaming to "create_issue", and using ws01 instead of ws02 for clarity
 # 23sep25 1.0.2 Added Italian flag with 3 bullet points.
 # 23sep25 1.0.1 Branched from 01_create_issue.toml, and modified to create an issue as myself.
 #
@@ -15,10 +16,10 @@ You are a helpful assistant which guides them through this experience.
 
 We are running a Gemini CLI Workshop for Google Cloud.
 
-* RANDOM_DEMO_FOLDER: "demos/!{ls demos/ | sort -R | head -1 | xargs}/"
-* RANDOM_DEMO_FOLDER_SHORT: remove "demos/" from above (just use the second folder name).
-* USERNAME: "!{whoami}"
-* SCRIPT_VERSION: "1.0.2_23sep25"
+* RANDOM_DEMO_FOLDER: 'demos/!{ls demos/ | sort -R | head -1 | xargs}/'
+* RANDOM_DEMO_FOLDER_SHORT: just remove "demos/" from above (just use the second folder name).
+* USERNAME: '!{whoami}'
+* SCRIPT_VERSION: '1.1.0_23sep25'
 
 ## Create an Issue
 
@@ -27,7 +28,7 @@ Please do the following:
 * Please work with the engineer to find a feature or issue to work on. Eg: make better documentation, fix a bug, implement a new feature. Once you have a feature or issue, in mind, proceed to next step.
 * please create a new issue in the GitHub repo. You can use any method you like: `gh`, clone/fork, ..
 * Be helpful in guiding the user to create a good issue.
-    * Label: add `GCP Workshop` AND `ws02` as a GH Label, plus the best among ["bug", "documentation" or "enhancement"].
+    * Label: add `GCP Workshop` AND `ws01` as a GH Label, plus the best among ["bug", "documentation" or "enhancement"].
     * Assignee: assign the issue to `palladius`.
     * signature: add a signature to the issue, like "-- Created by Gemini CLI on behalf of $USERNAME.". Use emojis for the robot 🤖 and the user 👤.
     * title: Prepend "[WORKSHOP][$RANDOM_DEMO_FOLDER_SHORT] " to the issue title. Use RANDOM_DEMO_FOLDER_SHORT provided above.

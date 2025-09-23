@@ -80,7 +80,7 @@ This enforces the reading of a GEMINI.md prompt, which changes Gemini's behaviou
 
 ### 2. Our first custom command
 
-Type:  `/workshops:02_create_issue_as_myself`. This will trigger some questions and some commands.
+Type:  `/workshops:01_create_issue`. This should be very straightforward and should lead you to creating an issue under https://github.com/palladius/gemini-cli-demos/issues , hopefully with a [WS01](https://github.com/palladius/gemini-cli-demos/issues?q=is%3Aissue%20state%3Aopen%20label%3Aws01) label.
 
 ![ws02](image.png)
 
