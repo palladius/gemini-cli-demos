@@ -50,4 +50,7 @@ gemini:
 
 # Tests the workshop in NON-interactive way.
 gemini-workshop:
-    gemini -c -y -p "/workshops:01_create_issue DO NOT ASK QUESTION - youve being running in non-interactive mode."
+    gemini -c -y -p "/workshops:01_create_issue DO NOT ASK QUESTION - you are running in non-interactive mode."
+
+gemini-workshop-02:
+    gemini -c -y -p "/workshops:02_add_me_to_class Yes teacher is Riccardo, now add me."
