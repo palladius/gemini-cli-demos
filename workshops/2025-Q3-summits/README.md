@@ -155,7 +155,7 @@ Did you enjoy my Custom commands, like `/workshops:01_create_issue` ? Time to wr
 4. Once you're happy, restart `gemini`.
 5. Try writing `/julia:my_first_cmd yellow is my favorite color` (or any other comment).
 6. Enjoy Gemini following instructions in your TOML prompt, substituting "yellow is my favorite color" to the {{args}}.
-7. Test this also in headless mode! just run `gemini -p "/julia:my_first_cmd yellow is my favorite color"`. Note you might want to give your command some super powers. `--yolo` will let it do ANYTHING (dangerous). More docs [here](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/shell.md).
+7. Test this also in headless mode! just run `gemini -p "/julia:my_first_cmd yellow is my favorite color"`. Note you might want to give your command some super powers. `--yolo` will let it do ANYTHING (dangerous), a good compromise might be '--approval-mode auto_edit'. More docs [here](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/shell.md).
 
 ### [optional] Add GitHub integration
 
@@ -175,8 +175,14 @@ We haven't had time to explore this in this short workshop, but this is probably
 Some pointers:
 
 * [Use MCP with Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md)
+* You can add STDIO or HTTP servers as simply as that:
+  * `gemini mcp add my-stdio-server -e API_KEY=123 /path/to/server`
+  * `gemini mcp add --transport http http-server https://api.example.com/mcp/`
 * My favorite MCPs:
   * https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia
+  * Playwright
+  * Context7
+  * Cloud Run
 
 Check if it works:
 
