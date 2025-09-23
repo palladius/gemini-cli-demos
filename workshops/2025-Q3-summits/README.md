@@ -77,6 +77,13 @@ Read @workshops/2025-Q3-summits/GEMINI.md
 
 This enforces the reading of a GEMINI.md prompt, which changes Gemini's behaviour. Now it should start using emojis and a few German words.
 
+
+### 2. Our first custom command
+
+Type:  `/workshops:02_create_issue_as_myself`. This will trigger some questions and some commands.
+
+![ws02](image.png)
+
 ### 2. Our first custom command
 
 4. To start the workshop, do something like this: `/workshops:01_create_issue What do you want to do`. Examples:
