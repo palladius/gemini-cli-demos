@@ -11,12 +11,15 @@ To do this workshop, you need two things:
 
 And of course, a computer connected to the internet.
 
-## Installing Gemini CLI
+## Prerequisites: Installing Gemini CLI
 
 You can install Gemini CLI on any machine, via `npm/npx`, even `brew` if you're on Mac.
 
 1. Go to https://github.com/google-gemini/gemini-cli
 2. Follow instructions.
+3. It also helps to have these installed:
+   1. [jq](https://jqlang.org/) (needed for the custom command)
+   2. [just](https://github.com/casey/just) (optional).
 
 ## Getting started: download the code
 
