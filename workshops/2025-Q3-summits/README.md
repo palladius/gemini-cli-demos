@@ -49,6 +49,8 @@ If you use a UI, like VSCode, Netbeans, Zed, or so, make sure to open it at the 
 
 * `[code|zed|..] path/to/gemini-cli-demos/`
 
+Decide the authentication you want to have, the simplest is to use a **gmail account login**.
+You can swap auth via `/auth`.
 
 ## The workshop
 
@@ -69,7 +71,7 @@ Explain the `workshops/2025-Q3-summits/ code base`.
 What does it do?
 ```
 
-Now type this (dont forget the '@' symbol):
+Now type this (don't forget the '@' symbol):
 
 ```
 Read @workshops/2025-Q3-summits/GEMINI.md
@@ -84,10 +86,16 @@ Type:  `/workshops:01_create_issue`. This should be very straightforward and sho
 
 ![ws02](image.png)
 
-### 2. Our first custom command
+### 3. Our second custom command (dangerous!)
 
-4. To start the workshop, do something like this: `/workshops:01_create_issue What do you want to do`. Examples:
+We have created a strange and dangerous "sign me up" functionality which will likely result in a Merge request palooza.
 
+Do something like this: `/workshops:02_add_me_to_class in Cloud Summit Zurich`.
+
+* Follow the lead of Gemini CLI who should guide you through the generation of a YAML (make sure you share info you want to share!)
+* Follow the guide to the creation of a [Pull Request](https://github.com/palladius/gemini-cli-demos/pulls).
+
+<!-- This is obsolete now, but i might resurrect it someday in the near future
 ```bash
 # Example 1: app creation
 /workshops:01_create_issue I want to vibe code a new app with Astro which tracks clicks from participants. Ensure a github issue tracks this.
@@ -100,20 +108,41 @@ Type:  `/workshops:01_create_issue`. This should be very straightforward and sho
 # Example 3: Planning a new app: PRD + Implementation plan.
 /workshops:01_create_issue Help me write the PRD for a new application to track participants clicks, so that the firs click returns a different PIN number. Every click will be tracked (IP, timestamp, PIN given). No login needed. Ask user for a preferred language/framework. If nothing is chosen, use Rails. Track this plan in a markdown and let the user review and commit after the user is happy. Some refinement will be needed. DO NOT IMPLEMENT anything, the output is a clicking-app-plan-PRD.md. When the user is happy, create a MD checklist clicking-app-plan-IMPLEMENTATION.md with the activities that need to be done. Finally commit the two files and link them in a new issue for ease of tracking.
 ```
-Decide the authentication you want to have, the simplest is to use a gmail account login. You can swap auth via `/auth`.
+-->
+
 
 
 ## 3. [optional] Now your turn to create automation!
 
-Did you like what you see? Now you can try things yourself!
+Did you like what you see? Now you can start experimenting yourself!
 
+### [optional] Move to YOUR OWN repo!
+
+Want to apply this to your own repo? Very simple!
+
+```
+$ cd path/to/your_own_repo/
+$ gemini
+```
+
+Then ask questions like:
+
+```
+"What does this repo do?"
+
+"show me what I did in the latest commit"
+
+"Which files were changed in the past 24h?"
+
+"Write a doc/ABOUT.md about what this repo does. Make sure to include a mermaid graph of the relationship between Classes/DB Tables/.."
+
+```
 ### [optional]  Write your own `GEMINI.md`
 
 Did you notice some aspect where Gemini misbehaved? Or you want to extend/improve something? time to create your first GEMINI.md!
 
 1. Create a GEMINI.md in the root folder or your git repo or edit the existing one.
-   1. Note that "workshops/2025-Q3-summits/GEMINI.md" contains mistakes on purpose. You might want to fix/remove them.
-2. Add some sentences. Something as simple as "Speak to me in Italian" or "add some emoji" or "call me Aladeen", or something more pertinent to your coding flow ("Ensure unit tests are there", "Before committing, always remember to run local tests", ..)
+2. Add some sentences. Something as simple as "Speak to me in Italian" or "add some emoji" or "call me Aladeen" or "substitute both YES and NO with the word Aladeen", or something more pertinent to your coding flow ("Ensure unit tests are there", "Before committing, always remember to run local tests", ..)
 3. Now reload `gemini` or run a `/memory refresh` or say "Please re-read @GEMINI.md". Don't forget the at ('@')!
 
 ### [optional]  Write your own Custom command
@@ -138,6 +167,23 @@ If you own your own repo, you can add custom GitHub Actions which allow you to i
 4. Enjoy the experience:
 
 ![testing gemini-cli GHA](images/gha.png)
+
+### [optional] Add MCP servers!
+
+We haven't had time to explore this in this short workshop, but this is probably the most useful and fascinating aspect.
+
+Some pointers:
+
+* [Use MCP with Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md)
+* My favorite MCPs:
+  * https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia
+
+Check if it works:
+
+* Restart `gemini` to pick up the MCP server configs
+* Type '/mcp'. Example:
+
+![MCP server](image-1.png)
 
 <!--
 Riccardo Only: ricc pvt doc: https://go/ricc-2025q3-cloud-summits

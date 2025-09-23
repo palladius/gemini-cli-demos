@@ -1,0 +1,13 @@
+student:
+  command_version: "1.1.0_23sep25"
+  user: "ricc"
+  todays_date: "20250923-201604"
+  teacher: "Riccardo"
+  github_username: "palladius"
+  name: "Rolando Furioso"
+  computer: "Darwin"
+  pin: "98765"
+workshop:
+  name: "Zurich - Cloud Summit"
+  secret_keyword: "Cuechicashli"
+  zip_code: "41044"
