@@ -1,1 +1,0 @@
-Audio generation failed for Italian, German, and French due to timeouts from the `chirp_tts` tool. The English audio was generated successfully. Will try again later.

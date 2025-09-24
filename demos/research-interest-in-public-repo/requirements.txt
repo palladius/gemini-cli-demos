@@ -1,4 +1,0 @@
-pyyaml
-matplotlib
-google-generativeai
-python-dotenv

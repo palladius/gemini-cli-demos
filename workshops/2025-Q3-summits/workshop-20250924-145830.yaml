@@ -1,0 +1,13 @@
+student:
+  workshop_command_version: "1.1.0_23sep25"
+  username: "dmytroyurchenko"
+  github_username: "dym-ok"
+  name_surname: "Dmytro Bond"
+  computer_type: "Mac"
+  random_pin: "9336"
+  issue: https://github.com/palladius/gemini-cli-demos/issues/34
+workshop:
+  name: "Zurich - Cloud Summit"
+  date: "2025-09-24"
+  secret_keyword: "Cuechicashli"
+  zip_code: "41044"

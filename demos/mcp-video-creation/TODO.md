@@ -1,3 +1,0 @@
-- [x] Generate a logo for the 'MCP Genmedia' project with the following prompt:
-
-  > A logo for a software project called 'MCP Genmedia'. The logo should represent the creation of generative media (images, video, audio) on the cloud. It should be a modern, clean, and professional design. The logo should feature abstract representations of different media types, like a stylized play button for video, sound waves for audio, and a camera shutter or image frame for images, all integrated with a cloud symbol. The color palette should be inspired by Google Cloud's colors (blue, green, yellow, red) but in a more subtle and modern way.
