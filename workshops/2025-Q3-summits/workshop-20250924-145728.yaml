@@ -1,0 +1,13 @@
+student:
+  workshop_command_version: "1.1.0_23sep25"
+  username: "jakub"
+  todays_date: "20250924-145728"
+  teacher_name: "Riccardo"
+  github_username: "jakubpawlowski"
+  user_name_and_surname: "Jakub Skywalker"
+  computer_type: "Darwin"
+  random_pin: "22801"
+workshop:
+  name: "Zurich - Cloud Summit"
+  secret_keyword: "Cuechicashli"
+  zip_code: "41044"
