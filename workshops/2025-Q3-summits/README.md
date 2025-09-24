@@ -1,7 +1,5 @@
 # Gemini CLI *beautiful* workshop
 
-
-
 <table border="0">
   <tr>
     <td valign="top">
@@ -94,7 +92,7 @@ Type:  `/workshops:01_create_issue`. This should be very straightforward and sho
 
 ### 3. Our second custom command (dangerous!)
 
-We have created a strange and dangerous "sign me up" functionality which will likely result in a Merge request palooza.
+We have created a strange and dangerous "sign me up" functionality which will likely result in a Merge request nightmare.
 
 Do something like this: `/workshops:02_add_me_to_class in Cloud Summit Zurich`.
 
@@ -127,9 +125,12 @@ Did you like what you see? Now you can start experimenting yourself!
 Want to apply this to your own repo? Very simple!
 
 ```
+# CD to your repo.
 $ cd path/to/your_own_repo/
 $ gemini
 ```
+
+If no repos available, you can always clone some juicy ones: [Microservices Demo](https://github.com/GoogleCloudPlatform/microservices-demo), or [Bank of Anthos](https://github.com/GoogleCloudPlatform/bank-of-anthos).
 
 Then ask questions like:
 
@@ -186,9 +187,24 @@ Some pointers:
   * `gemini mcp add --transport http http-server https://api.example.com/mcp/`
 * My favorite MCPs:
   * https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia
-  * Playwright
-  * Context7
-  * Cloud Run
+  * [Playwright](https://github.com/microsoft/playwright-mcp)
+  * [Context7](https://github.com/upstash/context7). Eg
+```json
+// Add to your .gemini/settings.json
+{
+  "mcpServers": {
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "YOUR_API_KEY", // Also works from ENV/.env
+        "Accept": "application/json, text/event-stream"
+      }
+    }
+  }
+}
+```
+
+  * [Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp)
 
 Check if it works:
 
