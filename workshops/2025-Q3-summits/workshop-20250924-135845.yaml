@@ -7,6 +7,7 @@ student:
   name_surname: Bumie Akinremi
   computer_type: Darwin
   random_pin: '24381'
+  issue: https://github.com/palladius/gemini-cli-demos/issues/41
 workshop:
   name: Zurich - Cloud Summit
   secret_keyword: Cuechicashli
