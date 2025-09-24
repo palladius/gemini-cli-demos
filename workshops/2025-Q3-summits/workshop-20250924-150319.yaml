@@ -1,0 +1,13 @@
+student:
+  WORKSHOP_COMMAND_VERSION: "1.1.0_23sep25"
+  USERNAME: "andreicap"
+  TODAYS_DATE: "20250924-150319"
+  TEACHER_NAME: "Riccardo"
+  GITHUB_USERNAME: "andreicap"
+  USER_NAME_AND_SURNAME: "Andrei Cap"
+  COMPUTER_TYPE: "Mac"
+  RANDOM_PIN: "25397"
+workshop:
+  WORKSHOP_NAME: "Zurich - Cloud Summit"
+  SECRET_KEYWORD: "Cuechicashli"
+  ZIP_CODE: "41044"
