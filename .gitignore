@@ -13,3 +13,6 @@ tmp/
 .DS_Store
 # TODO remove me after workshop
 *.mp4
+
+.gemini/
+gha-creds-*.json
