@@ -28,6 +28,7 @@ You can install Gemini CLI on any machine, via `npm/npx`, even `brew` if you're 
 3. It also helps to have these installed:
    1. [jq](https://jqlang.org/) (needed for the custom command)
    2. [just](https://github.com/casey/just) (optional).
+   3. [gh](https://cli.github.com/) GitHub CLI (optional).
 
 ## Getting started: download the code
 
