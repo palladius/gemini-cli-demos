@@ -1,118 +1,73 @@
-# `events_and_people.sqlite` Database Analysis
+# Updated Database Schema and E/R Diagram
 
-## Description
+Here is the updated schema for the `events_and_people.sqlite` database, including the new `talks` and `event_talks` tables.
 
-The `events_and_people.sqlite` database contains information about events, people, their subscriptions to events, and talks given at events.
+## SQL Schema
 
-### `events` table
+```sql
+CREATE TABLE events (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  location TEXT,
+  date TEXT
+);
+CREATE TABLE people (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  surname TEXT,
+  email TEXT UNIQUE
+);
+CREATE TABLE subscriptions (
+  person_id INTEGER,
+  event_id INTEGER,
+  FOREIGN KEY(person_id) REFERENCES people(id),
+  FOREIGN KEY(event_id) REFERENCES events(id),
+  PRIMARY KEY (person_id, event_id)
+);
+CREATE TABLE talks (id INTEGER PRIMARY KEY, title TEXT NOT NULL, abstract TEXT, person_id INTEGER, FOREIGN KEY(person_id) REFERENCES people(id));
+CREATE TABLE event_talks (event_id INTEGER, talk_id INTEGER, FOREIGN KEY(event_id) REFERENCES events(id), FOREIGN KEY(talk_id) REFERENCES talks(id), PRIMARY KEY (event_id, talk_id));
+```
 
-This table stores event information.
+## E/R Diagram (Mermaid)
 
--   **Schema:**
-    ```sql
-    CREATE TABLE events (
-      id INTEGER PRIMARY KEY,
-      name TEXT NOT NULL,
-      location TEXT,
-      date TEXT
-    );
-    ```
-
-### `people` table
-
-This table stores people information.
-
--   **Schema:**
-    ```sql
-    CREATE TABLE people (
-      id INTEGER PRIMARY KEY,
-      name TEXT NOT NULL,
-      surname TEXT,
-      email TEXT UNIQUE
-    );
-    ```
-
-### `subscriptions` table
-
-This table links people to events they are subscribed to.
-
--   **Schema:**
-    ```sql
-    CREATE TABLE subscriptions (
-      person_id INTEGER,
-      event_id INTEGER,
-      FOREIGN KEY(person_id) REFERENCES people(id),
-      FOREIGN KEY(event_id) REFERENCES events(id),
-      PRIMARY KEY (person_id, event_id)
-    );
-    ```
-
-### `talks` table
-
-This table stores information about talks.
-
--   **Schema:**
-    ```sql
-    CREATE TABLE talks (
-      id INTEGER PRIMARY KEY,
-      title TEXT NOT NULL,
-      abstract TEXT,
-      person_id INTEGER,
-      FOREIGN KEY (person_id) REFERENCES people(id)
-    );
-    ```
-
-### `event_talks` table
-
-This table links talks to events.
-
--   **Schema:**
-    ```sql
-    CREATE TABLE event_talks (
-      event_id INTEGER,
-      talk_id INTEGER,
-      PRIMARY KEY (event_id, talk_id),
-      FOREIGN KEY (event_id) REFERENCES events(id),
-      FOREIGN KEY (talk_id) REFERENCES talks(id)
-    );
-    ```
-
-## Entity-Relationship (E/R) Diagram
-
-The following is a Mermaid diagram representing the database schema.
+The new tables (`talks` and `event_talks`) are highlighted in red.
 
 ```mermaid
 erDiagram
-    events ||--o{ subscriptions : "has"
-    people ||--o{ subscriptions : "attends"
-    people ||--o{ talks : "gives"
-    events ||--o{ event_talks : "hosts"
-    talks ||--o{ event_talks : "is_at"
-
-    events {
-        INTEGER id PK
-        TEXT name
-        TEXT location
-        TEXT date
-    }
     people {
-        INTEGER id PK
-        TEXT name
-        TEXT surname
-        TEXT email
+        int id PK
+        string name
+        string surname
+        string email
+    }
+    events {
+        int id PK
+        string name
+        string location
+        string date
     }
     subscriptions {
-        INTEGER person_id PK,FK
-        INTEGER event_id PK,FK
+        int person_id FK
+        int event_id FK
     }
     talks {
-        INTEGER id PK
-        TEXT title
-        TEXT abstract
-        INTEGER person_id FK
+        int id PK
+        string title
+        string abstract
+        int person_id FK
     }
     event_talks {
-        INTEGER event_id PK,FK
-        INTEGER talk_id PK,FK
+        int event_id FK
+        int talk_id FK
     }
+
+    people ||--o{ subscriptions : "subscribes to"
+    events ||--o{ subscriptions : "is subscribed by"
+    people ||--o{ talks : "gives"
+    events ||--o{ event_talks : "has"
+    talks ||--o{ event_talks : "is part of"
+
+    classDef new_table fill:#f99,stroke:#333,stroke-width:2px;
+    class talks,event_talks new_table
+
 ```
