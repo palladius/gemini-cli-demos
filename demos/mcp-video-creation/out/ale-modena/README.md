@@ -1,3 +1,4 @@
+```markdown
 # Story Generation for Alessandro
 
 This document outlines the process of generating a story and its assets for Alessandro.
@@ -33,6 +34,25 @@ graph TD
     end
 ```
 
+## Simplified Workflow
+
+Here is a simplified version of the workflow, showing only the direct relationships between the generated files.
+
+```mermaid
+graph TD
+    A[Initial Prompt] --> B[story-en.txt];
+    A --> C[story-it.txt];
+    A --> D[story-de.txt];
+
+    B --> E[story-en.wav];
+    C --> F[story-it.wav];
+    D --> G[story-de.wav];
+
+    B --> H[start-1.png, ..., start-4.png];
+    B --> I[finale-1.png, ..., finale-4.png];
+    B --> J[trailer.mp4];
+```
+
 ## Generated Files
 
 The following files were generated in this process:
@@ -56,3 +76,4 @@ The following files were generated in this process:
     *   `finale-4.png`
 *   **Video:**
     *   `trailer.mp4`
+```
