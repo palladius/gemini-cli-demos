@@ -44,7 +44,7 @@ Note these are NOT strictly needed. Gemini needs them either in ENV or in `.gemi
    Show a list of italian ones, prepended by italian flag, and appropriate gender emoji for male/female.
 
 7. Finally running a simple CHEAP command, the simplest and funniest way is to say
-  "Non c'e' pezza, funge di brutto!" (and maybe something more elaborate afterwards, like "Non c'e' pezza, funge di brutto! Ho anche controllato X Y e Z, polpetta")
+  "Non c'e' pezza, funge di brutto!" (and maybe something more elaborate afterwards, like "Non c'è pezza, funge di brutto! Ho anche controllato che il balsamico sia in gitignore , polpetta!")
   and create a chirp file for it with any Italian voice you like,
   and call it "funge_di_brutto.wav". If this works, call some sort of `open funge_di_brutto.wav` to play the file in the local computer
   system (Mac / Linux / windows might have different ways to invoke this).

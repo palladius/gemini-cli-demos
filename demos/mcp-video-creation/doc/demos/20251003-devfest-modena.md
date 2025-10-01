@@ -1,6 +1,6 @@
 ## initial axctions
 
-## On the day
+## On the day - 1h before (once)
 
 * Set up `gcloud auth`
 * Check `just test-chirp`
@@ -15,6 +15,8 @@ just test-chirp
 # If  Unauthenticated desc greps, ->
 just auth
 gemini
-
+/mcp
+/aicinema:check_install_modena
 ```
+
 * Check `GEMINI.md`
