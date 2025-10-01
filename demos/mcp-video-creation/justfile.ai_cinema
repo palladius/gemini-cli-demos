@@ -24,3 +24,11 @@ gcloud-auth:
     gcloud config set compute/region $GOOGLE_CLOUD_LOCATION
     gcloud auth application-default login
     gcloud auth application-default print-access-token
+
+# Hussain is a rockstar!
+[group: 'aicinema']
+chirp-io-amo-la-pizza:
+    echo '{"jsonrpc":"2.0","method":"tools/call","id":2,"params":{"name":"chirp_tts","arguments":{"voice_name": "it-IT-Chirp3-HD-Zephyr", "text":"io amo la pizza", "output_directory": "."}}}' | mcp-chirp3-go | jq .
+chirp-io-amo-modena:
+    echo '{"jsonrpc":"2.0","method":"tools/call","id":2,"params":{"name":"chirp_tts","arguments":{"voice_name": "it-IT-Chirp3-HD-Zephyr", "text":"io amo Modena!", "output_directory": "."}}}' | mcp-chirp3-go | tee modena.json | jq .
+    cat modena.json | jq -r .result.content[0].text | sed -n 's/.*Audio saved to: \(.*\.wav\).*/\1/p' | xargs open
