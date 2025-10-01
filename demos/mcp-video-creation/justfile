@@ -24,7 +24,8 @@ test-chirp:
         exit 1; \
     fi
     @echo "mcp-chirp3-go found, generating audio..."
-    @echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-speech","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
+    #@echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-speech","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
+    @echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"list-voices","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
 
 
 
@@ -143,7 +144,13 @@ test-transcription:
 gemini-might-not-work:
     echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
     PATH=$PATH:~/go/bin gemini -c -y
-gemini-demo:
+
+gemini-demo-with-auth:
     #echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
     just auth
+    PATH=$PATH:~/go/bin gemini -c -y
+
+#use when uyou know you're authenticated
+gemini-demo-no-auth:
+    echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
     PATH=$PATH:~/go/bin gemini -c -y
