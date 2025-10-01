@@ -1,0 +1,26 @@
+
+
+[group: 'aicinema']
+gemini: gemini-geniectl
+
+[group: 'aicinema']
+gemini-geniectl:
+    #!/bin/bash
+    echo '🌱🪄🎦 Setting up GENIECTL for success... You only need to ensure the gcloud auth works: just gcloud-auth'
+    export PATH=~/go/bin/:$PATH
+    . .env
+    gemini -c --approval-mode auto_edit
+
+[group: 'aicinema']
+gcloud-auth:
+    #!/bin/bash
+
+    set -euo pipefail
+    . .env
+    echo "Setting up environment variables for authentication..."
+    echo "- GOOGLE_CLOUD_PROJECT: $GOOGLE_CLOUD_PROJECT"
+    echo "- GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION}"
+    gcloud config set project $GOOGLE_CLOUD_PROJECT
+    gcloud config set compute/region $GOOGLE_CLOUD_LOCATION
+    gcloud auth application-default login
+    gcloud auth application-default print-access-token

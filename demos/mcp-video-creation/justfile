@@ -1,7 +1,7 @@
 
 #import '~/git/gic/justfile.gemini_common'
 
-
+import 'justfile.ai_cinema'
 # PATH := ~/go/bin:$(PATH)
 
 # List all available recipes
@@ -11,10 +11,12 @@ list:
 
 # https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md
 # Tests local installation of MCP Golang Imagen client
+[group: 'aicinema_test']
 test-mcp:
     echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-image","arguments":{"prompt":"a futuristic cityscape at sunset"}}}' | mcp-imagen-go | jq .
 
 # Tests local installation of MCP Golang Chirp client
+[group: 'aicinema_test']
 test-chirp:
     @if ! command -v mcp-chirp3-go &> /dev/null; then \
         echo "mcp-chirp3-go not found in PATH."; \
@@ -56,17 +58,18 @@ check-install:
     gcloud auth list
 
 # Runs Imagen MCP on net transport
+[group: 'aicinema_test']
 run-imagen-mcp-on-port-8080:
     PATH=~/go/bin/:$PATH PROJECT_ID=ricc-genai PORT=8080 mcp-imagen-go -transport http
 
 # Checks gemini-cli works with MCP
+[group: 'aicinema_test']
 test-mcp-end2end:
     PATH=~/go/bin/:$PATH gemini -c --allowed-tools ChirpTool -p 'Show me Chirp voices through MCP tool, for instance the Italian female voices'
 
 # Generates the audio story for CUJ01 - Story+Audio+CoverImage
 test-cuj01:
     cat doc/CUJs/CUJ01-Seby-audio-story.md | PATH=~/go/bin/:$PATH gemini -y --allowed-tools ChirpTool,ImagenTool,LyriaTool,VeoTool,WebFetchTool -p
-
 
 # Showcasing the auto-extraction of frames from a video
 [group: 'demo']
@@ -103,6 +106,7 @@ install:
     ffmpeg -version
 
 
+[group: 'aicinema_test']
 [group: 'commands']
 gemini-check-install:
     gemini -c -y -p '/aicinema:check_install'
@@ -117,6 +121,7 @@ gemini-aicinema-generate-audio-story-for NAME:
     gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for {{NAME}}'
 
 
+[group: 'aicinema_test']
 [group: 'commands']
 gemini-check-auth:
     echo 1. Checking mcp-chirp3-go installation...
