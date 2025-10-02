@@ -17,3 +17,22 @@ Maybe test `list_chirp_voices in Italian via MCP` to test authentication.
 /aicinema:video_storyboard for the story highlighted in "doc/CUJs/CUJ03-video-from-pitch-event-modena25.md".
 Make sure to dump all your thinking in MD in the designated folder, in case we get interrupted :)
 ```
+
+Add this more structured structure:
+
+```
+  Maybe you could group the scenes in folders? scene02/README.md would have the Music, video and image prompt and all takes. Maybe a symlink should allow us to seamlessly choose the "good one" among multiple takes.
+  You can choose the first, and ask user to maybe choose another, and finally the construction of the final video could be seamless:
+
+* For scene 1, create folder `scene01/`
+    *  `README.md` containing Image, text, Video prompt and post-generation text to add, eg: `"Welcome to Modena" on the bottom center in big character`.
+    * `video_take01.mp4` For the first video take
+    * `video_take02.mp4`
+    * `video_take03.mp4`
+    * `music01.wav`
+    * `music02.wav` ..  in case we need more..
+    * `assembled_video_final.mp4` which contains the final assembly of video + music + [optionally] a Post generation text.
+* For scene 2 create folder `scene02/`
+* .. and so on
+* In the base folder you have a bash script which assembles all the `scene*/assembled_video_final.mp4`; this can be called again in case we want to change or retake a video.
+```
