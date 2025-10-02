@@ -1,0 +1,4 @@
+
+
+nanobanana-test-generation:
+    gemini -p "/generate a watercolor painting of a puffin in a snowy Zurich"
