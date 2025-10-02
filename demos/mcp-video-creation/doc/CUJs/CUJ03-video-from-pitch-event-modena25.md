@@ -6,32 +6,32 @@ We want to pitch an event.
 
 * Language: Italian
 * Location: Modena, Italy
-* Event Title: "Dev Fest Modena"
+* Event Title: "DevFest Modena"
 * Date: Sat/Sun 4-5 Oct 2025
 * Details: a community free event, with plenty of technical talks around the Google ecosystem. One of the biggest
   events in Italy
-* Pitch: Something Join us for an event
+* Pitch: Something contributing to "Join us for a special event" with 1000+ tickets already "SOLD" (note the event is free).
 * CTA: subscribe to the event for free at https://devfest.modena.it/
 
 * Elements which should be present:
-  * Pavarotti or a Tenor singer, possibly with background Opera music
+  * Pavarotti or a Tenor singer, possibly with background Opera music.
   * Balsamic vinegar pouring dramatically on computer screens (with comical effect)
-  * A lot of Google logos popping up everywhere, upbeat music.
-  * A number of developers everywhere. they all wear a tshirt, in one of the four google colors ( #4285F4
+  * Ferrari and/or fast cars close to Modena (Lamborghini / Maserati too).
+  * A lot of fun Google logos popping up everywhere, upbeat music: Google is the biggest sponsor.
+  * A number of developers everywhere. they all wear a t-shirt, in one of the four google colors ( #4285F4
  #DB4437 #F4B400 and #0F9D58 )
-  * We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Modena, and show big crowds of 100-300 people
-  inside an event space, in a typical tech event setup.
+  * We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Modena, and show big crowds of 100-300 people inside an event space (which is a church with amazing frescos), in a typical tech event setup.
 
 ## Execution
 
-* Create a folder with name like `YYYYMMDD-HHMM-CUJ03-title-of-story/`.
-  * Create a README.md file in it.
+* Create a DESIGNATED_FOLDER with name like `YYYYMMDD-HHMM)-CUJ03-STORY_TYILE/`, based on *current date* and *title*.
+  * Create a `README.md` file in it.
 * The final video should be around 30-40 seconds at most.
 
 ## Storyboard
 
 * Now lets create a storyboard for this story and then N videos from it.
-* output the storyboard into `YYYYMMDD-HHMM-title-of-story/storyboard.md`
+* output the storyboard into the `$DESIGNATED_FOLDER/storyboard.md`
   * Each scene (6-8sec scene) should be in a H2 ("## Scene XX: ...") so easy to isolate
   * It should contain both the the context AND the prompt.
   * Videos might be ugly, we might need to be able to redo them at a later time so "recast scene4" is something we should be able to do easily, hence this convention.
@@ -69,4 +69,4 @@ Once done,
    1. For each scene, you can ask user to evaluate the best, or choose a random one.
    2. The readme should link the CHOSEN take (eg scene1_take2, scene2_take1, ..) for ease of reproduction.
 2. Update the README with link to final video and summarize what it's about.
-3. Add an `assmeble_video.sh` which contains the deterministic FFMPG command to generate the final video starting from the original ones, so user can tweak the result.
+3. Add an `bin/assemble_[new_]video.sh` which contains the deterministic FFMPG command to generate the final video starting from the original ones, so user can tweak the result. Note some might be already present in bin/
