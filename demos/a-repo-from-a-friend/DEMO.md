@@ -13,7 +13,6 @@ Look at this repo suggested by a friend: https://github.com/Friends-of-Ricc/sand
 Explain to the audience: this prompt seems a good candidate for transforming this into a Custom Command...
 Let's discuss this later.
 
-
 ## Lets do more
 
 ```
