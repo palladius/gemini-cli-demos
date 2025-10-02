@@ -67,3 +67,12 @@ Siccome la API di Gemini non produce bambini, assicurati che non ci siano "7 yea
 
 Infine costruisci un video che faccia da trailer su questa storia.
 Ricorda sempre di omettere l'eta' del bimbo.
+
+## one off for the slides
+
+
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│  > Finally create a README.md which contains a mermaid graph containing all the files I've created. I need this for the presentation of a  │
+│    demo. Something showing the structure and lofic: prompt -> 3 stories in 3 languages, then 3 sounds, then images based on the EN story,  │
+│    and then video based on EN story. With arrows. I'll use an image of it, so it should be visually pelasing.                              │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

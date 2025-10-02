@@ -26,8 +26,8 @@ graph TD
 
     subgraph Asset Generation
         C --> L{Image Engine};
-        L --> M[🖼️ start-1.png, ..., start-4.png];
-        L --> N[🖼️ finale-1.png, ..., finale-4.png];
+        L --> M[🖼️ start-1..4.png];
+        L --> N[🖼️ finale-1..4.png];
         C --> O{Video Engine};
         O --> P[🎥 trailer.mp4];
     end
@@ -39,16 +39,16 @@ Here is a simplified version of the workflow, showing only the direct relationsh
 
 ```mermaid
 graph TD
-    A[💡 Initial Prompt] --> B[📄 story-en.txt];
-    A --> C[📄 story-it.txt];
-    A --> D[📄 story-de.txt];
+    A[💡 Initial Prompt] --> B[📄 story-en.txt 🇬🇧];
+    A --> C[📄 story-it.txt 🇮🇹];
+    A --> D[📄 story-de.txt 🇩🇪];
 
-    B --> E[🔊 story-en.wav];
-    C --> F[🔊 story-it.wav];
-    D --> G[🔊 story-de.wav];
+    B --> E[🔊 story-en.wav 🇬🇧];
+    C --> F[🔊 story-it.wav 🇮🇹];
+    D --> G[🔊 story-de.wav 🇩🇪];
 
-    B --> H[🖼️ start-1.png, ..., start-4.png];
-    B --> I[🖼️ finale-1.png, ..., finale-4.png];
+    B --> H["🖼️ start-{1..4}.png"];
+    B --> I["🖼️ finale{1-4}.png"];
     B --> J[🎥 trailer.mp4];
 ```
 
