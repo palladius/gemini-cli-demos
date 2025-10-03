@@ -15,9 +15,9 @@ We want to pitch an event.
 
 * Elements which should be present:
   * Pavarotti or a Tenor singer, possibly with background Opera music.
-  * Balsamic vinegar pouring dramatically on computer screens (with comical effect)
+  * A puffin
   * Ferrari and/or fast cars close to Modena (Lamborghini / Maserati too).
-  * A lot of fun Google logos popping up everywhere, upbeat music: Google is the biggest sponsor.
+  * A lot of fun Google logos popping up everywhere, upbeat music (Google is the biggest sponsor).
   * A number of developers everywhere. they all wear a t-shirt, in one of the four google colors ( #4285F4
  #DB4437 #F4B400 and #0F9D58 )
   * We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Modena, and show big crowds of 100-300 people inside an event space (which is a church with amazing frescos), in a typical tech event setup.

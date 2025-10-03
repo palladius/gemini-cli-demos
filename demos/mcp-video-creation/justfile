@@ -128,8 +128,9 @@ gemini-check-auth:
     echo 1. Checking mcp-chirp3-go installation...
     which mcp-chirp3-go || echo 'mcp-chirp3-go not found in PATH - this will FAIL!'
     echo 2. checking its authenticated: his will fail with auth issues if it fails.
-    timeout 7 ~/go/bin/mcp-chirp3-go
-    gemini -c -y -p 'Ensure mcp-chirp3-go is installed and in PATH. Then use MCP Chirp model to generate an audio file which says "I love justfiles!" If fails, suggest next fixing steps.'
+    timeout 5 mcp-chirp3-go
+    #timeout 5 ~/go/bin/mcp-chirp3-go
+    gemini -c -y -p 'Ensure mcp-chirp3-go is installed and in PATH. Then use MCP Chirp model to generate an audio file which says "I love justfiles!" If fails, suggest next fixing steps. If it works, play the file.'
 
 
 # ffmpeg v8 transcribe through whisper in local!!
