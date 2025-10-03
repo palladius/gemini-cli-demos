@@ -1,7 +1,14 @@
-
 # Modena Restaurant Recommendations
 
 Here is a summary of the four restaurants you asked me to research.
+
+| Restaurant          | Ambiance              | Scores                                     | Website                                                                  |
+| ------------------- | --------------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
+| **Zelmira (Winner)**| Cozy and romantic     | Positive reviews                           | [Website](https://www.ristorantezelmira.com/)                            |
+| Da Danilo           | Bustling and traditional| 4.3/5 (Restaurant Guru), 4.4/5 (others)    | [Website](https://www.ristorantedadanilomodena.it/)                      |
+| Hosteria La Frasca  | Unique and lively     | 4.1/5 (Restaurant Guru), 3.9/5 (others)    | [Restaurant Guru](https://restaurantguru.it/Hostaria-La-Frasca-Modena)   |
+| Da Enzo             | Traditional           | No scores found                            | [Website](https://www.ristorantedaenzo.it/)                              |
+
 
 ## 1. Zelmira (The Winner!)
 
