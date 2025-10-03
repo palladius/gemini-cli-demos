@@ -15,13 +15,11 @@ Maybe test `list_chirp_voices in Italian via MCP` to test authentication.
 
 ```markdown
 /aicinema:video_storyboard for the story highlighted in "doc/CUJs/CUJ03-video-from-pitch-event-modena25.md".
-Make sure to dump all your thinking in MD in a designated folder which contains today's YYYYMMDD,
-in case we get interrupted 😉
-
+Make sure to dump all your thinking in MD in a designated folder which contains today's YYYYMMDD, in case we get interrupted 😉
 ```
 If needed:
 
-```markdown
+```
 Note we DID get interrupted, so the folder already exists ;) Check under stories/ and take it from there
 ```
 

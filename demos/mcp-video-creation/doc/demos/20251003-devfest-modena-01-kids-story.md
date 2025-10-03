@@ -28,6 +28,8 @@ just gemini-demo-no-auth
 
 ## Story of Alessandro
 
+Type `just gemini-demo-no-auth`
+
 ```markdown
 
 Crea una storia per mio figlio Alessandro, un ragazzo di 7 anni nato a Zurigo di papa' italiano 🇮🇹 e mamma inglese 🇬🇧.
@@ -41,12 +43,12 @@ Voglio che ci siano dentro questi elementi:
 - Marvin l'androide paranoico (che sara' la mascotte di Alessandro e fara' da contrappeso tragicomico all'allegria e
 spensieratezza del bambino)
 
-Lui parla Italiano, Inglese e Tedesco.
+Lui parla Italiano e Inglese (e Tedesco).
 
-Usa la cartells 📁 `out/ale-modena02/`.
+Usa la cartella 📁 `out/ale-modena03/`.
 
 Comincia creando una storia in Markdown in inglese (`story-en.md`),
-poi traducila anche in Italiano e Tedesco.
+poi traducila anche in Italiano.
 
 Infine estrai da queste storie il testo, rimuovendo ogni formattazione (tipo "## titolo H2" o **grassetto**).
 Salva questi nuovi file come `story-en.txt`, `story-it.txt`, ...
@@ -64,20 +66,23 @@ Siccome la mia audience e' italiana, suona automaticamente il file italiano sul 
 
 ## Immagine
 
+```markdown
+Ora crea un'immagine che abbia a che fare con la storia, una attinente ad ogni paragrafo: `image1.png`,  `image2.png`, ..
+
+Siccome la API di Gemini non produce bambini, e nel caso tu trovi errori, assicurati che non ci siano "7 year old" o "boy" nella descrizione, e che l'output sia in formato cartone animato in stile Pixar.
 ```
-Ora crea un'immagine che abbia a che fare con la storia, una per l'inizio e una per il finale. Di ciascuna immagine voglio 4 versioni ("num_images":4).
 
-* start-1.png, ..
-* finale-1.png, ..
+After the images are created, let's add them to the MD:
 
-Siccome la API di Gemini non produce bambini, assicurati che non ci siano "7 year old" o "boy" nella descrizione, e che l'output sia in formato cartone animato tipo Pixar.
+```
+Now patch the  markdown storyfiles by including the images in the proper place. Make sure the image link is correct and not broken so we have a nice story flow.
 ```
 
 ## Video
 
 ```
 Infine costruisci un video che faccia da trailer su questa storia.
-Ricorda sempre di omettere l'eta' del bimbo.
+Ricorda sempre di omettere l'eta' del bimbo per evitare censure.
 ```
 
 
