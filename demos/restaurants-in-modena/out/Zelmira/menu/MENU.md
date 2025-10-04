@@ -1,7 +1,3 @@
-# Menus
-
-## Zelmira
-
 ### Menu Tradizionale (Traditional Menu)
 *(Content transcribed from out/Zelmira/menu_tradizionale.png)*
 
@@ -42,67 +38,3 @@
 *   Coniglio al lardo di colonnata con asparagi, riduzione al bergamotto e aglio nero fermentato (28,00€)
 *   Gamberi in tempura, cous cous aromatico con crema di rucola e terra di olive (28,00€)
 *   Bocconcini di rana pescatrice in guazzetto, salsa alla mediterranea e crumble alla frutta secca (28,00€)
-
-## Da Danilo
-
-### Menu
-**Antipasto della casa**
-*   SALUMI – PECORINO – MARMELLATA – GNOCCO (15,00€)
-*   CULATELLO DI PARMA CON GNOCCO (15,00€)
-*   SFORMATINO DI VERDURE E CREMA DI FORMAGGI (10,00€)
-
-**Primi piatti di pasta fresca**
-*   LASAGNE VERDI AL FORNO (10,00€)
-*   GRAMIGNA ALLA SALSICCIA (10,00€)
-*   RISOTTO AI FUNGHI PORCINI (10,00€)
-*   TAGLIATELLE AL RAGU’ (10,00€)
-*   TORTELLONI DI ZUCCA (12,00€)
-*   TORTELLONI DI RICOTTA (Vecchia Modena) (12,00€)
-*   TORTELLINI IN BRODO DI CAPPONE (12,00€)
-*   PASSATTELLI IN BRODO DI CAPPONE (10,00€)
-*   RIGATONI PROSCIUTTO E PISELLI (9,00€)
-*   ZUPPA DI MALTAGLIATI CON FAGIOLI (9,00€)
-*   TAGLIATELLINE AL CINGHIALE (10,00€)
-
-**Secondi piatti tipici**
-*   BOLLITO MISTO (CARRELLO) E SALSE (20,00€)
-*   TAGLIATA DI FILETTO CON RUCOLA E GRANA (20,00€)
-*   FILETTO ALL’ACETO BALSAMICO (20,00€)
-*   ROAST-BEEF AL FORNO (15,00€)
-*   CARPACCIO RUCOLA-SCAGLIE DI PARMIGIANO (15,00€)
-*   MAIALINO AL FORNO E PATATE ARROSTO (15,00€)
-*   PROSCIUTTO DI PRAGA E PATATE ARROSTO (15,00€)
-*   CAPRETTO AL FORNO E PATATE ARROSTO (18,00€)
-*   COTOLETTA ALL’ACETO BALSAMICO (20,00€)
-*   OSSOBUCO AL SUGO DI VERDURE E PURE’ (15,00€)
-*   SCALOPPINA AI FUNGHI PORCINI (18,00€)
-*   CONIGLIO AL FORNO CON PATATE (15,00€)
-*   BRESAOLA RUCOLA E SCAGLIE DI PARMIGIANO (15,00€)
-
-## Hosteria La Frasca
-
-### Menu
-*(Content transcribed from out/Hosteria La Frasca/menu.png)*
-
-**Antipasti**
-*   ...
-
-**Primi Piatti**
-*   ...
-
-**Secondi Piatti**
-*   ...
-
-## Da Enzo
-
-### Menu
-*(Content transcribed from out/Da Enzo/menu.pdf)*
-
-**Antipasti**
-*   ...
-
-**Primi Piatti**
-*   ...
-
-**Secondi Piatti**
-*   ...

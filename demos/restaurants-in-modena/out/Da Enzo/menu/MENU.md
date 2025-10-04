@@ -1,0 +1,44 @@
+### Menu
+*(Content transcribed from out/Da Enzo/menu.pdf)*
+
+**Antipasti**
+*   ANTIPASTI A BUFFET (1 Piatto) (7,00€)
+*   MISTO SALUMI EMILIANI (1 Piatto) (15,00€)
+*   GNOCCO (4 Pezzi) (2,50€)
+*   TIGELLE (4 Pezzi) (2,50€)
+*   FRITTELLE DI BACCALÀ (4 Pezzi) (8,00€)
+*   GNOCCO CON PROSCIUTTO CRUDO (4 Pezzi) (8,00€)
+*   PARMIGIANO REGGIANO 36 MESI CON ACETO BALSAMICO INVECCHIATO (8,00€)
+
+**Primi Piatti**
+*   TORTELLINI IN BRODO (12,00€)
+*   TORTELLINI IN CREMA DI PARMIGIANO (12,00€)
+*   LASAGNE VERDI ALLA VECCHIA MODENA (10,00€)
+*   ROSETTE ALL'EMILIANA (12,00€)
+*   TAGLIATELLE AL RAGÙ (10,00€)
+*   GRAMIGNA PANNA E SALSICCIA (10,00€)
+*   TORTELLONI RICOTTA E SPINACI VECCHIA MODENA (Conditi con panna, pancetta, Aceto Balsamico invecchiato e scaglie di Parmigiano) (13,00€)
+*   PENNE ALL'ARRABBIATA (10,00€)
+*   TORTELLONI RICOTTA E SPINACI (12,00€)
+*   TORTELLONI BURRO E SALVIA (12,00€)
+*   TORTELLONI DI ZUCCA AL RAGÙ DI SALSICCIA (12,00€)
+*   PASSATELLI IN BRODO (12,00€)
+*   PASSATELLI IN CREMA DI PARMIGIANO (12,00€)
+*   BIS DI PRIMI (14,00€)
+*   TRIS DI PRIMI (15,00€)
+
+**Secondi Piatti**
+*   FILETTO DI MANZO ALLA GRIGLIA (18,00€)
+*   FILETTO DI MANZO AL PEPE VERDE (18,00€)
+*   FILETTO DI MANZO ALL'ACETO BALSAMICO (18,00€)
+*   FILETTO DI MAIALE ALLA ENZO (16,00€)
+*   COTOLETTA ALLA MILANESE (16,00€)
+*   COTOLETTA ALLA PETRONIANA (18,00€)
+*   TAGLIATA DI MANZO (A piacere con rosmarino e sale grosso oppure rucola e scaglie di grana) (22,00€)
+*   ZAMPONE DI MODENA (13,00€)
+*   COTECHINO DI MODENA (13,00€)
+*   STINCO DI MAIALE AL FORNO O ALL'ACETO BALSAMICO (18,00€)
+*   MEZZO STINCO DI MAIALE AL FORNO O ALL'ACETO BALSAMICO (12,00€)
+*   TRIPPA (15,00€)
+*   BOLLITI MISTI (Lingua, manzo, cotechino, testina e zampone con salse varie) (18,00€)
+*   TIGELLE E GNOCCO (Con affettati misti, stracchino o formaggi misti, Nutella (a persona)) (23,00€)
