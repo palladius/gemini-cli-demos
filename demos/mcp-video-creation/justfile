@@ -6,6 +6,10 @@ import 'justfile.ai_cinema'
 
 # List all available recipes
 list:
+    echo "Available recipes:"
+    echo "+ ENV LOCATION=$(LOCATION)"
+    echo "+ ENV GOOGLE_CLOUD_REGION=$(GOOGLE_CLOUD_REGION)"
+    echo 'Also remember: export PATH=$PATH:~/go/bin to have MCP go clients in PATH'
     just -l
 
 

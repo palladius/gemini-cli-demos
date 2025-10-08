@@ -30,6 +30,8 @@ echo "PROJECT_ID: $PROJECT_ID"
 echo "GENMEDIA_BUCKET: $GENMEDIA_BUCKET"
 ```
 
+Also confirm that both LOCATION (for MCP) and GOOGLE_CLOUD_REGION (For gemini) is set to something European, like `europe-west1`.
+
 Note these are NOT strictly needed. Gemini needs them either in ENV or in `.gemini/settings.json`. (see step 4)
 
 3. Verify the `.gemini/settings.json` is set up correctly with your Google Cloud project and authentication details.
