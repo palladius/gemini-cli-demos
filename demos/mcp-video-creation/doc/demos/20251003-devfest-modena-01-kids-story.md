@@ -1,4 +1,4 @@
-## initial axctions
+## initial actions
 
 ## On the day - 1h before (once)
 
