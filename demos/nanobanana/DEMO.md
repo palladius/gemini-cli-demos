@@ -5,7 +5,9 @@
 
 Ensure the nanobanana MCP is used:
 
-`gemini extensions install https://github.com/gemini-cli-extensions/nanobanana`
+```
+gemini extensions install https://github.com/gemini-cli-extensions/nanobanana
+```
 
 ## [D&D demo] Showcase MCP
 
@@ -17,8 +19,14 @@ show MCP servers
 
 ## prompt 1 - without CC
 
+Image:
+
 ```
-Use Nanobanana to create a D&D character who's eating a banana, in tragicomical way. Use your creativity to infuse life into it
+Use Nanobanana to create a D&D character who's eating a banana, in tragicomical way. Use your creativity to infuse life into it. Add "Mythos" in bottom side.
+```
+
+```
+Generate a diagram showing the evolution of lanugages, touching on Assembly, Lisp, Prolog, C, all variants of C and Java
 ```
 
 ## prompt 2 - with CC
@@ -30,7 +38,9 @@ Now do it similar, but with the Custom Command:
 
 ## Show editing
 
-`now edit the image (created under /nanobanana-output/) adding a "Created with NanoBanana" on bottom in the center, papyrus style.`
+```
+now edit the image (created under /nanobanana-output/) adding a "Created with NanoBanana" on bottom in the center, papyrus style.
+```
 
 This will fail:
 
@@ -40,14 +50,15 @@ This will fail:
 
 ## find file manually maybe
 
-```ruby
-Do a `find .` and find the file
-Now add a "Created with NanoBanana" on bottom in the center, papyrus style.
+```
+Do a `find nanobanana-output/` and find all the PNG files.
+Now add a "Created with NanoBanana" on bottom in the center, papyrus style to ALL those files.
 ```
 
 
 ```bash
 ok now take images in src/ and add a small banana on top right for all images.
+Put the output in bananized/
 ```
 
 ```

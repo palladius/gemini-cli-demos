@@ -3,7 +3,7 @@ Image a friend tells you "Hey I wrote this amazing softwarem, can you give it a 
 You have no context on it. What can you do?
 Gemini CLI comes to help
 
-exampls: github.com/palladius/sandmold
+example: github.com/palladius/sandmold
 
 ask gemini to
 1. explain what it does

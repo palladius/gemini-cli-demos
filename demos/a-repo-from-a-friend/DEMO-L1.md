@@ -6,7 +6,7 @@ Look at this repo suggested by a friend: https://github.com/Friends-of-Ricc/sand
 
 1. Download it locally with `git clone` under random-repo/
 2. Explain what it does
-3. Create a RANDOM-REPO-README.md with what it does, and add 2 sections on Prerequsiites, and How to run it.
+3. Create a RANDOM-REPO-README.md with what it does, and add 2 sections on Prerequsites, and How to run it.
 4. run it for me (if applicable: eg, if its app to run locally, or TF code to run in PLAN mode, and so on).
 ```
 

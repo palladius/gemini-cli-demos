@@ -35,5 +35,5 @@ Check in the folders and tell me whats missing.
 ## Create MENU.md
 
 Now please, for the restaurants where you downloaded menu in JPG/PNG/PDF.. please
-read those files and transcribe into a MENU.md!
+read those files and transcribe into a `MENU.md`!
 Wait, its one menu PER restaurant, so it goes in their respective folders.

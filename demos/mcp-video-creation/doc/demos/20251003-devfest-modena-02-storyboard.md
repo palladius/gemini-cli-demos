@@ -14,10 +14,18 @@ Maybe test `list_chirp_voices in Italian via MCP` to test authentication.
 
 
 ```markdown
-/aicinema:video_storyboard for the story highlighted in "doc/CUJs/CUJ03-video-from-pitch-event-modena25.md".
-Make sure to dump all your thinking in MD in a designated folder which contains today's YYYYMMDD, in case we get interrupted 😉
+
+/aicinema:video_storyboard for the story highlighted
+in @doc/CUJs/CUJ03-video-from-pitch-event-modena25.md
+Make sure to dump all your thinking in MD in a designated folder
+under `out/demo02/`
+which contains today's YYYYMMDD-HHMM, in case we get interrupted 😉.
+For simplicity, use a SINGLE take per video,
+and rename videos to sceneXX.mp4 after creation.
+
 ```
-If needed:
+If needed: `This is for a quick demo, so use fastest models.`
+Or:
 
 ```
 Note we DID get interrupted, so the folder already exists ;) Check under stories/ and take it from there

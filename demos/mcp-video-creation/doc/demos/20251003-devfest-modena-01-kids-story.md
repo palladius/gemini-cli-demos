@@ -32,39 +32,37 @@ Type `just gemini-demo-no-auth`
 
 ```markdown
 
-Crea una storia per mio figlio Alessandro, un ragazzo di 7 anni nato a Zurigo di papa' italiano 🇮🇹 e mamma inglese 🇬🇧.
+Crea una storia breve per mio figlio Alessandro, un ragazzo di 7 anni nato a Zurigo di papa' italiano 🇮🇹 e mamma inglese 🇬🇧.
 Ama draghi, pokemon, le Tesla ma sopratutto le Ferrari, e infine le pietre preziose (perlopiu' oro e rubini).
 
 Crea una storia spaventosa (ma non troppo) ambientata a Modena.
 Voglio che ci siano dentro questi elementi:
-- Pavarotti
-- l'aceto Balsamico
-- una Ferrari elettrica
-- Marvin l'androide paranoico (che sara' la mascotte di Alessandro e fara' da contrappeso tragicomico all'allegria e
+- 🖤 l'aceto Balsamico
+- 🏎️ una Ferrari elettrica
+- 🤖 Marvin l'androide paranoico (che sara' la mascotte di Alessandro e fara' da contrappeso tragicomico all'allegria e
 spensieratezza del bambino)
 
 Lui parla Italiano e Inglese (e Tedesco).
 
-Usa la cartella 📁 `out/ale-modena03/`.
+Usa la cartella 📁 `out/demo01/ale-modena04oct-prod/`.
 
-Comincia creando una storia in Markdown in inglese (`story-en.md`),
-poi traducila anche in Italiano.
+Comincia creando una storia in Markdown in inglese (`story-en.md`), poi traducila anche in Italiano.
 
 Infine estrai da queste storie il testo, rimuovendo ogni formattazione (tipo "## titolo H2" o **grassetto**).
 Salva questi nuovi file come `story-en.txt`, `story-it.txt`, ...
 ```
 
-## Audio
+## Audio - prompt2
 
 ```
-Ora crea un file sonoro per ciascuna di queste storie e dagli un nome appropriato (eg, story-en.wav, story-it.wav, ... )
+Ora crea un file sonoro per ciascuna lingua e dagli un nome appropriato (eg, story-en.wav, story-it.wav, ... )
 
 Tutti i file devono essere nella stessa 📂 cartella, ovviamente!
 
 Siccome la mia audience e' italiana, suona automaticamente il file italiano sul mio Mac.
 ```
 
-## Immagine
+## Crea Immagini - prompt 3
 
 ```markdown
 Ora crea un'immagine che abbia a che fare con la storia, una attinente ad ogni paragrafo: `image1.png`,  `image2.png`, ..
@@ -81,14 +79,36 @@ Now patch the  markdown storyfiles by including the images in the proper place. 
 ## Video
 
 ```
-Infine costruisci un video che faccia da trailer su questa storia.
-Ricorda sempre di omettere l'eta' del bimbo per evitare censure.
+Finally create a video which consitutes a Trailer of this story
+Always remember to omit the kid's age/nature to avoid censorship.
 ```
 
 
 
 
-## one off for the slides
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## [REMOVEME] one off for the slides
+
 
 ╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 │  > Finally create a README.md which contains a mermaid graph containing all the files I've created. I need this for the presentation of a  │
