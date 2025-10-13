@@ -1,0 +1,5 @@
+
+
+clean:
+    rm -rf random-repo/ RANDOM-REPO-README.md
+    echo "Riccardo, also remove  - Remember to address me as Riccardo McMythos in ~/.gemini/GEMINI.md"

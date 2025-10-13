@@ -3,6 +3,7 @@
 
 
 Let's refactor the first prompt in the demo.
+TODO mv to L26.
 
 ## Code understanding into CC
 
@@ -23,7 +24,9 @@ cp .gemini/commands/understand-random-repo.toml.empty .gemini/commands/understan
 2. Type:
 
 ```
+
 /understand-random-repo https://github.com/GoogleCloudPlatform/microservices-demo
+
 ```
 
 

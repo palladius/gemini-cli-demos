@@ -7,6 +7,7 @@ Ensure the nanobanana MCP is used:
 
 ```
 gemini extensions install https://github.com/gemini-cli-extensions/nanobanana
+gemini
 ```
 
 ## [D&D demo] Showcase MCP
@@ -23,18 +24,23 @@ Image:
 
 ```
 Use Nanobanana to create a D&D character who's eating a banana, in tragicomical way. Use your creativity to infuse life into it. Add "Mythos" in bottom side.
-```
+The file should re then renamed to something like "YYYYMMDD-HHMM-$DESCRIPTION.png" so i can easily clean up after the demo.
 
-```
-Generate a diagram showing the evolution of lanugages, touching on Assembly, Lisp, Prolog, C, all variants of C and Java
+---
+
+Generate a diagram showing the evolution of languages, touching on Assembly, Lisp, Prolog, C, all variants of C and Java.
+
 ```
 
 ## prompt 2 - with CC
 
 Now do it similar, but with the Custom Command:
 
-`/generate a watercolor painting of a puffin in a snowy Zurich`
+```
+/generate a watercolor painting of a puffin in a snowy Zurich
+```
 
+Note: this TOML is here: `~/.gemini/extensions/nanobanana/commands/generate.toml`
 
 ## Show editing
 
@@ -42,7 +48,7 @@ Now do it similar, but with the Custom Command:
 now edit the image (created under /nanobanana-output/) adding a "Created with NanoBanana" on bottom in the center, papyrus style.
 ```
 
-This will fail:
+This might fail:
 
 ✦ I could not find the file /usr/-21/local/google/home/ricc/git/gemini-cli-demos/demos/nanobanana/nanobanana-output/a_puffin_in_a_snowy_zurich_water.png to edit. I looked in the current directory,
   images, input, nanobanana-output, Downloads and Desktop folders.
