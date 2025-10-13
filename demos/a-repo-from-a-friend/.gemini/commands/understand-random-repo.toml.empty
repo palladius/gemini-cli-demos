@@ -1,0 +1,8 @@
+
+
+
+description = "Understands a random repo"
+
+prompt = """you're an expert Software Developer.
+
+"""
