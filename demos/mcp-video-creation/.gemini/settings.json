@@ -14,7 +14,9 @@
         "MCP_REQUEST_MAX_TOTAL_TIMEOUT": "240000",
         "MCP_SERVER_REQUEST_TIMEOUT": "30000",
         "GENMEDIA_BUCKET": "ricc-genai-mcp-genmedia",
-        "LOCATION": "europe-west1",
+        //"LOCATION": "europe-west1", // doesnt work for Veo
+        //"LOCATION": "europe-west4",  // doesnt work for Veo
+        "LOCATION": "us-central1",
         //"LOCATION": "${GOOGLE_CLOUD_REGION}",
         "PROJECT_ID": "ricc-genai"
       }
@@ -25,7 +27,7 @@
       "env": {
         "MCP_SERVER_REQUEST_TIMEOUT": "55000",
         "GENMEDIA_BUCKET": "ricc-genai-mcp-genmedia",
-        "LOCATION": "europe-west1",
+        "LOCATION": "us-central1",
         "PROJECT_ID": "ricc-genai"
       }
     },
@@ -35,7 +37,7 @@
       "env": {
         "MCP_SERVER_REQUEST_TIMEOUT": "55000",
         "GENMEDIA_BUCKET": "ricc-genai-mcp-genmedia",
-        "LOCATION": "europe-west1",
+        "LOCATION": "us-central1",
         "PROJECT_ID": "ricc-genai"
       }
     },
@@ -43,7 +45,7 @@
       "command": "mcp-lyria-go",
       "env": {
         "GENMEDIA_BUCKET": "ricc-genai-mcp-genmedia",
-        "LOCATION": "europe-west1",
+        "LOCATION": "us-central1",
         "PROJECT_ID": "ricc-genai",
         "MCP_SERVER_REQUEST_TIMEOUT": "55000"
       }
@@ -51,7 +53,7 @@
     "avtool": {
       "command": "mcp-avtool-go",
       "env": {
-        "LOCATION": "europe-west1",
+        "LOCATION": "us-central1",
         "PROJECT_ID": "ricc-genai",
         "MCP_SERVER_REQUEST_TIMEOUT": "55000"
       }

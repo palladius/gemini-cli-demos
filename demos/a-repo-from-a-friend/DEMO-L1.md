@@ -1,21 +1,29 @@
 
+## Setup
+
+Launch `giancarlo-permissive-nomcp`
+
 ## Code understanding
 
 ```
+
 Look at this repo suggested by a friend: https://github.com/Friends-of-Ricc/sandmold
 
 1. Download it locally with `git clone` under random-repo/
-2. Explain what it does
+2. Explain what it does (do NOT run the app, just read docs and code as needed).
 3. Create a RANDOM-REPO-README.md with what it does, and add 2 sections on Prerequsites, and How to run it.
 4. run it for me (if applicable: eg, if its app to run locally, or TF code to run in PLAN mode, and so on).
+
 ```
 
-Explain to the audience: this prompt seems a good candidate for transforming this into a Custom Command...
-Let's discuss this later.
+Explain to the audience: this prompt seems a **good candidate** for
+**transforming this into a Custom Command**... Let's discuss this later.
 
 ## Lets do more
 
 ```
-1. The README is boring. Please add more emojis to it.
-2. Is there some sort of architecture diagram you can do of the code, for me to better understand the moving parts? If yes, please use a mermaid graph and add it to a new "Architecture Diagram"
+
+1. The README you've created is boring. Please add more emojis to it.
+2. Is there some sort of architecture diagram you can do of the code, for me to better understand the moving parts? If yes, please use a mermaid graph and add it to a new "Architecture Diagram" in the MD you've just created, ON TOP of it.
+
 ```

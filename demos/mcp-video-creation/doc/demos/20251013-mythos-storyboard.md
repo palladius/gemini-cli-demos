@@ -8,21 +8,24 @@ You've finished the demo01, now demo 02 in testing mode.
 just gemini-demo-no-auth         # or just gemini-demo-with-auth the first time
 ```
 
-Maybe test `list_chirp_voices in Irish or British English via MCP` to test authentication.
+Maybe test `list_chirp_voices in  British English via MCP` to test authentication.
 
 
 ```markdown
 
 /aicinema:video_storyboard for the story highlighted
-in @doc/CUJs/CUJ03-video-from-pitch-event-modena25.md
+in @doc/CUJs/CUJ03c-video-from-pitch-event-mythos2510.md
 Make sure to dump all your thinking in MD in a designated folder
-under `out/demo02/`
+under `out/demo-mythos/`
 which contains today's YYYYMMDD-HHMM, in case we get interrupted 😉.
 For simplicity, use a SINGLE take per video,
 and rename videos to sceneXX.mp4 after creation.
 
+Note: This is for a quick demo, so use fastest models.
 ```
+
 If needed: `This is for a quick demo, so use fastest models.`
+
 Or:
 
 ```

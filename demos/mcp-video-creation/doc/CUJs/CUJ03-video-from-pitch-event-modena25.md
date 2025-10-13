@@ -24,7 +24,7 @@ We want to pitch an event.
 
 ## Execution
 
-* Create a DESIGNATED_FOLDER with name like `YYYYMMDD-HHMM)-CUJ03-STORY_TYILE/`, based on *current date* and *title*.
+* Create a DESIGNATED_FOLDER with name like `YYYYMMDD-HHMM)-CUJ03-(STORY_TITLE)/`, based on *current date* and *title*.
   * Create a `README.md` file in it.
 * The final video should be around 30-40 seconds at most.
 
