@@ -2,7 +2,7 @@
 # 13sep25 v1.2 Added an additional step 8. when chirp doesnt work
 
 
-description = "Check if go installation was done correctly."
+description = "[AICinema] Check if GoLang installation was done correctly."
 
 prompt = """
 # Check MCP Veo Go Installation
@@ -58,6 +58,8 @@ Note these are NOT strictly needed. Gemini needs them either in ENV or in `.gemi
    problem is MCP / golang binaries, or just chirp.
 
 If it doesn't work, use your troubleshooting abilities to suggest fixes: authentication, PATH issues, ENV issues, changing the model region, etc.
+
+If anything goes wrong, installation and code are under https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/blob/main/experiments/mcp-genmedia/README.md
 
 """
 
