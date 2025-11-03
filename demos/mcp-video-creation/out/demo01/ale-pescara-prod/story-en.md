@@ -1,5 +1,7 @@
 ## Alessandro and the Whispering Shores of Pescara
 
+[Play English Story Audio](story-en-en-US-Chirp3-HD-Zephyr-20251103-073131.wav)
+
 Alessandro, a brave seven-year-old with a heart full of dragons and a mind dreaming of Ferraris, was visiting his nonno and nonna in Pescara. The city, usually bustling with life, felt different tonight. A strange mist rolled in from the Adriatic Sea, making the streetlights glow with an eerie halo.
 
 

@@ -1,5 +1,7 @@
 ## Alessandro e le Spiagge Sussurranti di Pescara
 
+[Ascolta la storia in Italiano](story-it-it-IT-Chirp3-HD-Algenib-20251103-073207.wav)
+
 Alessandro, un coraggioso bambino di sette anni con un cuore pieno di draghi e una mente che sognava Ferrari, stava visitando i suoi nonni a Pescara. La città, solitamente brulicante di vita, stasera sembrava diversa. Una strana nebbia si era alzata dal Mare Adriatico, facendo brillare i lampioni con un'aura inquietante.
 
 

@@ -80,6 +80,8 @@ After the images are created, let's add them to the MD:
 
 ```
 Now patch the  markdown storyfiles by including the images in the proper place. Make sure the image link is correct and not broken so we have a nice story flow.
+
+Also, attach the AUDIO play on top; not sure if Markdown will allow it. If yes, good. If not, create a story-XX.html which embeds the audio file playing please, using HTML5 `<audio>` tag with `autoplay` and `controls` attributes.
 ```
 
 ## Video
@@ -87,6 +89,7 @@ Now patch the  markdown storyfiles by including the images in the proper place. 
 ```
 Finally create a video which consitutes a Trailer of this story
 Always remember to omit the kid's age/nature to avoid censorship.
+Use Veo3, 8 seconds, dramatic voiceover (with a 8sec short speech, probably title and little more).
 ```
 
 
