@@ -2,6 +2,12 @@
 
 We want to pitch an event.
 
+<!--  CHANGELOG
+20251103 v3 - Added Aurum spec
+20251103 v2 - Added MIB theme and neuralyzer
+20251103 v1 - Spawned from Modena and edit main metdata.
+-->
+
 ## event details
 
 * Language: Italian
