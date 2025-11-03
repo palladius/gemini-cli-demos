@@ -20,6 +20,10 @@ We want to pitch an event.
   * A number of developers everywhere. they all wear a t-shirt, in one of the four google colors ( #4285F4 #DB4437 #F4B400 and #0F9D58 )
   * We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Pescara, and show big crowds of 100-300 people inside an event space (Aurum, a big oval building with a grand piano in the room), in a typical tech event setup.
 
+## About the location (Aurum)
+
+Aurum in Pescara looks like a historic building with a unique round shape, a mixture of Art Nouveau and 1930s rationalist architecture, and large windows that create a bright interior. Originally a bathhouse and later a distillery, it has been renovated and now serves as a cultural center, "La Fabbrica delle Idee" (The Idea Factory). The exterior showcases the original Art Nouveau facade from 1910, with a modern, horseshoe-shaped expansion designed by Giovanni Michelucci. 
+
 ## Execution
 
 * Create a DESIGNATED_FOLDER with name like `YYYYMMDD-HHMM)-CUJ03-(STORY_TITLE)/`, based on *current date* and *title*.
