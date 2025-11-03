@@ -39,7 +39,7 @@ gemini-with-go:
     set -euo pipefail
     . .env
     export PATH=~/go/bin/:$PATH
-    gemini -c -y --allowed-tools WebFetchTool,ChirpTool,ImagenTool,LyriaTool,VeoTool
+    gemini -y --allowed-tools WebFetchTool,ChirpTool,ImagenTool,LyriaTool,VeoTool
 
 # Dangerous, but should be fine while generating audio video locally.
 gemini-with-go-yolo:
@@ -47,7 +47,7 @@ gemini-with-go-yolo:
     set -euo pipefail
     . .env
     export PATH=~/go/bin/:$PATH
-    gemini -c -y --session-summary .gemini/summaries/$(date +%Y%m%d-%H%M%S)-session-summary.txt
+    gemini -y --session-summary .gemini/summaries/$(date +%Y%m%d-%H%M%S)-session-summary.txt
 
 # enable `imagen_t2i` Tool
 
@@ -114,16 +114,16 @@ install:
 [group: 'aicinema_test']
 [group: 'commands']
 gemini-check-install:
-    gemini -c -y -p '/aicinema:check_install'
+    gemini -y -p '/aicinema:check_install'
 
 # gemini-aicinema-generate-audio-story-for-ale:
-#     gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for Alessandro'
+#     gemini -y -p '/aicinema:audio_story Generate a spooky bedtime story for Alessandro'
 
 # Generates a spooky bedtime story for NAME
 [group: 'aicinema']
 [group: 'commands']
 gemini-aicinema-generate-audio-story-for NAME:
-    gemini -c -y -p '/aicinema:audio_story Generate a spooky bedtime story for {{NAME}}'
+    gemini -y -p '/aicinema:audio_story Generate a spooky bedtime story for {{NAME}}'
 
 
 [group: 'aicinema_test']
@@ -134,7 +134,7 @@ gemini-check-auth:
     echo 2. checking its authenticated: his will fail with auth issues if it fails.
     timeout 5 mcp-chirp3-go
     #timeout 5 ~/go/bin/mcp-chirp3-go
-    gemini -c -y -p 'Ensure mcp-chirp3-go is installed and in PATH. Then use MCP Chirp model to generate an audio file which says "I love justfiles!" If fails, suggest next fixing steps. If it works, play the file.'
+    gemini -y -p 'Ensure mcp-chirp3-go is installed and in PATH. Then use MCP Chirp model to generate an audio file which says "I love justfiles!" If fails, suggest next fixing steps. If it works, play the file.'
 
 
 # ffmpeg v8 transcribe through whisper in local!!
@@ -148,14 +148,22 @@ gemini-check-auth:
 
 gemini-might-not-work:
     echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
-    PATH=$PATH:~/go/bin gemini -c -y
+    PATH=$PATH:~/go/bin gemini -y
 
 gemini-demo-with-auth:
     #echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
     just auth
-    PATH=$PATH:~/go/bin gemini -c -y
+    PATH=$PATH:~/go/bin gemini -y
 
 #use when uyou know you're authenticated
 gemini-demo-no-auth:
     echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
-    PATH=$PATH:~/go/bin gemini -c -y
+    #PATH=$PATH:~/go/bin gemini -y WE DEREPCATED -c
+    PATH=$PATH:~/go/bin gemini -y 
+    
+# kills afplay which could go on for 10 min!
+kill-afplay:
+    echo "🤫🤫🤫🤫🤫"
+    killall afplay
+
+shut-up: kill-afplay
