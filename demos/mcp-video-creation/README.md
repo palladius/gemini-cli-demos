@@ -1,5 +1,7 @@
 # Cinema at home with Gemini CLI!
 
+Self: https://github.com/palladius/gemini-cli-demos/tree/main/demos/mcp-video-creation
+
 ## Install
 
 Installation will take you some time. But trust me, it IS worth it!
@@ -35,4 +37,3 @@ Thanks to Hussain Chinoy without whose work this wouldn't have been possible. **
 ## Docs
 
 * [Text on video ffmpeg - SO](https://stackoverflow.com/questions/17623676/text-on-video-ffmpeg).
-*

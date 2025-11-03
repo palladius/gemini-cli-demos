@@ -1,5 +1,7 @@
 **Note**: This project is intended for demonstration purposes only. It is not intended for use in a production environment.
 
+Self: https://github.com/palladius/gemini-cli-demos/
+
 # Gemini CLI Demos
 
 This repository contains Demos-in-a-box for Gemini CLI.
