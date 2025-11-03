@@ -138,12 +138,12 @@ gemini-check-auth:
 
 
 # ffmpeg v8 transcribe through whisper in local!!
-test-transcription:
-    echo 0. Remember to install on Mac  brew install whisper-cpp and more. See doc/bug/ for more info.
-    echo 1. Calling ffmpeg8 transcription, be patient...
-    bin/transcribe-video.sh stories/20250911-1230-CUJ03-rubycon-pitch/scene2_final.mp4
-    echo 2. Testing output:
-    cat stories/20250911-1230-CUJ03-rubycon-pitch/scene2_final_transcription.txt
+# test-transcription-locally:
+#     echo 0. Remember to install on Mac  brew install whisper-cpp and more. See doc/bug/ for more info.
+#     echo 1. Calling ffmpeg8 transcription, be patient...
+#     bin/transcribe-video.sh stories/20250911-1230-CUJ03-rubycon-pitch/scene2_final.mp4
+#     echo 2. Testing output:
+#     cat stories/20250911-1230-CUJ03-rubycon-pitch/scene2_final_transcription.txt
 
 
 gemini-might-not-work:

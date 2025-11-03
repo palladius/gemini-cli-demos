@@ -14,4 +14,6 @@ gcloud auth application-default login
 #gcloud auth login --update-adc
 gcloud auth application-default set-quota-project "$PROJECT_ID"
 
+echo "Note: on 3nov25 the sheer ADC didnt suffice i also needed normal LOGIN"
+
 echo To verify, run: gcloud storage buckets list
