@@ -98,6 +98,8 @@ Use Veo3, 8 seconds, dramatic voiceover (with a 8sec short speech, probably titl
 
 ```
 Now create a README.md which links the video, embeds the GIF, links ther audios, and points to the HTML and MarkDown files. basically, an index with all.
+
+Basically
 ```
 
 
