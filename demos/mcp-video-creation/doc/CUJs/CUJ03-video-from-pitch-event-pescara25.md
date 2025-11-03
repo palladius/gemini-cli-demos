@@ -30,6 +30,8 @@ We want to pitch an event.
 
 Aurum in Pescara looks like a historic building with a unique round shape, a mixture of Art Nouveau and 1930s rationalist architecture, and large windows that create a bright interior. Originally a bathhouse and later a distillery, it has been renovated and now serves as a cultural center, "La Fabbrica delle Idee" (The Idea Factory). The exterior showcases the original Art Nouveau facade from 1910, with a modern, horseshoe-shaped expansion designed by Giovanni Michelucci. 
 
+See ![Pescara Aurum image](../demos/pescara-aurum.png) for the facade.
+
 ## Execution
 
 * Create a DESIGNATED_FOLDER with name like `YYYYMMDD-HHMM)-CUJ03-(STORY_TITLE)/`, based on *current date* and *title*.
