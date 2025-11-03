@@ -10,25 +10,26 @@ We want to pitch an event.
 
 ## event details
 
-* Language: Italian
+* Language of the audience: Italian
 * Location: Pescara, Italy
 * Event Title: "DevFest Pescara"
 * Date: Sat/Sun 8-9 November 2025
 * Details: a community free event, with plenty of technical talks around the Google ecosystem. The biggest event in Italy, with an Arrosticini party
 * Pitch: Something contributing to "Join us for a special event" with 1000+ tickets already "SOLD" (note the event is free).
 * CTA: subscribe to the event for free at https://devfest.gdgpescara.it/
+* Theme: Men in Black (MIB). Ensure this element permeates the whole video, people in black/white suits, and possibly at least one neuralyzer being showed/used in 1 scene.
 
 * Elements which should be present:
-  * Gabriele d'annunzio
+  * Gabriele d'Annunzio
   * A puffin
-  * Aurum of Pescara (an amazing location where ITalian G7 was held - https://aurum.comune.pescara.it/)
+  * Aurum of Pescara (an amazing location where Italian G7 was held - https://aurum.comune.pescara.it/)
   * A lot of fun Google logos popping up everywhere, upbeat music (Google is the biggest sponsor).
   * A number of developers everywhere. they all wear a t-shirt, in one of the four google colors ( #4285F4 #DB4437 #F4B400 and #0F9D58 )
   * We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Pescara, and show big crowds of 100-300 people inside an event space (Aurum, a big oval building with a grand piano in the room), in a typical tech event setup.
 
 ## About the location (Aurum)
 
-Aurum in Pescara looks like a historic building with a unique round shape, a mixture of Art Nouveau and 1930s rationalist architecture, and large windows that create a bright interior. Originally a bathhouse and later a distillery, it has been renovated and now serves as a cultural center, "La Fabbrica delle Idee" (The Idea Factory). The exterior showcases the original Art Nouveau facade from 1910, with a modern, horseshoe-shaped expansion designed by Giovanni Michelucci. 
+Aurum in Pescara looks like a historic building with a unique round shape, a mixture of Art Nouveau and 1930s rationalist architecture, and large windows that create a bright interior. Originally a bathhouse and later a distillery, it has been renovated and now serves as a cultural center, "La Fabbrica delle Idee" (The Idea Factory). The exterior showcases the original Art Nouveau facade from 1910, with a modern, horseshoe-shaped expansion designed by Giovanni Michelucci.
 
 See ![Pescara Aurum image](../demos/pescara-aurum.png) for the facade.
 

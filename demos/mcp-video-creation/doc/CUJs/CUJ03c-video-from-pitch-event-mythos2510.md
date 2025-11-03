@@ -11,7 +11,6 @@ We want to pitch an event.
 * Details: Mythos is the space for App-Modernization Community team in EMEA to gather bi-weekly and connect to learn.
 * Pitch: Join us for a special event, Riccardo showing us Gemini CLI
 * CTA: subscribe to the Mythos Aficionados group join g/mythos-apasionados or just visit go/mythos
-* Theme: Men in Black (MIB). Ensure this element permeates the whole video, people in black/white suits, and possibly at least one neuralyzer being showed/used in 1 scene.
 
 * Elements which should be present:
   * Google Cloud technology
