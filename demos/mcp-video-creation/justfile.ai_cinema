@@ -6,7 +6,7 @@ gemini: gemini-geniectl
 [group: 'aicinema']
 gemini-geniectl:
     #!/bin/bash
-    echo '🌱🪄🎦 Setting up GENIECTL for success... You only need to ensure the gcloud auth works: just gcloud-auth'
+    echo '🌱🪄🎦 Setting up MCP Veo/Chirp/Imagen for success... You only need to ensure the gcloud auth works: just gcloud-auth'
     echo 'If youre not in US, remember to change GOOGLE_CLOUD_REGION and LOCATION to sth appropriate, like europe-west1'
     export PATH=~/go/bin/:$PATH
     . .env
