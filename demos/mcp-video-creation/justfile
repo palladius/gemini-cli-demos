@@ -27,9 +27,16 @@ test-chirp:
         echo "Please install it from https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md"; \
         exit 1; \
     fi
-    @echo "mcp-chirp3-go found, generating audio..."
+    @echo "mcp-chirp3-go found, generating audio... "
     #@echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-speech","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
-    @echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"list-voices","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
+    #@echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"list-voices","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
+    #@echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"list-chirp-voices","arguments":{"text_to_speech":"Show me Italian voices"}}}' | mcp-chirp3-go | jq .
+    #just chirp-io-amo-la-pizza
+    just chirp-arrosticini
+
+
+chirp-arrosticini:
+    echo '{"jsonrpc":"2.0","method":"tools/call","id":2,"params":{"name":"chirp_tts","arguments":{"voice_name": "it-IT-Chirp3-HD-Zephyr", "text":"io amo gli arrosticini!", "output_directory": "out/pescara/"}}}' | mcp-chirp3-go | jq .
 
 
 
@@ -159,8 +166,8 @@ gemini-demo-with-auth:
 gemini-demo-no-auth:
     echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
     #PATH=$PATH:~/go/bin gemini -y WE DEREPCATED -c
-    PATH=$PATH:~/go/bin gemini -y 
-    
+    PATH=$PATH:~/go/bin gemini -y
+
 # kills afplay which could go on for 10 min!
 kill-afplay:
     echo "🤫🤫🤫🤫🤫"

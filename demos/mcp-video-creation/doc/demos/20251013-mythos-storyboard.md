@@ -39,7 +39,7 @@ Add this more structured structure:
   You can choose the first, and ask user to maybe choose another, and finally the construction of the final video could be seamless:
 
 * For scene 1, create folder `scene01/`
-    *  `README.md` containing Image, text, Video prompt and post-generation text to add, eg: `"Welcome to Modena" on the bottom center in big character`.
+    *  `README.md` containing Image, text, Video prompt and post-generation text to add, eg: `"Welcome to Mythos" on the bottom center in big character`.
     * `video_take01.mp4` For the first video take
     * `video_take02.mp4`
     * `video_take03.mp4`
