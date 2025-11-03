@@ -84,12 +84,20 @@ Now patch the  markdown storyfiles by including the images in the proper place. 
 Also, attach the AUDIO play on top; not sure if Markdown will allow it. If yes, good. If not, create a story-XX.html which embeds the audio file playing please, using HTML5 `<audio>` tag with `autoplay` and `controls` attributes.
 ```
 
+Note on HTML: doesnt work on GitHUb, so you need to have an HTML preview like this: https://html-preview.github.io/?url=https://github.com/palladius/gemini-cli-demos/blob/main/demos/mcp-video-creation/out/demo01/ale-pescara-prod/story-it.html 
+
 ## Video
 
 ```
 Finally create a video which consitutes a Trailer of this story
 Always remember to omit the kid's age/nature to avoid censorship.
 Use Veo3, 8 seconds, dramatic voiceover (with a 8sec short speech, probably title and little more).
+```
+
+## Merge all in a README.md
+
+```
+Now create a README.md which links the video, embeds the GIF, links ther audios, and points to the HTML and MarkDown files. basically, an index with all.
 ```
 
 
