@@ -30,14 +30,14 @@ Here is the plan to complete the project once the authentication issue is resolv
 - [ ] **Resolve `veo_t2v` Authentication:** The primary task is to fix the authentication issue preventing video generation. You may need to refresh your credentials or check the project configuration.
 
 - [ ] **Re-generate Scene 1:** Create a new video for Scene 1 using the detailed prompt you provided.
-    - **Output Path:** `out/demo02/20251103-0845/scene1/scene1_take2_new_skyline.mp4`
+    - **Output Path:** `out/demo02/20251103-0845/scene1/scene1_take4_v2_with_text.mp4`
     - **Prompt (saved in `scene1_visual_prompt.txt`):**
       ```
       A cinematic, nocturnal silhouette of the Pescara skyline. On the left, the grand Aurum building with its arches. In the center, the modern Flaiano Bridge with its inclined antenna. To the right, the city's clock tower. In the sky, a cluster of shimmering, colorful, geometric shapes, like a glitch in the sky, hovers mysteriously. The atmosphere is static and slightly eerie.
       ```
 
 - [ ] **Re-generate Scene 2:** Create a new video for Scene 2 based on the "Nave di Cascella" fountain concept.
-    - **Output Path:** `out/demo02/20251103-0845/scene2/scene2_take2_fountain_monster.mp4`
+    - **Output Path:** `out/demo02/20251103-0845/scene2/scene2_take4_v1.mp4`
     - **Suggested Prompt:**
       ```
       A cinematic close-up of the "Nave di Cascella" fountain in Pescara. A small, colorful, friendly-looking Pixar-style monster is playfully splashing in the water of the fountain, wearing a tiny pair of sunglasses. The scene should feel mysterious but also whimsical.

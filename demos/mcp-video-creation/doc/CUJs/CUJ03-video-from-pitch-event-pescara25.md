@@ -3,13 +3,14 @@
 We want to pitch an event.
 
 <!--  CHANGELOG
+20251104 v5 - changing a few things creatively inside the prompt. removed the puffin and the elephant.
 20251103 v4 - fixed MIB from Mythos to here. Better music prompt. Added my MIB swimming idea in 3 parts.
 20251103 v3 - Added Aurum spec
 20251103 v2 - Added MIB theme and neuralyzer
 20251103 v1 - Spawned from Modena and edit main metdata.
 -->
 
-## event details
+## Event details
 
 * Language of the audience: Italian
 * Location: Pescara, Italy
@@ -20,15 +21,18 @@ We want to pitch an event.
 * CTA: subscribe to the event for free at https://devfest.gdgpescara.it/
 * Theme: Men in Black (MIB). Ensure this element permeates the whole video, people in black/white suits, and possibly at least one neuralyzer being showed/used in 1 scene.
 
-* Elements which should be present:
-  * Gabriele d'Annunzio
-  * A puffin
-  * Aurum of Pescara (an amazing location where Italian G7 was held - https://aurum.comune.pescara.it/)
-  * A lot of fun Google logos popping up everywhere, upbeat music (Google is the biggest sponsor).
-  * A number of developers everywhere. they all wear a t-shirt, in one of the four google colors ( #4285F4 #DB4437 #F4B400 and #0F9D58 )
-  * We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Pescara, and show big crowds of 100-300 people inside an event space (Aurum, a big oval building with a grand piano in the room), in a typical tech event setup.
+## Elements which should be present:
 
-## MIB Narrative Concept
+* Gabriele d'Annunzio
+* Arrosticini
+* Aurum of Pescara (an amazing location where Italian G7 was held - https://aurum.comune.pescara.it/).
+* The grand piano in Aurum's indoor views (full of developers).
+* A lot of fun Google logos popping up everywhere, upbeat music (Google is the biggest sponsor).
+* Software developers everywhere. they all wear a t-shirt, in one of the four google colors. they're having fun.
+* We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Pescara, and show big crowds of 100-300 people inside an event space (Aurum, a big oval building with a grand piano in the room), in a typical tech event setup.
+* A MIB "Neuralyzer".
+
+## MIB Narrative Concept 😎
 
 To fully embrace the "Men in Black" theme, the video should follow a short narrative arc:
 
@@ -42,7 +46,9 @@ To fully embrace the "Men in Black" theme, the video should follow a short narra
 
 Aurum in Pescara looks like a historic building with a unique round shape, a mixture of Art Nouveau and 1930s rationalist architecture, and large windows that create a bright interior. Originally a bathhouse and later a distillery, it has been renovated and now serves as a cultural center, "La Fabbrica delle Idee" (The Idea Factory). The exterior showcases the original Art Nouveau facade from 1910, with a modern, horseshoe-shaped expansion designed by Giovanni Michelucci.
 
-See ![Pescara Aurum image](../demos/pescara-aurum.png) for the facade.
+See ![Pescara Aurum facade](../demos/pescara-aurum.png) for the facade.
+
+See ![Pescara aurum internal courtyard](image.png) for a circular internal courtyard.
 
 Note that Aurum will be difficult to reproduce, so you might want to be prescriptive on how the building looks like.
 
