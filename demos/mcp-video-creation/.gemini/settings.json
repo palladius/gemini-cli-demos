@@ -5,8 +5,11 @@
    // "vertex-ai-creative-studio-imagen": { "command": "/usr/local/google/home/ricc/go/bin/mcp-imagen-go" }
 {
   "general": {
-    "enablePromptCompletion": true
-  } ,
+    "enablePromptCompletion": true,
+    "checkpointing": {
+      "enabled": true
+    }
+  },
   "mcpServers": {
     "veo": {
       "command": "mcp-veo-go",

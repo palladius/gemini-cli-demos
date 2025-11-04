@@ -1,6 +1,6 @@
 
 # TODO conflate the Video creation logic here.
-
+# TODO Add the scene1/scene2 folders for complex or multi-turn video generation logic here too.
 
 description = "Create an audio/video story from a script using GenAI and."
 
