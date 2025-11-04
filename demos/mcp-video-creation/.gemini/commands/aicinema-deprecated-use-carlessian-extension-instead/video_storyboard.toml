@@ -1,6 +1,8 @@
 
 # TODO conflate the Video creation logic here.
+
 # TODO Add the scene1/scene2 folders for complex or multi-turn video generation logic here too.
+# TODO Add caveats: if video gen fails, for example ugly montage, or bad text, try to create an IMAGE firts, use nanobanana to edit text and images until suer likes it, then use Veo to generate video from the initial image (or final for a surprise TXT effect, depending on case!).
 
 description = "Create an audio/video story from a script using GenAI and."
 
