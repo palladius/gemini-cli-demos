@@ -18,6 +18,7 @@ Can u see a sqlite file here?
 ```
 ## double click on a specific DB (which we can easily recreate)
 
+
 ```markdown
 
 Ok lets use events_and_people.sqlite which I’ve just generated with ./generate_database.sh . 
@@ -28,8 +29,10 @@ Can you look at this DB, show me the tables, their schemas, and if there are any
 
 ## Add a user and an event
 
+See `demos/20251105-psi-be.md`
+
 ```
-I'm at an Hackathon event today with PSI SOftware Berlin
+I'm at an Hackathon event today with PSI SOftware Berlin.
 
 Ok, let’s now add a person (Riccardo Carlesso, make up a sample email for me) and I’m coming to this event (as per event link). Also make sure I attend (subscribe) this event. Also add presenters for the event (a chap named Daniel Strebel, I presume).
 
