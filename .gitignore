@@ -17,3 +17,4 @@ tmp/
 .gemini/
 gha-creds-*.json
 demos/mcp-video-creation-backup/
+demos/a-zip-from-a-friend/
