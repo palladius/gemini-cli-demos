@@ -32,8 +32,14 @@ converse:
 install:
     uvx voice-mode deps
 
+    # PROVA RICC KOKORO: uvx pip install -q kokoro>=0.9.4 soundfile
+
 logs:
     cat /Users/ricc/voicemode_debug.log
 
 logs-tail:
     tail -f cat /Users/ricc/voicemode_debug.log
+
+# Fails on my mac
+start-kokoro:
+    docker run -p 8880:8880 kokoro-tts

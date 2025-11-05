@@ -9,6 +9,7 @@ As per go/ricc-gemini-cli:
 
 ## PROMPTS - 3-slash-Ns separated
 
+Launch gc: `giancarlo-permissive-nomcp` 
 
 ```markdown
 What does this repo do?
@@ -17,16 +18,25 @@ Can u see a sqlite file here?
 ```
 ## double click on a specific DB (which we can easily recreate)
 
-Ok lets use events_and_people.sqlite which I’ve just generated with ./generate_database.sh . Can you look at this DB, show me the tables, their schemas, and if there are any events or people in it?
+```markdown
+
+Ok lets use events_and_people.sqlite which I’ve just generated with ./generate_database.sh . 
+Can you look at this DB, show me the tables, their schemas, and if there are any events or people in it?
+
+```
 
 
 ## Add a user and an event
 
-I'm at an event today: https://rsvp.withgoogle.com/events/gemini-code-assist-26-sep
+```
+I'm at an Hackathon event today with PSI SOftware Berlin
 
-Ok, let’s now add a person (Riccardo Carlesso, make up a sample email for me) and I’m coming to this event (as per event link). Also make sure I attend (subscribe) this event. Also add presenters for the event (a chap named Daniel something, I presume).
+Ok, let’s now add a person (Riccardo Carlesso, make up a sample email for me) and I’m coming to this event (as per event link). Also make sure I attend (subscribe) this event. Also add presenters for the event (a chap named Daniel Strebel, I presume).
 
-finally add Jane Malanane. Again fake email, as its just a demo.
+Finally add Jasper Bernhardt. 
+
+Again fake email, as its just a demo.
+```
 
 ## English -> SQL
 
@@ -43,13 +53,10 @@ Now that we have more tables, help me create/update the “output/DEMO2.md” wi
 
 If possible, color the new table(s) differently, like in RED.
 
-## Wow moment v2
-
-OMG this is amazing! Can we maybe show the 2 tables you've just created ina  different colors, or under a RED rectangle saying "Added by Gemini"?
 
 # Cleanup
 
 ```bash
-# 99 - cleanup
+# 99 - cleanup - TODO just cleanup
 rm output/DEMO2.md
 ```
