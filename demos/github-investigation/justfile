@@ -1,0 +1,19 @@
+# this justfile was created by carlessize-folder v#{VERSION} on #{Time.now}
+#source .envrc  # Loads your environment variables
+#set SPANNOMETRIC_VERSION := 3
+set export
+
+# Should get them from envrc...
+#PROJECT_ID := "justfile_pincopallo"
+#GCP_REGION := 'justfile-antarctica-east-1'
+
+setup: cleanup download-random-repo
+
+
+download-random-repo:
+    git clone https://github.com/google-gemini/gemini-cli download-random-repo/
+
+
+
+cleanup:
+    rm -rf download-random-repo/
