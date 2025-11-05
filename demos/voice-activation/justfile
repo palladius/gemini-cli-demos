@@ -18,7 +18,8 @@ configure-voice-mode:
     gemini config set mcp.voice-mode.command "uvx voice-mode"
 
 gemini:
-    VOICEMODE_DEBUG=true gemini -e voice-mode
+    VOICEMODE_DEBUG=true gemini -e '' \
+        --allowed-mcp-server-names 'voice-mode'
 
 
 troubleshoot: converse
@@ -31,3 +32,8 @@ converse:
 install:
     uvx voice-mode deps
 
+logs:
+    cat /Users/ricc/voicemode_debug.log
+
+logs-tail:
+    tail -f cat /Users/ricc/voicemode_debug.log
