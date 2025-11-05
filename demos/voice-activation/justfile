@@ -7,7 +7,7 @@ list:
     just -l
     # Should get them from .env
     echo "OPENAI_API_KEY=$OPENAI_API_KEY"
-    
+
 start-voice-mode:
     uvx voice-mode
 
@@ -25,9 +25,9 @@ gemini:
 troubleshoot: converse
 converse:
     #!/bin/bash
-    . .env 
+    . .env
     echo OPENAI_API_KEY=$OPENAI_API_KEY
-    VOICEMODE_DEBUG=true uvx voice-mode converse
+    VOICEMODE_DEBUG=true OPENAI_API_KEY="$OPENAI_API_KEY" uvx voice-mode converse
 
 install:
     uvx voice-mode deps

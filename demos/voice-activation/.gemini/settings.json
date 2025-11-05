@@ -1,0 +1,13 @@
+{
+  "context_servers": {
+    "voice-mode": {
+      "command": {
+        "path": "uvx",
+        "args": ["voice-mode"],
+        "env": {
+          //"OPENAI_API_KEY": "your-openai-key"
+        }
+      }
+    }
+  }
+}
