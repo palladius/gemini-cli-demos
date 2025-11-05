@@ -1,11 +1,11 @@
 {
-  "context_servers": {
+  "mcpServers": {
     "voice-mode": {
       "command": {
         "path": "uvx",
         "args": ["voice-mode"],
         "env": {
-          //"OPENAI_API_KEY": "your-openai-key"
+            "VOICEMODE_DEBUG": "true"
         }
       }
     }

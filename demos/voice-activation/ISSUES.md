@@ -13,3 +13,4 @@ $ just troubleshoot
 ## Mac
 
 Issues on my Mac.
+Try: `brew install portaudio ffmpeg cmake`
