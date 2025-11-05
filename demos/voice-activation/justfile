@@ -1,0 +1,33 @@
+# this justfile was created by carlessize-folder v#{VERSION} on #{Time.now}
+#source .envrc  # Loads your environment variables
+#set SPANNOMETRIC_VERSION := 3
+set export
+
+list:
+    just -l
+    # Should get them from .env
+    echo "OPENAI_API_KEY=$OPENAI_API_KEY"
+    
+start-voice-mode:
+    uvx voice-mode
+
+docs:
+    echo 'READ: https://voice-mode.readthedocs.io/en/latest/integrations/gemini-cli/#overview'
+
+configure-voice-mode:
+    gemini config set mcp.voice-mode.command "uvx voice-mode"
+
+gemini:
+    VOICEMODE_DEBUG=true gemini -e voice-mode
+
+
+troubleshoot: converse
+converse:
+    #!/bin/bash
+    . .env 
+    echo OPENAI_API_KEY=$OPENAI_API_KEY
+    VOICEMODE_DEBUG=true uvx voice-mode converse
+
+install:
+    uvx voice-mode deps
+
