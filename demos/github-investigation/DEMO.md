@@ -41,8 +41,12 @@ Explain how this, like a colab, allows you to dump "semilavorati" into files to 
 
 ```markdown
 <!-- 1. Investigation -->
-I’ve heard they deprecated the -c (Checkpoint) command, I’m so sad! Can you find in which commit this happened and give me committer, timestamp and GH issue? 
+I’ve heard they deprecated the `-c/--checkpoint` (Checkpoint) CLI command, I’m so sad! Can you find in which commit this happened and give me committer, timestamp and GH issue? 
+
+Ideally point me to a github permalink containing the PR or commit hash so I can share with some friends.
+Also, give me the attached issue(s), if any.
+Dump these findings onto `./out/checkpoint-deprecation-findings.md`.
 
 <!-- 2. Fix and PR - actionable! -->
-Also I believe the docs still points to this deprecated command, can you help me file a PR to update the docs and reflect the new status?
+Also I believe the docs still points to this deprecated command, can you help me file a PR to update the docs and reflect the new status? should be a fairly easy PR, provided the docs still live in the repo.
 ```
