@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "voice-mode": {
+      "command": {
+        "path": "uvx",
+        "args": ["voice-mode"],
+        "env": {
+            "VOICEMODE_DEBUG": "true"
+        }
+      }
+    }
+  }
+}

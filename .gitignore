@@ -12,8 +12,9 @@ tmp/
 .vecchiume
 .DS_Store
 # TODO remove me after workshop
-*.mp4
+#*.mp4
 
 .gemini/
 gha-creds-*.json
 demos/mcp-video-creation-backup/
+demos/a-zip-from-a-friend/

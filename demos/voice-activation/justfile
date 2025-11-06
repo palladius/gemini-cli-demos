@@ -7,7 +7,7 @@ list:
     just -l
     # Should get them from .env
     echo "OPENAI_API_KEY=$OPENAI_API_KEY"
-    
+
 start-voice-mode:
     uvx voice-mode
 
@@ -18,20 +18,19 @@ configure-voice-mode:
     gemini config set mcp.voice-mode.command "uvx voice-mode"
 
 gemini:
-    VOICEMODE_DEBUG=true gemini -e '' \
-        --allowed-mcp-server-names 'voice-mode'
+    #VOICEMODE_DEBUG=true
+    gemini -e '' --allowed-mcp-server-names 'voice-mode'
 
 
 troubleshoot: converse
 converse:
     #!/bin/bash
-    . .env 
+    . .env
     echo OPENAI_API_KEY=$OPENAI_API_KEY
-    VOICEMODE_DEBUG=true uvx voice-mode converse
+    VOICEMODE_DEBUG=true OPENAI_API_KEY="$OPENAI_API_KEY" uvx voice-mode converse
 
 install:
     uvx voice-mode deps
-
     # PROVA RICC KOKORO: uvx pip install -q kokoro>=0.9.4 soundfile
 
 logs:
@@ -43,3 +42,19 @@ logs-tail:
 # Fails on my mac
 start-kokoro:
     docker run -p 8880:8880 kokoro-tts
+
+
+start-local-kokoro:
+    #kokoro serve --port 8880
+    VOICEMODE_PREFER_LOCAL=true
+    VOICEMODE_AUTO_START_KOKORO=true
+    #VOICEMODE_KOKORO_URL=http://localhost:8880
+
+troubleshoot-kokoro:
+    #uvx voice-mode troubleshoot-kokoro
+    VOICEMODE_DEBUG=true \
+    VOICEMODE_SAVE_AUDIO=true \
+    VOICEMODE_EVENT_LOG_ENABLED=true \
+    VOICEMODE_PREFER_LOCAL=true \
+    VOICEMODE_AUTO_START_KOKORO=true \
+    uvx voice-mode converse

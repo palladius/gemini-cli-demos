@@ -15,10 +15,11 @@ Maybe test `list_chirp_voices in Italian via MCP` to test authentication.
 
 ```markdown
 
+/aicinema:video_storyboard
+
 /aicinema-deprecated-use-carlessian-extension-instead:video_storyboard for the story highlighted
 in @doc/CUJs/CUJ03-video-from-pitch-event-pescara25.md
-Make sure to dump all your thinking in MD in a designated folder
-under `out/demo02/`
+Make sure to dump all your thinking in MD in a designated folder under `out/demo02/`
 which contains today's YYYYMMDD-HHMM, in case we get interrupted 😉.
 For simplicity, use a SINGLE take per video,
 and rename videos to `sceneXX.mp4` after creation.
