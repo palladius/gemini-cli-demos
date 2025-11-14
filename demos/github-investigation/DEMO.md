@@ -2,6 +2,8 @@
 
 # setup
 
+**improtant** Note: for this to work you need to either NOT `git-ignore` the repo, OR to use the gemini config to ignore gitignore.
+See my celeberrimus Friction Log on how to.
 
 ```
 just setup

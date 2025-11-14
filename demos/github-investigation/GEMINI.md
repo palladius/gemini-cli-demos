@@ -1,6 +1,9 @@
 We're investigating a random repo here, donwloaded.
 
-* REpo place: `download-random-repo/`
+IN the eontext of this folder and this demo, the "REPO" is not this git root, but this:
+
+* Repo place: `download-random-repo/`
+* NOT THE REPO PLACE: `git root` 
 
 Whenever we talk about git, we're talking about `download-random-repo/` -> make sure to cd in there before erunning git commands.
 
