@@ -1,0 +1,4 @@
+output/
+*.sqlite
+create_full_database.sql
+generate_full_database.sh
