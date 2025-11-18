@@ -1,4 +1,7 @@
 output/
-*.sqlite
+# We CANNOT use this or gemini clin will fail at seeing them
+#*.sqlite
 create_full_database.sql
 generate_full_database.sh
+full_database.sqlite
+full_database.sqlite
