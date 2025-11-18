@@ -1,0 +1,16 @@
+
+list:
+    just -l
+
+
+# recreates a safe DB
+setup:
+    ./generate_database.sh
+
+# removes generated demo files
+cleanup:
+    rm output/DEMO2.md
+
+clean: cleanup 
+teardown: cleanup
+tearup: setup

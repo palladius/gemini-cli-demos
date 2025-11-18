@@ -3,7 +3,7 @@
 As per go/ricc-gemini-cli:
 
 ```bash
-# 00 - setup
+# 00 - setup. TODO: `just setup`
 ./generate_database.sh
 ```
 
@@ -17,6 +17,7 @@ Launch gc: `giancarlo-permissive-nomcp`
 What does this repo do?
 
 Can u see a sqlite file in this folder (use "file \*")? Enumerate them with a nice emoji as a bulletpoint.
+
 ```
 
 ## double click on a specific DB (which we can easily recreate)
@@ -26,13 +27,13 @@ Can u see a sqlite file in this folder (use "file \*")? Enumerate them with a ni
 
 Ok lets use events_and_people.sqlite which I’ve just generated with ./generate_database.sh .
 Can you look at this DB, show me the tables, their schemas, and if there are any events or people in it?
+
 ```
 
 ## Add a user and an event
 
-See `demos/20251105-psi-be.md`
 
-```
+```markdown
 <!-- Change the prompt to be more event specific -->
 I'm at an Hackathon event today with Developers in Milan
 
@@ -41,6 +42,9 @@ Also add presenters for the event (Andrea Cervesato, Gianluca Menconi, Giorgio C
 
 Again fake email "name.surname@fake.google.com" , as its just a demo.
 ```
+
+Previous demos:
+*  See `demos/20251105-psi-be.md`
 
 ## English -> SQL
 
@@ -72,7 +76,7 @@ If possible, color the new table(s) differently, like in RED.
 # Cleanup
 
 ```bash
-# 99 - cleanup - TODO just cleanup
+# 99 - cleanup - TODO: `just cleanup`
 rm output/DEMO2.md
 ```
 
