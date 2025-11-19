@@ -1,0 +1,28 @@
+# Alessandro e il Rubino di Pescara
+
+Alessandro, un vivace bambino di sette anni di Zurigo, era in vacanza a Pescara, la città dove era cresciuto il suo papà italiano. Amava il rombo dei motori Ferrari, le linee eleganti di una Tesla e l'emozione di una bella battaglia Pokémon, ma oggi il suo cuore desiderava qualcos'altro: gli **arrosticini**! Montagne di essi, sfrigolanti e perfettamente salati.
+
+"Altri arrosticini, Zio Fabio!" esultò Alessandro, con la bocca piena. Zio Fabio, un programmatore Ruby di Dublino, ridacchiò. "Rallenta, campione, o ti trasformerai in uno!" Zio Luca, un convinto sostenitore di Linux e dell'open-source, annuì saggiamente. "In effetti, l'equilibrio è fondamentale, anche nelle attività culinarie."
+
+Mentre scendeva la sera, una strana nebbia si levò dal Mare Adriatico, conferendo a Pescara un bagliore inquietante. "Esploriamo la vecchia villa di D'Annunzio," suggerì Zio Fabio, indicando una grande dimora, leggermente fatiscente. "Dicono che nasconda segreti."
+
+"Segreti? Come draghi nascosti?" Gli occhi di Alessandro si spalancarono.
+
+All'interno, la villa era buia e polverosa. Un debole ronzio metallico echeggiava da un passaggio nascosto. "Oh, per l'amor di tutto ciò che è logico, non di nuovo," gemette una voce. Dalle ombre emerse Marvin, un androide perennemente paranoico, con i suoi circuiti che tremolavano. "Questa è proprio il tipo di situazione che ero stato programmato per evitare. Assoluta futilità."
+
+Marvin, la nuova mascotte tragicomica di Alessandro, si unì a malincuore alla loro esplorazione. Trovarono uno studio pieno di libri antichi. Zio Luca, sempre lo studioso, prese un volume consunto. "Ah, Gabriele D'Annunzio," mormorò, leggendo ad alta voce:
+"**O falce di luna calante**
+**che argenti la notte**"
+"Un'osservazione bella, eppure malinconica," concluse Zio Luca.
+
+Improvvisamente, un meccanismo nascosto ronzò, rivelando un compartimento segreto. All'interno, adagiato su un cuscino di velluto, c'era un magnifico rubino luminoso, che pulsava con una luce rossa e soffusa. Alessandro ansimò. "L'occhio di un drago!"
+
+"Più che altro una fonte di energia altamente instabile," borbottò Marvin, ritirandosi dietro Zio Fabio. "Siamo tutti condannati."
+
+Una proiezione olografica di un drago feroce, ma chiaramente non reale, si animò, a guardia del rubino. Zio Fabio, con la sua logica di programmazione Ruby, analizzò rapidamente il codice della proiezione. "È un semplice ciclo, Alessandro. Dobbiamo solo rompere lo schema." Zio Luca, nel frattempo, stava già cercando di accedere all'antico sistema di sicurezza della villa, basato su Linux.
+
+Lavorando insieme, gli zii aggirarono l'illusione. Alessandro, coraggioso come qualsiasi domatore di draghi, allungò la mano verso il rubino. Mentre le sue dita toccavano la gemma, un'energia calda lo attraversò, e le luci della villa si riaccesero, scacciando le ombre spettrali.
+
+"Beh, è stato marginalmente meno catastrofico del previsto," ammise Marvin, pur apparendo ancora completamente infelice.
+
+Alessandro strinse il rubino, il suo bagliore ora un calore confortante. Sapeva che questa avventura a Pescara, con gli arrosticini, le parole di D'Annunzio e il suo amico androide paranoico, era un tesoro più prezioso di qualsiasi oro. Non vedeva l'ora di raccontare tutto alla sua mamma inglese e ai suoi amici tedeschi.

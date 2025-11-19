@@ -1,3 +1,0 @@
-## Veo Prompt for Neuralyzer Transition Video
-
-"The neuralyzer in the foreground emits a brilliant, screen-filling flash of white light. As the flash subsides, the scene dramatically transforms, revealing a large, diverse audience of tech enthusiasts at DevFest Pescara. They are looking up with expressions of awe and excitement. Subtle, glowing logos of Google and Gemini appear in the background, as if projected. The entire video should have a cinematic, high-tech, and exciting feel."

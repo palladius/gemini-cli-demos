@@ -1,3 +1,0 @@
-file 'scene1/scene1_take1_original_seaside.mp4'
-file 'scene2/scene2_take1_original_bridge.mp4'
-file 'scene3/scene3_take1_agents_assemble.mp4'

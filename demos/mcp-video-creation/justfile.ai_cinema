@@ -33,3 +33,6 @@ chirp-io-amo-la-pizza:
 chirp-io-amo-modena:
     echo '{"jsonrpc":"2.0","method":"tools/call","id":2,"params":{"name":"chirp_tts","arguments":{"voice_name": "it-IT-Chirp3-HD-Zephyr", "text":"io amo Modena!", "output_directory": "."}}}' | mcp-chirp3-go | tee modena.json | jq .
     cat modena.json | jq -r .result.content[0].text | sed -n 's/.*Audio saved to: \(.*\.wav\).*/\1/p' | xargs open
+
+chirp-io-amo-il-risotto-alla-milanese:
+    echo '{"jsonrpc":"2.0","method":"tools/call","id":2,"params":{"name":"chirp_tts","arguments":{"voice_name": "it-IT-Chirp3-HD-Zephyr", "text":"io amo il risotto alla milanese", "output_directory": "."}}}' | mcp-chirp3-go | jq .

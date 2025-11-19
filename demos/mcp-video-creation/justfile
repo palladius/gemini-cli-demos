@@ -28,11 +28,9 @@ test-chirp:
         exit 1; \
     fi
     @echo "mcp-chirp3-go found, generating audio... "
-    #@echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"generate-speech","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
-    #@echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"list-voices","arguments":{"text_to_speech":"I love justfiles!"}}}' | mcp-chirp3-go | jq .
-    #@echo '{"jsonrpc":"2.0","method":"prompts/get","id":2,"params":{"name":"list-chirp-voices","arguments":{"text_to_speech":"Show me Italian voices"}}}' | mcp-chirp3-go | jq .
     #just chirp-io-amo-la-pizza
-    just chirp-arrosticini
+    just chirp-io-amo-il-risotto-alla-milanese
+    #just chirp-arrosticini
 
 
 chirp-arrosticini:
