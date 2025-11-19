@@ -13,13 +13,15 @@ Ensure you open this folder:
 * Launch:
 
 ```bash
+source .env
 export PATH=$PATH:~/go/bin
 just test-chirp
+just chirp-io-amo-il-risotto-alla-milanese 
 # If  Unauthenticated desc greps, ->
 just auth
 just gemini-demo-no-auth
 /mcp
-/aicinema:check_install_modena
+/aicinema:check_install
 ```
 
 * Check `GEMINI.md`
@@ -33,17 +35,16 @@ Type `just gemini-demo-no-auth`
 
 ```markdown
 
-Create a short story for my son Alessandro, a 7-year-old boy born in Zurich to an Italian 🇮🇹 father and an English 🇬🇧 mother.
+Create a short story for my son Alessandro, a 7-year-old boy born in Zurich to an Italian 🇮🇹 father ("papino") and an English 🇬🇧 mummy.
 He loves dragons, pokemon, Teslas but above all Ferraris, and finally precious stones (mostly gold and rubies).
 
 Create a scary (but not too scary) story set in Milan.
 I want it to contain these elements:
 - a delicious risotto alla milanese!
-- 📚 Alessandro Manzoni (and a quote of at least 2 verses from one of his poems)
+- 📚 Alessandro Manzoni (and a quote of at least 2 verses from one of his poems or from Promessi Sposi, rigurously in ITALIAN)
 - 🤖 Marvin the Paranoid Android (who will be Alessandro's mascot and will be a tragicomic counterpoint to the child's cheerfulness and
 carefreeness)
-- Uncle Fabio, his friend from Dublin who is a Ruby programmer.
-- Uncle Luca, his friend who loves Linux, OSS and Richard Stallman
+- 💛 Uncle Alfredo who, likes papino, is deeply in love with the color "yellow".
 
 He speaks Italian and English (and German).
 
@@ -62,6 +63,7 @@ Test: `Verify the 2 italian and 2 english files are in the aforementioned direct
 
 
 ```markdown
+<!-- Sound creation -->
 
 Now create a sound file for each language and give it an appropriate name (eg, story-en.wav, story-it.wav)
 
@@ -74,15 +76,19 @@ Since my audience is English-speaking, automatically play the English file on my
 ## prompt 3 / 4: Create Images (Imagen MCP) and update MD files
 
 ```markdown
+<!-- IMAGE creation pt1 -->
 
 Now create an image that has to do with the story, one pertaining to each paragraph: `image1.png`,  `image2.png`, ..
 
 Since the Gemini API does not produce children, and in case you find errors, make sure that there are no "7 year old" or "boy" in the description, and that the output is in a Pixar-style cartoon format.
+
+<!-- /IMAGE creation -->
 ```
 
-After the images are created, let's add them to the markdown files.
+* After the images are created, let's add them to the markdown files.
 
-```
+```markdown
+<!-- IMAGE creation pt1 -->
 
 Now patch the markdown storyfiles (both en and it) by including the images in the proper place.
 MAKE SURE the image link is correct and not broken so we have a nice story flow.
