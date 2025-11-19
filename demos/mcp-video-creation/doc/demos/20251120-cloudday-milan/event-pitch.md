@@ -21,28 +21,15 @@ We want to pitch an event.
 * Details: A community event with plenty of technical talks around the cloud technologies.
 * Pitch: Something contributing to "Join us for a special event" to generate excitement.
 * CTA: 1. Subscribe to the event and come tomorrow! Tickets still available. 2. Come to hear Riccardo talk about Gemini CLI at 12:45 - 13:30 on Track 2.
-* Theme: Men in Black (MIB). Ensure this element permeates the whole video, people in black/white suits, and possibly at least one neuralyzer being showed/used in 1 scene.
 
 ## Elements which should be present:
 
-* Alessandro Manzoni
 * A classic Milanese Aperitivo
 * Duomo di Milano (an amazing location in the heart of the city, for visual inspiration).
 * Talent Garden Calabiana (the actual event venue), a modern conference space, full of developers.
-* A lot of fun Google logos popping up everywhere, upbeat music (Google is the biggest sponsor).
-* Software developers everywhere. they all wear a t-shirt, in one of the four google colors. they're having fun.
+* A lot of fun Google logos popping up everywhere, upbeat music (Google is a sponsor).
+* Cloud developers everywhere.
 * We need to give a sense of this huge community, so you should show a diverse crowd of Italian developers, of all ages, based in Milan, and show big crowds of 100-300 people inside a modern tech event setup.
-* A MIB "Neuralyzer".
-
-## MIB Narrative Concept 😎
-
-To fully embrace the "Men in Black" theme, the video should follow a short narrative arc:
-
-1.  **The Calm Before:** Start with serene, beautiful shots of Milan. Show key locations like the Navigli canals, the city center, and the Duomo. The atmosphere is peaceful, with ambient city sounds. (Approx. 4-8 seconds).
-
-2.  **The Hidden Threat:** Introduce a sense of mystery. The music shifts to a suspenseful crescendo. We get glimpses of colorful, Pixar-style monsters lurking in the shadows or behind famous landmarks. The idea is that a hidden, fantastical world coexists with our own.
-
-3.  **The Agents Assemble:** The music dramatically shifts to an upbeat, MIB-inspired theme. Google Developers, now styled as MIB agents (crisp black suits, white shirts, black sunglasses), appear on the scene. They are competent, cool, and ready to handle the situation, showcasing their role as the "protectors" who manage the unseen complexities (the "monsters"). This is where we can subtly tie in the idea of developers solving complex tech problems.
 
 ## Execution
 

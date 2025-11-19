@@ -18,11 +18,11 @@
 
 ## Scene 2: The Hidden Threat
 
-**Visual:** A vibrant, cinematic shot of a classic Milanese aperitivo on a rooftop terrace at sunset, with the city skyline in the background. A diverse group of stylishly dressed people are chatting and enjoying drinks. In the scene, three small, colorful, mischievous, Pixar-style monsters are playfully causing minor tech-related disruptions. One monster is tangled in a pair of headphones, another is sitting on a laptop, its screen glitching with colorful patterns, and a third is unplugging a phone charger. The overall mood is lively and fashionable, with a hint of humorous technological chaos.
+**Visual:** A vibrant, cinematic shot of a classic Milanese aperitivo on a rooftop terrace at sunset, with the city skyline in the background. A diverse group of stylishly dressed people are chatting and enjoying drinks. In the scene, a few small, colorful, mischievous, Pixar-style monsters are playfully causing minor tech-related disruptions. The overall mood is lively and fashionable, with a hint of humorous technological chaos.
 
 **Video:** The camera pans across the lively aperitivo scene. The monsters' playful disruptions cause a ripple of funny, minor chaos. People are laughing and reacting to the glitches with amusement. The scene is dynamic and humorous.
 
-**Music:** An upbeat, slightly tense, and mischievous cinematic score. The music should feature pizzicato strings, playful woodwinds, and a driving rhythm. It should create a sense of humorous chaos and impending action. The style is reminiscent of a spy movie with a comedic twist.
+**Music:** An upbeat, slightly tense, and mischievous cinematic score. The music should feature pizzicato strings, playful woodwinds, and a driving rhythm. It should create a sense of humorous chaos and impending action.
 
 **Voiceover (Italian):** "Piccoli problemi, grandi impatti. La tecnologia a volte può essere un mostro."
 
@@ -34,11 +34,11 @@
 
 ## Scene 3: The Agents Assemble
 
-**Visual:** A cinematic, low-angle shot of the entrance to the Talent Garden Calabiana in Milan. A diverse group of developers, three men and two women, are dressed in the "Men in Black" style: crisp black suits, white shirts, and dark sunglasses. They walk confidently and purposefully towards the modern entrance of the building. One of the agents, a woman in the foreground, briefly holds up a silver MIB-style neuralyzer. A sleek banner with the Google logo and "Cloud Day Milan" is visible next to the entrance. The lighting is dramatic, and the mood is cool, competent, and heroic.
+**Visual:** A cinematic, low-angle shot of the entrance to the Talent Garden Calabiana in Milan. A diverse group of developers, dressed in "Men in Black" style, walk confidently towards the modern entrance. One agent briefly holds up a MIB-style neuralyzer. A sleek banner with the Google logo and "Cloud Day Milan" is visible. The mood is cool, competent, and heroic.
 
-**Video:** The group of developers walks towards the camera in slow motion, looking confident and heroic. The woman with the neuralyzer gives a subtle, knowing smile to the camera. The shot is powerful and inspiring, with a sense of mission.
+**Video:** The group of developers walks towards the camera in slow motion. The woman with the neuralyzer gives a subtle, knowing smile. The shot is powerful and inspiring.
 
-**Music:** A heroic, upbeat, and inspiring cinematic theme reminiscent of the "Men in Black" soundtrack. The music should be grand and orchestral, with a powerful brass section, a driving percussion beat, and a memorable, triumphant melody. It should create a sense of excitement, competence, and adventure.
+**Music:** A heroic, upbeat, and inspiring cinematic theme reminiscent of the "Men in Black" soundtrack. Grand and orchestral with a driving beat.
 
 **Voiceover (Italian):** "Ma non temete. Gli agenti del Cloud Day sono pronti a domare ogni mostro. Unitevi a noi."
 
@@ -47,3 +47,19 @@
 *   Music: `scene3_music.wav`
 *   Voiceover: `scene3_voiceover-it-IT-Chirp3-HD-Algenib-20251119-131348.wav`
 *   Video: `scene3.mp4`
+
+## Scene 4: Call to Action
+
+**Visual:** A high-resolution, cinematic background image. The right side features a beautifully detailed, dark, and elegant bas-relief of the Milan Duomo's architecture. The left side is a smooth, deep, dark elegant blue.
+
+**Video:** A static 6-second shot of the background. The text "Join us for Cloud Day tomorrow!" fades in at 1 second and out at 5 seconds. The URL "https://cloudday.it/" fades in at 2 seconds and out at 6 seconds.
+
+**Music:** A short, upbeat, and inspiring musical outro. A positive and uplifting electronic track.
+
+**Voiceover (Italian):** "Unisciti a noi al Cloud Day domani! Biglietti ancora disponibili su cloud day punto it."
+
+**Assets:**
+*   Image: `scene4_image_clean.png`
+*   Music: `scene4_music.wav`
+*   Voiceover: `scene4_voiceover-it-IT-Chirp3-HD-Algenib-20251119-134530.wav`
+*   Video: `scene4_final.mp4`
