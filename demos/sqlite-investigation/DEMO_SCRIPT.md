@@ -1,4 +1,4 @@
-# Script for WAD demo
+# Script for SQL demo
 
 As per go/ricc-gemini-cli:
 
@@ -35,12 +35,13 @@ Can you look at this DB, show me the tables, their schemas, and if there are any
 
 ```markdown
 <!-- Change the prompt to be more event specific EVENT_SPECIFIC -->
+
 I'm at an Hackathon event today: **Cloud Day** in **Milan**
 
 Ok, let’s now add a person (Riccardo Carlesso, make up a sample email for me) and I’m coming to this event (as per event link). Also make sure I attend (subscribe) this event.
 Also add presenters for the event (Andrea Saltarello).
 
-Again fake email "name.surname@fake.google.com" , as its just a demo.
+Again fake email "name.surname@fake.google.com" , as its just a demo. 
 ```
 
 Previous demos:
@@ -52,6 +53,7 @@ Previous demos:
 <!-- SQL query from English :) -->
 
 Now execute a query to get the people attending the most events, with person and COUNT in the table sorted by count. Show me both the SQL query AND the result.
+Present the results in a nice markdown table.
 ```
 
 ## Extend the DB
@@ -59,7 +61,7 @@ Now execute a query to get the people attending the most events, with person and
 ```markdown
 <!-- change schema -->
 
-Now I want to extend the Database with a new concept. I want to add the fact that Riccardo is participating to the above event with a talk, called “Gemini CLI rocks for Databases”. A talk should have a title, an abstract, and a person id, and it can be linked in 1:many to an event, and I want you to both create the tables to make this happen and add this talk , and “attach” it to both the above event AND the Tech Conference 2025 to demonstrate the 1:many relationship. In the end, show me some SQL to demonstrate it.
+Now I want to extend the Database with a new concept. I want to add the fact that Riccardo is participating to the above event with a talk, called “Gemini CLI rocks for DatabasesBs”. A talk should have a title, an abstract, and a person id, and it can be linked in 1:many to an event, and I want you to both create the tables to make this happen and add this talk , and “attach” it to both the above event AND the Tech Conference 2025 to demonstrate the 1:many relationship. In the end, show me some SQL to demonstrate it.
 ```
 
 ## Wow moment

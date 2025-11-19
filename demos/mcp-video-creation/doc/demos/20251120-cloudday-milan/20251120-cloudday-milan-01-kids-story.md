@@ -51,7 +51,7 @@ Dad and mummy should NOT be part of the story (cheesy!).
 
 He speaks Italian and English (and German).
 
-Use the folder 📁 `out/milan/demo01-alessandro-story/`.
+Use the folder 📁 `out/milan/demo01-alessandro-daybefore/`.
 
 Start by creating a story in Markdown in English (`story-en.md`), then translate it into Italian (`story-it.md`).
 
