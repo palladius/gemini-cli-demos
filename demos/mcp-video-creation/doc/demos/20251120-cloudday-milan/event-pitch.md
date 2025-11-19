@@ -18,7 +18,7 @@ We want to pitch an event.
 * Location: Milan, Italy (Talent Garden Calabiana, via Arcivescovo Calabiana 6)
 * Event Title: "Cloud Day Milan"
 * Date: 20 November 2025
-* Details: A community event with plenty of technical talks around the Google ecosystem and cloud technologies.
+* Details: A community event with plenty of technical talks around the cloud technologies.
 * Pitch: Something contributing to "Join us for a special event" to generate excitement.
 * CTA: 1. Subscribe to the event and come tomorrow! Tickets still available. 2. Come to hear Riccardo talk about Gemini CLI at 12:45 - 13:30 on Track 2.
 * Theme: Men in Black (MIB). Ensure this element permeates the whole video, people in black/white suits, and possibly at least one neuralyzer being showed/used in 1 scene.

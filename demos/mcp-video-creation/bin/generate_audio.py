@@ -67,6 +67,20 @@ def generate_audio(text, output_dir, output_filename, voice_name):
     Returns:
         Path to generated file or None on failure
     """
+    # Ensure output directory exists and clean up old temporary files
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Remove any leftover chirp_audio-*.wav files to avoid confusion
+    for old_file in glob.glob(os.path.join(output_dir, "chirp_audio-*.wav")):
+        try:
+            os.remove(old_file)
+        except Exception:
+            pass
+    
+    # Record timestamp before starting subprocess
+    import time
+    start_time = time.time()
+    
     # Construct JSON payload
     payload = {
         "jsonrpc": "2.0",
@@ -123,18 +137,32 @@ def generate_audio(text, output_dir, output_filename, voice_name):
             except json.JSONDecodeError:
                 continue
         
-        # Find the generated file
-        list_of_files = glob.glob(os.path.join(output_dir, '*.wav'))
-        if not list_of_files:
-             print("No audio file found generated.", file=sys.stderr)
-             return None
+        # Find the generated file - look specifically for chirp_audio-*.wav files created after start_time
+        candidate_files = glob.glob(os.path.join(output_dir, "chirp_audio-*.wav"))
+        if not candidate_files:
+            # Fallback to any .wav file if chirp naming wasn't used
+            candidate_files = glob.glob(os.path.join(output_dir, "*.wav"))
+        
+        if not candidate_files:
+            print("No audio file found generated.", file=sys.stderr)
+            return None
 
-        latest_file = max(list_of_files, key=os.path.getctime)
-        print(f"Generated: {latest_file}")
+        # Find the file created after we started the subprocess
+        generated_path = None
+        for f in sorted(candidate_files, key=os.path.getctime, reverse=True):
+            if os.path.getctime(f) > start_time:
+                generated_path = f
+                break
+        
+        # Fallback to newest file if none are newer than start_time (shouldn't happen)
+        if not generated_path:
+            generated_path = max(candidate_files, key=os.path.getctime)
+        
+        print(f"Generated: {generated_path}")
         
         target_path = os.path.join(output_dir, output_filename)
-        if latest_file != target_path:
-            os.rename(latest_file, target_path)
+        if generated_path != target_path:
+            os.rename(generated_path, target_path)
             print(f"Renamed to: {target_path}")
         
         return target_path
