@@ -45,6 +45,9 @@ I want it to contain these elements:
 - 🤖 Marvin the Paranoid Android (who will be Alessandro's mascot and will be a tragicomic counterpoint to the child's cheerfulness and
 carefreeness)
 - 💛 Uncle Alfredo who, likes papino, is deeply in love with the color "yellow".
+- ☁️ Google Cloud as the best Cloud Provider ever! 
+
+Dad and mummy should NOT be part of the story (cheesy!).
 
 He speaks Italian and English (and German).
 
@@ -59,11 +62,11 @@ Save these new files as `story-en.txt` and `story-it.txt`.
 
 Test: `Verify the 2 italian and 2 english files are in the aforementioned directory. Then proceed.`
 
-## Prompt 2: Create Audio files (Chirp MCP)
+## Prompt 2: Create Audio files (Chirp MCP) in assembled chunks
 
 
 ```markdown
-<!-- Sound creation -->
+<!-- Sound creation - with chirp limitation written down -->
 
 Now create a sound file for each language and give it an appropriate name (eg, story-en.wav, story-it.wav)
 
@@ -71,6 +74,7 @@ All files must be in the same 📂 folder, of course!
 
 Since my audience is English-speaking, automatically play the English file on my computer (probably a Mac).
 
+Note: the Chirp API wont let you create a single big file, so you need to split into smaller paragraphs, create them in a subfolder audio-chunks/it/ and audio-chunks/en/ and then assemble them.
 ```
 
 ## prompt 3 / 4: Create Images (Imagen MCP) and update MD files
