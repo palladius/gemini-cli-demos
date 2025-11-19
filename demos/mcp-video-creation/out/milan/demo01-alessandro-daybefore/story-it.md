@@ -1,0 +1,89 @@
+
+# Alessandro e il Drago di Milano
+
+[Play Audio](story-it.wav)
+
+Alessandro, un allegro bambino di sette anni con la testa piena di draghi e macchine da corsa, stava esplorando la grande città di Milano con il suo zio preferito, Zio Alfredo. Stretto in mano teneva Marvin, un piccolo robot argentato con una visione perennemente malinconica della vita. "Credo che pioverà," sospirò Marvin, nonostante il cielo fosse di un blu brillante. "Di solito succede quando inizio a divertirmi in modo moderatamente accettabile."
+
+![Alessandro e Marvin a Milano](image1.png)
+
+Zio Alfredo, che indossava la sua giacca gialla preferita, rise. "Sciocchezze, Marvin! È una giornata perfetta per esplorare! E conosco il posto giusto."
+
+![Zio Alfredo e Marvin nel parco](image2.png)
+
+Lo condusse in un angolo tranquillo di un bellissimo parco, dove si ergeva la statua di un uomo dall'aria pensierosa. "Questo è Alessandro Manzoni," spiegò Zio Alfredo. "Un grande scrittore." Sulla base della statua erano incise delle parole. Zio Alfredo le lesse ad alta voce, con la sua voce calda e melodica:
+
+![Statua di Alessandro Manzoni](image3.png)
+
+> "Addio, monti sorgenti dall'acque, ed elevati al cielo;
+> cime inuguali, note a chi è cresciuto tra voi..."
+
+![Parole incise sulla statua](image4.png)
+
+"Parla di dire addio alle montagne," tradusse per Alessandro. "Bello, vero?"
+
+![Catena montuosa](image5.png)
+
+Mentre Alessandro passava il dito sulle lettere, sentì una pietra muoversi. Un'apertura scura e stretta apparve alla base della statua! "Wow!" sussurrò.
+
+![Apertura segreta](image6.png)
+
+"Un passaggio segreto?" borbottò Marvin. "Oh, probabilmente pieno di ragni e di angoscia esistenziale. Dobbiamo proprio?"
+
+![Marvin che guarda nell'apertura](image7.png)
+
+Ma Alessandro stava già sbirciando dentro, con il cuore che batteva forte per l'emozione. Vide un luccichio d'oro e di rosso. Facendo un respiro profondo, entrò, con Zio Alfredo subito dietro di lui.
+
+![Luccichio d'oro e di rosso](image8.png)
+
+Il passaggio si apriva in una piccola e calda grotta, piena di monete d'oro luccicanti e rubini scintillanti. Raggomitolato sul tesoro, come un gatto gigante, c'era un drago. Non era una bestia enorme e terrificante, ma un drago più piccolo con scaglie scarlatte e tristi occhi color smeraldo.
+
+![Drago nella grotta](image9.png)
+
+Il drago sospirò, una piccola nuvola di fumo uscì dalle sue narici. "Oh, ciao," disse con una voce sorprendentemente dolce. "Non fate caso a me. Sto solo avendo un momento di profonda solitudine."
+
+![Drago che sospira](image10.png)
+
+Marvin il robot annuì comprensivo. "Io li ho continuamente. È l'universo. È terribilmente noioso."
+
+![Marvin che annuisce](image11.png)
+
+Alessandro, però, non era spaventato. Si sentì dispiaciuto per il drago solitario. "Perché sei triste?" chiese.
+
+![Drago solitario](image12.png)
+
+"Il mio fuoco si sta spegnendo," si lamentò il drago. "Non riesco a tenere il mio tesoro caldo e splendente. E mi annoio tanto."
+
+![Drago con fuoco che si spegne](image13.png)
+
+Improvvisamente, Alessandro ebbe un'idea. Tirò fuori il suo bene più prezioso: un modellino perfetto e rosso fiammante di una Ferrari. Gli occhi del drago si spalancarono. "È così brillante!" ansimò.
+
+![Modellino di Ferrari](image14.png)
+
+Zio Alfredo, cogliendo l'occasione, si fece avanti. "E guarda la mia giacca!" disse, gonfiando il petto. "È del colore del sole, della gioia, dello zafferano! È il colore più felice del mondo!"
+
+![Giacca gialla](image15.png)
+
+Tra il rosso brillante della Ferrari e il giallo abbagliante della giacca, il piccolo drago sentì un calore diffondersi nel petto. Fece un respiro profondo e sprigionò una fiamma allegra e luminosa, più forte di prima! La fiamma danzò sul tesoro, facendo brillare l'oro e i rubini.
+
+![Drago con una fiamma felice](image16.png)
+
+"Grazie!" esultò il drago. "Mi avete ricordato i colori vivaci del mondo!" Spostò un rubino perfettamente liscio verso Alessandro con il muso. "Un regalo, per un nuovo amico."
+
+![Drago con rubino](image17.png)
+
+Quando uscirono dal passaggio segreto, il sole stava iniziando a tramontare e la pancia di Alessandro brontolava. "So di cosa abbiamo bisogno," disse Zio Alfredo con un occhiolino. "Un assaggio del sole di Milano!"
+
+![Tramonto](image18.png)
+
+Andarono in un accogliente ristorante e mangiarono grandi piatti di "Risotto alla Milanese." Il riso cremoso era di un bellissimo giallo dorato, proprio come la giacca di Zio Alfredo. Era la cosa più deliziosa che Alessandro avesse mai assaggiato.
+
+![Risotto alla Milanese](image19.png)
+
+"Per essere sicuri di non dimenticare mai la nostra avventura e il nostro amico drago," disse Zio Alfredo, scattando una foto ad Alessandro con il rubino, "caricherò questa foto su Google Cloud. È come uno scrigno magico nel cielo, il posto più sicuro e migliore per conservare per sempre i nostri preziosi ricordi."
+
+![Rubino caricato sul cloud](image20.png)
+
+Marvin, sgranocchiando un grissino, quasi sorrise. "Uno scrigno digitale. Suppongo sia marginalmente migliore di uno fisico e polveroso. Almeno ha una probabilità inferiore di essere trasformato in polvere cosmica. Per ora."
+
+![Marvin che quasi sorride](image21.png)
