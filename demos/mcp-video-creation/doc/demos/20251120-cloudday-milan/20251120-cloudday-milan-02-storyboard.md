@@ -14,16 +14,14 @@ Maybe test `list_chirp_voices in Italian via MCP` to test authentication.
 
 
 ```markdown
+<!-- during the day - short time -->
+/aicinema:video_storyboard Take inspiration from the pitch event described in @doc/demos/20251120-cloudday-milan/event-pitch.md . Create a compelling 3-scene storyboard for a teaser video in Italian, inspired by the themes and content of the Cloud Day event (URL: https://www.cloudday.it/). The storyboard should be saved as `STORYBOARD.md` in the designated output folder.
 
-/aicinema:video_storyboard
-
-Make sure to dump all your thinking in MD in a designated folder under `out/milan/demo02/`
-which contains today's YYYYMMDD-HHMM, in case we get interrupted 😉.
-For simplicity, use a SINGLE take per video,
-and rename videos to `sceneXX.mp4` after creation.
-
+Make sure to dump all your thinking in MD in a designated folder under `out/milan/demo02/` which contains today's YYYYMMDD-HHMM, in case we get interrupted 😉. 
+For simplicity, use a SINGLE take per video, and rename videos to `sceneXX.mp4` after creation.
 ```
-If needed: `This is for a quick demo, so use fastest models.`
+
+If needed: `This is for a quick demo, so use fastest models.` 
 Or:
 
 ```
@@ -45,6 +43,7 @@ Add this more structured structure:
     * `music02.wav` ..  in case we need more..
     * `assembled_video_final.mp4` which contains the final assembly of video + music + [optionally] a Post generation text.
 * For scene 2 create folder `scene02/`
-* .. and so on
-* In the base folder you have a bash script which assembles all the `scene*/assembled_video_final.mp4`; this can be called again in case we want to change or retake a video.
+  * .. and so on
+* For the assempled stuff (production video) you can use something like "production/" which will assembles scene1/2/3/4 into a single piece.
+* In the base folder you have a bash script which assembles all the `scene*/assembled_video_final.mp4` into the `production/` folder; this can be called again in case we want to change or retake a video.
 ```

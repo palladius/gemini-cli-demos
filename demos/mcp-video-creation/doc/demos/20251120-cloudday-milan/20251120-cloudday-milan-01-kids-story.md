@@ -47,7 +47,7 @@ carefreeness)
 
 He speaks Italian and English (and German).
 
-Use the folder 📁 `out/milan/demo01-alessandro-story-derek/`.
+Use the folder 📁 `out/milan/demo01-alessandro-story/`.
 
 Start by creating a story in Markdown in English (`story-en.md`), then translate it into Italian (`story-it.md`).
 
