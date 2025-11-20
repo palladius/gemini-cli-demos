@@ -6,6 +6,8 @@ You've finished the demo01, now demo 02 in testing mode.
 ###
 
 ```bash
+source .env
+export PATH=$PATH:~/go/bin
 just gemini-demo-no-auth         # or just gemini-demo-with-auth the first time
 ```
 
