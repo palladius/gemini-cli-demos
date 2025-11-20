@@ -43,8 +43,8 @@ CREATE TABLE subscriptions (
 
 -- Sample Data
 INSERT INTO events (id, name, location, date) VALUES
-(1, 'Tech Conference 2025', 'Virtual', '2025-10-15'),
-(2, 'Local Hackathon', 'City Library', '2025-11-01');
+(1, 'Tech Conference 2025', 'Berlin', '2025-07-15'),
+(2, 'Local Hackathon', 'Zurich', '2025-11-01');
 
 INSERT INTO people (id, name, surname, email) VALUES
 (1, 'Alice', 'Smith', 'alice@example.com'),
