@@ -6,6 +6,7 @@ student:
   user_name_and_surname: "Emmanuel Washington"
   computer_type: "Linux"
   random_pin: "12870"
+  issue: https://github.com/palladius/gemini-cli-demos/issues/75
 workshop:
   name: "Zurich - Cloud Summit"
   secret_keyword: "Cuechicashli"
