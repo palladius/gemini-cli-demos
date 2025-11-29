@@ -3,7 +3,8 @@ student:
   github_username: michaji
   username: codespace
   computer_type: Linux
-  pin: 17828
+    pin: 17828
+  issue: https://github.com/palladius/gemini-cli-demos/issues/79
 workshop:
   name: Zurich - Cloud Summit
   date: '20251129-170247'
