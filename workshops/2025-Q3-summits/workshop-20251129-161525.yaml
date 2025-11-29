@@ -4,6 +4,7 @@ student:
   name: St. Mark Andretti
   computer_type: Linux
   random_pin: 12328
+  issue: https://github.com/palladius/gemini-cli-demos/issues/72
 workshop:
   name: Zurich - Cloud Summit
   teacher: Riccardo
