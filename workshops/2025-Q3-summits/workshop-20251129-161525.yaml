@@ -1,0 +1,10 @@
+student:
+  username: codespace
+  github_username: StMarkFx
+  name: St. Mark Andretti
+  computer_type: Linux
+  random_pin: 12328
+workshop:
+  name: Zurich - Cloud Summit
+  teacher: Riccardo
+  command_version: 1.1.0_23sep25
