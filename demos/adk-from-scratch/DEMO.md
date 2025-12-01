@@ -17,21 +17,23 @@ mkdir -p out
 1. **Download the ADK**:
 
 ```markdown
-<!-- Download the ADK locally -->
-Download https://github.com/google/adk-python under the rag/ folder
+<!-- Download the ADK locally (Riccardo way). Should -->
+Download ADK python repo and ADK Docs, both repos should be under the rag/ folder.
 ```
 
 
-1. **Understand the Repo**:
+1. **Understand the Repo** (AGY way):
    Ask Gemini to explain what this repo does and save it to a file.
-   > "Look at the `adk-python` folder. What is this project about? Summarize its core functionality. Save the response to `out/01_summary.md`."
+   > "Look at the `rag/adk-python` folder. What is this project about? Summarize its core functionality. Save the response to `out/01_summary.md`.
+   > Does this repo contain code? Tests? Evals? And are the docs in here too, or just in the rag/adk-docs/ folder?"
 
 ## Step 2: Visualizing the Docs
 
-1. **Create a Diagram**:
+1. **Create a Markdown/Mermaid Diagram**:
    > "Read the documentation in `adk-python/docs`. Create a Mermaid.js diagram showing the high-level architecture of the ADK (Agents, Tools, Model). Save the mermaid code to `out/02_architecture.mmd`."
 
-   * *Alternative*: Use `generate_image` to create a visual diagram and save to `out/02_architecture.png`.
+   * *Alternative*: 
+   > Use `generate_image` to create a visual diagram and save to `out/02_architecture.png`. Use the "Create Diagram" instructions from the nanobanana README: https://github.com/gemini-cli-extensions/nanobanana . Since we are in Geneva, use the `gemini-3-pro-image-preview` model and add some Swiss Romande touch to the final image (could be imagery or text, but needs to be visible!).
 
 ## Step 3: Animation (Bonus)
 
