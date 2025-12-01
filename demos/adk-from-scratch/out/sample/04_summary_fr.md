@@ -1,0 +1,1 @@
+L'Agent Development Kit (ADK) est un framework Python open-source pour construire, évaluer et déployer des agents IA. Il est modulaire, optimisé pour Gemini, et simplifie la création de workflows d'agents complexes.

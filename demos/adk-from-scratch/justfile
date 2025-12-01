@@ -9,6 +9,7 @@ install:
 # Runs gemini with well some allowlisted commands.
 run:
     gemini \
+    --allowed-tools="ShellTool(adk)" \
     --allowed-tools="ShellTool(date)" \
     --allowed-tools="ShellTool(df)" \
     --allowed-tools="ShellTool(du)" \
@@ -26,6 +27,7 @@ run:
     --allowed-tools="ShellTool(jq)" \
     --allowed-tools="ShellTool(just)" \
     --allowed-tools="ShellTool(lolcat)" \
+    --allowed-tools="ShellTool(ls)" \
     --allowed-tools="ShellTool(mkdir)" \
     --allowed-tools="ShellTool(pwd)" \
     --allowed-tools="ShellTool(say)" \
@@ -35,3 +37,6 @@ run:
     --allowed-tools="ShellTool(uname)" \
     --allowed-tools="ShellTool(whoami)" 
 
+
+test-vibecoded-demo-agent:
+    echo 'How are you?' | adk run out/vibecoded_agent/
