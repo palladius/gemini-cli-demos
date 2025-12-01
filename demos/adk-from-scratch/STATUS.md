@@ -5,7 +5,7 @@
 * Creator: Ricc
 * GitHub username: palladius
 * Creator fav ice-cream: Pistachio
-* status: WorkInPogress
+* status: 🟡  WorkInPogress
 * Checkbox:
     * [ ] code_present
     * [ ] code_working
