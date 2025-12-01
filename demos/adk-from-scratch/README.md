@@ -1,20 +1,17 @@
-# Idea
+# ADK from Scratch Demo
 
-the idea is to start creating it WITHOUT anything, see it makes mistakes...
+## Overview
+This demo showcases how to use the Gemini CLI to explore, visualize, and interact with the Google ADK (Agent Development Kit) for Python.
 
-then add `llms-full.txt` in https://github.com/google/adk-python/blob/main/llms-full.txt
+## Features
+1.  **Exploration**: Downloading and understanding the ADK codebase using Gemini.
+2.  **Visualization**: Creating architecture diagrams from the documentation.
+3.  **Accessibility**: Translating summaries and generating audio (French) using MCP tools.
 
-or `context7` and then see it work!
+## Running the Demo
+Follow the steps in [DEMO.md](DEMO.md).
 
-
-## About
-
-We want to do the following demo to demonstrate Gemini CLI:
-
-1. Download 
-2. Help
-
-
-## Resources
-
-* ADK in poython: https://github.com/google/adk-python
+## Resources
+*   [ADK Python Repository](https://github.com/google/adk-python)
+*   [ADK Documentation](https://google.github.io/adk-docs/)
+*   [Nanobanana Extension](https://github.com/gemini-cli-extensions/nanobanana)
