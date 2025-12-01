@@ -16,11 +16,13 @@ mkdir -p out
 
 1. **Download the ADK**:
 
-   ```bash
-   git clone https://github.com/google/adk-python
-   ```
+```markdown
+<!-- Download the ADK locally -->
+Download https://github.com/google/adk-python under the rag/ folder
+```
 
-2. **Understand the Repo**:
+
+1. **Understand the Repo**:
    Ask Gemini to explain what this repo does and save it to a file.
    > "Look at the `adk-python` folder. What is this project about? Summarize its core functionality. Save the response to `out/01_summary.md`."
 

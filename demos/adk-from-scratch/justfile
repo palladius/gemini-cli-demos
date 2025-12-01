@@ -1,0 +1,36 @@
+
+list:
+    just -l
+
+install:
+    gemini extensions install https://github.com/gemini-cli-extensions/nanobanana
+
+;; run:
+;;     #gemini --allowed-tools=ShellTool(date) --allowed-tools=ShellTool(df) --allowed-tools=ShellTool(du) --allowed-tools=ShellTool(echo) --allowed-tools=ShellTool(find) --allowed-tools=ShellTool(gh auth status) --allowed-tools=ShellTool(gh issue) --allowed-tools=ShellTool(git add) --allowed-tools=ShellTool(git status) --allowed-tools=ShellTool(git log) --allowed-tools=ShellTool(git diff) --allowed-tools=ShellTool(grep) --allowed-tools=ShellTool(hostname) --allowed-tools=ShellTool(jq) --allowed-tools=ShellTool(just) --allowed-tools=ShellTool(mkdir) --allowed-tools=ShellTool(pwd) --allowed-tools=ShellTool(sed) --allowed-tools=ShellTool(sort) --allowed-tools=ShellTool(touch) --allowed-tools=ShellTool(uname) --allowed-tools=ShellTool(whoami)
+;;     giancarlo-permissive
+
+run:
+    gemini \
+    --allowed-tools="ShellTool(date)" \
+    --allowed-tools="ShellTool(df)" \
+    --allowed-tools="ShellTool(du)" \
+    --allowed-tools="ShellTool(echo)" \
+    --allowed-tools="ShellTool(find)" \
+    --allowed-tools="ShellTool(gh auth status)" \
+    --allowed-tools="ShellTool(gh issue)" \
+    --allowed-tools="ShellTool(git add)" \
+    --allowed-tools="ShellTool(git status)" \
+    --allowed-tools="ShellTool(git log)" \
+    --allowed-tools="ShellTool(git diff)" \
+    --allowed-tools="ShellTool(grep)" \
+    --allowed-tools="ShellTool(hostname)" \
+    --allowed-tools="ShellTool(jq)" \
+    --allowed-tools="ShellTool(just)" \
+    --allowed-tools="ShellTool(mkdir)" \
+    --allowed-tools="ShellTool(pwd)" \
+    --allowed-tools="ShellTool(sed)" \
+    --allowed-tools="ShellTool(sort)" \
+    --allowed-tools="ShellTool(touch)" \
+    --allowed-tools="ShellTool(uname)" \
+    --allowed-tools="ShellTool(whoami)" 
+    
