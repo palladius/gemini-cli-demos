@@ -1,14 +1,14 @@
 
 list:
-just -l
+    just -l
 
 # Install nanobanana extension
 install:
-gemini extensions install https://github.com/gemini-cli-extensions/nanobanana
+    gemini extensions install https://github.com/gemini-cli-extensions/nanobanana
 
 # Runs gemini with well some allowlisted commands.
 run:
-gemini \
+    gemini \
     --allowed-tools="ShellTool(date)" \
     --allowed-tools="ShellTool(df)" \
     --allowed-tools="ShellTool(du)" \

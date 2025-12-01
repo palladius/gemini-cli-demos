@@ -10,6 +10,7 @@ We want to do the following demo to demonstrate Gemini CLI:
 
 1. Everything you download from the itnernet whihc is fungible, put it under `tmp/`. If it's augmenting your knowledge, put it under `rag/`. We'll git-ignore tmp/ but not rag/ to allow you to keep your knowledge.
 2. All output from scripts should go to `out/` which we're nicely git-ignoring :)
+3. Never call `gemini` via shell!
 
 ## Resources
 

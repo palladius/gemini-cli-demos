@@ -30,10 +30,10 @@ Download ADK python repo and ADK Docs, both repos should be under the rag/ folde
 ## Step 2: Visualizing the Docs
 
 1. **Create a Markdown/Mermaid Diagram**:
-   > "Read the documentation in `adk-python/docs`. Create a Mermaid.js diagram showing the high-level architecture of the ADK (Agents, Tools, Model). Save the mermaid code to `out/02_architecture.mmd`."
+   > "Read the documentation in `adk-python/docs`. Create a Mermaid.js diagram showing the high-level architecture of the ADK (Agents, Tools, Model). Save the mermaid code to `out/02_architecture.md`. Add emojis to the diagram to make it more engaging."
 
-   * *Alternative*: 
-   > Use `generate_image` to create a visual diagram and save to `out/02_architecture.png`. Use the "Create Diagram" instructions from the nanobanana README: https://github.com/gemini-cli-extensions/nanobanana . Since we are in Geneva, use the `gemini-3-pro-image-preview` model and add some Swiss Romande touch to the final image (could be imagery or text, but needs to be visible!).
+   * *Visual Alternative*: 
+   > Use `generate_diagram` to create a visual diagram and save to `out/02_architecture.png`. Use the "Create Diagram" instructions from the nanobanana README: https://github.com/gemini-cli-extensions/nanobanana . Since we are in Geneva, use the `gemini-3-pro-image-preview` model and add some Swiss Romande touch to the final image (could be imagery or text, but needs to be visible!).
 
 ## Step 3: Animation (Bonus)
 
