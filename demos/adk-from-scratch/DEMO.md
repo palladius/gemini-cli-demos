@@ -24,19 +24,22 @@ just run
 Download ADK python repo and ADK Docs, both repos should be under the rag/ folder.
 ```
 
-1. **Understand the Repo** (AGY way):
-   Ask Gemini to explain what this repo does and save it to a file.
+1. **Understand the Repo** (AGY way):    Ask Gemini to explain what this repo does and save it to a file. 
    > "Look at the `rag/adk-python` folder. What is this project about? Summarize its core functionality. Save the response to `out/01_summary.md`.
-   > Does this repo contain Tests? Evals? Does it explain MCP? And are the docs in here too, or just in the rag/adk-docs/ folder?"
+   > Does this repo contain Tests? Does it explain MCP? And are the docs in here too, or just in the rag/adk-docs/ folder?"
+   > Explain to me how I would do a Travel agent which dispatches wotk to other subagents: flights, hotels, and restaurants and finally a budget agent to keep track of the budget expenditure based on the price of the flights, hotels, and restaurants. save this under `out/01_travel_agent.md`. I want both small snippets of code AND a high level overview of the architecture possibly with mermaid.
 
 ## Step 2: Visualizing the Docs
 
 1. **Create a Markdown/Mermaid Diagram**:
 
-   > "Read the documentation in `adk-python/docs`. Create a Mermaid.js diagram showing the high-level architecture of the ADK (Agents, Tools, Model). Save the mermaid code wrapped as markdown onto `out/02_architecture.md`. Add emojis to the diagram to make it more engaging."
+   > "Read the documentation in `rag/adk-docs/`. Create a Mermaid.js diagram showing the high-level architecture of the ADK (Agents, Tools, Model). Save the mermaid code wrapped as markdown onto `out/02_architecture.md`. Add emojis to the diagram to make it more engaging."
 
-   - _Visual Alternative_:
-     > Use `generate_diagram` from Nanobanana MCP to create a visual diagram and save to `out/02_architecture.png`. Use the "Create Diagram" instructions from the nanobanana README: https://github.com/gemini-cli-extensions/nanobanana . Since we are in Geneva, use the `gemini-3-pro-image-preview` model and add some Swiss Romande touch to the final image (could be imagery or text, but needs to be visible!).
+2. **Create a PNG image with NanoBanana**:
+
+   > Use `generate_diagram` from Nanobanana MCP to create a visual diagram and save to `out/02_architecture.png`. Use the "Create Diagram" instructions from the nanobanana README: https://github.com/gemini-cli-extensions/nanobanana . Since we are in Geneva, use the `gemini-3-pro-image-preview` model and add some Swiss Romande touch to the final image (could be imagery or text, but needs to be visible!).
+   > Do the same for the Travel Agent file `out/01_travel_agent.md`.
+   > Concentrate on its architecture and the link between main agent and sub agents =>  `out/02_travel_agent_architecture.png`
 
 ## Step 3: Accessibility (Geneve Plan)
 
@@ -46,11 +49,12 @@ Download ADK python repo and ADK Docs, both repos should be under the rag/ folde
 
 2. **Generate Audio**:
 
-   > "Read `out/03_summary_fr.md`. Use the `run_command` tool to generate an audio file using the macOS `say` command. The command should be something like: `say -v Thomas -f out/03_summary_fr.md -o out/04_audio.aiff`."
-   > On Linux, use espeak -v fr
+   > "Read `out/03_summary_fr.md`. Use the `run_command` tool to generate an audio file using the macOS `say` command. The command should be something like: `say -v Thomas -f out/03_summary_fr.md`."
+   > Make sure that the text is prepended by a short salutation to the folks in Geneva in a cold winter day.
 
    - _Note_: `say` is a native macOS tool (offline, no external APIs).
    - _Note_: For Linux you might weant to use `espeak` instead. `espeak -v fr` should be able to speak French, but its very basic and metallic.
+   - _Note_: Make sure to speak it out loud for max effect in the demo
 
 ## Step 4: Vibe Coding a Simple Agent
 

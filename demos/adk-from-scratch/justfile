@@ -49,3 +49,10 @@ test-vibecoded-demo-agent:
 
 clean:
     rm -rf rag/adk-python rag/adk-docs out/0* out/vibecoded_agent
+
+auth:
+    gcloud auth login --update-adc
+
+# say it in french (thomas is french!)
+say:
+    say -v Thomas -f out/03_summary_fr.md

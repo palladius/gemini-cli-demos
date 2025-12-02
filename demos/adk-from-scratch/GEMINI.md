@@ -16,10 +16,10 @@ TODO(Ricc or AGY): perfect this readme
 4. Never overwrite `.env` (just ensure it exists or pinpoint the error to the user)
 5. Never code with "gemini-1.5-flash" model: any model below 2.0 is obsolete now. I suggest to use "gemini-2.5-flash" or more.
 
-## Resources
+## Resources
 
-- ADK in poython: https://github.com/google/adk-python
-- ADK doc GH repo: https://github.com/google/adk-docs
+- ADK in python: https://github.com/google/adk-python
+- ADK documentation GH repo: https://github.com/google/adk-docs
   - They can be read online in: https://google.github.io/adk-docs/
 - Official nanobanana extension: https://github.com/gemini-cli-extensions/nanobanana
   - Use the latest model: check `.env` contains it.
