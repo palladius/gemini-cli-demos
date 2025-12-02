@@ -1,4 +1,6 @@
+# This is a Justile
 
+# List available commands
 list:
     just -l
 
@@ -8,35 +10,42 @@ install:
 
 # Runs gemini with well some allowlisted commands.
 run:
-    gemini \
-    --allowed-tools="ShellTool(adk)" \
-    --allowed-tools="ShellTool(date)" \
-    --allowed-tools="ShellTool(df)" \
-    --allowed-tools="ShellTool(du)" \
-    --allowed-tools="ShellTool(echo)" \
-    --allowed-tools="ShellTool(find)" \
-    --allowed-tools="ShellTool(gh auth status)" \
-    --allowed-tools="ShellTool(gh issue)" \
-    --allowed-tools="ShellTool(git add)" \
-    --allowed-tools="ShellTool(git clone)" \
-    --allowed-tools="ShellTool(git status)" \
-    --allowed-tools="ShellTool(git log)" \
-    --allowed-tools="ShellTool(git diff)" \
-    --allowed-tools="ShellTool(grep)" \
-    --allowed-tools="ShellTool(hostname)" \
-    --allowed-tools="ShellTool(jq)" \
-    --allowed-tools="ShellTool(just)" \
-    --allowed-tools="ShellTool(lolcat)" \
-    --allowed-tools="ShellTool(ls)" \
-    --allowed-tools="ShellTool(mkdir)" \
-    --allowed-tools="ShellTool(pwd)" \
-    --allowed-tools="ShellTool(say)" \
-    --allowed-tools="ShellTool(sed)" \
-    --allowed-tools="ShellTool(sort)" \
-    --allowed-tools="ShellTool(touch)" \
-    --allowed-tools="ShellTool(uname)" \
-    --allowed-tools="ShellTool(whoami)" 
+    gemini --model gemini-3-pro-preview \
+        --allowed-tools="ShellTool(adk)" \
+        --allowed-tools="ShellTool(date)" \
+        --allowed-tools="ShellTool(df)" \
+        --allowed-tools="ShellTool(du)" \
+        --allowed-tools="ShellTool(echo)" \
+        --allowed-tools="ShellTool(espeak)" \
+        --allowed-tools="ShellTool(find)" \
+        --allowed-tools="ShellTool(gh auth status)" \
+        --allowed-tools="ShellTool(gh issue)" \
+        --allowed-tools="ShellTool(git add)" \
+        --allowed-tools="ShellTool(git clone)" \
+        --allowed-tools="ShellTool(git status)" \
+        --allowed-tools="ShellTool(git log)" \
+        --allowed-tools="ShellTool(git diff)" \
+        --allowed-tools="ShellTool(grep)" \
+        --allowed-tools="ShellTool(hostname)" \
+        --allowed-tools="ShellTool(jq)" \
+        --allowed-tools="ShellTool(just)" \
+        --allowed-tools="ShellTool(lolcat)" \
+        --allowed-tools="ShellTool(ls)" \
+        --allowed-tools="ShellTool(mkdir)" \
+        --allowed-tools="ShellTool(pwd)" \
+        --allowed-tools="ShellTool(say)" \
+        --allowed-tools="ShellTool(sed)" \
+        --allowed-tools="ShellTool(sort)" \
+        --allowed-tools="ShellTool(touch)" \
+        --allowed-tools="ShellTool(uname)" \
+        --allowed-tools="ShellTool(whoami)" 
 
+
+# run-g3:
+#     gemini --model gemini-3-pro-preview
 
 test-vibecoded-demo-agent:
-    echo 'How are you?' | adk run out/vibecoded_agent/
+    echo 'How are you? What time is it? Where am I? Answer in YAML format and in French.' | adk run out/vibecoded_agent/
+
+clean:
+    rm -rf rag/adk-python rag/adk-docs out/0* out/vibecoded_agent

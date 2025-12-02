@@ -9,7 +9,10 @@ Demonstrate how Gemini can help explore a new SDK (ADK Python), visualize its ar
 Ensure the output directory exists:
 
 ```bash
+## Clean
+just clean # rm rag/* and out/*
 mkdir -p out
+just run
 ```
 
 ## Step 1: Exploration
@@ -18,7 +21,6 @@ mkdir -p out
 
 ```markdown
 <!-- Download the ADK locally (Riccardo way). Should -->
-
 Download ADK python repo and ADK Docs, both repos should be under the rag/ folder.
 ```
 
@@ -36,34 +38,26 @@ Download ADK python repo and ADK Docs, both repos should be under the rag/ folde
    - _Visual Alternative_:
      > Use `generate_diagram` from Nanobanana MCP to create a visual diagram and save to `out/02_architecture.png`. Use the "Create Diagram" instructions from the nanobanana README: https://github.com/gemini-cli-extensions/nanobanana . Since we are in Geneva, use the `gemini-3-pro-image-preview` model and add some Swiss Romande touch to the final image (could be imagery or text, but needs to be visible!).
 
-<!--
-## Step 3: Animation (Bonus)
-
-1. **Animate the Diagram**:
-   > "Read `out/02_architecture.md`. Create a text description/script of how you would animate this diagram to explain the request flow. Save this script to `out/03_animation_script.md`."
-
-Note this is not feasible without the Hussain MediaGen MCP , which seems beyond the purpose of this.
--->
-
-## Step 4: Accessibility (Geneve Plan)
+## Step 3: Accessibility (Geneve Plan)
 
 1. **Translate to French**:
 
-   > "Read `out/01_summary.md`. Translate the summary to French, and SHORTEN it to a couple of sentences. Save it to `out/04_summary_fr.md`."
+   > "Read `out/01_summary.md`. Translate the summary to French, and SHORTEN it to a couple of sentences. Save it to `out/03_summary_fr.md`."
 
 2. **Generate Audio**:
 
-   > "Read `out/04_summary_fr.md`. Use the `run_command` tool to generate an audio file using the macOS `say` command. The command should be something like: `say -v Thomas -f out/04_summary_fr.md -o out/05_audio.aiff`."
+   > "Read `out/03_summary_fr.md`. Use the `run_command` tool to generate an audio file using the macOS `say` command. The command should be something like: `say -v Thomas -f out/03_summary_fr.md -o out/04_audio.aiff`."
    > On Linux, use espeak -v fr
 
    - _Note_: `say` is a native macOS tool (offline, no external APIs).
    - _Note_: For Linux you might weant to use `espeak` instead. `espeak -v fr` should be able to speak French, but its very basic and metallic.
 
-## Step 5: Vibe Coding a Simple Agent
+## Step 4: Vibe Coding a Simple Agent
 
 To show how easy it is to get started, we'll create a simple "Hello World" agent with a single tool.
 
-> "Create a new directory `out/vibecoded_agent`. Inside it, create a simple ADK agent named `hello_agent`. The agent needs a tool called `fancy_hello` that takes no arguments and returns the string 'Hello from your friendly ADK Agent! 🚀'. The agent's instruction should be to use this tool to greet the user. Also, create the necessary `__init__.py` file.
+> "Create a new directory `out/vibecoded_agent`. Inside it, create a simple ADK agent named `hello_agent`. The agent should have a `get_time_now()` tool that returns the current time in JSON format, together with "status": "success". The agent's instruction should be to use this tool to greet the user. Also, create the necessary `__init__.py` file.
+> Also create a second tool like `where_am_i()` which uses an online API to return the current location of the user. Maybe a simple `curl -s ipinfo.io/json` suffices.
 > Before handing over to me, ensure that it doesnt have any syntax errors, by issuing "just test-vibecoded-demo-agent" until it works!"
 
 After the files are created, you can run the agent with:
