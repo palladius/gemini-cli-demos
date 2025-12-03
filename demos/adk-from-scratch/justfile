@@ -12,6 +12,7 @@ install:
 run:
     gemini --model gemini-3-pro-preview \
         --allowed-tools="ShellTool(adk)" \
+        --allowed-tools="ShellTool(afplay)" \
         --allowed-tools="ShellTool(date)" \
         --allowed-tools="ShellTool(df)" \
         --allowed-tools="ShellTool(du)" \
@@ -56,3 +57,11 @@ auth:
 # say it in french (thomas is french!)
 say:
     say -v Thomas -f out/03_summary_fr.md
+
+demo: run
+    echo "Riccardo look at DEMO.md"
+
+# kill all say and afplay processes in case the demo runs too long
+shutup:
+    killall say
+    killall afplay
