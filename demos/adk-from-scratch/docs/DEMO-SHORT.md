@@ -11,21 +11,21 @@ Ensure the output directory exists:
 ```bash
 ## Clean
 just clean # rm rag/* and out/*
-mkdir -p out
-just run
+#mkdir -p out
+#just run
 ```
 
 ## Step 1: Exploration
 
-1. **Download the ADK**:
+1A. **Download the ADK**:
 
 ```markdown
 <!-- Download the ADK locally (Riccardo way). Should -->
 Download ADK python repo and ADK Docs, both repos should be under the rag/ folder.
 ```
 
-1. **Understand the Repo** (AGY way):    Ask Gemini to explain what this repo does and save it to a file. 
-   > "Look at the `rag/adk-python` folder. What is this project about? Summarize its core functionality. Save the response to `out/01_summary.md`. Are the docs in here too, or just in the rag/adk-docs/ folder? If so tell me where they are!"
+1B. **Understand the Repo** (AGY way):    Ask Gemini to explain what this repo does and save it to a file. 
+   > "Look at the `rag/adk-python` folder. What is this project about? Summarize its core functionality. Save the response to `out/01_summary.md`."
 
 ## Step 2: Visualizing the Docs
 

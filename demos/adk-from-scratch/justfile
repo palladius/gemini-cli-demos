@@ -33,6 +33,7 @@ run:
         --allowed-tools="ShellTool(lolcat)" \
         --allowed-tools="ShellTool(ls)" \
         --allowed-tools="ShellTool(mkdir)" \
+        --allowed-tools="ShellTool(mv)" \
         --allowed-tools="ShellTool(pwd)" \
         --allowed-tools="ShellTool(say)" \
         --allowed-tools="ShellTool(sed)" \
@@ -65,3 +66,7 @@ demo: run
 shutup:
     killall say
     killall afplay
+
+
+auto-demo:
+    time gemini -y -p "@docs/AUTO_DEMO.md"
