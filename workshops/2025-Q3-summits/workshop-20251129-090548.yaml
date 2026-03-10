@@ -1,0 +1,14 @@
+student:
+  WORKSHOP_COMMAND_VERSION: "1.1.0_23sep25"
+  USERNAME: "codespace"
+  TODAYS_DATE: "20251129-090548"
+  TEACHER_NAME: "Riccardo"
+  GITHUB_USERNAME: "bumie-e"
+  USER_NAME_AND_SURNAME: "bumie Goldblum"
+  COMPUTER_TYPE: "Linux"
+  RANDOM_PIN: "25542"
+  issue: https://github.com/palladius/gemini-cli-demos/issues/65
+workshop:
+  WORKSHOP_NAME: "Zurich - Cloud Summit"
+  SECRET_KEYWORD: "Cuechicashli"
+  ZIP_CODE: "41044"
