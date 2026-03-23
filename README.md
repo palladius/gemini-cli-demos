@@ -2,6 +2,9 @@
 
 Self: https://github.com/palladius/gemini-cli-demos/
 
+# this is just a test
+
+
 # Gemini CLI Demos
 
 This repository contains Demos-in-a-box for Gemini CLI.
