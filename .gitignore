@@ -20,3 +20,7 @@ demos/mcp-video-creation-backup/
 demos/a-zip-from-a-friend/
 demos/mcp-video-creation/out/
 .vscode/
+__pycache__/
+*.pyc
+.adk/
+out/

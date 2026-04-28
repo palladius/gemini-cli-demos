@@ -1,0 +1,34 @@
+# This is a Justfile for the adk-with-skills demo
+
+# List available commands
+list:
+    just -l
+
+# Set up the environment
+setup:
+    uv venv
+    uv pip install google-adk
+
+# Test 1: Basic LLM API test
+test-api:
+    echo "How are you?" | uv run adk run banana_ric_agent/
+
+# Test 2: Skill check (help command)
+test-skill:
+    echo "Run the Nanobanana python script with --help and show me the options for image size" | uv run adk run banana_ric_agent/
+
+# Test 3: Image generation
+test-image:
+    echo "Create an image of Riccardo eating an Avocado with an ADK label on it. Name the file riccardo_avocado.png" | uv run adk run banana_ric_agent/
+
+# Run interactive session
+run:
+    uv run adk run banana_ric_agent/
+
+# Start web UI
+web:
+    uv run adk web banana_ric_agent/
+
+clean:
+    rm -rf out/
+    rm -rf .venv/
