@@ -14,7 +14,7 @@
     * [ ] video
     * [ ] asciinema (optional)
 * Note: Deployed to GEAP (Agent Engine) successfully! 
-  - Link (Banana Ric): https://console.cloud.google.com/vertex-ai/agents/agent-engines/locations/us-central1/agent-engines/4192363619675013120/playground?project=272932496670
+  - Link (Banana Ric): https://console.cloud.google.com/vertex-ai/agents/agent-engines/locations/us-central1/agent-engines/5848280907663802368/playground?project=272932496670
   - Link (Hello World): https://console.cloud.google.com/vertex-ai/agents/agent-engines/locations/us-central1/agent-engines/3722581883544928256/playground?project=272932496670
   - Assets: Hosted on GCS (gs://banana-ric-assets)
   - Attachment: Using ADK Artifacts
