@@ -82,6 +82,15 @@ deploy:
             banana_ric_agent/
     fi
 
+# Deploy Hello Agent
+deploy-hello:
+    uv run adk deploy agent_engine \
+        --project="palladius-genai" \
+        --region="us-central1" \
+        --display_name="hello_agent" \
+        --adk_app_object=app \
+        hello_agent/
+
 clean:
     rm -rf out/
     rm -rf .venv/

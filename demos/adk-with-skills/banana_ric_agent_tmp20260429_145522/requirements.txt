@@ -1,0 +1,9 @@
+google-genai
+Pillow
+google-adk
+google-cloud-aiplatform
+google-cloud-storage
+opentelemetry-instrumentation-fastapi
+opentelemetry-instrumentation-grpc
+opentelemetry-instrumentation-httpx
+opentelemetry-instrumentation-google-genai
