@@ -1,6 +1,7 @@
 # Bug: SkillToolset Incompatibility with BuiltInCodeExecutor
 
 **GitHub Issue:** [google/adk-python#5524](https://github.com/google/adk-python/issues/5524)
+**Internal Reference:** [go/orcas-rfc-657](http://go/orcas-rfc-657)
 
 ## Overview
 
