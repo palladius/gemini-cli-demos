@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2026 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,11 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
+set -e
 
-# Bypass corp airlock for all modules in this package
-os.environ["UV_INDEX_URL"] = "https://pypi.org/simple"
+PROJECT_ID="palladius-genai"
+REGION="us-central1"
 
-from .agent import root_agent, app
-
-__all__ = ["root_agent", "app"]
+gcloud config set project $PROJECT_ID
+gcloud config set run/region $REGION
+gcloud auth login
+gcloud auth application-default login

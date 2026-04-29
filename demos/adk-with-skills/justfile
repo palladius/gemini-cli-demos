@@ -1,4 +1,19 @@
-# This is a Justfile for the adk-with-skills demo
+#! /usr/bin/env just
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+export UV_INDEX_URL := "https://pypi.org/simple"
 
 # List available commands
 list:
@@ -19,7 +34,15 @@ test-skill:
 
 # Test 3: Image generation
 test-image:
+    #!/bin/bash
+
+    export UV_INDEX_URL="https://pypi.org/simple"
+
     echo "Create an image of Riccardo eating an Avocado with an ADK label on it. Name the file riccardo_avocado.png" | uv run adk run banana_ric_agent/
+
+# Test 4: Deprecated image generation
+test-deprecated-image:
+    source .venv/bin/activate && python3 -c "from banana_ric_agent.tools import generate_riccardo_image; print(generate_riccardo_image('Riccardo eating an Avocado with an ADK label on it', 'riccardo_avocado_deprecated.png'))"
 
 # Run interactive session
 run:
@@ -28,6 +51,10 @@ run:
 # Start web UI
 web:
     uv run adk web banana_ric_agent/
+
+# Deploy to GEAP (Agent Engine)
+deploy:
+    uv run adk deploy agent_engine --project="palladius-genai" --region="us-central1" banana_ric_agent/
 
 clean:
     rm -rf out/

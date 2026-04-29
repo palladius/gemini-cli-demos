@@ -10,6 +10,7 @@ Available demos:
 
 | Status | Author | Demo Folder | Category | Description |
 |---|---|---|---|---|
+| 🚧 ©️ | Riccardo | 📂 [adk-with-skills/](./demos/adk-with-skills/) | Agents | Showcases how gemini-cli creates ADK code and uses Skills (with a character-consistent Riccardo image generator). |
 | ✅ ©️ | Riccardo | 📂 [auto-slide-creator/](./demos/auto-slide-creator/) | Google Workspace | This demo showcases how `gemini-cli` is able to create Google Slides and generate an E/R schema based on it. |
 | 🫙 | Riccardo | 📂 [git-investigation/](./demos/git-investigation/) | Git | Showcase `git` commands for code investigation, such as finding the origin of a file, creating a git history graph, and bisecting to find a problematic commit. |
 | 🫙 | Riccardo | 📂 [google-sheets-mcp/](./demos/google-sheets-mcp/) | Google Sheets | This demo shows how to use mcp-google-sheets to interact with Google Sheets. |
