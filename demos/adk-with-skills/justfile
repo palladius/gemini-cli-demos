@@ -54,7 +54,7 @@ web:
 
 # Deploy to GEAP (Agent Engine)
 deploy:
-    uv run adk deploy agent_engine --project="palladius-genai" --region="us-central1" banana_ric_agent/
+    uv run adk deploy agent_engine --project="palladius-genai" --region="us-central1" --adk_app_object=app banana_ric_agent/
 
 clean:
     rm -rf out/

@@ -22,6 +22,7 @@ from .tools import generate_riccardo_image, get_nanobanana_help
 
 # Bypass corp airlock
 os.environ["UV_INDEX_URL"] = "https://pypi.org/simple"
+os.environ["OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT"] = "true"
 
 class ErrorHandlingPlugin(BasePlugin):
     """Gracefully handles 503/UNAVAILABLE and 429/QUOTA errors from the LLM."""
