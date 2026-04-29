@@ -4,14 +4,16 @@
 * Creator: Riccardo Carlesso
 * GitHub username: palladius
 * Creator fav ice-cream: Dubai chocolate
-* status: WorkInProgress
+* status: Complete
 * Checkbox:
     * [X] code_present
     * [X] code_working
-    * [ ] code_test
+    * [X] code_test
     * [X] license_headers
     * [X] documentation
     * [ ] video
     * [ ] asciinema (optional)
-* Demo purpose: This demo showcases how gemini-cli is able to create code to generate working ADK code and use Skills. It features a character-consistent Riccardo image generator. Note: The `SkillToolset` is still being integrated, so a reliable `subprocess` fallback is currently used.
+* Note: Deployed to GEAP (Agent Engine) successfully! 
+  Link: https://console.cloud.google.com/vertex-ai/agents/agent-engines/locations/us-central1/agent-engines/9155330409037299712/playground?project=272932496670
+* Demo purpose: This demo showcases how gemini-cli is able to create code to generate working ADK code and use Skills. It features a character-consistent Riccardo image generator.
 * Time to execute: 10 minutes
