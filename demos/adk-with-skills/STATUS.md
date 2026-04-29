@@ -14,6 +14,7 @@
     * [ ] video
     * [ ] asciinema (optional)
 * Note: Deployed to GEAP (Agent Engine) successfully! 
+  - Link: https://console.cloud.google.com/vertex-ai/agents/agent-engines/locations/us-central1/agent-engines/945268288340885504/playground?project=272932496670
   - Assets: Hosted on GCS (gs://banana-ric-assets)
   - Attachment: Using ADK Artifacts
   - Observability: Full OTEL and Content Capture enabled (added missing instrumentation packages).
