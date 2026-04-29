@@ -16,6 +16,7 @@
 * Note: Deployed to GEAP (Agent Engine) successfully! 
   - Assets: Hosted on GCS (gs://banana-ric-assets)
   - Attachment: Using ADK Artifacts
-  - Observability: OTEL and Content Capture enabled.
-* Demo purpose: This demo showcases how gemini-cli is able to create code to generate working ADK code and use Skills. It features a character-consistent Riccardo image generator with artifact-based attachment and resilient error handling.
+  - Observability: Full OTEL and Content Capture enabled (added missing instrumentation packages).
+  - Alignment: App and Agent names aligned to resolve warning.
+* Demo purpose: This demo showcases how gemini-cli is able to create code to generate working ADK code and use Skills. It features a character-consistent Riccardo image generator with artifact-based attachment, resilient error handling, and full cloud observability.
 * Time to execute: 10 minutes
