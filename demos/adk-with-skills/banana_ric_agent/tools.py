@@ -17,9 +17,33 @@ import os
 import pathlib
 import sys
 from google.adk.tools import ToolContext
+from google.cloud import storage
 
 # Bypass corp airlock
 os.environ["UV_INDEX_URL"] = "https://pypi.org/simple"
+
+def ensure_assets(assets_dir: pathlib.Path):
+    """Ensures reference images exist locally, downloading from GCS if needed."""
+    bucket_name = "banana-ric-assets"
+    images = [
+        "ricc-za-view-with-kids.png",
+        "ricc-za-lake.png",
+        "ricc-za-wine-tasting.png",
+        "ricc-pineapple-pizza.png",
+        "ricc-google-switzerland.png",
+        "riccardosouthafrica.png",
+    ]
+    
+    os.makedirs(assets_dir, exist_ok=True)
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(bucket_name)
+    
+    for img in images:
+        local_path = assets_dir / img
+        if not local_path.exists():
+            print(f"Downloading {img} from GCS...")
+            blob = bucket.blob(img)
+            blob.download_to_filename(str(local_path))
 
 def generate_riccardo_image(prompt: str, filename: str) -> dict:
     """(DEPRECATED: uses direct subprocess call, not ADK-native skill integration)
@@ -36,7 +60,22 @@ def generate_riccardo_image(prompt: str, filename: str) -> dict:
     """
     agent_dir = pathlib.Path(__file__).parent
     script_path = agent_dir / "scripts" / "generate_image.py"
-    assets_dir = agent_dir / "assets"
+    
+    # In cloud environments, use /tmp/ for assets to keep deployment payload small
+    # and handle read-only source directories.
+    if os.environ.get("GOOGLE_CLOUD_PROJECT"):
+        assets_dir = pathlib.Path("/tmp/banana_ric_assets")
+    else:
+        assets_dir = agent_dir / "assets"
+    
+    # Ensure assets are present (download from GCS if cloud or missing)
+    try:
+        ensure_assets(assets_dir)
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"Failed to ensure assets: {str(e)}"
+        }
     
     reference_images = [
         assets_dir / "ricc-za-view-with-kids.png",
