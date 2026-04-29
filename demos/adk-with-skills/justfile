@@ -35,10 +35,8 @@ test-skill:
 # Test 3: Image generation
 test-image:
     #!/bin/bash
-
     export UV_INDEX_URL="https://pypi.org/simple"
-
-    echo "Create an image of Riccardo eating an Avocado with an ADK label on it. Name the file riccardo_avocado.png" | uv run adk run banana_ric_agent/
+    echo "Create an image of Riccardo eating an Avocado with an ADK label on it. Name the file riccardo_avocado_attach.png" | uv run adk run banana_ric_agent/
 
 # Test 4: Deprecated image generation
 test-deprecated-image:
@@ -50,7 +48,8 @@ run:
 
 # Start web UI
 web:
-    uv run adk web banana_ric_agent/
+    export OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT="true"
+    uv run adk web --adk_app_object=app banana_ric_agent/
 
 # Deploy to GEAP (Agent Engine)
 deploy:
@@ -70,6 +69,7 @@ deploy:
             --display_name="$DISPLAY_NAME" \
             --agent_engine_id="$AGENT_ID" \
             --adk_app_object=app \
+            --otel_to_cloud \
             banana_ric_agent/
     else
         echo "Creating new agent instance..."
@@ -78,6 +78,7 @@ deploy:
             --region="$REGION" \
             --display_name="$DISPLAY_NAME" \
             --adk_app_object=app \
+            --otel_to_cloud \
             banana_ric_agent/
     fi
 

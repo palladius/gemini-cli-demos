@@ -17,11 +17,13 @@ from google.adk.agents import Agent
 from google.adk.apps.app import App
 from google.adk.models.llm_response import LlmResponse
 from google.adk.plugins.base_plugin import BasePlugin
+from google.adk.plugins.multimodal_tool_results_plugin import MultimodalToolResultsPlugin
 from google.genai import types, errors as genai_errors
 from .tools import generate_riccardo_image, get_nanobanana_help
 
 # Bypass corp airlock
 os.environ["UV_INDEX_URL"] = "https://pypi.org/simple"
+os.environ["GOOGLE_CLOUD_AGENT_ENGINE_ENABLE_TELEMETRY"] = "true"
 os.environ["OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT"] = "true"
 
 class ErrorHandlingPlugin(BasePlugin):
@@ -34,14 +36,14 @@ class ErrorHandlingPlugin(BasePlugin):
             return LlmResponse(
                 content=types.Content(
                     role="model",
-                    parts=[types.Part.from_text("Ouch! The model is feeling a bit 'slipped up' right now (503 High Demand). 🍌 Let's wait a few seconds and try again. Don't worry, Banana Ric never gives up!")]
+                    parts=[types.Part.from_text(text="Ouch! The model is feeling a bit 'slipped up' right now (503 High Demand). 🍌 Let's wait a few seconds and try again. Don't worry, Banana Ric never gives up!")]
                 )
             )
         if isinstance(error, genai_errors.ClientError) and "429" in str(error):
              return LlmResponse(
                 content=types.Content(
                     role="model",
-                    parts=[types.Part.from_text("Slow down there, partner! 🍌 We've hit a quota limit (429). Let's take a tiny banana break and try again in a minute!")]
+                    parts=[types.Part.from_text(text="Slow down there, partner! 🍌 We've hit a quota limit (429). Let's take a tiny banana break and try again in a minute!")]
                 )
             )
         return None

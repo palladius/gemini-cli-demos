@@ -18,6 +18,7 @@ import pathlib
 import sys
 from google.adk.tools import ToolContext
 from google.cloud import storage
+from google.genai import types
 
 # Bypass corp airlock
 os.environ["UV_INDEX_URL"] = "https://pypi.org/simple"
@@ -45,7 +46,7 @@ def ensure_assets(assets_dir: pathlib.Path):
             blob = bucket.blob(img)
             blob.download_to_filename(str(local_path))
 
-def generate_riccardo_image(prompt: str, filename: str) -> dict:
+async def generate_riccardo_image(prompt: str, filename: str, tool_context: ToolContext) -> dict:
     """(DEPRECATED: uses direct subprocess call, not ADK-native skill integration)
     This is a temporary workaround until https://github.com/google/adk-python/issues/5524 is resolved.
     Generates an image of Riccardo using the nano-banana-ricc skill.
@@ -54,9 +55,10 @@ def generate_riccardo_image(prompt: str, filename: str) -> dict:
     Args:
         prompt: A description of the image to generate, including Riccardo.
         filename: The name of the file to save the image to (should end in .png).
+        tool_context: The ADK tool context for saving artifacts.
 
     Returns:
-        A dict with 'status', 'message', and 'file_path'.
+        A dict with 'status', 'message', and 'artifact_name'.
     """
     agent_dir = pathlib.Path(__file__).parent
     script_path = agent_dir / "scripts" / "generate_image.py"
@@ -86,30 +88,48 @@ def generate_riccardo_image(prompt: str, filename: str) -> dict:
         assets_dir / "riccardosouthafrica.png",
     ]
     
-    # Ensure out directory exists
-    os.makedirs("out", exist_ok=True)
-    full_path = os.path.join("out", filename)
+    # Ensure out directory exists in the agent folder
+    out_dir = agent_dir / "out"
+    os.makedirs(out_dir, exist_ok=True)
+    full_path = out_dir / filename
     
     # Use current python executable for better cloud compatibility
     command = [
         sys.executable, str(script_path),
         "--prompt", prompt,
-        "--filename", full_path,
+        "--filename", str(full_path),
     ]
     for img in reference_images:
         command.extend(["-i", str(img)])
         
     try:
         result = subprocess.run(command, capture_output=True, text=True, check=True)
+        
+        if not full_path.exists():
+             return {
+                "status": "error",
+                "message": f"Script claimed success but {full_path} was not created.",
+            }
+
+        # Read the image bytes and save as an artifact
+        with open(full_path, "rb") as f:
+            image_bytes = f.read()
+            
+        artifact_version = await tool_context.save_artifact(
+            filename=filename,
+            artifact=types.Part.from_bytes(data=image_bytes, mime_type="image/png")
+        )
+            
         return {
             "status": "success",
-            "message": f"Image generated successfully at {full_path}. Script output: {result.stdout}",
-            "file_path": full_path
+            "message": f"Banana Ric has created your image! You can find it as an artifact named '{filename}' (version {artifact_version}).",
+            "artifact_name": filename,
+            "artifact_version": artifact_version
         }
     except subprocess.CalledProcessError as e:
         return {
             "status": "error",
-            "message": f"Failed to generate image: {e.stderr}",
+            "message": f"Failed to generate image: {e.stderr or e.stdout}",
             "error": str(e)
         }
 
