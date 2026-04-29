@@ -1,0 +1,4 @@
+google-genai
+Pillow
+google-adk
+google-cloud-aiplatform

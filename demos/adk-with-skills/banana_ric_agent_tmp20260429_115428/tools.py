@@ -14,8 +14,6 @@
 
 import subprocess
 import os
-import pathlib
-import sys
 from google.adk.tools import ToolContext
 
 # Bypass corp airlock
@@ -34,31 +32,29 @@ def generate_riccardo_image(prompt: str, filename: str) -> dict:
     Returns:
         A dict with 'status', 'message', and 'file_path'.
     """
-    agent_dir = pathlib.Path(__file__).parent
-    script_path = agent_dir / "scripts" / "generate_image.py"
-    assets_dir = agent_dir / "assets"
+    script_path = "/usr/local/google/home/ricc/.agents/skills/nano-banana-ricc/scripts/generate_image.py"
+    assets_dir = "/usr/local/google/home/ricc/.agents/skills/nano-banana-ricc/assets/riccardo/"
     
     reference_images = [
-        assets_dir / "ricc-za-view-with-kids.png",
-        assets_dir / "ricc-za-lake.png",
-        assets_dir / "ricc-za-wine-tasting.png",
-        assets_dir / "ricc-pineapple-pizza.png",
-        assets_dir / "ricc-google-switzerland.png",
-        assets_dir / "riccardosouthafrica.png",
+        os.path.join(assets_dir, "ricc-za-view-with-kids.png"),
+        os.path.join(assets_dir, "ricc-za-lake.png"),
+        os.path.join(assets_dir, "ricc-za-wine-tasting.png"),
+        os.path.join(assets_dir, "ricc-pineapple-pizza.png"),
+        os.path.join(assets_dir, "ricc-google-switzerland.png"),
+        os.path.join(assets_dir, "riccardosouthafrica.png"),
     ]
     
     # Ensure out directory exists
     os.makedirs("out", exist_ok=True)
     full_path = os.path.join("out", filename)
     
-    # Use current python executable for better cloud compatibility
     command = [
-        sys.executable, str(script_path),
+        "uv", "run", script_path,
         "--prompt", prompt,
         "--filename", full_path,
     ]
     for img in reference_images:
-        command.extend(["-i", str(img)])
+        command.extend(["-i", img])
         
     try:
         result = subprocess.run(command, capture_output=True, text=True, check=True)
@@ -81,9 +77,8 @@ def get_nanobanana_help() -> dict:
     Returns:
         A dict with 'status' and 'help_text'.
     """
-    agent_dir = pathlib.Path(__file__).parent
-    script_path = agent_dir / "scripts" / "generate_image.py"
-    command = [sys.executable, str(script_path), "--help"]
+    script_path = "/usr/local/google/home/ricc/.agents/skills/nano-banana-ricc/scripts/generate_image.py"
+    command = ["uv", "run", script_path, "--help"]
     try:
         result = subprocess.run(command, capture_output=True, text=True, check=True)
         return {

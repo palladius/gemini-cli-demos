@@ -54,7 +54,32 @@ web:
 
 # Deploy to GEAP (Agent Engine)
 deploy:
-    uv run adk deploy agent_engine --project="palladius-genai" --region="us-central1" --adk_app_object=app banana_ric_agent/
+    #!/bin/bash
+    PROJECT="palladius-genai"
+    REGION="us-central1"
+    DISPLAY_NAME="banana_ric_agent"
+    
+    # Try to find existing agent ID
+    AGENT_ID=$(uv run python bin/find_agent_id.py "$PROJECT" "$REGION" "$DISPLAY_NAME" 2>/dev/null || echo "")
+    
+    if [ -n "$AGENT_ID" ]; then
+        echo "Updating existing agent with ID: $AGENT_ID"
+        uv run adk deploy agent_engine \
+            --project="$PROJECT" \
+            --region="$REGION" \
+            --display_name="$DISPLAY_NAME" \
+            --agent_engine_id="$AGENT_ID" \
+            --adk_app_object=app \
+            banana_ric_agent/
+    else
+        echo "Creating new agent instance..."
+        uv run adk deploy agent_engine \
+            --project="$PROJECT" \
+            --region="$REGION" \
+            --display_name="$DISPLAY_NAME" \
+            --adk_app_object=app \
+            banana_ric_agent/
+    fi
 
 clean:
     rm -rf out/
