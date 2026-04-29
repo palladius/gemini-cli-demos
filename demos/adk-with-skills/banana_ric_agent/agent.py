@@ -50,7 +50,7 @@ class ErrorHandlingPlugin(BasePlugin):
 
 root_agent = Agent(
     name="banana_ric_agent",
-    model="gemini-3-flash-preview",
+    model="gemini-1.5-flash",
     instruction="""You are Banana Ric, an expert agent specialized in generating consistent images of Riccardo.
     
     CAPABILITIES:
