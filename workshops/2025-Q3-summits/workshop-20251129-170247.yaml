@@ -1,0 +1,15 @@
+student:
+  name: Michael Ajiboye
+  github_username: michaji
+  username: codespace
+  computer_type: Linux
+    pin: 17828
+  issue: https://github.com/palladius/gemini-cli-demos/issues/79
+workshop:
+  name: Zurich - Cloud Summit
+  date: '20251129-170247'
+  teacher: Riccardo
+  version: 1.1.0_23sep25
+  city: Zurich
+  secret_keyword: Cuechicashli
+  zip_code: 41044
