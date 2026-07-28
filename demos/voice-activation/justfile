@@ -18,9 +18,17 @@ configure-voice-mode:
     gemini config set mcp.voice-mode.command "uvx voice-mode"
 
 gemini:
+    #!/bin/bash
+    . .env
+    echo OPENAI_API_KEY=$OPENAI_API_KEY
     #VOICEMODE_DEBUG=true
-    gemini -e '' --allowed-mcp-server-names 'voice-mode'
+    gemini -e '' --allowed-mcp-server-names 'voicemode'
 
+gemini-quick-test:
+    #!/bin/bash
+    . .env
+    echo OPENAI_API_KEY=$OPENAI_API_KEY
+    gemini -e '' --allowed-mcp-server-names 'voicemode' -p '/mcp list'
 
 troubleshoot: converse
 converse:

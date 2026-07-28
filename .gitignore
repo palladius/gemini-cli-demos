@@ -24,3 +24,6 @@ __pycache__/
 *.pyc
 .adk/
 out/
+#non final scenes
+scene*.mp4
+demos/adk-from-scratch/rag/awkward/

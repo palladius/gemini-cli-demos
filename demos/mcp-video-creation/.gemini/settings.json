@@ -41,6 +41,7 @@
         "MCP_SERVER_REQUEST_TIMEOUT": "55000",
         "GENMEDIA_BUCKET": "ricc-genai-mcp-genmedia",
         "LOCATION": "us-central1",
+//        "LOCATION": "europe-west4",
         "PROJECT_ID": "ricc-genai"
       }
     },

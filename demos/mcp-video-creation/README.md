@@ -2,6 +2,8 @@
 
 Self: https://github.com/palladius/gemini-cli-demos/tree/main/demos/mcp-video-creation
 
+Note: this repo also needs `GIT-LFS`.
+
 ## Install
 
 Installation will take you some time. But trust me, it IS worth it!

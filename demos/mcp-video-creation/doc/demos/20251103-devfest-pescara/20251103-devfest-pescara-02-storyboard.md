@@ -6,7 +6,9 @@ You've finished the demo01, now demo 02 in testing mode.
 ###
 
 ```bash
+. .env
 just gemini-demo-no-auth         # or just gemini-demo-with-auth the first time
+/mcp list
 ```
 
 
@@ -14,27 +16,39 @@ Maybe test `list_chirp_voices in Italian via MCP` to test authentication.
 
 
 ```markdown
-
-/aicinema:video_storyboard
+<!-- if you installed the carlsssian scripts...-->
+/aicinema:video_storyboard ... copy from below.. 
+<!-- Otherwise ...-->
 
 /aicinema-deprecated-use-carlessian-extension-instead:video_storyboard for the story highlighted
 in @doc/CUJs/CUJ03-video-from-pitch-event-pescara25.md
-Make sure to dump all your thinking in MD in a designated folder under `out/demo02/`
-which contains today's YYYYMMDD-HHMM, in case we get interrupted 😉.
+Make sure to dump all your thinking in MD in a designated folder under `out/pescara/demo02/`
+which contains today's YYYYMMDD-HHMM (based on todays, hour and minute), in case we get interrupted 😉.
 For simplicity, use a SINGLE take per video,
 and rename videos to `sceneXX.mp4` after creation.
+Make sure to add a PLAN.md with a checklist of things to do in case we get interrupted.
 
+This is for a quick demo, so use fastest models.
 ```
 If needed: `This is for a quick demo, so use fastest models.`
 Or:
 
-```
+```markdown
+<!-- in case u got single interruption and state is obvious -->
 Note we DID get interrupted, so the folder already exists ;) Check under stories/ and take it from there
+```
+
+or: 
+
+```markdown
+<!-- in case u got multiple interruptions -->
+/aicinema:video_storyboard We got interrupted, please continue execution on this @out/pescara/demo02/20251107-0900/storyboard.md . Please put a PLAN.md into the folder, and check itmes while u do them in case we get interrupted again.
 ```
 
 Add this more structured structure:
 
-```
+```markdown
+<!-- enhancement: Use foldrs -->
   Maybe you could group the scenes in folders? scene02/README.md would have the Music, video and image prompt and all takes. Maybe a symlink should allow us to seamlessly choose the "good one" among multiple takes.
   You can choose the first, and ask user to maybe choose another, and finally the construction of the final video could be seamless:
 

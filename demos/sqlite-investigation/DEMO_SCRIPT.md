@@ -20,8 +20,7 @@ giancarlo-permissive-nomcp
 
 What does this repo do?
 
-Can u see a sqlite file in this folder (use "file \*")? Enumerate them with a nice emoji as a bulletpoint.
-
+Can u see a sqlite file in this folder (use "file *")? Enumerate them with a nice emoji as a bulletpoint.
 ```
 
 ## double click on a specific DB (which we can easily recreate)
@@ -29,7 +28,7 @@ Can u see a sqlite file in this folder (use "file \*")? Enumerate them with a ni
 ```markdown
 <!-- Now we ask random question on a specific DB: EaP.sqlite -->
 
-Ok lets use events_and_people.sqlite which I’ve just generated with ./generate_database.sh .
+Ok lets use `events_and_people.sqlite` which I’ve just generated with `./generate_database.sh` .
 Can you look at this DB, show me the tables, their schemas, and if there are any events or people in it?
 
 ```
@@ -40,16 +39,15 @@ Can you look at this DB, show me the tables, their schemas, and if there are any
 ```markdown
 <!-- Change the prompt to be more event specific EVENT_SPECIFIC -->
 
-I'm at an Hackathon event today: **Cloud Day** in **Milan**
+I'm at an Hackathon event today: **Cloud Day** in **Milan** (or **DevFest** in **Pescara**)
 
-Ok, let’s now add a person (Riccardo Carlesso, make up a sample email for me) and I’m coming to this event (as per event link). Also make sure I attend (subscribe) this event.
-Also add presenters for the event (Andrea Saltarello and Luca Fregoso).
+Ok, let’s now add a person (**Riccardo Carlesso**, make up a sample email for me) and I’m coming to this event (as per event link). Also make sure I attend (subscribe) this event.
+Also add presenters for the event (**Andrea Saltarello** and **Luca Fregoso** / **Luca Ferroni**).
 
-Again fake email "name.surname@fake.google.com" , as its just a demo. 
+Finally add **Maurizio Ipsale**.
+
+Again fake email "name.surname@fake.google.com" , as its just a demo.
 ```
-
-Previous demos:
-*  See `demos/20251105-psi-be.md`
 
 ## English -> SQL
 
@@ -65,8 +63,7 @@ Present the results in a nice markdown table.
 ```markdown
 <!-- change schema -->
 
-Now I want to extend the Database with a new concept. I want to add the fact that Riccardo is participating to the above event with a talk, called “Gemini CLI rocks for DatabasesBs”. A talk should have a title, an abstract, and a person id, and it can be linked in 1:many to an event, and I want you to both create the tables to make this happen and add this talk , and “attach” it to both the above event AND the Tech Conference 2025 to demonstrate the 1:many relationship. In the end, show me some SQL to demonstrate it.
-
+Now I want to extend the Database with a new concept. I want to add the fact that Riccardo is participating to the above event with a talk, called “Gemini CLI rocks”. A talk should have a title, an abstract, and a person id, and it can be linked in 1:many to an event, and I want you to both create the tables to make this happen and add this talk , and “attach” it to both the above event AND the Tech Conference 2025 to demonstrate the 1:many relationship. In the end, show me some SQL to demonstrate it.
 ```
 
 ## Wow moment

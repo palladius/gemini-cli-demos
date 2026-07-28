@@ -162,9 +162,12 @@ gemini-demo-with-auth:
 
 #use when uyou know you're authenticated
 gemini-demo-no-auth:
+    #!/bin/bash
     echo "👀 Riccardo remember to authenticate BEFORE running Gemini or MCP wont work!"
-    #PATH=$PATH:~/go/bin gemini -y WE DEREPCATED -c
-    PATH=$PATH:~/go/bin gemini -y
+    PATH=$PATH:~/go/bin 
+    . .env
+    verde 'Ricc: ok PATH and ok .env'
+    gemini -y
 
 # kills afplay which could go on for 10 min!
 kill-afplay:
